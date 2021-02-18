@@ -678,6 +678,7 @@ return array(
     'StructType\\FlatShippingPreferencesType' => $baseDir . '/src/StructType/FlatShippingPreferencesType.php',
     'StructType\\FreeGalleryPlusEnabledDefinitionType' => $baseDir . '/src/StructType/FreeGalleryPlusEnabledDefinitionType.php',
     'StructType\\FreePicturePackEnabledDefinitionType' => $baseDir . '/src/StructType/FreePicturePackEnabledDefinitionType.php',
+    'StructType\\FulfillmentType' => $baseDir . '/src/StructType/FulfillmentType.php',
     'StructType\\GetAccountRequestType' => $baseDir . '/src/StructType/GetAccountRequestType.php',
     'StructType\\GetAccountResponseType' => $baseDir . '/src/StructType/GetAccountResponseType.php',
     'StructType\\GetAdFormatLeadsRequestType' => $baseDir . '/src/StructType/GetAdFormatLeadsRequestType.php',

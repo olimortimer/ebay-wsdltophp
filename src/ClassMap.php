@@ -493,6 +493,7 @@ class ClassMap
             'FlatShippingPreferencesType' => '\\StructType\\FlatShippingPreferencesType',
             'FreeGalleryPlusEnabledDefinitionType' => '\\StructType\\FreeGalleryPlusEnabledDefinitionType',
             'FreePicturePackEnabledDefinitionType' => '\\StructType\\FreePicturePackEnabledDefinitionType',
+            'FulfillmentType' => '\\StructType\\FulfillmentType',
             'GetRecommendationsRequestContainerType' => '\\StructType\\GetRecommendationsRequestContainerType',
             'GetRecommendationsResponseContainerType' => '\\StructType\\GetRecommendationsResponseContainerType',
             'GiftSummaryType' => '\\StructType\\GiftSummaryType',

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit7d70db789a1435fbf6115fbb0956c534
+class ComposerStaticInit28a2af86b6d20c80219c5c3b50e21cbc
 {
     public static $prefixLengthsPsr4 = array (
         'W' => 
@@ -697,6 +697,7 @@ class ComposerStaticInit7d70db789a1435fbf6115fbb0956c534
         'StructType\\FlatShippingPreferencesType' => __DIR__ . '/../..' . '/src/StructType/FlatShippingPreferencesType.php',
         'StructType\\FreeGalleryPlusEnabledDefinitionType' => __DIR__ . '/../..' . '/src/StructType/FreeGalleryPlusEnabledDefinitionType.php',
         'StructType\\FreePicturePackEnabledDefinitionType' => __DIR__ . '/../..' . '/src/StructType/FreePicturePackEnabledDefinitionType.php',
+        'StructType\\FulfillmentType' => __DIR__ . '/../..' . '/src/StructType/FulfillmentType.php',
         'StructType\\GetAccountRequestType' => __DIR__ . '/../..' . '/src/StructType/GetAccountRequestType.php',
         'StructType\\GetAccountResponseType' => __DIR__ . '/../..' . '/src/StructType/GetAccountResponseType.php',
         'StructType\\GetAdFormatLeadsRequestType' => __DIR__ . '/../..' . '/src/StructType/GetAdFormatLeadsRequestType.php',
@@ -1346,10 +1347,10 @@ class ComposerStaticInit7d70db789a1435fbf6115fbb0956c534
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit7d70db789a1435fbf6115fbb0956c534::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit7d70db789a1435fbf6115fbb0956c534::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit7d70db789a1435fbf6115fbb0956c534::$fallbackDirsPsr4;
-            $loader->classMap = ComposerStaticInit7d70db789a1435fbf6115fbb0956c534::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit28a2af86b6d20c80219c5c3b50e21cbc::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit28a2af86b6d20c80219c5c3b50e21cbc::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit28a2af86b6d20c80219c5c3b50e21cbc::$fallbackDirsPsr4;
+            $loader->classMap = ComposerStaticInit28a2af86b6d20c80219c5c3b50e21cbc::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -21,6 +21,14 @@ class TransactionProgramType extends AbstractStructBase
      */
     public $AuthenticityVerification;
     /**
+     * The Fulfillment
+     * Meta information extracted from the WSDL
+     * - documentation: This container provides details about an order line item being handled by eBay fulfillment. It is only returned for paid orders being fulfilled by eBay or an eBay fulfillment partner.
+     * - minOccurs: 0
+     * @var \StructType\FulfillmentType
+     */
+    public $Fulfillment;
+    /**
      * The any
      * @var \DOMDocument
      */
@@ -28,14 +36,17 @@ class TransactionProgramType extends AbstractStructBase
     /**
      * Constructor method for TransactionProgramType
      * @uses TransactionProgramType::setAuthenticityVerification()
+     * @uses TransactionProgramType::setFulfillment()
      * @uses TransactionProgramType::setAny()
      * @param \StructType\AuthenticityVerificationType $authenticityVerification
+     * @param \StructType\FulfillmentType $fulfillment
      * @param \DOMDocument $any
      */
-    public function __construct(\StructType\AuthenticityVerificationType $authenticityVerification = null, \DOMDocument $any = null)
+    public function __construct(\StructType\AuthenticityVerificationType $authenticityVerification = null, \StructType\FulfillmentType $fulfillment = null, \DOMDocument $any = null)
     {
         $this
             ->setAuthenticityVerification($authenticityVerification)
+            ->setFulfillment($fulfillment)
             ->setAny($any);
     }
     /**
@@ -54,6 +65,24 @@ class TransactionProgramType extends AbstractStructBase
     public function setAuthenticityVerification(\StructType\AuthenticityVerificationType $authenticityVerification = null)
     {
         $this->AuthenticityVerification = $authenticityVerification;
+        return $this;
+    }
+    /**
+     * Get Fulfillment value
+     * @return \StructType\FulfillmentType|null
+     */
+    public function getFulfillment()
+    {
+        return $this->Fulfillment;
+    }
+    /**
+     * Set Fulfillment value
+     * @param \StructType\FulfillmentType $fulfillment
+     * @return \StructType\TransactionProgramType
+     */
+    public function setFulfillment(\StructType\FulfillmentType $fulfillment = null)
+    {
+        $this->Fulfillment = $fulfillment;
         return $this;
     }
     /**
