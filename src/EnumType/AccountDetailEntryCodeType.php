@@ -2532,6 +2532,20 @@ class AccountDetailEntryCodeType extends AbstractStructEnumBase
      */
     const VALUE_FINAL_VALUE_FEE_BELOW_STANDARD_CREDIT = 'FinalValueFeeBelowStandardCredit';
     /**
+     * Constant for value 'AdFeeExpress'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the account entry is a Promoted Listing Express fee.
+     * @return string 'AdFeeExpress'
+     */
+    const VALUE_AD_FEE_EXPRESS = 'AdFeeExpress';
+    /**
+     * Constant for value 'AdFeeExpressCredit'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the account entry is a credit applied against a Promoted Listing Express fee.
+     * @return string 'AdFeeExpressCredit'
+     */
+    const VALUE_AD_FEE_EXPRESS_CREDIT = 'AdFeeExpressCredit';
+    /**
      * Return allowed values
      * @uses self::VALUE_UNKNOWN
      * @uses self::VALUE_FEE_INSERTION
@@ -2877,6 +2891,8 @@ class AccountDetailEntryCodeType extends AbstractStructEnumBase
      * @uses self::VALUE_FINAL_VALUE_FEE_FIXED_FEE_PER_ORDER_CREDIT
      * @uses self::VALUE_FINAL_VALUE_FEE_BELOW_STANDARD
      * @uses self::VALUE_FINAL_VALUE_FEE_BELOW_STANDARD_CREDIT
+     * @uses self::VALUE_AD_FEE_EXPRESS
+     * @uses self::VALUE_AD_FEE_EXPRESS_CREDIT
      * @return string[]
      */
     public static function getValidValues()
@@ -3226,6 +3242,8 @@ class AccountDetailEntryCodeType extends AbstractStructEnumBase
             self::VALUE_FINAL_VALUE_FEE_FIXED_FEE_PER_ORDER_CREDIT,
             self::VALUE_FINAL_VALUE_FEE_BELOW_STANDARD,
             self::VALUE_FINAL_VALUE_FEE_BELOW_STANDARD_CREDIT,
+            self::VALUE_AD_FEE_EXPRESS,
+            self::VALUE_AD_FEE_EXPRESS_CREDIT,
         );
     }
 }

@@ -217,30 +217,6 @@ class Revise extends AbstractSoapClientBase
         }
     }
     /**
-     * Method to call the operation originally named ReviseSellingManagerSaleRecord
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\ReviseSellingManagerSaleRecordRequestType $reviseSellingManagerSaleRecordRequest
-     * @return \StructType\ReviseSellingManagerSaleRecordResponseType|bool
-     */
-    public function ReviseSellingManagerSaleRecord(\StructType\ReviseSellingManagerSaleRecordRequestType $reviseSellingManagerSaleRecordRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->ReviseSellingManagerSaleRecord($reviseSellingManagerSaleRecordRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
      * Method to call the operation originally named ReviseSellingManagerTemplate
      * Meta information extracted from the WSDL
      * - SOAPHeaderNames: RequesterCredentials
@@ -267,7 +243,7 @@ class Revise extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\ReviseCheckoutStatusResponseType|\StructType\ReviseFixedPriceItemResponseType|\StructType\ReviseInventoryStatusResponseType|\StructType\ReviseItemResponseType|\StructType\ReviseMyMessagesFoldersResponseType|\StructType\ReviseMyMessagesResponseType|\StructType\ReviseSellingManagerInventoryFolderResponseType|\StructType\ReviseSellingManagerProductResponseType|\StructType\ReviseSellingManagerSaleRecordResponseType|\StructType\ReviseSellingManagerTemplateResponseType
+     * @return \StructType\ReviseCheckoutStatusResponseType|\StructType\ReviseFixedPriceItemResponseType|\StructType\ReviseInventoryStatusResponseType|\StructType\ReviseItemResponseType|\StructType\ReviseMyMessagesFoldersResponseType|\StructType\ReviseMyMessagesResponseType|\StructType\ReviseSellingManagerInventoryFolderResponseType|\StructType\ReviseSellingManagerProductResponseType|\StructType\ReviseSellingManagerTemplateResponseType
      */
     public function getResult()
     {

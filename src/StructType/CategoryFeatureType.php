@@ -26,7 +26,7 @@ class CategoryFeatureType extends AbstractStructBase
      * The ListingDuration
      * Meta information extracted from the WSDL
      * - documentation: A <b>ListingDuration</b> field is returned for each listing type and listing duration combination that is supported for the category. The integer value indicates the number of days of the listing duration, and the <b>type</b>
-     * attribute identifies the supported listing type. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a
+     * attribute identifies the supported listing type. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a
      * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ListingDurations</code>.
      * - maxOccurs: unbounded
      * - minOccurs: 0
@@ -36,7 +36,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ShippingTermsRequired
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category requires sellers to specify shipping details at listing time. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
+     * - documentation: Indicates whether the category requires sellers to specify shipping details at listing time. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
      * default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ShippingTermsRequired</code>.
      * - minOccurs: 0
      * @var bool
@@ -45,7 +45,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The BestOfferEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the Best Offer feature for listings. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
+     * - documentation: Indicates whether the category supports the Best Offer feature for listings. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
      * be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>BestOfferEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -62,8 +62,9 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The UserConsentRequired
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether a bidder must consent to the bid by confirming that he or she read and agrees to the terms in eBay's privacy policy. <br><br> Only returned when this value (or this category's setting) overrides the value inherited
-     * from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>UserConsentRequired</code>.
+     * - documentation: Indicates whether a bidder must consent to the bid by confirming that he or she read and agrees to the terms in eBay's privacy policy. <br/><br/> Only returned when this value (or this category's setting) overrides the value
+     * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * <code>UserConsentRequired</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -72,8 +73,8 @@ class CategoryFeatureType extends AbstractStructBase
      * The HomePageFeaturedEnabled
      * Meta information extracted from the WSDL
      * - documentation: Indicates whether or not it is possible to enhance a listing by putting it into a rotation for display on a special area of the eBay home page. Support for this feature varies by site. Item or feedback restrictions may apply.
-     * <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used
-     * in the call request, and one of those values does not include <code>HomePageFeaturedEnabled</code>.
+     * <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are
+     * used in the call request, and one of those values does not include <code>HomePageFeaturedEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -81,7 +82,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ProPackEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the Pro Pack Bundle listing upgrade. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
+     * - documentation: Indicates whether the category supports the Pro Pack Bundle listing upgrade. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
      * be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ProPack</code>.
      * - minOccurs: 0
      * @var bool
@@ -98,8 +99,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ValuePackEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the Value Pack bundle listing upgrade. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
-     * be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ValuePack</code>.
+     * - documentation: Indicates whether the category supports the Value Pack bundle listing upgrade. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
+     * not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ValuePack</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -107,8 +108,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ProPackPlusEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the Pro Pack Plus bundle listing upgrade. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
-     * not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ProPackPlus</code>.
+     * - documentation: Indicates whether the category supports the Pro Pack Plus bundle listing upgrade. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default.
+     * Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ProPackPlus</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -116,8 +117,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The AdFormatEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports Classified Ad listings. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if
-     * one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>AdFormatEnabled</code>.
+     * - documentation: Indicates whether the category supports Classified Ad listings. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned
+     * if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>AdFormatEnabled</code>.
      * - minOccurs: 0
      * @var string
      */
@@ -125,9 +126,9 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The BestOfferCounterEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports sellers offering a counter offer against a buyer's Best Offer, or a buyer offering a counter offer against the seller's counter offer. <br><br> Only returned when this value (or this category's
-     * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
-     * include <code>BestOfferCounterEnabled</code>.
+     * - documentation: Indicates whether the category supports sellers offering a counter offer against a buyer's Best Offer, or a buyer offering a counter offer against the seller's counter offer. <br/><br/> Only returned when this value (or this
+     * category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values
+     * does not include <code>BestOfferCounterEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -135,7 +136,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The BestOfferAutoDeclineEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the Best Offer Auto Decline feature. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
+     * - documentation: Indicates whether the category supports the Best Offer Auto Decline feature. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
      * be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>BestOfferAutoDeclineEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -144,7 +145,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketSpecialitySubscription
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the Speciality level subscription to Motors Local Market listings. This feature is only available to licensed vehicle dealers. <br><br> Only returned when this value (or this category's
+     * - documentation: Indicates whether the category supports the Speciality level subscription to Motors Local Market listings. This feature is only available to licensed vehicle dealers. <br/><br/> Only returned when this value (or this category's
      * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
      * include <code>LocalMarketSpecialitySubscription</code>.
      * - minOccurs: 0
@@ -154,7 +155,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketRegularSubscription
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the Regular level subscription to Motors Local Market listings. This feature is only available to licensed vehicle dealers. <br><br> Only returned when this value (or this category's setting)
+     * - documentation: Indicates whether the category supports the Regular level subscription to Motors Local Market listings. This feature is only available to licensed vehicle dealers. <br/><br/> Only returned when this value (or this category's setting)
      * overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>LocalMarketRegularSubscription</code>.
      * - minOccurs: 0
@@ -164,7 +165,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketPremiumSubscription
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the Premium level subscription Motors Local Market listings. This feature is only available to licensed vehicle dealers. <br><br> Only returned when this value (or this category's setting)
+     * - documentation: Indicates whether the category supports the Premium level subscription Motors Local Market listings. This feature is only available to licensed vehicle dealers. <br/><br/> Only returned when this value (or this category's setting)
      * overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>LocalMarketPremiumSubscription</code>.
      * - minOccurs: 0
@@ -174,7 +175,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketNonSubscription
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports a seller creating a Motors Local Market listing without a subscription. This feature is only available to licensed vehicle dealers. <br><br> Only returned when this value (or this category's
+     * - documentation: Indicates whether the category supports a seller creating a Motors Local Market listing without a subscription. This feature is only available to licensed vehicle dealers. <br/><br/> Only returned when this value (or this category's
      * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
      * include <code>LocalMarketNonSubscription</code>.
      * - minOccurs: 0
@@ -208,7 +209,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The MinimumReservePrice
      * Meta information extracted from the WSDL
-     * - documentation: Indicates the Minimum Reserve Price for an auction listing in this category. If there is no Minimum Reserve Price, a value of <code>0.0</code> is returned in this field. <br><br> Only returned when this value (or this category's
+     * - documentation: Indicates the Minimum Reserve Price for an auction listing in this category. If there is no Minimum Reserve Price, a value of <code>0.0</code> is returned in this field. <br/><br/> Only returned when this value (or this category's
      * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
      * include <code>MinimumReservePrice</code>.
      * - minOccurs: 0
@@ -218,8 +219,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The SellerContactDetailsEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether this category supports seller-level contact information for Classified Ad listings. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the
-     * site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>SellerContactDetailsEnabled</code>.
+     * - documentation: Indicates whether this category supports seller-level contact information for Classified Ad listings. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or
+     * the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>SellerContactDetailsEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -227,7 +228,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The TransactionConfirmationRequestEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the Transaction Confirmation Request feature is supported for this category. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
+     * - documentation: Indicates whether the Transaction Confirmation Request feature is supported for this category. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
      * default.
      * - minOccurs: 0
      * @var bool
@@ -260,7 +261,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ClassifiedAdPaymentMethodEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the payment method should be displayed to the user for Classified Ad format listings. Even if enabled, checkout may or may not be enabled. <br><br> Only returned when this value (or this category's setting)
+     * - documentation: Indicates whether the payment method should be displayed to the user for Classified Ad format listings. Even if enabled, checkout may or may not be enabled. <br/><br/> Only returned when this value (or this category's setting)
      * overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>ClassifiedAdPaymentMethodEnabled</code>.
      * - minOccurs: 0
@@ -270,8 +271,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ClassifiedAdShippingMethodEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates if shipping options are available for Classified Ad listings in the category. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default.
-     * Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ClassifiedAdShippingMethodEnabled</code>.
+     * - documentation: Indicates if shipping options are available for Classified Ad listings in the category. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
+     * default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ClassifiedAdShippingMethodEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -279,7 +280,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ClassifiedAdBestOfferEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates if Best offer is enabled for Classified Ad listings for this category. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
+     * - documentation: Indicates if Best offer is enabled for Classified Ad listings for this category. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
      * not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ClassifiedAdBestOfferEnabled</code>.
      * - minOccurs: 0
      * @var string
@@ -288,7 +289,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ClassifiedAdCounterOfferEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether counter offers are allowed in Classified Ad listings for this category. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
+     * - documentation: Indicates whether counter offers are allowed in Classified Ad listings for this category. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
      * default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ClassifiedAdCounterOfferEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -297,8 +298,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ClassifiedAdAutoDeclineEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether automatic decline for best offers for Classified Ad listings is enabled for this category. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent
-     * or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ClassifiedAdAutoDeclineEnabled</code>.
+     * - documentation: Indicates whether automatic decline for best offers for Classified Ad listings is enabled for this category. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's
+     * parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ClassifiedAdAutoDeclineEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -306,8 +307,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ClassifiedAdContactByPhoneEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the telephone as a contact method for Classified Ad listings. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the
-     * site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ClassifiedAdContactByPhoneEnabled</code>.
+     * - documentation: Indicates whether the category supports the telephone as a contact method for Classified Ad listings. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or
+     * the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ClassifiedAdContactByPhoneEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -315,7 +316,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ClassifiedAdContactByEmailEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports email as a contact method for Classified Ad listings. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
+     * - documentation: Indicates whether the category supports email as a contact method for Classified Ad listings. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
      * default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ClassifiedAdContactByEmailEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -324,7 +325,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The SafePaymentRequired
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether listings in this category need to have a safe payment method. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
+     * - documentation: Indicates whether listings in this category need to have a safe payment method. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
      * not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>SafePaymentRequired</code>.
      * - minOccurs: 0
      * @var bool
@@ -334,7 +335,7 @@ class CategoryFeatureType extends AbstractStructBase
      * The ClassifiedAdPayPerLeadEnabled
      * Meta information extracted from the WSDL
      * - documentation: Indicates if pay-per-lead listings are allowed for this category. Pay-per-lead listings can be applicable if the value of <b>ListingType</b> is <code>LeadGeneration</code> and the value of <b>ListingSubtype</b> is
-     * <code>ClassifiedAd</code>. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default.
+     * <code>ClassifiedAd</code>. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default.
      * - minOccurs: 0
      * @var bool
      */
@@ -342,7 +343,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ItemSpecificsEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the use of Item Specifics in listings. If enabled, sellers can use the <b>Item.ItemSpecifics</b> node in Add/Revise/Relist calls to specify Item Specific name-value pairs. <br><br> Only
+     * - documentation: Indicates whether the category supports the use of Item Specifics in listings. If enabled, sellers can use the <b>Item.ItemSpecifics</b> node in Add/Revise/Relist calls to specify Item Specific name-value pairs. <br/><br/> Only
      * returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call
      * request, and one of those values does not include <code>ItemSpecificsEnabled</code>.
      * - minOccurs: 0
@@ -353,8 +354,8 @@ class CategoryFeatureType extends AbstractStructBase
      * The PaisaPayFullEscrowEnabled
      * Meta information extracted from the WSDL
      * - documentation: <span class="tablenote"><b>Note:</b> This field is deprecated since it is only applicable to the eBay India site, and this marketplace is no longer available.</span> Indicates whether the category supports the
-     * <code>PaisaPayEscrow</code> payment method. This feature is only applicable to the India site. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
-     * be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>PaisaPayFullEscrowEnabled</code>.
+     * <code>PaisaPayEscrow</code> payment method. This feature is only applicable to the India site. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
+     * not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>PaisaPayFullEscrowEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -362,8 +363,9 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The BrandMPNIdentifierEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the capability to identify a product using the brand/manufacturer part number combination. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from
-     * the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>BrandMPNIdentifierEnabled</code>.
+     * - documentation: Indicates whether the category supports the capability to identify a product using the brand/manufacturer part number combination. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited
+     * from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * <code>BrandMPNIdentifierEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -371,8 +373,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ClassifiedAdAutoAcceptEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the Best Offer Automatic Accept feature for Classified Ad listings. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent
-     * or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ClassifiedAdAutoAcceptEnabled</code>.
+     * - documentation: Indicates whether the category supports the Best Offer Automatic Accept feature for Classified Ad listings. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's
+     * parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ClassifiedAdAutoAcceptEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -380,7 +382,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The BestOfferAutoAcceptEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports the Best Offer Automatic Accept feature for listings. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
+     * - documentation: Indicates whether the category supports the Best Offer Automatic Accept feature for listings. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
      * default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>BestOfferAutoAcceptEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -389,7 +391,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The CrossBorderTradeNorthAmericaEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports specifying that listings be displayed in the default search results of North America sites (US and Canada (English). <br><br> Only returned when this value (or this category's setting)
+     * - documentation: Indicates whether the category supports specifying that listings be displayed in the default search results of North America sites (US and Canada (English). <br/><br/> Only returned when this value (or this category's setting)
      * overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>CrossBorderTradeEnabled</code>.
      * - minOccurs: 0
@@ -399,7 +401,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The CrossBorderTradeGBEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports specifying that listings be displayed in the default search results of the UK and Ireland sites. <br><br> Only returned when this value (or this category's setting) overrides the value
+     * - documentation: Indicates whether the category supports specifying that listings be displayed in the default search results of the UK and Ireland sites. <br/><br/> Only returned when this value (or this category's setting) overrides the value
      * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>CrossBorderTradeEnabled</code>.
      * - minOccurs: 0
@@ -409,8 +411,9 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The CrossBorderTradeAustraliaEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports specifying that listings be displayed in the default search results of the Australia site. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from
-     * the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>CrossBorderTradeEnabled</code>.
+     * - documentation: Indicates whether the category supports specifying that listings be displayed in the default search results of the Australia site. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited
+     * from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * <code>CrossBorderTradeEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -418,7 +421,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The PayPalBuyerProtectionEnabled
      * Meta information extracted from the WSDL
-     * - documentation: For the Australia site, if both <b>PayPalBuyerProtectionEnabled</b> and <b>BuyerGuaranteeEnabled</b> are returned, then buyer protection is allowed for this category. <br><br> Only returned when this value (or this category's
+     * - documentation: For the Australia site, if both <b>PayPalBuyerProtectionEnabled</b> and <b>BuyerGuaranteeEnabled</b> are returned, then buyer protection is allowed for this category. <br/><br/> Only returned when this value (or this category's
      * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
      * include <code>PayPalBuyerProtectionEnabled</code>.
      * - minOccurs: 0
@@ -428,7 +431,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The BuyerGuaranteeEnabled
      * Meta information extracted from the WSDL
-     * - documentation: For the Australia site, if both <b>PayPalBuyerProtectionEnabled</b> and <b>BuyerGuaranteeEnabled</b> are returned, then buyer protection is allowed for this category. <br><br> Only returned when this value (or this category's
+     * - documentation: For the Australia site, if both <b>PayPalBuyerProtectionEnabled</b> and <b>BuyerGuaranteeEnabled</b> are returned, then buyer protection is allowed for this category. <br/><br/> Only returned when this value (or this category's
      * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
      * include <code>PayPalBuyerProtectionEnabled</code>.
      * - minOccurs: 0
@@ -446,9 +449,9 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The GalleryFeaturedDurations
      * Meta information extracted from the WSDL
-     * - documentation: This field is returned if the Featured Gallery feature is supported for the category. The time unit that is returned in this field indicates how long a gallery will be featured on eBay. <br><br> Only returned when this value (or this
-     * category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values
-     * does not include <code>GalleryFeaturedDurations</code>.
+     * - documentation: This field is returned if the Featured Gallery feature is supported for the category. The time unit that is returned in this field indicates how long a gallery will be featured on eBay. <br/><br/> Only returned when this value (or
+     * this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those
+     * values does not include <code>GalleryFeaturedDurations</code>.
      * - minOccurs: 0
      * @var \StructType\ListingEnhancementDurationReferenceType
      */
@@ -456,7 +459,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The PayPalRequired
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category requires PayPal as a payment method. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be
+     * - documentation: Indicates whether the category requires PayPal as a payment method. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be
      * returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>PayPalRequired</code>.
      * - minOccurs: 0
      * @var bool
@@ -465,7 +468,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProAdFormatEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Specifies whether this category allows Classified Ad listings on eBay Motors. This element is applicable for eBay Motors Pro users. <br><br> Only returned when this value (or this category's setting) overrides the value inherited
+     * - documentation: Specifies whether this category allows Classified Ad listings on eBay Motors. This element is applicable for eBay Motors Pro users. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited
      * from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>eBayMotorsProAdFormatEnabled</code>.
      * - minOccurs: 0
@@ -475,8 +478,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProContactByPhoneEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether this category supports including the telephone in the seller's contact information. This element is for eBay Motors Pro users. <br><br> Only returned when this value (or this category's setting) overrides the value
-     * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * - documentation: Indicates whether this category supports including the telephone in the seller's contact information. This element is for eBay Motors Pro users. <br/><br/> Only returned when this value (or this category's setting) overrides the
+     * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>eBayMotorsProContactByPhoneEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -485,7 +488,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProPhoneCount
      * Meta information extracted from the WSDL
-     * - documentation: Indicates which telephone option is enabled for the seller's contact information. This element is for eBay Motors Pro users. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the
+     * - documentation: Indicates which telephone option is enabled for the seller's contact information. This element is for eBay Motors Pro users. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the
      * category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>eBayMotorsProContactByPhoneEnabled</code>.
      * - minOccurs: 0
@@ -495,7 +498,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProContactByAddressEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether this category supports including the address in the seller's contact information. This element is for eBay Motors Pro users. <br><br> Only returned when this value (or this category's setting) overrides the value
+     * - documentation: Indicates whether this category supports including the address in the seller's contact information. This element is for eBay Motors Pro users. <br/><br/> Only returned when this value (or this category's setting) overrides the value
      * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>eBayMotorsProContactByAddressEnabled</code>.
      * - minOccurs: 0
@@ -505,7 +508,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProStreetCount
      * Meta information extracted from the WSDL
-     * - documentation: Indicates which address option is enabled for the seller's contact information. This element is for eBay Motors Pro users. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the
+     * - documentation: Indicates which address option is enabled for the seller's contact information. This element is for eBay Motors Pro users. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the
      * category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>eBayMotorsProContactByAddressEnabled</code>.
      * - minOccurs: 0
@@ -515,7 +518,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProCompanyNameEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether this category supports including the company name in the seller's contact information. This element is for eBay Motors Pro users. <br><br> Only returned when this value (or this category's setting) overrides the
+     * - documentation: Indicates whether this category supports including the company name in the seller's contact information. This element is for eBay Motors Pro users. <br/><br/> Only returned when this value (or this category's setting) overrides the
      * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>eBayMotorsProCompanyNameEnabled</code>.
      * - minOccurs: 0
@@ -525,7 +528,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProContactByEmailEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether this category supports including an email address in the seller's contact information. This element is for eBay Motors Pro users. <br><br> Only returned when this value (or this category's setting) overrides the
+     * - documentation: Indicates whether this category supports including an email address in the seller's contact information. This element is for eBay Motors Pro users. <br/><br/> Only returned when this value (or this category's setting) overrides the
      * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>eBayMotorsProContactByEmailEnabled</code>.
      * - minOccurs: 0
@@ -535,7 +538,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProBestOfferEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates if Best Offer is supported for eBay Motors Classified Ad listings in this category. This element is for eBay Motors Pro users. <br><br> Only returned when this value (or this category's setting) overrides the value
+     * - documentation: Indicates if Best Offer is supported for eBay Motors Classified Ad listings in this category. This element is for eBay Motors Pro users. <br/><br/> Only returned when this value (or this category's setting) overrides the value
      * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>eBayMotorsProBestOfferEnabled</code>.
      * - minOccurs: 0
@@ -545,7 +548,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProAutoAcceptEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Specifies whether this category allows auto-accept for Best Offers for eBay Motors Classified Ad listings. This element is for eBay Motors Pro users. <br><br> Only returned when this value (or this category's setting) overrides the
+     * - documentation: Specifies whether this category allows auto-accept for Best Offers for eBay Motors Classified Ad listings. This element is for eBay Motors Pro users. <br/><br/> Only returned when this value (or this category's setting) overrides the
      * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>eBayMotorsProAutoAcceptEnabled</code>.
      * - minOccurs: 0
@@ -555,8 +558,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProAutoDeclineEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Specifies whether this category allows auto-decline for Best Offers for eBay Motors Classified Ad listings. This element is for eBay Motors Pro users. <br><br> Only returned when this value (or this category's setting) overrides the
-     * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * - documentation: Specifies whether this category allows auto-decline for Best Offers for eBay Motors Classified Ad listings. This element is for eBay Motors Pro users. <br/><br/> Only returned when this value (or this category's setting) overrides
+     * the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>eBayMotorsProAutoDeclineEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -565,9 +568,9 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProPaymentMethodCheckOutEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates if the payment method should be displayed to the user for this category in an eBay Motors Classified Ad listing. Even if enabled, checkout may or may not be enabled. This element is for eBay Motors Pro users. <br><br> Only
-     * returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call
-     * request, and one of those values does not include <code>eBayMotorsProPaymentMethodCheckOutEnabled</code>.
+     * - documentation: Indicates if the payment method should be displayed to the user for this category in an eBay Motors Classified Ad listing. Even if enabled, checkout may or may not be enabled. This element is for eBay Motors Pro users. <br/><br/>
+     * Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the
+     * call request, and one of those values does not include <code>eBayMotorsProPaymentMethodCheckOutEnabled</code>.
      * - minOccurs: 0
      * @var string
      */
@@ -575,7 +578,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProShippingMethodEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates if shipping options should be displayed to the user for this category in an eBay Motors Classified Ad listing. This element is for eBay Motors Pro users. <br><br> Only returned when this value (or this category's setting)
+     * - documentation: Indicates if shipping options should be displayed to the user for this category in an eBay Motors Classified Ad listing. This element is for eBay Motors Pro users. <br/><br/> Only returned when this value (or this category's setting)
      * overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>eBayMotorsProShippingMethodEnabled</code>.
      * - minOccurs: 0
@@ -585,7 +588,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The eBayMotorsProCounterOfferEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether counter offers are allowed on Best Offers for this category in an eBay Motors Classified Ad listing. This element is for eBay Motors Pro users. <br><br> Only returned when this value (or this category's setting)
+     * - documentation: Indicates whether counter offers are allowed on Best Offers for this category in an eBay Motors Classified Ad listing. This element is for eBay Motors Pro users. <br/><br/> Only returned when this value (or this category's setting)
      * overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>eBayMotorsProCounterOfferEnabled</code>.
      * - minOccurs: 0
@@ -596,7 +599,7 @@ class CategoryFeatureType extends AbstractStructBase
      * The eBayMotorsProSellerContactDetailsEnabled
      * Meta information extracted from the WSDL
      * - documentation: Specifies whether this category allows seller-level contact information for eBay Motors Classified Ad listings. A value of true means seller-level contact information is available for Classified Ad listings. This element is for eBay
-     * Motors Pro users. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a
+     * Motors Pro users. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a
      * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>eBayMotorsProSellerContactDetailsEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -605,8 +608,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketAdFormatEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Specifies whether this category supports Motor Local Market Classified Ad listings. This element is for Local Market dealers. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the
-     * category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>LocalMarketAdFormatEnabled</code>.
+     * - documentation: Specifies whether this category supports Motor Local Market Classified Ad listings. This element is for Local Market dealers. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from
+     * the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>LocalMarketAdFormatEnabled</code>.
      * - minOccurs: 0
      * @var string
      */
@@ -614,7 +617,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketContactByPhoneEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether this category supports including the telephone in the seller's contact information. This element is for Local Market dealers. <br><br> Only returned when this value (or this category's setting) overrides the value
+     * - documentation: Indicates whether this category supports including the telephone in the seller's contact information. This element is for Local Market dealers. <br/><br/> Only returned when this value (or this category's setting) overrides the value
      * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>LocalMarketContactByPhoneEnabled</code>.
      * - minOccurs: 0
@@ -624,7 +627,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketPhoneCount
      * Meta information extracted from the WSDL
-     * - documentation: Indicates which telephone option is enabled for the seller's contact information. This element is for Local Market dealers. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the
+     * - documentation: Indicates which telephone option is enabled for the seller's contact information. This element is for Local Market dealers. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the
      * category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>LocalMarketContactByPhoneEnabled</code>.
      * - minOccurs: 0
@@ -634,7 +637,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketContactByAddressEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether this category supports including the address in the seller's contact information. This element is for Local Market dealers. <br><br> Only returned when this value (or this category's setting) overrides the value
+     * - documentation: Indicates whether this category supports including the address in the seller's contact information. This element is for Local Market dealers. <br/><br/> Only returned when this value (or this category's setting) overrides the value
      * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>LocalMarketContactByAddressEnabled</code>.
      * - minOccurs: 0
@@ -644,7 +647,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketStreetCount
      * Meta information extracted from the WSDL
-     * - documentation: Indicates which address option is enabled for the seller's contact information. This element is for Local Market dealers. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the
+     * - documentation: Indicates which address option is enabled for the seller's contact information. This element is for Local Market dealers. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the
      * category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>LocalMarketContactByAddressEnabled</code>.
      * - minOccurs: 0
@@ -654,7 +657,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketCompanyNameEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports including a company name in the seller's contact information. This element is for Local Market dealers. <br><br> Only returned when this value (or this category's setting) overrides the value
+     * - documentation: Indicates whether the category supports including a company name in the seller's contact information. This element is for Local Market dealers. <br/><br/> Only returned when this value (or this category's setting) overrides the value
      * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>LocalMarketCompanyNameEnabled</code>.
      * - minOccurs: 0
@@ -664,8 +667,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketContactByEmailEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports including an email address in the seller's contact information. This element is for Local Market dealers. <br><br> Only returned when this value (or this category's setting) overrides the value
-     * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * - documentation: Indicates whether the category supports including an email address in the seller's contact information. This element is for Local Market dealers. <br/><br/> Only returned when this value (or this category's setting) overrides the
+     * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>LocalMarketContactByEmailEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -674,8 +677,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketBestOfferEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates if Best Offer is enabled/required for Motors Local Market Classified Ad listings in this category. This element is for Local Market dealers. <br><br> Only returned when this value (or this category's setting) overrides the
-     * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * - documentation: Indicates if Best Offer is enabled/required for Motors Local Market Classified Ad listings in this category. This element is for Local Market dealers. <br/><br/> Only returned when this value (or this category's setting) overrides
+     * the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>LocalMarketBestOfferEnabled</code>.
      * - minOccurs: 0
      * @var string
@@ -684,8 +687,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketAutoAcceptEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Specifies whether this category supports auto-accept for Best Offers for Motors Local Market Classified Ads. This element is for Local Market dealers. <br><br> Only returned when this value (or this category's setting) overrides the
-     * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * - documentation: Specifies whether this category supports auto-accept for Best Offers for Motors Local Market Classified Ads. This element is for Local Market dealers. <br/><br/> Only returned when this value (or this category's setting) overrides
+     * the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>LocalMarketAutoAcceptEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -694,8 +697,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketAutoDeclineEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Specifies whether this category supports auto-decline for Best Offers for Motors Local Market Classified Ads. This element is for Local Market dealers. <br><br> Only returned when this value (or this category's setting) overrides the
-     * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * - documentation: Specifies whether this category supports auto-decline for Best Offers for Motors Local Market Classified Ads. This element is for Local Market dealers. <br/><br/> Only returned when this value (or this category's setting) overrides
+     * the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>LocalMarketAutoDeclineEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -705,8 +708,8 @@ class CategoryFeatureType extends AbstractStructBase
      * The LocalMarketPaymentMethodCheckOutEnabled
      * Meta information extracted from the WSDL
      * - documentation: Indicates if the payment method should be displayed to the user for this category in an Motors Local Market Classified Ad listing. Even if enabled, checkout may or may not be enabled. This element is for Local Market dealers.
-     * <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used
-     * in the call request, and one of those values does not include <code>LocalMarketPaymentMethodCheckOutEnabled</code>.
+     * <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are
+     * used in the call request, and one of those values does not include <code>LocalMarketPaymentMethodCheckOutEnabled</code>.
      * - minOccurs: 0
      * @var string
      */
@@ -714,9 +717,9 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketShippingMethodEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates if shipping methods should be displayed to the user for this category in an Motors Local Market Classified Ad listing. Even if enabled, checkout may or may not be enabled. This element is for Local market dealers. <br><br>
-     * Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the
-     * call request, and one of those values does not include <code>LocalMarketShippingMethodEnabled</code>.
+     * - documentation: Indicates if shipping methods should be displayed to the user for this category in an Motors Local Market Classified Ad listing. Even if enabled, checkout may or may not be enabled. This element is for Local market dealers.
+     * <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are
+     * used in the call request, and one of those values does not include <code>LocalMarketShippingMethodEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -724,7 +727,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketCounterOfferEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether counter offers are allowed on Best Offers for this category for Motors Local Market Classified Ad listings. This element is for Local market dealers. <br><br> Only returned when this value (or this category's
+     * - documentation: Indicates whether counter offers are allowed on Best Offers for this category for Motors Local Market Classified Ad listings. This element is for Local market dealers. <br/><br/> Only returned when this value (or this category's
      * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
      * include <code>LocalMarketCounterOfferEnabled</code>.
      * - minOccurs: 0
@@ -734,9 +737,9 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The LocalMarketSellerContactDetailsEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Specifies the whether this category allows seller-level contact information for Motors Local Market Classified Ad listings. This element is for Local Market dealers. <br><br> Only returned when this value (or this category's setting)
-     * overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
-     * <code>LocalMarketSellerContactDetailsEnabled</code>.
+     * - documentation: Specifies the whether this category allows seller-level contact information for Motors Local Market Classified Ad listings. This element is for Local Market dealers. <br/><br/> Only returned when this value (or this category's
+     * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
+     * include <code>LocalMarketSellerContactDetailsEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -744,8 +747,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ClassifiedAdPhoneCount
      * Meta information extracted from the WSDL
-     * - documentation: Indicates which telephone option is included in the seller's contact information. This element is for For Sale By Owner listings. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from
-     * the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * - documentation: Indicates which telephone option is included in the seller's contact information. This element is for For Sale By Owner listings. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited
+     * from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>ClassifiedAdContactByPhoneEnabled</code>.
      * - minOccurs: 0
      * @var int
@@ -754,7 +757,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ClassifiedAdContactByAddressEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether this category supports including an address in the seller's contact information. This element is for For Sale By Owner listings. <br><br> Only returned when this value (or this category's setting) overrides the
+     * - documentation: Indicates whether this category supports including an address in the seller's contact information. This element is for For Sale By Owner listings. <br/><br/> Only returned when this value (or this category's setting) overrides the
      * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>ClassifiedAdContactByAddressEnabled</code>.
      * - minOccurs: 0
@@ -764,7 +767,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ClassifiedAdStreetCount
      * Meta information extracted from the WSDL
-     * - documentation: Indicates which address option is included in the seller's contact information. This element is for For Sale By Owner listings. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from
+     * - documentation: Indicates which address option is included in the seller's contact information. This element is for For Sale By Owner listings. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from
      * the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>ClassifiedAdContactByAddressEnabled</code>.
      * - minOccurs: 0
@@ -774,8 +777,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ClassifiedAdCompanyNameEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether this category supports including a company name in the seller's contact information. This element is for For Sale By Owner listings. <br><br> Only returned when this value (or this category's setting) overrides the
-     * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * - documentation: Indicates whether this category supports including a company name in the seller's contact information. This element is for For Sale By Owner listings. <br/><br/> Only returned when this value (or this category's setting) overrides
+     * the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>ClassifiedAdCompanyNameEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -784,8 +787,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The SpecialitySubscription
      * Meta information extracted from the WSDL
-     * - documentation: The value in this field indicates whether the category supports Motors Local Market listings if the seller has a Specialty vehicle subscription. <br><br> Only returned when this value (or this category's setting) overrides the value
-     * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * - documentation: The value in this field indicates whether the category supports Motors Local Market listings if the seller has a Specialty vehicle subscription. <br/><br/> Only returned when this value (or this category's setting) overrides the
+     * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>SpecialitySubscription</code>.
      * - minOccurs: 0
      * @var string
@@ -794,7 +797,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The RegularSubscription
      * Meta information extracted from the WSDL
-     * - documentation: The value in this field indicates whether the category supports Motors Local Market listings if the seller has a Regular vehicle subscription. <br><br> Only returned when this value (or this category's setting) overrides the value
+     * - documentation: The value in this field indicates whether the category supports Motors Local Market listings if the seller has a Regular vehicle subscription. <br/><br/> Only returned when this value (or this category's setting) overrides the value
      * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>RegularSubscription</code>.
      * - minOccurs: 0
@@ -804,7 +807,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The PremiumSubscription
      * Meta information extracted from the WSDL
-     * - documentation: The value in this field indicates whether the category supports Motors Local Market listings if the seller has a Premium vehicle subscription. <br><br> Only returned when this value (or this category's setting) overrides the value
+     * - documentation: The value in this field indicates whether the category supports Motors Local Market listings if the seller has a Premium vehicle subscription. <br/><br/> Only returned when this value (or this category's setting) overrides the value
      * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>PremiumSubscription</code>.
      * - minOccurs: 0
@@ -814,8 +817,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The NonSubscription
      * Meta information extracted from the WSDL
-     * - documentation: The value in this field indicates whether the category supports Motors Local Market listings if the seller does not have a vehicle subscription. <br><br> Only returned when this value (or this category's setting) overrides the value
-     * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
+     * - documentation: The value in this field indicates whether the category supports Motors Local Market listings if the seller does not have a vehicle subscription. <br/><br/> Only returned when this value (or this category's setting) overrides the
+     * value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>NonSubscription</code>.
      * - minOccurs: 0
      * @var string
@@ -825,7 +828,7 @@ class CategoryFeatureType extends AbstractStructBase
      * The INEscrowWorkflowTimeline
      * Meta information extracted from the WSDL
      * - documentation: <span class="tablenote"><b>Note:</b> This field is deprecated since it is only applicable to the eBay India site, and this marketplace is no longer available.</span> Indicates the escrow workflow version that applies to the category
-     * on the India site: Default Workflow, Workflow A or Workflow B. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a
+     * on the India site: Default Workflow, Workflow A or Workflow B. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a
      * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>INEscrowWorkflowTimeline</code>.
      * - minOccurs: 0
      * @var string
@@ -842,7 +845,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ReviseQuantityAllowed
      * Meta information extracted from the WSDL
-     * - documentation: Indicates if the category allows the seller to revise the quantity of a multi-quantity, active listing. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or
+     * - documentation: Indicates if the category allows the seller to revise the quantity of a multi-quantity, active listing. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or
      * the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ReviseQuantityAllowed</code>.
      * - minOccurs: 0
      * @var bool
@@ -851,7 +854,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The RevisePriceAllowed
      * Meta information extracted from the WSDL
-     * - documentation: Indicates if the category allows the seller to revise the price of a fixed-price listing. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
+     * - documentation: Indicates if the category allows the seller to revise the price of a fixed-price listing. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
      * default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>RevisePriceAllowed</code>.
      * - minOccurs: 0
      * @var bool
@@ -861,7 +864,7 @@ class CategoryFeatureType extends AbstractStructBase
      * The StoreOwnerExtendedListingDurationsEnabled
      * Meta information extracted from the WSDL
      * - documentation: Indicates if an eBay Store owner gets extended listing durations in a given category. When the value of this element is true, it means the listing duration values defined in <b>StoreOwnerExtendedListingDurations</b> are applicable to
-     * fixed-price listings in a given category. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a
+     * fixed-price listings in a given category. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a
      * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>StoreOwnerExtendedListingDurationsEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -871,8 +874,8 @@ class CategoryFeatureType extends AbstractStructBase
      * The StoreOwnerExtendedListingDurations
      * Meta information extracted from the WSDL
      * - documentation: Provides additional listings durations that are available to eBay Store owners. The extended listing durations provided here in this element should be merged in with the baseline listing durations provided in the
-     * <b>ListingDurations</b> element. Applies to fixed-price Listings. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a
-     * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>StoreOwnerExtendedListingDurations</code>.
+     * <b>ListingDurations</b> element. Applies to fixed-price Listings. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more
+     * <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>StoreOwnerExtendedListingDurations</code>.
      * - minOccurs: 0
      * @var \StructType\StoreOwnerExtendedListingDurationsType
      */
@@ -880,9 +883,9 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ReturnPolicyEnabled
      * Meta information extracted from the WSDL
-     * - documentation: <b>For most sites:</b> If true, listings in this category require a return policy. <br> <br> <b>For eBay Australia (AU) and US eBay Motors Parts and Accessories:</b> If true, the category supports but does not require a return
-     * policy. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values
-     * are used in the call request, and one of those values does not include <code>ReturnPolicyEnabled</code>.
+     * - documentation: <b>For most sites:</b> If true, listings in this category require a return policy. <br/> <br/> <b>For eBay Australia (AU) and US eBay Motors Parts and Accessories:</b> If true, the category supports but does not require a return
+     * policy. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a>
+     * values are used in the call request, and one of those values does not include <code>ReturnPolicyEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -890,11 +893,11 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The HandlingTimeEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates if a seller's stated handling time is enabled for a category. A handling time is generally needed for items that are shipped to the buyer, but not necessarily applicable to freight shipping or local pickup. <br> <br> The
-     * handling time is the maximum number of business days the seller commits to for preparing an item to be shipped after receiving a cleared payment. The seller's handling time does not include the shipping time (the carrier's transit time). <br> For a
-     * list of the handling time values allowed for each site, use <code>DispatchTimeMaxDetails</code> in <b>GeteBayDetails</b>.<br> <br> <span class="tablenote"><b>Note:</b> Although the field name ends with "Enabled", a value of true means that a handling
-     * time is NOT supported, and value of false means that a handling time IS supported.</span><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be
-     * returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>HandlingTimeEnabled</code>.
+     * - documentation: Indicates if a seller's stated handling time is enabled for a category. A handling time is generally needed for items that are shipped to the buyer, but not necessarily applicable to freight shipping or local pickup. <br/> <br/> The
+     * handling time is the maximum number of business days the seller commits to for preparing an item to be shipped after receiving a cleared payment. The seller's handling time does not include the shipping time (the carrier's transit time). <br/> For a
+     * list of the handling time values allowed for each site, use <code>DispatchTimeMaxDetails</code> in <b>GeteBayDetails</b>.<br/> <br/> <span class="tablenote"><b>Note:</b> Although the field name ends with "Enabled", a value of true means that a
+     * handling time is NOT supported, and value of false means that a handling time IS supported.</span><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
+     * be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>HandlingTimeEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -902,7 +905,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The MaxFlatShippingCost
      * Meta information extracted from the WSDL
-     * - documentation: The maximum cost the seller can charge for the first domestic flat-rate shipping service. Mutually exclusive with the <b>Group</b><code>N</code><b>MaxFlatShippingCost</b> elements. <br><br> Only returned when this value (or this
+     * - documentation: The maximum cost the seller can charge for the first domestic flat-rate shipping service. Mutually exclusive with the <b>Group</b><code>N</code><b>MaxFlatShippingCost</b> elements. <br/><br/> Only returned when this value (or this
      * category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values
      * does not include <code>MaxFlatShippingCost</code>.
      * - minOccurs: 0
@@ -912,8 +915,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The Group1MaxFlatShippingCost
      * Meta information extracted from the WSDL
-     * - documentation: Returns the applicable max cap per shipping cost for shipping service group1. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
-     * be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>Group1MaxFlatShippingCost</code>.
+     * - documentation: Returns the applicable max cap per shipping cost for shipping service group1. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
+     * not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>Group1MaxFlatShippingCost</code>.
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -921,8 +924,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The Group2MaxFlatShippingCost
      * Meta information extracted from the WSDL
-     * - documentation: Returns the applicable max cap per shipping cost for shipping service group2. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
-     * be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>Group2MaxFlatShippingCost</code>.
+     * - documentation: Returns the applicable max cap per shipping cost for shipping service group2. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
+     * not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>Group2MaxFlatShippingCost</code>.
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -930,8 +933,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The Group3MaxFlatShippingCost
      * Meta information extracted from the WSDL
-     * - documentation: Returns the applicable max cap per shipping cost for shipping service group3. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
-     * be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>Group3MaxFlatShippingCost</code>.
+     * - documentation: Returns the applicable max cap per shipping cost for shipping service group3. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
+     * not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>Group3MaxFlatShippingCost</code>.
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -939,7 +942,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The PaymentMethod
      * Meta information extracted from the WSDL
-     * - documentation: Indicates the acceptable payment methods that can be used when listing an item for sale in the corresponding category. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the
+     * - documentation: Indicates the acceptable payment methods that can be used when listing an item for sale in the corresponding category. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the
      * category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>PaymentMethods</code>.
      * - maxOccurs: unbounded
      * - minOccurs: 0
@@ -949,10 +952,10 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The VariationsEnabled
      * Meta information extracted from the WSDL
-     * - documentation: If <code>true</code>, you can pass in <b>Item.Variations</b> in an Add/Revise/Relist fixed-price item call when you list in this category.<br> <br> Multi-variation listings contain items that are logically the same product, but that
-     * vary in their manufacturing details or packaging. For example, a particular brand and style of shirt could be available in different sizes and colors, such as "large blue" and "medium black" variations. <br><br> Only returned when this value (or this
-     * category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values
-     * does not include <code>VariationsEnabled</code>.
+     * - documentation: If <code>true</code>, you can pass in <b>Item.Variations</b> in an Add/Revise/Relist fixed-price item call when you list in this category.<br/> <br/> Multi-variation listings contain items that are logically the same product, but
+     * that vary in their manufacturing details or packaging. For example, a particular brand and style of shirt could be available in different sizes and colors, such as "large blue" and "medium black" variations. <br/><br/> Only returned when this value
+     * (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those
+     * values does not include <code>VariationsEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -968,8 +971,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The FreeGalleryPlusEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports free, automatic upgrades for Gallery Plus, which enhances pictures in search results. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the
-     * category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>FreeGalleryPlusEnabled</code>.
+     * - documentation: Indicates whether the category supports free, automatic upgrades for Gallery Plus, which enhances pictures in search results. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from
+     * the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>FreeGalleryPlusEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -977,7 +980,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The FreePicturePackEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports free, automatic upgrades for Picture Pack, a discount package that includes super-sizing of pictures. <br><br> Only returned when this value (or this category's setting) overrides the value
+     * - documentation: Indicates whether the category supports free, automatic upgrades for Picture Pack, a discount package that includes super-sizing of pictures. <br/><br/> Only returned when this value (or this category's setting) overrides the value
      * inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
      * <code>FreePicturePackEnabled</code>.
      * - minOccurs: 0
@@ -988,7 +991,7 @@ class CategoryFeatureType extends AbstractStructBase
      * The ItemCompatibilityEnabled
      * Meta information extracted from the WSDL
      * - documentation: Indicates whether the category supports parts compatibility by application (<b>ByApplication</b>), by specification (<b>BySpecification</b>), or not at all (<b>Disabled</b>). Categories cannot support both types of parts
-     * compatibility. <br><br> Parts Compatibility is supported in limited Parts & Accessories categories for the eBay Motors (US) site (site ID 100) only. <br><br> Only returned when this value (or this category's setting) overrides the value inherited
+     * compatibility. <br/><br/> Parts Compatibility is supported in limited Parts & Accessories categories for the eBay Motors (US) site (site ID 100) only. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited
      * from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>CompatibilityEnabled</code>.
      * - minOccurs: 0
      * @var string
@@ -997,9 +1000,9 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The MinItemCompatibility
      * Meta information extracted from the WSDL
-     * - documentation: This field specifies the minimum number of required compatible applications for listing items. A value of "0" indicates it is not mandatory to specify parts compatibilities when listing. <br><br> This applies to categories that are
+     * - documentation: This field specifies the minimum number of required compatible applications for listing items. A value of "0" indicates it is not mandatory to specify parts compatibilities when listing. <br/><br/> This applies to categories that are
      * enabled for compatibility by application only. Parts compatiblity by application can be specified by listing with a catalog product that supports parts compatibility or by specifying parts compatibility by application manually (<b class="con">
-     * Item.ItemCompatibilityList</b>). <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a
+     * Item.ItemCompatibilityList</b>). <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a
      * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>MinCompatibleApplications</code>.
      * - minOccurs: 0
      * @var int
@@ -1009,7 +1012,7 @@ class CategoryFeatureType extends AbstractStructBase
      * The MaxItemCompatibility
      * Meta information extracted from the WSDL
      * - documentation: This field specifies the maximum number of compatible applications allowed per item when adding or revising items. This is relevant for specifying parts compatibility by application manually (<b class="con">
-     * Item.ItemCompatibilityList</b>) only. <br><br> Applicable for the US site only. <br><br> For DE, UK, and AU sites, this field returns the same value as <b>MaxGranularFitmentCount</b>. <br><br> Only returned when this value (or this category's
+     * Item.ItemCompatibilityList</b>) only. <br/><br/> Applicable for the US site only. <br/><br/> For DE, UK, and AU sites, this field returns the same value as <b>MaxGranularFitmentCount</b>. <br/><br/> Only returned when this value (or this category's
      * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
      * include <code>MaxCompatibleApplications</code>.
      * - minOccurs: 0
@@ -1019,9 +1022,9 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ConditionEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category supports (or requires) using <b>Item.ConditionID</b> to specify an item's condition in Add/Revise/Relist calls. See the <b>ConditionValues</b> type for a list of valid condition ID values. <br><br> Only
-     * returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call
-     * request, and one of those values does not include <code>ConditionEnabled</code>.
+     * - documentation: Indicates whether the category supports, requires, or doesn't support the use item condition for an item listing. For categories that require or support the use of item condition, see the <b>ConditionValues</b> and/or
+     * <b>SpecialFeatures</b> containers for a list of valid item conditions (display names and ID values). <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default.
+     * Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ConditionEnabled</code>.
      * - minOccurs: 0
      * @var string
      */
@@ -1029,22 +1032,34 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ConditionValues
      * Meta information extracted from the WSDL
-     * - documentation: Specifies the supported item conditions for the category, plus related policies and other details. <br><br> Only returned <b>ConditionEnabled</b> value is <code>Enabled</code> or <code>Required</code> and when any of the condition
-     * values are different from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
-     * <code>ConditionValues</code>.
+     * - documentation: This container specifies all of the item conditions that are supported for the corresponding category. The display name of the item condiation and the ID associated with the description are both shown. <br/><br/> This container will
+     * not be returned for any eBay categories that don't support the use of an item condition value. To see which categories require, support, or don't support the use of item conditions, you can include a <b>FeatureID</b> value of
+     * <code>ConditionEnabled</code>. Any eBay category that does not support the use of an item condition value will return a <b>ConditionEnabled</b> value of <code>Disabled</code>. <br/><br/> This container will also not be returned if one or more <a
+     * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ConditionValues</code>. <br/> <br/> <span class="tablenote"><b>Note:</b> The <b>Certified Refurbished</b> condition
+     * (Condition ID 2000) is now returned in the <b>SpecialFeatures</b> container. A seller must be pre-qualified by eBay to list items with the <b>Certified Refurbished</b> condition.</span>
      * - minOccurs: 0
      * @var \StructType\ConditionValuesType
      */
     public $ConditionValues;
     /**
+     * The SpecialFeatures
+     * Meta information extracted from the WSDL
+     * - documentation: This container is only returned if the corresponding category supports a special item condition such as <b>Certified Refurbished</b> condition (Condition ID 2000). A seller must be pre-qualified by eBay to list items with the
+     * <b>Certified Refurbished</b> condition. All other item conditions supported by a category will be returned in the <b>ConditionValues</b> container instead. <br/><br/> Neither the <b>ConditionValues</b> or the <b>SpecialFeatures</b> containers will be
+     * returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ConditionValues</code>.
+     * - minOccurs: 0
+     * @var \StructType\ConditionValuesType
+     */
+    public $SpecialFeatures;
+    /**
      * The ValueCategory
      * Meta information extracted from the WSDL
      * - documentation: Some eBay sites may select a few categories and designate them as "value categories". These are typically selected from categories where buyers can find great deals. (Not all categories with great deals are designated as value
-     * categories.) This designation can change over time. <br> <br> While a category is designated as a value category (i.e., when <b>ValueCategory</b> is <code>true</code>), it is subject to the following rule: Items in value categories can only be listed
-     * in one category.<br> <br> For example, if you attempt to list in two categories and the primary category or secondary category is a value category, then eBay drops the secondary category and lists the item in the primary category only. Similarly, if
-     * you attempt to add a secondary category to an existing listing, or you change the category for an existing listing, and if the primary or secondary category is a value category, then eBay drops the secondary category. <br><br> Only returned when this
-     * value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of
-     * those values does not include <code>ValueCategory</code>.
+     * categories.) This designation can change over time. <br/> <br/> While a category is designated as a value category (i.e., when <b>ValueCategory</b> is <code>true</code>), it is subject to the following rule: Items in value categories can only be
+     * listed in one category.<br/> <br/> For example, if you attempt to list in two categories and the primary category or secondary category is a value category, then eBay drops the secondary category and lists the item in the primary category only.
+     * Similarly, if you attempt to add a secondary category to an existing listing, or you change the category for an existing listing, and if the primary or secondary category is a value category, then eBay drops the secondary category. <br/><br/> Only
+     * returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call
+     * request, and one of those values does not include <code>ValueCategory</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -1054,7 +1069,7 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: Indicates whether a category supports (or requires) the creation of a listing using an eBay Catalog product. To create a listing based on an eBay Catalog product, the seller passed in Global Trade Item Number (GTIN) or eBay Product
      * ID (ePID) value in an Add/Revise/Relist call and then eBay tries to match the product identifier to a product in the eBay Catalog. If a match is found, the listing picks up the details of the eBay Catalog product, including product title, product
-     * description, product aspects, primary eBay listing category ID, and links to any product stock photos. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default.
+     * description, product aspects, primary eBay listing category ID, and links to any product stock photos. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default.
      * Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ProductCreationEnabled</code>.
      * - minOccurs: 0
      * @var string
@@ -1064,10 +1079,10 @@ class CategoryFeatureType extends AbstractStructBase
      * The EANEnabled
      * Meta information extracted from the WSDL
      * - documentation: Indicates whether or not European Article Numbers (EANs) are supported/required when listing products in the category. A value of <code>Disabled</code> indicates that EANs cannot be used for the category, a value of
-     * <code>Enabled</code> indicates that EANs can be used for the category, and a value of <code>Required</code> indicates that an EAN is required when listing a product in this category. <br><br> Only returned when this value (or this category's setting)
-     * overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
-     * <code>EANEnabled</code>. <br> <br> <span class="tablenote"><b>Note:</b> It is recommended that sellers always use <b>GetCategoryFeatures</b> to see if an eBay category requires a Global Trade Item Number (GTIN) or a Brand/MPN combination. So, that
-     * means that they should look for <b>EANEnabled</b>, <b>ISBNEnabled</b>, <b>UPCEnabled</b>, and <b>BrandMPNIdentifierEnabled</b> at the category level in the <b>GetCategoryFeatures</b> response. </span>
+     * <code>Enabled</code> indicates that EANs can be used for the category, and a value of <code>Required</code> indicates that an EAN is required when listing a product in this category. <br/><br/> Only returned when this value (or this category's
+     * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
+     * include <code>EANEnabled</code>. <br/> <br/> <span class="tablenote"><b>Note:</b> It is recommended that sellers always use <b>GetCategoryFeatures</b> to see if an eBay category requires a Global Trade Item Number (GTIN) or a Brand/MPN combination.
+     * So, that means that they should look for <b>EANEnabled</b>, <b>ISBNEnabled</b>, <b>UPCEnabled</b>, and <b>BrandMPNIdentifierEnabled</b> at the category level in the <b>GetCategoryFeatures</b> response. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -1076,9 +1091,9 @@ class CategoryFeatureType extends AbstractStructBase
      * The ISBNEnabled
      * Meta information extracted from the WSDL
      * - documentation: Indicates whether or not International Standard Book Numbers (ISBNs) are supported/required when listing products in the category. A value of <code>Disabled</code> indicates that ISBNs cannot be used for the category, a value of
-     * <code>Enabled</code> indicates that ISBNs can be used for the category, and a value of <code>Required</code> indicates that an ISBN is required when listing a product in this category. <br><br> Only returned when this value (or this category's
+     * <code>Enabled</code> indicates that ISBNs can be used for the category, and a value of <code>Required</code> indicates that an ISBN is required when listing a product in this category. <br/><br/> Only returned when this value (or this category's
      * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
-     * include <code>ISBNEnabled</code>. <br> <br> <span class="tablenote"><b>Note:</b> It is recommended that sellers always use <b>GetCategoryFeatures</b> to see if an eBay category requires a Global Trade Item Number (GTIN) or a Brand/MPN combination.
+     * include <code>ISBNEnabled</code>. <br/> <br/> <span class="tablenote"><b>Note:</b> It is recommended that sellers always use <b>GetCategoryFeatures</b> to see if an eBay category requires a Global Trade Item Number (GTIN) or a Brand/MPN combination.
      * So, that means that they should look for <b>ISBNEnabled</b>, <b>EANEnabled</b>, <b>UPCEnabled</b>, and <b>BrandMPNIdentifierEnabled</b> at the category level in the <b>GetCategoryFeatures</b> response. </span>
      * - minOccurs: 0
      * @var string
@@ -1088,10 +1103,10 @@ class CategoryFeatureType extends AbstractStructBase
      * The UPCEnabled
      * Meta information extracted from the WSDL
      * - documentation: Indicates whether or not Universal Product Codes (UPCs) are supported/required when listing products in the category. A value of <code>Disabled</code> indicates that UPCs cannot be used for the category, a value of
-     * <code>Enabled</code> indicates that UPCs can be used for the category, and a value of <code>Required</code> indicates that a UPC is required when listing a product in this category. <br><br> Only returned when this value (or this category's setting)
-     * overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
-     * <code>UPCEnabled</code>. <br> <br> <span class="tablenote"><b>Note:</b> It is recommended that sellers always use <b>GetCategoryFeatures</b> to see if an eBay category requires a Global Trade Item Number (GTIN) or a Brand/MPN combination. So, that
-     * means that they should look for <b>UPCEnabled</b>, <b>ISBNEnabled</b>, <b>EANEnabled</b>, and <b>BrandMPNIdentifierEnabled</b> at the category level in the <b>GetCategoryFeatures</b> response. </span>
+     * <code>Enabled</code> indicates that UPCs can be used for the category, and a value of <code>Required</code> indicates that a UPC is required when listing a product in this category. <br/><br/> Only returned when this value (or this category's
+     * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
+     * include <code>UPCEnabled</code>. <br/> <br/> <span class="tablenote"><b>Note:</b> It is recommended that sellers always use <b>GetCategoryFeatures</b> to see if an eBay category requires a Global Trade Item Number (GTIN) or a Brand/MPN combination.
+     * So, that means that they should look for <b>UPCEnabled</b>, <b>ISBNEnabled</b>, <b>EANEnabled</b>, and <b>BrandMPNIdentifierEnabled</b> at the category level in the <b>GetCategoryFeatures</b> response. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -1100,7 +1115,7 @@ class CategoryFeatureType extends AbstractStructBase
      * The MaxGranularFitmentCount
      * Meta information extracted from the WSDL
      * - documentation: Indicates the maximum number of compatible applications allowed per item when adding or revising items with compatibilities provided at the most detailed granularity. For example, in Car and Truck Parts on the US site, the most
-     * granular application would include Year, Make, Model, Trim, and Engine. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or
+     * granular application would include Year, Make, Model, Trim, and Engine. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or
      * more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>MaxGranularFitmentCount</code>.
      * - minOccurs: 0
      * @var int
@@ -1109,7 +1124,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The CompatibleVehicleType
      * Meta information extracted from the WSDL
-     * - documentation: This field is for future use. It is currently returned as an empty field, but in the future, the string value in this field will indicate Parts Compatibility vehicle type (e.g. cars, motorcycles, boats). <br><br> Only returned when
+     * - documentation: This field is for future use. It is currently returned as an empty field, but in the future, the string value in this field will indicate Parts Compatibility vehicle type (e.g. cars, motorcycles, boats). <br/><br/> Only returned when
      * this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and
      * one of those values does not include <code>CompatibleVehicleType</code>.
      * - minOccurs: 0
@@ -1127,8 +1142,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ShippingProfileCategoryGroup
      * Meta information extracted from the WSDL
-     * - documentation: Indicates the Business Policies category group that may be used for Shipping profiles. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default.
-     * Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ShippingProfileCategoryGroup</code>.
+     * - documentation: Indicates the Business Policies category group that may be used for Shipping profiles. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
+     * default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ShippingProfileCategoryGroup</code>.
      * - minOccurs: 0
      * @var string
      */
@@ -1136,7 +1151,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The PaymentProfileCategoryGroup
      * Meta information extracted from the WSDL
-     * - documentation: Indicates the Business Policies category group that may be used for Payment profiles. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default.
+     * - documentation: Indicates the Business Policies category group that may be used for Payment profiles. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default.
      * Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>PaymentProfileCategoryGroup</code>.
      * - minOccurs: 0
      * @var string
@@ -1145,7 +1160,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ReturnPolicyProfileCategoryGroup
      * Meta information extracted from the WSDL
-     * - documentation: Indicates the Business Policies category group that may be used for Return Policy profiles. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
+     * - documentation: Indicates the Business Policies category group that may be used for Return Policy profiles. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site
      * default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ReturnPolicyProfileCategoryGroup</code>.
      * - minOccurs: 0
      * @var string
@@ -1189,8 +1204,8 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The GlobalShippingEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates if the Global Shipping Program (GSP) is supported for the category. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not
-     * be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>GlobalShippingEnabled</code>.
+     * - documentation: Indicates if the Global Shipping Program (GSP) is supported for the category. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
+     * not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>GlobalShippingEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -1199,7 +1214,7 @@ class CategoryFeatureType extends AbstractStructBase
      * The AdditionalCompatibilityEnabled
      * Meta information extracted from the WSDL
      * - documentation: This field indicates whether or not the category (specified in the <b>Category.CategoryID</b> field) supports Boats and Motorcycles Parts compatibility. If <code>true</code>, parts compatibility name-value pairs for boats and
-     * motorcycles can be added to an item listed in the specified category. <br><br> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or
+     * motorcycles can be added to an item listed in the specified category. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or
      * more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>AdditionalCompatibilityEnabled</code>.
      * - minOccurs: 0
      * @var bool
@@ -1215,9 +1230,9 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: A <code>true</code> value in this field indicates that items listed in the category (specified in the <b>Category.CategoryID</b> field) may be enabled with the 'Click and Collect' feature. With the 'Click and Collect' feature, a
      * buyer can purchase certain items on an eBay site and collect them at a local store. Buyers are notified by eBay once their items are available. A <code>false</code> value in this field indicates that items listed in the category are not eligible for
-     * the 'Click and Collect' feature. <br/><br/> The 'Click and Collect' feature is only available to large merchants on the eBay UK (site ID - 3), eBay Australia (Site ID - 15), and eBay Germany (Site ID - 77) sites. <br><br> Only returned when this
+     * the 'Click and Collect' feature. <br/><br/> The 'Click and Collect' feature is only available to large merchants on the eBay UK (site ID - 3), eBay Australia (Site ID - 15), and eBay Germany (Site ID - 77) sites. <br/><br/> Only returned when this
      * value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of
-     * those values does not include <code>PickupDropOffEnabled</code>. <br> <br> <span class="tablenote"><b>Note:</b> For Click and Collect eligible sellers, the Click and Collect feature can only be enabled at the account level, and then each of the
+     * those values does not include <code>PickupDropOffEnabled</code>. <br/> <br/> <span class="tablenote"><b>Note:</b> For Click and Collect eligible sellers, the Click and Collect feature can only be enabled at the account level, and then each of the
      * seller's listings within an Click and Collect enabled category will be automatically evaluated for Click and Collect eligibility. </span>
      * - minOccurs: 0
      * @var bool
@@ -1229,9 +1244,9 @@ class CategoryFeatureType extends AbstractStructBase
      * - documentation: A <code>true</code> value in this field indicates that digital gift cards (eBay gift cards or third-party gift cards) can be listed in the category specified in the <b>Category.CategoryID</b> field. A <code>false</code> value in this
      * field indicates that digital gift cards can not be listed in the specified category. <br/><br/> Digital gift cards are currently only supported on the US site. There are some restrictions when it comes to selling gift cards, including the following:
      * <ul> <li>Each seller can only have one gift card listing at any given time </li> <li>The maximum dollar value of the gift card may not exceed 500.00</li> <li>Prepaid credit cards from American Express, Discover, MasterCard, or Visa are not
-     * allowed</li> </ul> For more information on eBay's Gift Card policy, see the <a href=" http://pages.ebay.com/help/policies/gift.html" target="_blank">Gift cards policy Help page</a>. <br><br> Only returned when this value (or this category's setting)
-     * overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include
-     * <code>DigitalGoodDeliveryEnabled</code>.
+     * allowed</li> </ul> For more information on eBay's Gift Card policy, see the <a href=" http://pages.ebay.com/help/policies/gift.html" target="_blank">Gift cards policy Help page</a>. <br/><br/> Only returned when this value (or this category's
+     * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
+     * include <code>DigitalGoodDeliveryEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -1241,7 +1256,7 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: This field is returned as <code>true</code> if the category supports the use of an eBay Product ID (e.g. ePID) in an Add/Revise/Relist API call to identify which motorcycles and/or scooters are compatible with a motor vehicle part or
      * accessory. ePIDs can only be used to identify motorcycles and scooters on the Germany and UK sites. <br/><br/> For more information on using an ePID to identify a compatible motorcycle or scooter through an Add/Revise/Relist API call on the Germany
-     * or UK site, see the documentation for the <a href=" http://developer.ebay.com/Devzone/XML/docs/Reference/eBay/AddItem.html#Request.Item.ItemCompatibilityList.Compatibility.NameValueList">Compatibility.NameValueList</a> container. <br><br> Only
+     * or UK site, see the documentation for the <a href=" http://developer.ebay.com/Devzone/XML/docs/Reference/eBay/AddItem.html#Request.Item.ItemCompatibilityList.Compatibility.NameValueList">Compatibility.NameValueList</a> container. <br/><br/> Only
      * returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call
      * request, and one of those values does not include <code>EpidSupported</code>.
      * - minOccurs: 0
@@ -1253,9 +1268,9 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: This field is returned as <code>true</code> if the category supports the use of a K Type vehicle number in an Add/Revise/Relist API call to identify which cars and/or trucks are compatible with a motor vehicle part or accessory. K
      * type vehicle numbers can only be used to identify cars and trucks on the Germany site. <br/><br/> For more information on using a K Type vehicle number to identify a compatible car or truck through an Add/Revise/Relist API call on the Germany site,
-     * see the documentation for the <a href=" http://developer.ebay.com/Devzone/XML/docs/Reference/eBay/AddItem.html#Request.Item.ItemCompatibilityList.Compatibility.NameValueList">Compatibility.NameValueList</a> container. <br><br> Only returned when this
-     * value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of
-     * those values does not include <code>KTypeSupported</code>.
+     * see the documentation for the <a href=" http://developer.ebay.com/Devzone/XML/docs/Reference/eBay/AddItem.html#Request.Item.ItemCompatibilityList.Compatibility.NameValueList">Compatibility.NameValueList</a> container. <br/><br/> Only returned when
+     * this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and
+     * one of those values does not include <code>KTypeSupported</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -1263,7 +1278,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ProductRequiredEnabled
      * Meta information extracted from the WSDL
-     * - documentation: This field indicates if the category supports Product-Based Shopping Experience listings (listings associated with eBay catalog products). <br><br> <span class="tablenote"><b>Note:</b> Due to the rollback of the Product-Based
+     * - documentation: This field indicates if the category supports Product-Based Shopping Experience listings (listings associated with eBay catalog products). <br/><br/> <span class="tablenote"><b>Note:</b> Due to the rollback of the Product-Based
      * Shopping Experience mandate for all eBay categories, the value for this field should never get returned as <code>Enabled</code> for any production categories.</span>
      * - minOccurs: 0
      * @var string
@@ -1275,7 +1290,7 @@ class CategoryFeatureType extends AbstractStructBase
      * - documentation: The values returned in this field indicate whether or not the seller accepts domestic returns for items listed in the associated marketplace and category. <br><br>While most categories return the <b>ReturnsAccepted</b> flag
      * (indicating the category supports returns), some categories will also return the <b>ReturnsNotAccepted</b> flag to indicate the seller can choose to not accept returns for an item listed in that category. <br><br>The values returned in this field are
      * pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. Here, it's worth noting that not accepting
-     * returns is a return policy. The values returned in this field are valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br><br> <span
+     * returns is a return policy. The values returned in this field are valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br/><br/> <span
      * class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings
      * in the domestic return policy will be used instead. For more information on setting separate domestic and international return policies, see the <a
      * href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help topic. For the international equivalent of this field, see the
@@ -1289,7 +1304,7 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The values returned in this field indicate whether or not the seller can offer international returns. <br><br>The values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to
      * <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values returned in this field are valid in AddItem and its related family of calls, and in the return policies you
-     * configure for use with the Account and Business Policies Management APIs. <br><br> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate international return policy for items that are shipped to international
+     * configure for use with the Account and Business Policies Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate international return policy for items that are shipped to international
      * customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For more information on setting separate domestic and international return policies, see the <a
      * href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help topic. </span>
      * - minOccurs: 0
@@ -1301,10 +1316,10 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The values returned in this field indicate the return duration options that are available for domestic returns for items listed in the associated marketplace and category. <br><br>The values returned in this field are pertinent only
      * if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values returned in this field are valid in AddItem and
-     * its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br><br> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate international
-     * return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For more information on setting separate domestic
-     * and international return policies, see the <a href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help topic. For the
-     * international equivalent of this field, see the <b>InternationalReturnsDurationValues</b> field.</span>
+     * its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate
+     * international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For more information on setting
+     * separate domestic and international return policies, see the <a href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help topic.
+     * For the international equivalent of this field, see the <b>InternationalReturnsDurationValues</b> field.</span>
      * - minOccurs: 0
      * @var \StructType\DomesticReturnsDurationCodeType
      */
@@ -1314,7 +1329,7 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The values returned in this field indicate the return duration options that are available for international returns for items listed in the associated marketplace and category. <br><br>The values returned in this field are pertinent
      * only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values returned in this field are valid in AddItem
-     * and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br><br> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate
+     * and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate
      * international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For more information on setting
      * separate domestic and international return policies, see the <a href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help topic.
      * - minOccurs: 0
@@ -1326,7 +1341,7 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The values returned in this field indicate the available options for who pays the return shipping for domestic returns. Possible values are <code>BUYER</code> and <code>SELLER</code>. <br><br>The values returned in this field are
      * pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values returned in this field are valid
-     * in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br><br> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a
+     * in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a
      * separate international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For more information on
      * setting separate domestic and international return policies, see the <a href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help
      * topic. For the international equivalent of this field, see the <b>InternationalReturnsShipmentPayeeValues</b> field.</span>
@@ -1339,7 +1354,7 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The values returned in this field indicate the available options for who pays the return shipping for international returns. Possible values are <code>BUYER</code> and <code>SELLER</code>. <br><br>The values returned in this field
      * are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values returned in this field are
-     * valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br><br> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a
+     * valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a
      * separate international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For more information on
      * setting separate domestic and international return policies, see the <a href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help
      * topic.
@@ -1352,7 +1367,7 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: On the EBAY_US marketplace only, sellers can offer item replacement in addition to offering money back returns. This flag defines the availability of such options for the given US marketplace category. Sellers can offer item
      * replacements only if returns are enabled (<b>returnPolicyEnabled</b> is set to <code>true</code>) for the item. You can specify item replacement in the AddItem family of calls and in the return policy settings of the Account and Business Policies
-     * Management APIs. <br><br> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate international return policy for items that are shipped to international customers. If a seller does not add a separate
+     * Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate international return policy for items that are shipped to international customers. If a seller does not add a separate
      * international return policy, the settings in the domestic return policy will be used instead. For more information on setting separate domestic and international return policies, see the <a
      * href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help topic. For the international equivalent of this field, see the
      * <b>InternationalRefundMethodValues</b> field.</span>
@@ -1365,7 +1380,7 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: In US, sellers can offer an item replacement for returns, in addition to offering money back returns. The values returned in this field indicate the availability of such options for the given marketplace and category. <br><br>The
      * values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values
-     * returned in this field are valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br><br> <span class="tablenote"><b>Note:</b> In May 2018, eBay
+     * returned in this field are valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay
      * added the ability to create a separate international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used
      * instead. For more information on setting separate domestic and international return policies, see the <a href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy"
      * target="_blank">International returns policy</a> help topic. </span>
@@ -1492,6 +1507,7 @@ class CategoryFeatureType extends AbstractStructBase
      * @uses CategoryFeatureType::setMaxItemCompatibility()
      * @uses CategoryFeatureType::setConditionEnabled()
      * @uses CategoryFeatureType::setConditionValues()
+     * @uses CategoryFeatureType::setSpecialFeatures()
      * @uses CategoryFeatureType::setValueCategory()
      * @uses CategoryFeatureType::setProductCreationEnabled()
      * @uses CategoryFeatureType::setEANEnabled()
@@ -1631,6 +1647,7 @@ class CategoryFeatureType extends AbstractStructBase
      * @param int $maxItemCompatibility
      * @param string $conditionEnabled
      * @param \StructType\ConditionValuesType $conditionValues
+     * @param \StructType\ConditionValuesType $specialFeatures
      * @param bool $valueCategory
      * @param string $productCreationEnabled
      * @param string $eANEnabled
@@ -1664,7 +1681,7 @@ class CategoryFeatureType extends AbstractStructBase
      * @param \StructType\InternationalRefundMethodCodeType $internationalRefundMethodValues
      * @param bool $returnPolicyDescriptionEnabled
      */
-    public function __construct($categoryID = null, array $listingDuration = array(), $shippingTermsRequired = null, $bestOfferEnabled = null, $dutchBINEnabled = null, $userConsentRequired = null, $homePageFeaturedEnabled = null, $proPackEnabled = null, $basicUpgradePackEnabled = null, $valuePackEnabled = null, $proPackPlusEnabled = null, $adFormatEnabled = null, $bestOfferCounterEnabled = null, $bestOfferAutoDeclineEnabled = null, $localMarketSpecialitySubscription = null, $localMarketRegularSubscription = null, $localMarketPremiumSubscription = null, $localMarketNonSubscription = null, $expressEnabled = null, $expressPicturesRequired = null, $expressConditionRequired = null, $minimumReservePrice = null, $sellerContactDetailsEnabled = null, $transactionConfirmationRequestEnabled = null, $storeInventoryEnabled = null, $skypeMeTransactionalEnabled = null, $skypeMeNonTransactionalEnabled = null, $classifiedAdPaymentMethodEnabled = null, $classifiedAdShippingMethodEnabled = null, $classifiedAdBestOfferEnabled = null, $classifiedAdCounterOfferEnabled = null, $classifiedAdAutoDeclineEnabled = null, $classifiedAdContactByPhoneEnabled = null, $classifiedAdContactByEmailEnabled = null, $safePaymentRequired = null, $classifiedAdPayPerLeadEnabled = null, $itemSpecificsEnabled = null, $paisaPayFullEscrowEnabled = null, $brandMPNIdentifierEnabled = null, $classifiedAdAutoAcceptEnabled = null, $bestOfferAutoAcceptEnabled = null, $crossBorderTradeNorthAmericaEnabled = null, $crossBorderTradeGBEnabled = null, $crossBorderTradeAustraliaEnabled = null, $payPalBuyerProtectionEnabled = null, $buyerGuaranteeEnabled = null, $combinedFixedPriceTreatmentEnabled = null, \StructType\ListingEnhancementDurationReferenceType $galleryFeaturedDurations = null, $payPalRequired = null, $eBayMotorsProAdFormatEnabled = null, $eBayMotorsProContactByPhoneEnabled = null, $eBayMotorsProPhoneCount = null, $eBayMotorsProContactByAddressEnabled = null, $eBayMotorsProStreetCount = null, $eBayMotorsProCompanyNameEnabled = null, $eBayMotorsProContactByEmailEnabled = null, $eBayMotorsProBestOfferEnabled = null, $eBayMotorsProAutoAcceptEnabled = null, $eBayMotorsProAutoDeclineEnabled = null, $eBayMotorsProPaymentMethodCheckOutEnabled = null, $eBayMotorsProShippingMethodEnabled = null, $eBayMotorsProCounterOfferEnabled = null, $eBayMotorsProSellerContactDetailsEnabled = null, $localMarketAdFormatEnabled = null, $localMarketContactByPhoneEnabled = null, $localMarketPhoneCount = null, $localMarketContactByAddressEnabled = null, $localMarketStreetCount = null, $localMarketCompanyNameEnabled = null, $localMarketContactByEmailEnabled = null, $localMarketBestOfferEnabled = null, $localMarketAutoAcceptEnabled = null, $localMarketAutoDeclineEnabled = null, $localMarketPaymentMethodCheckOutEnabled = null, $localMarketShippingMethodEnabled = null, $localMarketCounterOfferEnabled = null, $localMarketSellerContactDetailsEnabled = null, $classifiedAdPhoneCount = null, $classifiedAdContactByAddressEnabled = null, $classifiedAdStreetCount = null, $classifiedAdCompanyNameEnabled = null, $specialitySubscription = null, $regularSubscription = null, $premiumSubscription = null, $nonSubscription = null, $iNEscrowWorkflowTimeline = null, $payPalRequiredForStoreOwner = null, $reviseQuantityAllowed = null, $revisePriceAllowed = null, $storeOwnerExtendedListingDurationsEnabled = null, \StructType\StoreOwnerExtendedListingDurationsType $storeOwnerExtendedListingDurations = null, $returnPolicyEnabled = null, $handlingTimeEnabled = null, \StructType\AmountType $maxFlatShippingCost = null, \StructType\AmountType $group1MaxFlatShippingCost = null, \StructType\AmountType $group2MaxFlatShippingCost = null, \StructType\AmountType $group3MaxFlatShippingCost = null, array $paymentMethod = array(), $variationsEnabled = null, $attributeConversionEnabled = null, $freeGalleryPlusEnabled = null, $freePicturePackEnabled = null, $itemCompatibilityEnabled = null, $minItemCompatibility = null, $maxItemCompatibility = null, $conditionEnabled = null, \StructType\ConditionValuesType $conditionValues = null, $valueCategory = null, $productCreationEnabled = null, $eANEnabled = null, $iSBNEnabled = null, $uPCEnabled = null, $maxGranularFitmentCount = null, $compatibleVehicleType = null, $paymentOptionsGroup = null, $shippingProfileCategoryGroup = null, $paymentProfileCategoryGroup = null, $returnPolicyProfileCategoryGroup = null, $vINSupported = null, $vRMSupported = null, $sellerProvidedTitleSupported = null, $depositSupported = null, $globalShippingEnabled = null, $additionalCompatibilityEnabled = null, \DOMDocument $any = null, $pickupDropOffEnabled = null, $digitalGoodDeliveryEnabled = null, $epidSupported = null, $kTypeSupported = null, $productRequiredEnabled = null, \StructType\DomesticReturnsAcceptedCodeType $domesticReturnsAcceptedValues = null, \StructType\InternationalReturnsAcceptedCodeType $internationalReturnsAcceptedValues = null, \StructType\DomesticReturnsDurationCodeType $domesticReturnsDurationValues = null, \StructType\InternationalReturnsDurationCodeType $internationalReturnsDurationValues = null, \StructType\DomesticReturnsShipmentPayeeCodeType $domesticReturnsShipmentPayeeValues = null, \StructType\InternationalReturnsShipmentPayeeCodeType $internationalReturnsShipmentPayeeValues = null, \StructType\DomesticRefundMethodCodeType $domesticRefundMethodValues = null, \StructType\InternationalRefundMethodCodeType $internationalRefundMethodValues = null, $returnPolicyDescriptionEnabled = null)
+    public function __construct($categoryID = null, array $listingDuration = array(), $shippingTermsRequired = null, $bestOfferEnabled = null, $dutchBINEnabled = null, $userConsentRequired = null, $homePageFeaturedEnabled = null, $proPackEnabled = null, $basicUpgradePackEnabled = null, $valuePackEnabled = null, $proPackPlusEnabled = null, $adFormatEnabled = null, $bestOfferCounterEnabled = null, $bestOfferAutoDeclineEnabled = null, $localMarketSpecialitySubscription = null, $localMarketRegularSubscription = null, $localMarketPremiumSubscription = null, $localMarketNonSubscription = null, $expressEnabled = null, $expressPicturesRequired = null, $expressConditionRequired = null, $minimumReservePrice = null, $sellerContactDetailsEnabled = null, $transactionConfirmationRequestEnabled = null, $storeInventoryEnabled = null, $skypeMeTransactionalEnabled = null, $skypeMeNonTransactionalEnabled = null, $classifiedAdPaymentMethodEnabled = null, $classifiedAdShippingMethodEnabled = null, $classifiedAdBestOfferEnabled = null, $classifiedAdCounterOfferEnabled = null, $classifiedAdAutoDeclineEnabled = null, $classifiedAdContactByPhoneEnabled = null, $classifiedAdContactByEmailEnabled = null, $safePaymentRequired = null, $classifiedAdPayPerLeadEnabled = null, $itemSpecificsEnabled = null, $paisaPayFullEscrowEnabled = null, $brandMPNIdentifierEnabled = null, $classifiedAdAutoAcceptEnabled = null, $bestOfferAutoAcceptEnabled = null, $crossBorderTradeNorthAmericaEnabled = null, $crossBorderTradeGBEnabled = null, $crossBorderTradeAustraliaEnabled = null, $payPalBuyerProtectionEnabled = null, $buyerGuaranteeEnabled = null, $combinedFixedPriceTreatmentEnabled = null, \StructType\ListingEnhancementDurationReferenceType $galleryFeaturedDurations = null, $payPalRequired = null, $eBayMotorsProAdFormatEnabled = null, $eBayMotorsProContactByPhoneEnabled = null, $eBayMotorsProPhoneCount = null, $eBayMotorsProContactByAddressEnabled = null, $eBayMotorsProStreetCount = null, $eBayMotorsProCompanyNameEnabled = null, $eBayMotorsProContactByEmailEnabled = null, $eBayMotorsProBestOfferEnabled = null, $eBayMotorsProAutoAcceptEnabled = null, $eBayMotorsProAutoDeclineEnabled = null, $eBayMotorsProPaymentMethodCheckOutEnabled = null, $eBayMotorsProShippingMethodEnabled = null, $eBayMotorsProCounterOfferEnabled = null, $eBayMotorsProSellerContactDetailsEnabled = null, $localMarketAdFormatEnabled = null, $localMarketContactByPhoneEnabled = null, $localMarketPhoneCount = null, $localMarketContactByAddressEnabled = null, $localMarketStreetCount = null, $localMarketCompanyNameEnabled = null, $localMarketContactByEmailEnabled = null, $localMarketBestOfferEnabled = null, $localMarketAutoAcceptEnabled = null, $localMarketAutoDeclineEnabled = null, $localMarketPaymentMethodCheckOutEnabled = null, $localMarketShippingMethodEnabled = null, $localMarketCounterOfferEnabled = null, $localMarketSellerContactDetailsEnabled = null, $classifiedAdPhoneCount = null, $classifiedAdContactByAddressEnabled = null, $classifiedAdStreetCount = null, $classifiedAdCompanyNameEnabled = null, $specialitySubscription = null, $regularSubscription = null, $premiumSubscription = null, $nonSubscription = null, $iNEscrowWorkflowTimeline = null, $payPalRequiredForStoreOwner = null, $reviseQuantityAllowed = null, $revisePriceAllowed = null, $storeOwnerExtendedListingDurationsEnabled = null, \StructType\StoreOwnerExtendedListingDurationsType $storeOwnerExtendedListingDurations = null, $returnPolicyEnabled = null, $handlingTimeEnabled = null, \StructType\AmountType $maxFlatShippingCost = null, \StructType\AmountType $group1MaxFlatShippingCost = null, \StructType\AmountType $group2MaxFlatShippingCost = null, \StructType\AmountType $group3MaxFlatShippingCost = null, array $paymentMethod = array(), $variationsEnabled = null, $attributeConversionEnabled = null, $freeGalleryPlusEnabled = null, $freePicturePackEnabled = null, $itemCompatibilityEnabled = null, $minItemCompatibility = null, $maxItemCompatibility = null, $conditionEnabled = null, \StructType\ConditionValuesType $conditionValues = null, \StructType\ConditionValuesType $specialFeatures = null, $valueCategory = null, $productCreationEnabled = null, $eANEnabled = null, $iSBNEnabled = null, $uPCEnabled = null, $maxGranularFitmentCount = null, $compatibleVehicleType = null, $paymentOptionsGroup = null, $shippingProfileCategoryGroup = null, $paymentProfileCategoryGroup = null, $returnPolicyProfileCategoryGroup = null, $vINSupported = null, $vRMSupported = null, $sellerProvidedTitleSupported = null, $depositSupported = null, $globalShippingEnabled = null, $additionalCompatibilityEnabled = null, \DOMDocument $any = null, $pickupDropOffEnabled = null, $digitalGoodDeliveryEnabled = null, $epidSupported = null, $kTypeSupported = null, $productRequiredEnabled = null, \StructType\DomesticReturnsAcceptedCodeType $domesticReturnsAcceptedValues = null, \StructType\InternationalReturnsAcceptedCodeType $internationalReturnsAcceptedValues = null, \StructType\DomesticReturnsDurationCodeType $domesticReturnsDurationValues = null, \StructType\InternationalReturnsDurationCodeType $internationalReturnsDurationValues = null, \StructType\DomesticReturnsShipmentPayeeCodeType $domesticReturnsShipmentPayeeValues = null, \StructType\InternationalReturnsShipmentPayeeCodeType $internationalReturnsShipmentPayeeValues = null, \StructType\DomesticRefundMethodCodeType $domesticRefundMethodValues = null, \StructType\InternationalRefundMethodCodeType $internationalRefundMethodValues = null, $returnPolicyDescriptionEnabled = null)
     {
         $this
             ->setCategoryID($categoryID)
@@ -1774,6 +1791,7 @@ class CategoryFeatureType extends AbstractStructBase
             ->setMaxItemCompatibility($maxItemCompatibility)
             ->setConditionEnabled($conditionEnabled)
             ->setConditionValues($conditionValues)
+            ->setSpecialFeatures($specialFeatures)
             ->setValueCategory($valueCategory)
             ->setProductCreationEnabled($productCreationEnabled)
             ->setEANEnabled($eANEnabled)
@@ -4265,6 +4283,24 @@ class CategoryFeatureType extends AbstractStructBase
     public function setConditionValues(\StructType\ConditionValuesType $conditionValues = null)
     {
         $this->ConditionValues = $conditionValues;
+        return $this;
+    }
+    /**
+     * Get SpecialFeatures value
+     * @return \StructType\ConditionValuesType|null
+     */
+    public function getSpecialFeatures()
+    {
+        return $this->SpecialFeatures;
+    }
+    /**
+     * Set SpecialFeatures value
+     * @param \StructType\ConditionValuesType $specialFeatures
+     * @return \StructType\CategoryFeatureType
+     */
+    public function setSpecialFeatures(\StructType\ConditionValuesType $specialFeatures = null)
+    {
+        $this->SpecialFeatures = $specialFeatures;
         return $this;
     }
     /**

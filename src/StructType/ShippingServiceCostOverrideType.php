@@ -59,40 +59,26 @@ class ShippingServiceCostOverrideType extends AbstractStructBase
      */
     public $ShippingServiceAdditionalCost;
     /**
-     * The ShippingSurcharge
-     * Meta information extracted from the WSDL
-     * - documentation: <span class="tablenote"><b>Note:</b> DO NOT USE THIS FIELD. Shipping surcharges for shipping service options can no longer be set with shipping business policies. To set a shipping surcharge for a shipping service option, only the
-     * <b>Shipping rate tables</b> tool in My eBay can be used. This field will be removed in a later release. </span> This dollar value indicates the shipping surcharge applicable to the domestic shipping service. If the shipping service costs override
-     * operation is successful, this value will override the corresponding <strong>shippingSurcharge</strong> value set in the <strong>domesticShippingPolicyInfoService</strong> container in the Business Policies shipping profile. <br/><br/> This field can
-     * only be used if the shipping surcharges are applicable for the corresponding shipping service.
-     * - minOccurs: 0
-     * @var \StructType\AmountType
-     */
-    public $ShippingSurcharge;
-    /**
      * Constructor method for ShippingServiceCostOverrideType
      * @uses ShippingServiceCostOverrideType::setShippingServicePriority()
      * @uses ShippingServiceCostOverrideType::setShippingServiceType()
      * @uses ShippingServiceCostOverrideType::setAny()
      * @uses ShippingServiceCostOverrideType::setShippingServiceCost()
      * @uses ShippingServiceCostOverrideType::setShippingServiceAdditionalCost()
-     * @uses ShippingServiceCostOverrideType::setShippingSurcharge()
      * @param int $shippingServicePriority
      * @param string $shippingServiceType
      * @param \DOMDocument $any
      * @param \StructType\AmountType $shippingServiceCost
      * @param \StructType\AmountType $shippingServiceAdditionalCost
-     * @param \StructType\AmountType $shippingSurcharge
      */
-    public function __construct($shippingServicePriority = null, $shippingServiceType = null, \DOMDocument $any = null, \StructType\AmountType $shippingServiceCost = null, \StructType\AmountType $shippingServiceAdditionalCost = null, \StructType\AmountType $shippingSurcharge = null)
+    public function __construct($shippingServicePriority = null, $shippingServiceType = null, \DOMDocument $any = null, \StructType\AmountType $shippingServiceCost = null, \StructType\AmountType $shippingServiceAdditionalCost = null)
     {
         $this
             ->setShippingServicePriority($shippingServicePriority)
             ->setShippingServiceType($shippingServiceType)
             ->setAny($any)
             ->setShippingServiceCost($shippingServiceCost)
-            ->setShippingServiceAdditionalCost($shippingServiceAdditionalCost)
-            ->setShippingSurcharge($shippingSurcharge);
+            ->setShippingServiceAdditionalCost($shippingServiceAdditionalCost);
     }
     /**
      * Get ShippingServicePriority value
@@ -203,24 +189,6 @@ class ShippingServiceCostOverrideType extends AbstractStructBase
     public function setShippingServiceAdditionalCost(\StructType\AmountType $shippingServiceAdditionalCost = null)
     {
         $this->ShippingServiceAdditionalCost = $shippingServiceAdditionalCost;
-        return $this;
-    }
-    /**
-     * Get ShippingSurcharge value
-     * @return \StructType\AmountType|null
-     */
-    public function getShippingSurcharge()
-    {
-        return $this->ShippingSurcharge;
-    }
-    /**
-     * Set ShippingSurcharge value
-     * @param \StructType\AmountType $shippingSurcharge
-     * @return \StructType\ShippingServiceCostOverrideType
-     */
-    public function setShippingSurcharge(\StructType\AmountType $shippingSurcharge = null)
-    {
-        $this->ShippingSurcharge = $shippingSurcharge;
         return $this;
     }
 }

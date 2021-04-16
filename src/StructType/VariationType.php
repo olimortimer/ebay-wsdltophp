@@ -103,7 +103,7 @@ class VariationType extends AbstractStructBase
      * The VariationTitle
      * Meta information extracted from the WSDL
      * - documentation: The title of the variation. This is a concatenation of the listing title plus the values (no names) from <b>Variationpecifics</b>. For example, if the Title is "Polo Shirt" and the variation is for a medium pink shirt, the variation
-     * title could be "Polo Shirt[Pink,M]. PayPal may also use this value to identify item variations (for buyers and sellers).
+     * title could be "Polo Shirt[Pink,M]. <br/>
      * - minOccurs: 0
      * @var string
      */

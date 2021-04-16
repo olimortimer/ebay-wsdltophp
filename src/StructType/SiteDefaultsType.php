@@ -943,12 +943,20 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The ConditionValues
      * Meta information extracted from the WSDL
-     * - documentation: The comprehensive list of item conditions on the site. That is, this lists any value that could be supported by at least one category on the site. Individual meta-categories define their own default set of condition values. (In other
-     * words, categories always override this list with a customized subset of these values.)
+     * - documentation: This container shows the site default item condition values. Individual leaf categories define their own default set of item condition values and always override this list.
      * - minOccurs: 0
      * @var \StructType\ConditionValuesType
      */
     public $ConditionValues;
+    /**
+     * The SpecialFeatures
+     * Meta information extracted from the WSDL
+     * - documentation: This container shows the site default special item condition values, such as <b>Certified Refurbished</b> condition (Condition ID 2000). A seller must be pre-qualified by eBay to list items with the <b>Certified Refurbished</b>
+     * condition. All other item conditions will be returned in the <b>ConditionValues</b> container instead. Individual leaf categories define their own default set of item condition values and always override this list.
+     * - minOccurs: 0
+     * @var \StructType\ConditionValuesType
+     */
+    public $SpecialFeatures;
     /**
      * The ValueCategory
      * Meta information extracted from the WSDL
@@ -1349,6 +1357,7 @@ class SiteDefaultsType extends AbstractStructBase
      * @uses SiteDefaultsType::setMaxItemCompatibility()
      * @uses SiteDefaultsType::setConditionEnabled()
      * @uses SiteDefaultsType::setConditionValues()
+     * @uses SiteDefaultsType::setSpecialFeatures()
      * @uses SiteDefaultsType::setValueCategory()
      * @uses SiteDefaultsType::setProductCreationEnabled()
      * @uses SiteDefaultsType::setEANEnabled()
@@ -1494,6 +1503,7 @@ class SiteDefaultsType extends AbstractStructBase
      * @param int $maxItemCompatibility
      * @param string $conditionEnabled
      * @param \StructType\ConditionValuesType $conditionValues
+     * @param \StructType\ConditionValuesType $specialFeatures
      * @param bool $valueCategory
      * @param string $productCreationEnabled
      * @param string $eANEnabled
@@ -1527,7 +1537,7 @@ class SiteDefaultsType extends AbstractStructBase
      * @param \StructType\InternationalRefundMethodCodeType $internationalRefundMethodValues
      * @param bool $returnPolicyDescriptionEnabled
      */
-    public function __construct(array $listingDuration = array(), $shippingTermsRequired = null, $bestOfferEnabled = null, $dutchBINEnabled = null, $userConsentRequired = null, $homePageFeaturedEnabled = null, $proPackEnabled = null, $basicUpgradePackEnabled = null, $valuePackEnabled = null, $proPackPlusEnabled = null, $adFormatEnabled = null, $bestOfferCounterEnabled = null, $bestOfferAutoDeclineEnabled = null, $localMarketSpecialitySubscription = null, $localMarketRegularSubscription = null, $localMarketPremiumSubscription = null, $localMarketNonSubscription = null, $expressEnabled = null, $expressPicturesRequired = null, $expressConditionRequired = null, $minimumReservePrice = null, $sellerContactDetailsEnabled = null, $transactionConfirmationRequestEnabled = null, $storeInventoryEnabled = null, $skypeMeTransactionalEnabled = null, $skypeMeNonTransactionalEnabled = null, $localListingDistancesRegular = null, $localListingDistancesSpecialty = null, $localListingDistancesNonSubscription = null, $classifiedAdPaymentMethodEnabled = null, $classifiedAdShippingMethodEnabled = null, $classifiedAdBestOfferEnabled = null, $classifiedAdCounterOfferEnabled = null, $classifiedAdAutoDeclineEnabled = null, $classifiedAdContactByPhoneEnabled = null, $classifiedAdContactByEmailEnabled = null, $safePaymentRequired = null, $classifiedAdPayPerLeadEnabled = null, $itemSpecificsEnabled = null, $paisaPayFullEscrowEnabled = null, $iSBNIdentifierEnabled = null, $uPCIdentifierEnabled = null, $eANIdentifierEnabled = null, $brandMPNIdentifierEnabled = null, $classifiedAdAutoAcceptEnabled = null, $bestOfferAutoAcceptEnabled = null, $crossBorderTradeNorthAmericaEnabled = null, $crossBorderTradeGBEnabled = null, $crossBorderTradeAustraliaEnabled = null, $payPalBuyerProtectionEnabled = null, $buyerGuaranteeEnabled = null, $iNEscrowWorkflowTimeline = null, $combinedFixedPriceTreatmentEnabled = null, \StructType\ListingEnhancementDurationReferenceType $galleryFeaturedDurations = null, $payPalRequired = null, $eBayMotorsProAdFormatEnabled = null, $eBayMotorsProContactByPhoneEnabled = null, $eBayMotorsProPhoneCount = null, $eBayMotorsProContactByAddressEnabled = null, $eBayMotorsProStreetCount = null, $eBayMotorsProCompanyNameEnabled = null, $eBayMotorsProContactByEmailEnabled = null, $eBayMotorsProBestOfferEnabled = null, $eBayMotorsProAutoAcceptEnabled = null, $eBayMotorsProAutoDeclineEnabled = null, $eBayMotorsProPaymentMethodCheckOutEnabled = null, $eBayMotorsProShippingMethodEnabled = null, $eBayMotorsProCounterOfferEnabled = null, $eBayMotorsProSellerContactDetailsEnabled = null, $localMarketAdFormatEnabled = null, $localMarketContactByPhoneEnabled = null, $localMarketPhoneCount = null, $localMarketContactByAddressEnabled = null, $localMarketStreetCount = null, $localMarketCompanyNameEnabled = null, $localMarketContactByEmailEnabled = null, $localMarketBestOfferEnabled = null, $localMarketAutoAcceptEnabled = null, $localMarketAutoDeclineEnabled = null, $localMarketPaymentMethodCheckOutEnabled = null, $localMarketShippingMethodEnabled = null, $localMarketCounterOfferEnabled = null, $localMarketSellerContactDetailsEnabled = null, $classifiedAdPhoneCount = null, $classifiedAdContactByAddressEnabled = null, $classifiedAdStreetCount = null, $classifiedAdCompanyNameEnabled = null, $specialitySubscription = null, $regularSubscription = null, $premiumSubscription = null, $nonSubscription = null, $payPalRequiredForStoreOwner = null, $reviseQuantityAllowed = null, $revisePriceAllowed = null, $storeOwnerExtendedListingDurationsEnabled = null, \StructType\StoreOwnerExtendedListingDurationsType $storeOwnerExtendedListingDurations = null, $returnPolicyEnabled = null, $handlingTimeEnabled = null, \StructType\AmountType $maxFlatShippingCost = null, $maxFlatShippingCostCBTExempt = null, \StructType\AmountType $group1MaxFlatShippingCost = null, \StructType\AmountType $group2MaxFlatShippingCost = null, \StructType\AmountType $group3MaxFlatShippingCost = null, array $paymentMethod = array(), $variationsEnabled = null, $attributeConversionEnabled = null, $freeGalleryPlusEnabled = null, $freePicturePackEnabled = null, $itemCompatibilityEnabled = null, $minItemCompatibility = null, $maxItemCompatibility = null, $conditionEnabled = null, \StructType\ConditionValuesType $conditionValues = null, $valueCategory = null, $productCreationEnabled = null, $eANEnabled = null, $iSBNEnabled = null, $uPCEnabled = null, $maxGranularFitmentCount = null, $compatibleVehicleType = null, $paymentOptionsGroup = null, $shippingProfileCategoryGroup = null, $paymentProfileCategoryGroup = null, $returnPolicyProfileCategoryGroup = null, $vINSupported = null, $vRMSupported = null, $sellerProvidedTitleSupported = null, $depositSupported = null, $globalShippingEnabled = null, $additionalCompatibilityEnabled = null, \DOMDocument $any = null, $pickupDropOffEnabled = null, $digitalGoodDeliveryEnabled = null, $epidSupported = null, $kTypeSupported = null, $productRequiredEnabled = null, \StructType\DomesticReturnsAcceptedCodeType $domesticReturnsAcceptedValues = null, \StructType\InternationalReturnsAcceptedCodeType $internationalReturnsAcceptedValues = null, \StructType\DomesticReturnsDurationCodeType $domesticReturnsDurationValues = null, \StructType\InternationalReturnsDurationCodeType $internationalReturnsDurationValues = null, \StructType\DomesticReturnsShipmentPayeeCodeType $domesticReturnsShipmentPayeeValues = null, \StructType\InternationalReturnsShipmentPayeeCodeType $internationalReturnsShipmentPayeeValues = null, \StructType\DomesticRefundMethodCodeType $domesticRefundMethodValues = null, \StructType\InternationalRefundMethodCodeType $internationalRefundMethodValues = null, $returnPolicyDescriptionEnabled = null)
+    public function __construct(array $listingDuration = array(), $shippingTermsRequired = null, $bestOfferEnabled = null, $dutchBINEnabled = null, $userConsentRequired = null, $homePageFeaturedEnabled = null, $proPackEnabled = null, $basicUpgradePackEnabled = null, $valuePackEnabled = null, $proPackPlusEnabled = null, $adFormatEnabled = null, $bestOfferCounterEnabled = null, $bestOfferAutoDeclineEnabled = null, $localMarketSpecialitySubscription = null, $localMarketRegularSubscription = null, $localMarketPremiumSubscription = null, $localMarketNonSubscription = null, $expressEnabled = null, $expressPicturesRequired = null, $expressConditionRequired = null, $minimumReservePrice = null, $sellerContactDetailsEnabled = null, $transactionConfirmationRequestEnabled = null, $storeInventoryEnabled = null, $skypeMeTransactionalEnabled = null, $skypeMeNonTransactionalEnabled = null, $localListingDistancesRegular = null, $localListingDistancesSpecialty = null, $localListingDistancesNonSubscription = null, $classifiedAdPaymentMethodEnabled = null, $classifiedAdShippingMethodEnabled = null, $classifiedAdBestOfferEnabled = null, $classifiedAdCounterOfferEnabled = null, $classifiedAdAutoDeclineEnabled = null, $classifiedAdContactByPhoneEnabled = null, $classifiedAdContactByEmailEnabled = null, $safePaymentRequired = null, $classifiedAdPayPerLeadEnabled = null, $itemSpecificsEnabled = null, $paisaPayFullEscrowEnabled = null, $iSBNIdentifierEnabled = null, $uPCIdentifierEnabled = null, $eANIdentifierEnabled = null, $brandMPNIdentifierEnabled = null, $classifiedAdAutoAcceptEnabled = null, $bestOfferAutoAcceptEnabled = null, $crossBorderTradeNorthAmericaEnabled = null, $crossBorderTradeGBEnabled = null, $crossBorderTradeAustraliaEnabled = null, $payPalBuyerProtectionEnabled = null, $buyerGuaranteeEnabled = null, $iNEscrowWorkflowTimeline = null, $combinedFixedPriceTreatmentEnabled = null, \StructType\ListingEnhancementDurationReferenceType $galleryFeaturedDurations = null, $payPalRequired = null, $eBayMotorsProAdFormatEnabled = null, $eBayMotorsProContactByPhoneEnabled = null, $eBayMotorsProPhoneCount = null, $eBayMotorsProContactByAddressEnabled = null, $eBayMotorsProStreetCount = null, $eBayMotorsProCompanyNameEnabled = null, $eBayMotorsProContactByEmailEnabled = null, $eBayMotorsProBestOfferEnabled = null, $eBayMotorsProAutoAcceptEnabled = null, $eBayMotorsProAutoDeclineEnabled = null, $eBayMotorsProPaymentMethodCheckOutEnabled = null, $eBayMotorsProShippingMethodEnabled = null, $eBayMotorsProCounterOfferEnabled = null, $eBayMotorsProSellerContactDetailsEnabled = null, $localMarketAdFormatEnabled = null, $localMarketContactByPhoneEnabled = null, $localMarketPhoneCount = null, $localMarketContactByAddressEnabled = null, $localMarketStreetCount = null, $localMarketCompanyNameEnabled = null, $localMarketContactByEmailEnabled = null, $localMarketBestOfferEnabled = null, $localMarketAutoAcceptEnabled = null, $localMarketAutoDeclineEnabled = null, $localMarketPaymentMethodCheckOutEnabled = null, $localMarketShippingMethodEnabled = null, $localMarketCounterOfferEnabled = null, $localMarketSellerContactDetailsEnabled = null, $classifiedAdPhoneCount = null, $classifiedAdContactByAddressEnabled = null, $classifiedAdStreetCount = null, $classifiedAdCompanyNameEnabled = null, $specialitySubscription = null, $regularSubscription = null, $premiumSubscription = null, $nonSubscription = null, $payPalRequiredForStoreOwner = null, $reviseQuantityAllowed = null, $revisePriceAllowed = null, $storeOwnerExtendedListingDurationsEnabled = null, \StructType\StoreOwnerExtendedListingDurationsType $storeOwnerExtendedListingDurations = null, $returnPolicyEnabled = null, $handlingTimeEnabled = null, \StructType\AmountType $maxFlatShippingCost = null, $maxFlatShippingCostCBTExempt = null, \StructType\AmountType $group1MaxFlatShippingCost = null, \StructType\AmountType $group2MaxFlatShippingCost = null, \StructType\AmountType $group3MaxFlatShippingCost = null, array $paymentMethod = array(), $variationsEnabled = null, $attributeConversionEnabled = null, $freeGalleryPlusEnabled = null, $freePicturePackEnabled = null, $itemCompatibilityEnabled = null, $minItemCompatibility = null, $maxItemCompatibility = null, $conditionEnabled = null, \StructType\ConditionValuesType $conditionValues = null, \StructType\ConditionValuesType $specialFeatures = null, $valueCategory = null, $productCreationEnabled = null, $eANEnabled = null, $iSBNEnabled = null, $uPCEnabled = null, $maxGranularFitmentCount = null, $compatibleVehicleType = null, $paymentOptionsGroup = null, $shippingProfileCategoryGroup = null, $paymentProfileCategoryGroup = null, $returnPolicyProfileCategoryGroup = null, $vINSupported = null, $vRMSupported = null, $sellerProvidedTitleSupported = null, $depositSupported = null, $globalShippingEnabled = null, $additionalCompatibilityEnabled = null, \DOMDocument $any = null, $pickupDropOffEnabled = null, $digitalGoodDeliveryEnabled = null, $epidSupported = null, $kTypeSupported = null, $productRequiredEnabled = null, \StructType\DomesticReturnsAcceptedCodeType $domesticReturnsAcceptedValues = null, \StructType\InternationalReturnsAcceptedCodeType $internationalReturnsAcceptedValues = null, \StructType\DomesticReturnsDurationCodeType $domesticReturnsDurationValues = null, \StructType\InternationalReturnsDurationCodeType $internationalReturnsDurationValues = null, \StructType\DomesticReturnsShipmentPayeeCodeType $domesticReturnsShipmentPayeeValues = null, \StructType\InternationalReturnsShipmentPayeeCodeType $internationalReturnsShipmentPayeeValues = null, \StructType\DomesticRefundMethodCodeType $domesticRefundMethodValues = null, \StructType\InternationalRefundMethodCodeType $internationalRefundMethodValues = null, $returnPolicyDescriptionEnabled = null)
     {
         $this
             ->setListingDuration($listingDuration)
@@ -1643,6 +1653,7 @@ class SiteDefaultsType extends AbstractStructBase
             ->setMaxItemCompatibility($maxItemCompatibility)
             ->setConditionEnabled($conditionEnabled)
             ->setConditionValues($conditionValues)
+            ->setSpecialFeatures($specialFeatures)
             ->setValueCategory($valueCategory)
             ->setProductCreationEnabled($productCreationEnabled)
             ->setEANEnabled($eANEnabled)
@@ -4266,6 +4277,24 @@ class SiteDefaultsType extends AbstractStructBase
     public function setConditionValues(\StructType\ConditionValuesType $conditionValues = null)
     {
         $this->ConditionValues = $conditionValues;
+        return $this;
+    }
+    /**
+     * Get SpecialFeatures value
+     * @return \StructType\ConditionValuesType|null
+     */
+    public function getSpecialFeatures()
+    {
+        return $this->SpecialFeatures;
+    }
+    /**
+     * Set SpecialFeatures value
+     * @param \StructType\ConditionValuesType $specialFeatures
+     * @return \StructType\SiteDefaultsType
+     */
+    public function setSpecialFeatures(\StructType\ConditionValuesType $specialFeatures = null)
+    {
+        $this->SpecialFeatures = $specialFeatures;
         return $this;
     }
     /**

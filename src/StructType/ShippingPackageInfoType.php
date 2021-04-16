@@ -34,8 +34,8 @@ class ShippingPackageInfoType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The <b>ScheduledDeliveryTimeMin</b> and <b>ScheduledDeliveryTimeMax</b> timestamps indicate the delivery window for which the buyer can expect to receive the order. The <b>ScheduledDeliveryTimeMin</b> value indicates the earliest
      * time that the buyer can expect to receive the order. <br><br> The <b>ScheduledDeliveryTimeMin</b> and <b>ScheduledDeliveryTimeMax</b> fields will start being returned once the seller marks the order as shipped/provides tracking information. Until
-     * then, the <b>EstimatedDeliveryTimeMin</b> and <b>EstimatedDeliveryTimeMax</b> dates are returned instead. <br><br> <span class="tablenote"><b>Note:</b> This field does not appear in Merchant Data API's <b>OrderReport</b> or <b>SoldReport</b>
-     * responses, because once shipment tracking information is provided to the buyer, the order/order line item is considered acknowledged, and acknowledged orders do not show up in <b>OrderReport</b> or <b>SoldReport</b> responses. </span>
+     * then, the <b>EstimatedDeliveryTimeMin</b> and <b>EstimatedDeliveryTimeMax</b> dates are returned instead. <br><br> <span class="tablenote"><b>Note:</b> This field does not appear in Merchant Data API's <b>OrderReport</b> responses, because once
+     * shipment tracking information is provided to the buyer, the order/order line item is considered acknowledged, and acknowledged orders do not show up in <b>OrderReport</b> responses. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -45,8 +45,8 @@ class ShippingPackageInfoType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The <b>ScheduledDeliveryTimeMin</b> and <b>ScheduledDeliveryTimeMax</b> timestamps indicate the delivery window for which the buyer can expect to receive the order. The <b>ScheduledDeliveryTimeMax</b> value indicates the latest time
      * that the buyer can expect to receive the order. <br><br> The <b>ScheduledDeliveryTimeMin</b> and <b>ScheduledDeliveryTimeMax</b> fields will start being returned once the seller marks the order as shipped/provides tracking information. Until then,
-     * the <b>EstimatedDeliveryTimeMin</b> and <b>EstimatedDeliveryTimeMax</b> dates are returned instead. <br><br> <span class="tablenote"><b>Note:</b> This field does not appear in Merchant Data API's <b>OrderReport</b> or <b>SoldReport</b> responses,
-     * because once shipment tracking information is provided to the buyer, the order/order line item is considered acknowledged, and acknowledged orders do not show up in <b>OrderReport</b> or <b>SoldReport</b> responses. </span>
+     * the <b>EstimatedDeliveryTimeMin</b> and <b>EstimatedDeliveryTimeMax</b> dates are returned instead. <br><br> <span class="tablenote"><b>Note:</b> This field does not appear in Merchant Data API's <b>OrderReport</b> responses, because once shipment
+     * tracking information is provided to the buyer, the order/order line item is considered acknowledged, and acknowledged orders do not show up in <b>OrderReport</b> responses. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -55,8 +55,8 @@ class ShippingPackageInfoType extends AbstractStructBase
      * The ActualDeliveryTime
      * Meta information extracted from the WSDL
      * - documentation: This timestamp indicates when the order was actually delivered to the buyer. This field is only returned after the order has been delivered to the buyer. <br><br> <span class="tablenote"><b>Note:</b> This field does not appear in
-     * Merchant Data API's <b>OrderReport</b> or <b>SoldReport</b> responses, because once shipment tracking information is provided to the buyer (or marked as shipped), the order/order line item is considered acknowledged, and acknowledged orders do not
-     * show up in <b>OrderReport</b> or <b>SoldReport</b> responses. </span>
+     * Merchant Data API's <b>OrderReport</b> responses, because once shipment tracking information is provided to the buyer (or marked as shipped), the order/order line item is considered acknowledged, and acknowledged orders do not show up in
+     * <b>OrderReport</b> responses. </span>
      * - minOccurs: 0
      * @var string
      */

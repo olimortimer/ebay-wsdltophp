@@ -233,8 +233,6 @@ class ClassMap
             'ReviseSellingManagerInventoryFolderResponseType' => '\\StructType\\ReviseSellingManagerInventoryFolderResponseType',
             'ReviseSellingManagerProductRequestType' => '\\StructType\\ReviseSellingManagerProductRequestType',
             'ReviseSellingManagerProductResponseType' => '\\StructType\\ReviseSellingManagerProductResponseType',
-            'ReviseSellingManagerSaleRecordRequestType' => '\\StructType\\ReviseSellingManagerSaleRecordRequestType',
-            'ReviseSellingManagerSaleRecordResponseType' => '\\StructType\\ReviseSellingManagerSaleRecordResponseType',
             'ReviseSellingManagerTemplateRequestType' => '\\StructType\\ReviseSellingManagerTemplateRequestType',
             'ReviseSellingManagerTemplateResponseType' => '\\StructType\\ReviseSellingManagerTemplateResponseType',
             'RevokeTokenRequestType' => '\\StructType\\RevokeTokenRequestType',

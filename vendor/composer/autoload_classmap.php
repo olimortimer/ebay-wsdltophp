@@ -1089,8 +1089,6 @@ return array(
     'StructType\\ReviseSellingManagerInventoryFolderResponseType' => $baseDir . '/src/StructType/ReviseSellingManagerInventoryFolderResponseType.php',
     'StructType\\ReviseSellingManagerProductRequestType' => $baseDir . '/src/StructType/ReviseSellingManagerProductRequestType.php',
     'StructType\\ReviseSellingManagerProductResponseType' => $baseDir . '/src/StructType/ReviseSellingManagerProductResponseType.php',
-    'StructType\\ReviseSellingManagerSaleRecordRequestType' => $baseDir . '/src/StructType/ReviseSellingManagerSaleRecordRequestType.php',
-    'StructType\\ReviseSellingManagerSaleRecordResponseType' => $baseDir . '/src/StructType/ReviseSellingManagerSaleRecordResponseType.php',
     'StructType\\ReviseSellingManagerTemplateRequestType' => $baseDir . '/src/StructType/ReviseSellingManagerTemplateRequestType.php',
     'StructType\\ReviseSellingManagerTemplateResponseType' => $baseDir . '/src/StructType/ReviseSellingManagerTemplateResponseType.php',
     'StructType\\ReviseStatusType' => $baseDir . '/src/StructType/ReviseStatusType.php',

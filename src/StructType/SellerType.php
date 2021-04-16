@@ -259,7 +259,7 @@ class SellerType extends AbstractStructBase
     /**
      * The DomesticRateTable
      * Meta information extracted from the WSDL
-     * - documentation: If true, the seller has configured a domestic shipping rate table on the DE, UK or US website.
+     * - documentation: A returned value of <code>true</code> indicates that the seller has configured a default, domestic shipping rate table in their My eBay shipping preferences.
      * - minOccurs: 0
      * @var bool
      */
@@ -267,7 +267,7 @@ class SellerType extends AbstractStructBase
     /**
      * The InternationalRateTable
      * Meta information extracted from the WSDL
-     * - documentation: If true, the seller has configured an international shipping rate table on the US, UK or DE website.
+     * - documentation: A returned value of <code>true</code> indicates that the seller has configured a default, international shipping rate table in their My eBay shipping preferences.
      * - minOccurs: 0
      * @var bool
      */

@@ -987,14 +987,6 @@ if ($revise->ReviseSellingManagerProduct(new \StructType\ReviseSellingManagerPro
     print_r($revise->getLastError());
 }
 /**
- * Sample call for ReviseSellingManagerSaleRecord operation/method
- */
-if ($revise->ReviseSellingManagerSaleRecord(new \StructType\ReviseSellingManagerSaleRecordRequestType()) !== false) {
-    print_r($revise->getResult());
-} else {
-    print_r($revise->getLastError());
-}
-/**
  * Sample call for ReviseSellingManagerTemplate operation/method
  */
 if ($revise->ReviseSellingManagerTemplate(new \StructType\ReviseSellingManagerTemplateRequestType()) !== false) {

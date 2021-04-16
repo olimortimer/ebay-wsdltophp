@@ -1412,10 +1412,12 @@ class ItemType extends AbstractStructBase
     /**
      * The IncludeRecommendations
      * Meta information extracted from the WSDL
-     * - documentation: This boolean field should be included and set to <code>true</code> if the seller wishes to see listing recommendations in the call response via the <b>ListingRecommendations</b> container. Listing recommendations provide one or more
-     * messages to the seller on recommendations on: <b></b> <ul> <li>improving a listing </li> <li>bringing a listing up to standard in regards to Top-Rated seller/listing requirements </li> <li>mandated or recommended Item Specifics </li> <li>picture
-     * quality requirements </li> <li>pricing and/or listing format recommendations </li> <li>recommended keywords and/or Item Specifics in a Title </li> <li>offering fast handling (same-day handling or handling time of 1 day) and/or a free shipping option
-     * in order to qualify the listing for a Fast 'N Free badge </li> </ul>
+     * - documentation: <span class="tablenote"><b>Note: </b> This field is deprecated, and <b>ListingRecommendations</b> containers will no longer be returned in any responses after June 1, 2021. eBay recommends that you integrate with the REST-based <a
+     * href="/api-docs/sell/recommendation/overview.html" target="_blank">Recommendation API</a> to retrieve recommendations for improving your listings and sales performance, or with the <a href="/api-docs/sell/compliance/overview.html"
+     * target="_blank">Compliance API</a> to discover non-compliant listings or listings that are at risk at becoming non-compliant in the future. </span> <br><br> This boolean field should be included and set to <code>true</code> if the seller wishes to
+     * see listing recommendations in the call response via the <b>ListingRecommendations</b> container. Listing recommendations provide one or more messages to the seller on recommendations on: <b></b> <ul> <li>improving a listing </li> <li>bringing a
+     * listing up to standard in regards to Top-Rated seller/listing requirements </li> <li>mandated or recommended Item Specifics </li> <li>picture quality requirements </li> <li>pricing and/or listing format recommendations </li> <li>recommended keywords
+     * and/or Item Specifics in a Title </li> <li>offering fast handling (same-day handling or handling time of 1 day) and/or a free shipping option in order to qualify the listing for a Fast 'N Free badge </li> </ul>
      * - default: false
      * - minOccurs: 0
      * @var bool

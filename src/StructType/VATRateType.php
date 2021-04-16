@@ -7,8 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for VATRateType StructType
  * Meta information extracted from the WSDL
- * - documentation: Type defining the <b>VATRateType</b> container, which is used by <b>ReviseSellingManagerSaleRecord</b> to modify the VAT percentage for an order line item. This container is also retrieved by <b>GetSellingManagerSaleRecord</b> if
- * Value-Added Tax has been applied to the order line item.
+ * - documentation: Type defining the <b>VATRateType</b> container, which is used by <b>GetSellingManagerSaleRecord</b> if Value-Added Tax has been applied to the order line item.
  * @subpackage Structs
  */
 class VATRateType extends AbstractStructBase
@@ -16,9 +15,7 @@ class VATRateType extends AbstractStructBase
     /**
      * The ItemID
      * Meta information extracted from the WSDL
-     * - documentation: Unique identifier for an eBay listing. A listing can have multiple order line items (transactions), but only one <b>ItemID</b>. An <b>ItemID</b> can be paired up with a corresponding <b>TransactionID</b> and used as an input filter
-     * for <b>ReviseSellingManagerSaleRecord</b>. However, if <b>OrderID</b> is passed in as an input filter for <b>ReviseSellingManagerSaleRecord</b>, the <b>ItemID</b>/<b>TransactionID</b> pair is ignored. | Type that represents the unique identifier for
-     * an eBay listing.
+     * - documentation: Unique identifier for an eBay listing. A listing can have multiple order line items (transactions), but only one <b>ItemID</b>. | Type that represents the unique identifier for an eBay listing.
      * - base: xs:string
      * - minOccurs: 0
      * @var string
@@ -28,9 +25,7 @@ class VATRateType extends AbstractStructBase
      * The TransactionID
      * Meta information extracted from the WSDL
      * - documentation: Unique identifier for an eBay sales transaction. This identifier is created once there is a commitment from a buyer to purchase an item. Along with its corresponding <b>ItemID</b>, a <b>TransactionID</b> is used and referenced during
-     * an order checkout flow and after checkout has been completed. The <b>ItemID</b>/<b>TransactionID</b> pair can be used as an input filter for <b>ReviseSellingManagerSaleRecord</b>. However, if <b>OrderID</b> is passed in as an input filter for
-     * <b>ReviseSellingManagerSaleRecord</b>, the <b>ItemID</b>/<b>TransactionID</b> pair is ignored. <br> <br> The <b>TransactionID</b> value for auction listings is always <code>0</code> since there can be only one winning bidder/one sale for an auction
-     * listing.
+     * an order checkout flow and after checkout has been completed. <br> <br> The <b>TransactionID</b> value for auction listings is always <code>0</code> since there can be only one winning bidder/one sale for an auction listing.
      * - minOccurs: 0
      * @var string
      */
@@ -49,8 +44,7 @@ class VATRateType extends AbstractStructBase
     /**
      * The OrderLineItemID
      * Meta information extracted from the WSDL
-     * - documentation: <b>OrderLineItemID</b> is a unique identifier for an eBay order line item If a VAT rate is specified in the <b>ReviseSellingManagerSaleRecord</b> request, <b>OrderLineItemID</b> can be used instead of <b>ItemID</b> and
-     * <b>TransactionID</b>.
+     * - documentation: <b>OrderLineItemID</b> is a unique identifier for an eBay order line item.
      * - minOccurs: 0
      * @var string
      */

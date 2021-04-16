@@ -260,8 +260,8 @@ class TransactionType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: Indicates the time when the line item was marked as 'Shipped'. This value will only be visible to the user on either side of the order. An order can be marked as 'Shipped' by purchasing an eBay shipping label, providing shipment
      * tracking in My eBay or through Selling Manager Pro, or programmatically by the seller through the <b>ReviseCheckoutStatus</b> or <b>CompleteSale</b> call. <br><br> <span class="tablenote"><b>Note:</b> This field does not appear in Merchant Data API's
-     * <b>OrderReport</b> or <b>SoldReport</b> responses, because once shipment tracking information is provided to the buyer (or marked as shipped), the order/order line item is considered acknowledged, and acknowledged orders do not show up in
-     * <b>OrderReport</b> or <b>SoldReport</b> responses. </span>
+     * <b>OrderReport</b> responses, because once shipment tracking information is provided to the buyer (or marked as shipped), the order/order line item is considered acknowledged, and acknowledged orders do not show up in <b>OrderReport</b> responses.
+     * </span>
      * - minOccurs: 0
      * @var string
      */

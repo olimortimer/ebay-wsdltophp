@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit28a2af86b6d20c80219c5c3b50e21cbc
+class ComposerStaticInit6cf61b1abdf294cc625bc3f9e9fe9a1f
 {
     public static $prefixLengthsPsr4 = array (
         'W' => 
@@ -1108,8 +1108,6 @@ class ComposerStaticInit28a2af86b6d20c80219c5c3b50e21cbc
         'StructType\\ReviseSellingManagerInventoryFolderResponseType' => __DIR__ . '/../..' . '/src/StructType/ReviseSellingManagerInventoryFolderResponseType.php',
         'StructType\\ReviseSellingManagerProductRequestType' => __DIR__ . '/../..' . '/src/StructType/ReviseSellingManagerProductRequestType.php',
         'StructType\\ReviseSellingManagerProductResponseType' => __DIR__ . '/../..' . '/src/StructType/ReviseSellingManagerProductResponseType.php',
-        'StructType\\ReviseSellingManagerSaleRecordRequestType' => __DIR__ . '/../..' . '/src/StructType/ReviseSellingManagerSaleRecordRequestType.php',
-        'StructType\\ReviseSellingManagerSaleRecordResponseType' => __DIR__ . '/../..' . '/src/StructType/ReviseSellingManagerSaleRecordResponseType.php',
         'StructType\\ReviseSellingManagerTemplateRequestType' => __DIR__ . '/../..' . '/src/StructType/ReviseSellingManagerTemplateRequestType.php',
         'StructType\\ReviseSellingManagerTemplateResponseType' => __DIR__ . '/../..' . '/src/StructType/ReviseSellingManagerTemplateResponseType.php',
         'StructType\\ReviseStatusType' => __DIR__ . '/../..' . '/src/StructType/ReviseStatusType.php',
@@ -1347,10 +1345,10 @@ class ComposerStaticInit28a2af86b6d20c80219c5c3b50e21cbc
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit28a2af86b6d20c80219c5c3b50e21cbc::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit28a2af86b6d20c80219c5c3b50e21cbc::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit28a2af86b6d20c80219c5c3b50e21cbc::$fallbackDirsPsr4;
-            $loader->classMap = ComposerStaticInit28a2af86b6d20c80219c5c3b50e21cbc::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6cf61b1abdf294cc625bc3f9e9fe9a1f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6cf61b1abdf294cc625bc3f9e9fe9a1f::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit6cf61b1abdf294cc625bc3f9e9fe9a1f::$fallbackDirsPsr4;
+            $loader->classMap = ComposerStaticInit6cf61b1abdf294cc625bc3f9e9fe9a1f::$classMap;
 
         }, null, ClassLoader::class);
     }
