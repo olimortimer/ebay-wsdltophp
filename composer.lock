@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8a2d15a5791334f869b857f51c52725",
+    "content-hash": "de06ded5d81a6abc73e815c74cb7df0f",
     "packages": [
         {
             "name": "wsdltophp/packagebase",
-            "version": "2.2.2",
+            "version": "2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WsdlToPhp/PackageBase.git",
-                "reference": "55f5aceb333a421a675b9cd2968999e6b00fe745"
+                "reference": "1175889721ecfe9be7a48225a3f878dec13ee86a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WsdlToPhp/PackageBase/zipball/55f5aceb333a421a675b9cd2968999e6b00fe745",
-                "reference": "55f5aceb333a421a675b9cd2968999e6b00fe745",
+                "url": "https://api.github.com/repos/WsdlToPhp/PackageBase/zipball/1175889721ecfe9be7a48225a3f878dec13ee86a",
+                "reference": "1175889721ecfe9be7a48225a3f878dec13ee86a",
                 "shasum": ""
             },
             "require": {
@@ -80,7 +80,7 @@
                 "models",
                 "php"
             ],
-            "time": "2021-02-05T14:51:00+00:00"
+            "time": "2021-07-11T05:43:29+00:00"
         }
     ],
     "packages-dev": [],

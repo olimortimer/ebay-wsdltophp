@@ -39,6 +39,14 @@ class AuthenticityVerificationType extends AbstractStructBase
      */
     public $OutcomeReason;
     /**
+     * The ServiceCost
+     * Meta information extracted from the WSDL
+     * - documentation: This container shows service cost to the buyer for an item that will go through the Authenticity Guarantee process.
+     * - minOccurs: 0
+     * @var \StructType\ServiceCostType
+     */
+    public $ServiceCost;
+    /**
      * The any
      * @var \DOMDocument
      */
@@ -47,16 +55,19 @@ class AuthenticityVerificationType extends AbstractStructBase
      * Constructor method for AuthenticityVerificationType
      * @uses AuthenticityVerificationType::setStatus()
      * @uses AuthenticityVerificationType::setOutcomeReason()
+     * @uses AuthenticityVerificationType::setServiceCost()
      * @uses AuthenticityVerificationType::setAny()
      * @param string $status
      * @param string $outcomeReason
+     * @param \StructType\ServiceCostType $serviceCost
      * @param \DOMDocument $any
      */
-    public function __construct($status = null, $outcomeReason = null, \DOMDocument $any = null)
+    public function __construct($status = null, $outcomeReason = null, \StructType\ServiceCostType $serviceCost = null, \DOMDocument $any = null)
     {
         $this
             ->setStatus($status)
             ->setOutcomeReason($outcomeReason)
+            ->setServiceCost($serviceCost)
             ->setAny($any);
     }
     /**
@@ -101,6 +112,24 @@ class AuthenticityVerificationType extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($outcomeReason, true), gettype($outcomeReason)), __LINE__);
         }
         $this->OutcomeReason = $outcomeReason;
+        return $this;
+    }
+    /**
+     * Get ServiceCost value
+     * @return \StructType\ServiceCostType|null
+     */
+    public function getServiceCost()
+    {
+        return $this->ServiceCost;
+    }
+    /**
+     * Set ServiceCost value
+     * @param \StructType\ServiceCostType $serviceCost
+     * @return \StructType\AuthenticityVerificationType
+     */
+    public function setServiceCost(\StructType\ServiceCostType $serviceCost = null)
+    {
+        $this->ServiceCost = $serviceCost;
         return $this;
     }
     /**

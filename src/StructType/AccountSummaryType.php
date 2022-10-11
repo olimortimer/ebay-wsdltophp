@@ -24,9 +24,9 @@ class AccountSummaryType extends AbstractStructBase
     /**
      * The InvoicePayment
      * Meta information extracted from the WSDL
-     * - documentation: This field specifies the payment amount that has been made by the user for the specified/last invoice. This field is only returned if a payment has been made towards the invoice, and if the <b>AccountHistorySelection</b> input
-     * field's value was set to <code>LastInvoice</code> or <code>SpecifiedInvoice</code>. This field is not returned if the <b>AccountHistorySelection</b> input field's value was set to <code>BetweenSpecifiedDates</code> and a custom time period
-     * (overlapping multiple billing cycles) was specified. If a credit was issued by eBay to the user instead, this credit will be shown in the <b>InvoiceCredit</b> field.
+     * - documentation: This field specifies the payment amount that has been made by the user for the invoice. This field is only returned if a payment has been made towards the invoice, and if the <b>AccountHistorySelection</b> input field's value was set
+     * to <code>LastInvoice</code>. This field is not returned if the <b>AccountHistorySelection</b> input field's value was set to <code>BetweenSpecifiedDates</code> and a custom time period (overlapping multiple billing cycles) was specified. If a credit
+     * was issued by eBay to the user instead, this credit will be shown in the <b>InvoiceCredit</b> field.
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -34,9 +34,9 @@ class AccountSummaryType extends AbstractStructBase
     /**
      * The InvoiceCredit
      * Meta information extracted from the WSDL
-     * - documentation: This field specifies the credit amount that has been issued to the user's account by eBay for the specified/last invoice. This field is only returned if a credit has been issued towards the invoice, and if the
-     * <b>AccountHistorySelection</b> input field's value was set to <code>LastInvoice</code> or <code>SpecifiedInvoice</code>. This field is not returned if the <b>AccountHistorySelection</b> input field's value was set to
-     * <code>BetweenSpecifiedDates</code> and a custom time period (overlapping multiple billing cycles) was specified. If a payment was made by the user instead, this payment amount will be shown in the <b>InvoicePayment</b> field.
+     * - documentation: This field specifies the credit amount that has been issued to the user's account by eBay for the invoice. This field is only returned if a credit has been issued towards the invoice, and if the <b>AccountHistorySelection</b> input
+     * field's value was set to <code>LastInvoice</code>. This field is not returned if the <b>AccountHistorySelection</b> input field's value was set to <code>BetweenSpecifiedDates</code> and a custom time period (overlapping multiple billing cycles) was
+     * specified. If a payment was made by the user instead, this payment amount will be shown in the <b>InvoicePayment</b> field.
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -45,8 +45,8 @@ class AccountSummaryType extends AbstractStructBase
      * The InvoiceNewFee
      * Meta information extracted from the WSDL
      * - documentation: This field specifies the balance of any new fees that have been assessed toward the user's account since the last invoice was created. This field is only returned if the <b>AccountHistorySelection</b> input field's value was set to
-     * <code>LastInvoice</code>. This field is not returned if the <b>AccountHistorySelection</b> input field's value was set to <code>BetweenSpecifiedDates</code> or <code>SpecifiedInvoice</code>. If there have been no fees since the last invoice was
-     * created, this value will be <code>0.0</code>.
+     * <code>LastInvoice</code>. This field is not returned if the <b>AccountHistorySelection</b> input field's value was set to <code>BetweenSpecifiedDates</code> or <code>OrderId</code>. If there have been no fees since the last invoice was created, this
+     * value will be <code>0.0</code>.
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -140,9 +140,8 @@ class AccountSummaryType extends AbstractStructBase
     /**
      * The InvoiceBalance
      * Meta information extracted from the WSDL
-     * - documentation: This field specifies the balance for the specified/last invoice. This field is only returned if the <b>AccountHistorySelection</b> input field's value was set to <code>LastInvoice</code> or <code>SpecifiedInvoice</code>. This field
-     * is not returned if the <b>AccountHistorySelection</b> input field's value was set to <code>BetweenSpecifiedDates</code> and a custom time period (overlapping multiple billing cycles) was specified. The value is positive for debits and negative for
-     * credits.
+     * - documentation: This field specifies the balance for the invoice. This field is only returned if the <b>AccountHistorySelection</b> input field's value was set to <code>LastInvoice</code>. This field is not returned if the
+     * <b>AccountHistorySelection</b> input field's value was set to <code>BetweenSpecifiedDates</code> and a custom time period (overlapping multiple billing cycles) was specified. The value is positive for debits and negative for credits.
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -150,8 +149,8 @@ class AccountSummaryType extends AbstractStructBase
     /**
      * The InvoiceDate
      * Meta information extracted from the WSDL
-     * - documentation: This timestamp indicates the date and time of the specified/last invoice. This field is only returned if the <b>AccountHistorySelection</b> input field's value was set to <code>LastInvoice</code> or <code>SpecifiedInvoice</code>.
-     * This field is not returned if the <b>AccountHistorySelection</b> input field's value was set to <code>BetweenSpecifiedDates</code> and a custom time period (overlapping multiple billing cycles) was specified.
+     * - documentation: This timestamp indicates the date and time of the invoice. This field is only returned if the <b>AccountHistorySelection</b> input field's value was set to <code>LastInvoice</code>. This field is not returned if the
+     * <b>AccountHistorySelection</b> input field's value was set to <code>BetweenSpecifiedDates</code> and a custom time period (overlapping multiple billing cycles) was specified.
      * - minOccurs: 0
      * @var string
      */
@@ -193,9 +192,7 @@ class AccountSummaryType extends AbstractStructBase
      * The NettedTransactionSummary
      * Meta information extracted from the WSDL
      * - documentation: This container shows the total amount of fees (and credits if applicable) that have already been paid through seller payout deductions. The seller must include the <b>IncludeNettedEntries</b> field in the request and set it to
-     * <code>true</code> in order for this container to be returned. <br> <br> The seller's account has to be enabled for managed payments and the fee netting mechanism must be enabled for the managed payments account in order to retrieve the fee netted
-     * amounts. A seller can check their status for the fee netting mechanism by checking the value in the <b>FeeNettingStatus</b> field. <br> <br> <span class="tablenote"><b>Note: </b> For a limited number of managed payments sellers, final value fees and
-     * payment processing fees will start getting deducted from seller payouts as early as mid-June 2020, but for many other managed payments sellers, these fees won't start getting deducted from seller payouts until mid-July 2020. </span>
+     * <code>true</code> in order for this container to be returned.
      * - minOccurs: 0
      * @var \StructType\NettedTransactionSummaryType
      */

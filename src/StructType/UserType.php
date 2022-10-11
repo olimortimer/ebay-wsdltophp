@@ -243,7 +243,7 @@ class UserType extends AbstractStructBase
     /**
      * The CharityAffiliations
      * Meta information extracted from the WSDL
-     * - documentation: This type is deprecated. Use instead <b>User.SellerInfo.CharityAffiliationDetail</b>.
+     * - documentation: This field is deprecated.
      * - minOccurs: 0
      * @var \StructType\CharityAffiliationsType
      */
@@ -251,8 +251,7 @@ class UserType extends AbstractStructBase
     /**
      * The PayPalAccountLevel
      * Meta information extracted from the WSDL
-     * - documentation: The user's PayPal account level. Only returned for the user identified in eBayAuthToken. That is, you cannot see someone else's PayPal account level. Use this information to check whether a seller is eligible to list digital
-     * downloadable items. See the eBay Web site online help for current PayPal requirements for listing digital items.
+     * - documentation: This field is currently still returned, but is no longer relevant since having a PayPal account linked to your eBay account is no longer required.
      * - minOccurs: 0
      * @var string
      */
@@ -260,8 +259,7 @@ class UserType extends AbstractStructBase
     /**
      * The PayPalAccountType
      * Meta information extracted from the WSDL
-     * - documentation: The user's PayPal account type. Only returned for the user identified in <b>eBayAuthToken</b>. That is, you cannot see someone else's PayPal account type. Use this information to check whether a seller is likely to be eligible to
-     * list digital downloadable items. See the eBay Web site online help for current PayPal requirements for listing digital items.
+     * - documentation: This field is currently still returned, but is no longer relevant since having a PayPal account linked to your eBay account is no longer required.
      * - minOccurs: 0
      * @var string
      */
@@ -269,8 +267,7 @@ class UserType extends AbstractStructBase
     /**
      * The PayPalAccountStatus
      * Meta information extracted from the WSDL
-     * - documentation: The user's PayPal account status. Only returned for the user identified in <b>eBayAuthToken</b>. That is, you cannot see someone else's PayPal account status. Use this information to check whether a seller is eligible to list digital
-     * downloadable items. See the eBay Web site online help for current PayPal requirements for listing digital items.
+     * - documentation: This field is currently still returned, but is no longer relevant since having a PayPal account linked to your eBay account is no longer required.
      * - minOccurs: 0
      * @var string
      */

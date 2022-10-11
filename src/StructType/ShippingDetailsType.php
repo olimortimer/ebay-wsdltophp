@@ -80,11 +80,7 @@ class ShippingDetailsType extends AbstractStructBase
     /**
      * The PaymentInstructions
      * Meta information extracted from the WSDL
-     * - documentation: This free-form string field gives sellers the ability add detailed payment instructions to their listings. The payment instructions appear on eBay's View Item and Checkout pages. <br><br> Sellers can use this field to specify payment
-     * instructions, how soon the item will shipped, feedback instructions, and other items that the buyer should be aware of when they bid on or buy an item. eBay recommends sellers use this field to clarify payment policies for motor vehicle listings on
-     * eBay Motors. For example, sellers can include the specifics on the deposit (if required), pickup/delivery arrangements, and full payment details on the vehicle. <br><br> The field allows only 500 characters as input, but due to the way the eBay web
-     * site UI treats characters, this field can return more than 500 characters in the response. For example, characters like & and ' (ampersand and single quote) count as 5 characters each. <br><br> This field can be specified regardless of the shipping
-     * type. Use <b>DeletedField</b> to remove this value when revising or relisting an item. <br><br> Applicable to eBay Motors (usually used to elaborate on the return policy). <br>
+     * - documentation: This free-form string field gives sellers the ability to add detailed payment instructions to their listings. <br>
      * - minOccurs: 0
      * @var string
      */
@@ -96,11 +92,9 @@ class ShippingDetailsType extends AbstractStructBase
      * Add/Revise/Relist/Verify call to set sales tax settings for a specific tax jurisdiction, but it is actually a better practice if a user sets up sales tax rates through the Sales Tax Table tool in My eBay (or by using the <b>SetTaxTable</b> call). A
      * seller's Sales Tax Table is applied to the listing by including the <b>UseTaxTable</b> field in the request and setting its value to <code>true</code>. The <b>GetTaxTable</b> call can be used to retrieve the current sales tax rates for different tax
      * jurisdictions. <br><br> This container is only returned in order management 'Get' calls if sales tax is applicable to the order line item. For eBay Collect and Remit states, the sales tax information is displayed in the <b>Transaction.Taxes</b>
-     * container instead. <br><br> <span class="tablenote"><b>Note: </b> As of September 1, 2020, buyers in over 40 US states will automatically be charged sales tax for eBay purchases. eBay will collect and remit this sales tax to the proper taxing
-     * authority on the buyer's behalf. So, if a sales tax rate is applied by the seller for a state that is subject to 'eBay Collect and Remit', this sales tax rate will be ignored by eBay during checkout process. For a list of the US states that are
-     * currently subject to 'eBay Collect and Remit', see the <a href="https://www.ebay.com/help/selling/fees-credits-invoices/taxes-import-charges?id=4121#section4">eBay sales tax collection</a> help topic. </span> <br> <span class="tablenote"><b>Note:
-     * </b> For eBay managed payment orders that are subject to 'Collect and Remit' taxes, these taxes will only be shown in the <b>eBayCollectAndRemitTaxes</b> container for line items, and the <b>SalesTax</b> will not be returned at all. For non-eBay
-     * managed payment orders, the 'Collect and Remit' taxes will be shown in both the <b>eBayCollectAndRemitTaxes</b> and <b>SalesTax</b> containers. </span>
+     * container instead. <br><br> <span class="tablenote"><b>Note: </b> As of November 2021, buyers in all US states except for Missouri (and several US territories), will automatically be charged sales tax for purchases, and the seller does not set this
+     * rate. eBay will collect and remit this sales tax to the proper taxing authority on the buyer's behalf. For more US state-level information on sales tax, see the <a
+     * href="https://www.ebay.com/help/selling/fees-credits-invoices/taxes-import-charges?id=4121#section4">eBay sales tax collection</a> help topic. </span>
      * - minOccurs: 0
      * @var \StructType\SalesTaxType
      */
@@ -176,10 +170,10 @@ class ShippingDetailsType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The sale record ID. Applicable to Selling Manager users. When an item is sold, Selling Manager generates a sale record. A sale record contains buyer information, shipping, and other information. A sale record is displayed in the Sold
      * view in Selling Manager. Each sale record has a sale record ID. <br/><br/> In the following calls, the value for the sale record ID is in the <b>SellingManagerSalesRecordNumber</b> field: <b>GetItemTransactions</b>, <b>GetSellerTransactions</b>,
-     * <b>GetOrders</b>, <b>GetOrderTransactions</b>. In the Selling Manager calls, the value for the sale record ID is in the <b>SaleRecordID</b> field. <br><br> <b>For GetOrders, GetOrderTransactions, and GetItemTransactions only:</b> If using Trading
-     * WSDL Version 1019 or above, this field will only be returned to the buyer or seller, and no longer returned at all to third parties. If using a Trading WSDL older than Version 1019, the real record number is only returned to the buyer or seller, and
-     * a dummy value of <code>0</code> will be returned to all third parties. <br/><br/> The sale record ID can be for a single or a multiple line item order. <br> <br> <span class="tablenote"><b>Note:</b> For the <strong>GetItemTransactions</strong>,
-     * <strong>GetOrders</strong>, and <strong>GetOrderTransactions</strong> calls, this field is only returned to the seller of the order; this field is not returned for the buyer or third party. </span>
+     * <b>GetOrders</b>, <b>GetOrderTransactions</b>. <br><br> <b>For GetOrders, GetOrderTransactions, and GetItemTransactions only:</b> If using Trading WSDL Version 1019 or above, this field will only be returned to the buyer or seller, and no longer
+     * returned at all to third parties. If using a Trading WSDL older than Version 1019, the real record number is only returned to the buyer or seller, and a dummy value of <code>0</code> will be returned to all third parties. <br/><br/> The sale record
+     * ID can be for a single or a multiple line item order. <br> <br> <span class="tablenote"><b>Note:</b> For the <strong>GetItemTransactions</strong>, <strong>GetOrders</strong>, and <strong>GetOrderTransactions</strong> calls, this field is only
+     * returned to the seller of the order; this field is not returned for the buyer or third party. </span>
      * - minOccurs: 0
      * @var int
      */

@@ -149,6 +149,13 @@ class ValueTypeCodeType extends AbstractStructEnumBase
      */
     const VALUE_CNPJ = 'CNPJ';
     /**
+     * Constant for value 'VATIN'
+     * Meta information extracted from the WSDL
+     * - documentation: This value indicates that the tax ID in the <b>ID</b> field is a VAT Identification Number for the buyer.
+     * @return string 'VATIN'
+     */
+    const VALUE_VATIN = 'VATIN';
+    /**
      * Constant for value 'CustomCode'
      * Meta information extracted from the WSDL
      * - documentation: Reserved for future use.
@@ -175,6 +182,7 @@ class ValueTypeCodeType extends AbstractStructEnumBase
      * @uses self::VALUE_NIT
      * @uses self::VALUE_DRIVER_LICENSE
      * @uses self::VALUE_CNPJ
+     * @uses self::VALUE_VATIN
      * @uses self::VALUE_CUSTOM_CODE
      * @return string[]
      */
@@ -199,6 +207,7 @@ class ValueTypeCodeType extends AbstractStructEnumBase
             self::VALUE_NIT,
             self::VALUE_DRIVER_LICENSE,
             self::VALUE_CNPJ,
+            self::VALUE_VATIN,
             self::VALUE_CUSTOM_CODE,
         );
     }

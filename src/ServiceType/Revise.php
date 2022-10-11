@@ -24,30 +24,6 @@ class Revise extends AbstractSoapClientBase
         return $this->setSoapHeader($nameSpace, 'RequesterCredentials', $requesterCredentials, $mustUnderstand, $actor);
     }
     /**
-     * Method to call the operation originally named ReviseCheckoutStatus
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\ReviseCheckoutStatusRequestType $reviseCheckoutStatusRequest
-     * @return \StructType\ReviseCheckoutStatusResponseType|bool
-     */
-    public function ReviseCheckoutStatus(\StructType\ReviseCheckoutStatusRequestType $reviseCheckoutStatusRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->ReviseCheckoutStatus($reviseCheckoutStatusRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
      * Method to call the operation originally named ReviseFixedPriceItem
      * Meta information extracted from the WSDL
      * - SOAPHeaderNames: RequesterCredentials
@@ -168,82 +144,9 @@ class Revise extends AbstractSoapClientBase
         }
     }
     /**
-     * Method to call the operation originally named
-     * ReviseSellingManagerInventoryFolder
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\ReviseSellingManagerInventoryFolderRequestType $reviseSellingManagerInventoryFolderRequest
-     * @return \StructType\ReviseSellingManagerInventoryFolderResponseType|bool
-     */
-    public function ReviseSellingManagerInventoryFolder(\StructType\ReviseSellingManagerInventoryFolderRequestType $reviseSellingManagerInventoryFolderRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->ReviseSellingManagerInventoryFolder($reviseSellingManagerInventoryFolderRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named ReviseSellingManagerProduct
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\ReviseSellingManagerProductRequestType $reviseSellingManagerProductRequest
-     * @return \StructType\ReviseSellingManagerProductResponseType|bool
-     */
-    public function ReviseSellingManagerProduct(\StructType\ReviseSellingManagerProductRequestType $reviseSellingManagerProductRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->ReviseSellingManagerProduct($reviseSellingManagerProductRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named ReviseSellingManagerTemplate
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\ReviseSellingManagerTemplateRequestType $reviseSellingManagerTemplateRequest
-     * @return \StructType\ReviseSellingManagerTemplateResponseType|bool
-     */
-    public function ReviseSellingManagerTemplate(\StructType\ReviseSellingManagerTemplateRequestType $reviseSellingManagerTemplateRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->ReviseSellingManagerTemplate($reviseSellingManagerTemplateRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\ReviseCheckoutStatusResponseType|\StructType\ReviseFixedPriceItemResponseType|\StructType\ReviseInventoryStatusResponseType|\StructType\ReviseItemResponseType|\StructType\ReviseMyMessagesFoldersResponseType|\StructType\ReviseMyMessagesResponseType|\StructType\ReviseSellingManagerInventoryFolderResponseType|\StructType\ReviseSellingManagerProductResponseType|\StructType\ReviseSellingManagerTemplateResponseType
+     * @return \StructType\ReviseFixedPriceItemResponseType|\StructType\ReviseInventoryStatusResponseType|\StructType\ReviseItemResponseType|\StructType\ReviseMyMessagesFoldersResponseType|\StructType\ReviseMyMessagesResponseType
      */
     public function getResult()
     {

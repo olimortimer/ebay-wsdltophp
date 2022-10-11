@@ -16,7 +16,7 @@ class DiscountDetailType extends AbstractStructBase
      * The Discount
      * Meta information extracted from the WSDL
      * - documentation: This container indicates the discount type and amount applied to an account entry. <br> <br> <span class="tablenote"><b>Note: </b> The discount type will be shown for any account entry where a discount applies, but the discount
-     * amount will only be shown if the corresponding fee was deducted from a seller payout for a managed payments seller. </span>
+     * amount will only be shown if the corresponding fee was deducted from a seller payout. </span>
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * @var \StructType\DiscountType[]

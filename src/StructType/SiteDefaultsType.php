@@ -7,7 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for SiteDefaultsType StructType
  * Meta information extracted from the WSDL
- * - documentation: A container for feature definitions that apply to the entire site.
+ * - documentation: This type is used by the <b>SiteDefaults</b> container to display the features/settings that are default for most categories on the eBay marketplace.
  * @subpackage Structs
  */
 class SiteDefaultsType extends AbstractStructBase
@@ -15,7 +15,8 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The ListingDuration
      * Meta information extracted from the WSDL
-     * - documentation: Specifies the ID of a set of default durations for a certain type of listing. The actual duration values are returned within the FeatureDefinitions node. The type of listing is named in the type attribute.
+     * - documentation: A <b>ListingDuration</b> field will be returned for each different listing type that is supported on the eBay marketplace. Each field will show the listing type and the identifier associated with this listing type. These IDs will be
+     * used to match the default listing duration values that are displayed in the <b>FeatureDefinitions.ListingDurations</b> containers.
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * @var \StructType\ListingDurationReferenceType[]
@@ -41,7 +42,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The DutchBINEnabled
      * Meta information extracted from the WSDL
-     * - documentation: This field is no longer applicable as Dutch auctions are no longer available on eBay sites. </span> <br>
+     * - documentation: This field is no longer applicable as Dutch auctions are no longer available on eBay sites.
      * - minOccurs: 0
      * @var bool
      */
@@ -185,7 +186,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The SellerContactDetailsEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Specifies the default site setting for whether most categories allow seller- level contact information for Classified Ad listings. <br/><br/> A value of <code>true</code> means seller-level contact information is available for
+     * - documentation: Specifies the default site setting for whether most categories allow seller-level contact information for Classified Ad listings. <br/><br/> A value of <code>true</code> means seller-level contact information is available for
      * Classified Ad format listings site-wide, unless a specific category overrides the setting.
      * - minOccurs: 0
      * @var bool
@@ -306,11 +307,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The SafePaymentRequired
      * Meta information extracted from the WSDL
-     * - documentation: Specifies whether categories on the site require a seller to offer a safe payment method (i.e. PayPal or one of the credit cards specified in <b>Item.PaymentMethods</b>). If a seller has a 'SafePaymentExempt' status, they are exempt
-     * from the category requirement to offer at least one safe payment method, even if the site and category have the safe payment method turned on. <br/><br/> If <code>true</code>, items on the site need to have the safe payment method selected, but
-     * specific categories can override the setting if they don't need this requirement. For example, Business and Industrial, Motors, Real Estate, and Mature Audiences categories, and all listings that don't support <b>Item.PaymentMethods</b> are exempt
-     * from this requirement, which means that any seller can list without any safe payment method selected. <br><br/> If <code>false</code>, all sellers in all categories can list without any safe payment method selected and this setting cannot be
-     * overridden at the category level. If site is not enabled, there is no category where this requirement is enabled on that site.
+     * - documentation: eBay controls all forms of electronic payment methods that are avaialable to buyers, so this field is no longer applicable.
      * - minOccurs: 0
      * @var bool
      */
@@ -415,7 +412,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The PayPalBuyerProtectionEnabled
      * Meta information extracted from the WSDL
-     * - documentation: For the Australia site, if both <b>PayPalBuyerProtectionEnabled</b> and <b>BuyerGuaranteeEnabled</b> are returned, then the default site setting is that categories allow buyer protection.
+     * - documentation: This field is deprecated. eBay now manages the complete payment and checkout process, so PayPal Purchase Protection no longer applies to eBay orders.
      * - minOccurs: 0
      * @var bool
      */
@@ -423,7 +420,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The BuyerGuaranteeEnabled
      * Meta information extracted from the WSDL
-     * - documentation: For the Australia site, if both <b>PayPalBuyerProtectionEnabled</b> and <b>BuyerGuaranteeEnabled</b> are returned, then the default site setting is that categories allow buyer protection.
+     * - documentation: For the Australia site, if the <b>BuyerGuaranteeEnabled</b> is returned, then the default site setting is that categories allow buyer protection.
      * - minOccurs: 0
      * @var bool
      */
@@ -455,7 +452,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The PayPalRequired
      * Meta information extracted from the WSDL
-     * - documentation: Specifies the default site setting for whether categories have PayPal as a required payment method for listings.
+     * - documentation: This field is deprecated. eBay now controls the electronic payment methods avaialable to buyers, and the seller does not specify any electronic payment methods.
      * - minOccurs: 0
      * @var bool
      */
@@ -755,7 +752,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The PayPalRequiredForStoreOwner
      * Meta information extracted from the WSDL
-     * - documentation: This field is deprecated and will no longer be returned.
+     * - documentation: This field is deprecated.
      * - minOccurs: 0
      * @var bool
      */
@@ -797,8 +794,8 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The ReturnPolicyEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Specifies the default site setting for whether a return policy is required for most categories.<br> <br> <b>For most sites:</b> If true, listings in most categories require a return policy. <br> <br> <b>For eBay Australia (AU) and US
-     * eBay Motors Parts and Accessories:</b> If true, most categories support but do not require a return policy.<br> <br> Individual categories can override the site default.
+     * - documentation: Specifies the default site setting for whether a return policy is required for most categories. <br> <br> <b>For most sites:</b> If true, listings in most categories require a return policy. <br> <br> <b>For eBay Australia (AU) and
+     * US eBay Motors Parts and Accessories:</b> If true, most categories support but do not require a return policy. <br> <br> Individual categories can override the site default.
      * - minOccurs: 0
      * @var bool
      */
@@ -806,10 +803,10 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The HandlingTimeEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Specifies the default site setting for whether a handling time (dispatch time) is required for most categories.<br> <br> The handling time is the maximum number of business days the seller commits to for preparing an item to be
-     * shipped after receiving a cleared payment. The seller's handling time does not include the shipping time (the carrier's transit time).<br> <br> If <code>false</code>, most listings on the site require a handling time (see <b>DispatchTimeMax</b> in
-     * <b>AddItem</b>) when flat or calculated shipping is specified. (A handling time is not required for local pickup or for freight shipping.)<br> <br> For a list of the handling time values allowed for each site, use <b>DispatchTimeMaxDetails</b> in
-     * <b>GeteBayDetails</b>.<br> <br> <span class="tablenote"><b>Note:</b> Although the field name ends with "Enabled", a value of <code>true</code> means that a handling time is NOT required, and value of <code>false</code> means that a handling time IS
+     * - documentation: Specifies the default site setting for whether a handling time (dispatch time) is required for most categories. <br> <br> The handling time is the maximum number of business days the seller commits to for preparing an item to be
+     * shipped after receiving a cleared payment. The seller's handling time does not include the shipping time (the carrier's transit time). <br> <br> If <code>false</code>, most listings on the site require a handling time (see <b>DispatchTimeMax</b> in
+     * <b>AddItem</b>) when flat or calculated shipping is specified. (A handling time is not required for local pickup or for freight shipping.) <br> <br> For a list of the handling time values allowed for each site, use <b>DispatchTimeMaxDetails</b> in
+     * <b>GeteBayDetails</b>. <br> <br> <span class="tablenote"><b>Note:</b> Although the field name ends with "Enabled", a value of <code>true</code> means that a handling time is NOT required, and value of <code>false</code> means that a handling time IS
      * required.</span>
      * - minOccurs: 0
      * @var bool
@@ -858,7 +855,8 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The PaymentMethod
      * Meta information extracted from the WSDL
-     * - documentation: Indicates the acceptable payment methods that can be used when using the <b>Add</b>/<b>Revise</b>/<b>Relist</b> calls for an item listed on the corresponding site.
+     * - documentation: Indicates the acceptable payment methods that can be used when using the <b>Add</b>/<b>Revise</b>/<b>Relist</b> calls for an item listed on the corresponding site. <br><br> <span class="tablenote"><b>Note:</b> eBay now controls all
+     * electronic payment methods available to buyers, but sellers still need to specify offline payment methods for listings that require/support offline payment such as motor vehicle listings.</span>
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * @var string[]
@@ -867,7 +865,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The VariationsEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Specifies the default site setting for whether categories support multi-variation listings. If true, you can pass in Item.Variations in the AddFixedPriceItem family of calls when you list in categories that support this feature.<br>
+     * - documentation: Specifies the default site setting for whether categories support multi-variation listings. If true, you can pass in Item.Variations in the AddFixedPriceItem family of calls when you list in categories that support this feature. <br>
      * <br> Multi-variation listings contain items that are logically the same product, but that vary in their manufacturing details or packaging. For example, a particular brand and style of shirt could be available in different sizes and colors, such as
      * "large blue" and "medium black" variations.
      * - minOccurs: 0
@@ -951,8 +949,10 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The SpecialFeatures
      * Meta information extracted from the WSDL
-     * - documentation: This container shows the site default special item condition values, such as <b>Certified Refurbished</b> condition (Condition ID 2000). A seller must be pre-qualified by eBay to list items with the <b>Certified Refurbished</b>
-     * condition. All other item conditions will be returned in the <b>ConditionValues</b> container instead. Individual leaf categories define their own default set of item condition values and always override this list.
+     * - documentation: This container shows the site default special item condition values, such as <b>Certified - Refurbished</b> condition (condition ID 2000), <b>Excellent - Refurbished</b> condition (condition ID 2010), <b>Very Good - Refurbished</b>
+     * condition (condition ID 2020), and <b>Good - Refurbished</b> condition (condition ID 2030). A seller must be pre-qualified by eBay to list items with the any of these refurbished item conditions. The <b>Excellent - Refurbished</b>, <b>Very Good -
+     * Refurbished</b> and <b>Good - Refurbished</b> conditions are currently only applicable for the <strong>Cell Phones & Smartphones</strong> category (category ID 9355). <br/><br/> All other item conditions supported by a category will be returned in
+     * the <b>ConditionValues</b> container instead. Individual leaf categories define their own default set of item condition values and always override this list.
      * - minOccurs: 0
      * @var \StructType\ConditionValuesType
      */
@@ -960,9 +960,9 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The ValueCategory
      * Meta information extracted from the WSDL
-     * - documentation: Specifies the default site setting for whether most categories follow specific rules associated with "value categories".<br> <br> Some eBay sites may select a few categories and designate them as "value categories". These are
+     * - documentation: Specifies the default site setting for whether most categories follow specific rules associated with "value categories". <br> <br> Some eBay sites may select a few categories and designate them as "value categories". These are
      * typically selected from categories where buyers can find great deals. (Not all categories with great deals are designated as value categories.) This designation can change over time. <br> <br> While a category is designated as a value category (i.e.,
-     * when <b>ValueCategory</b> = <code>true</code>), it is subject to the following rule: Items in value categories can only be listed in one category.<br> <br> For example, if you attempt to list in two categories and the <b>PrimaryCategory</b> or
+     * when <b>ValueCategory</b> = <code>true</code>), it is subject to the following rule: Items in value categories can only be listed in one category. <br> <br> For example, if you attempt to list in two categories and the <b>PrimaryCategory</b> or
      * <b>SecondaryCategory</b> is a value category, then eBay drops the <b>SecondaryCategory</b> and lists the item in the <b>PrimaryCategory</b> only. Similarly, if you attempt to add a secondary category to an existing listing, or you change the category
      * for an existing listing, and if the primary or secondary category is a value category, then eBay drops the secondary category.
      * - minOccurs: 0
@@ -972,8 +972,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The ProductCreationEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Specifies the default site setting for whether most categories support (or require) product creation in listings. Use this to determine whether it is mandatory to send product id in AddItem and related calls. In general, this is set
-     * to Disabled, and meta-categories (level 1 categories) define their own default settings.
+     * - documentation: Specifies the default site setting for whether most categories support creating/revising listings based off an eBay catalog product.
      * - minOccurs: 0
      * @var string
      */
@@ -1043,7 +1042,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The PaymentProfileCategoryGroup
      * Meta information extracted from the WSDL
-     * - documentation: Specifies what categories the Payment profile is applicable to. Only returned when this value (or this category's setting) overrides the value inherited from the category's parent.
+     * - documentation: Specifies what categories the Payment profile is applicable to.
      * - minOccurs: 0
      * @var string
      */
@@ -1051,7 +1050,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The ReturnPolicyProfileCategoryGroup
      * Meta information extracted from the WSDL
-     * - documentation: Specifies what categories the Return Policy profile is applicable to. Only returned when this value (or this category's setting) overrides the value inherited from the category's parent.
+     * - documentation: Specifies what categories the Return Policy profile is applicable to.
      * - minOccurs: 0
      * @var string
      */
@@ -1106,11 +1105,6 @@ class SiteDefaultsType extends AbstractStructBase
      */
     public $AdditionalCompatibilityEnabled;
     /**
-     * The any
-     * @var \DOMDocument
-     */
-    public $any;
-    /**
      * The PickupDropOffEnabled
      * Meta information extracted from the WSDL
      * - documentation: Indicates whether most categories on the specified eBay site support the "Click and Collect" feature. With the 'Click and Collect' feature, a buyer can purchase certain items on an eBay site and collect them at a local store. Buyers
@@ -1136,7 +1130,7 @@ class SiteDefaultsType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: This field is returned as <code>true</code> if one or more categories on an eBay site support the use of an eBay Product ID (e.g. ePID) in an Add/Revise/Relist API call to identify which motorcycles and/or scooters are compatible
      * with a motor vehicle part or accessory. ePIDs can only be used to identify motorcycles and scooters on the Germany and UK sites. <br/><br/> For more information on using an ePID to identify a compatible motorcycle or scooter through an
-     * Add/Revise/Relist API call on the Germany or UK site, see the documentation for the <a href=" http://developer.ebay.com/Devzone/XML/docs/Reference/eBay/AddItem.html#Request .Item.ItemCompatibilityList.Compatibility.NameValueList">Compatibility.Name
+     * Add/Revise/Relist API call on the Germany or UK site, see the documentation for the <a href=" https://developer.ebay.com/Devzone/XML/docs/Reference/eBay/AddItem.html#Request .Item.ItemCompatibilityList.Compatibility.NameValueList">Compatibility.Name
      * ValueList</a> container.
      * - minOccurs: 0
      * @var bool
@@ -1147,7 +1141,7 @@ class SiteDefaultsType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: This field is returned as <code>true</code> if one or more categories on an eBay site support the use of a K Type vehicle number in an Add/Revise/Relist API call to identify which cars and/or trucks are compatible with a motor
      * vehicle part or accessory. K type vehicle numbers can only be used to identify cars and trucks on the Germany site. <br/><br/> For more information on using a K Type vehicle number to identify a compatible car or truck through an Add/Revise/Relist
-     * API call on the Germany site, see the documentation for the <a href=" http://developer.ebay.com/Devzone/XML/docs/Reference/eBay/AddItem.html#Request .Item.ItemCompatibilityList.Compatibility.NameValueList">Compatibility.Name ValueList</a> container.
+     * API call on the Germany site, see the documentation for the <a href=" https://developer.ebay.com/Devzone/XML/docs/Reference/eBay/AddItem.html#Request .Item.ItemCompatibilityList.Compatibility.NameValueList">Compatibility.Name ValueList</a> container.
      * - minOccurs: 0
      * @var bool
      */
@@ -1155,8 +1149,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The ProductRequiredEnabled
      * Meta information extracted from the WSDL
-     * - documentation: This field indicates whether or not the specified eBay site supports Product-Based Shopping Experience listings - listings that are associated with an eBay catalog product. <br> <br> <span class="tablenote"><b>Note:</b> Due to the
-     * rollback of the Product-Based Shopping Experience mandate for all eBay categories, the <b>SiteDefaults.ProductRequiredEnabled</b> field no longer has any practical use, since its value with always be <code>Disabled</code>. </span>
+     * - documentation: This field is deprecated. No eBay categories require listings based on an eBay catalog product.
      * - minOccurs: 0
      * @var string
      */
@@ -1164,7 +1157,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The DomesticReturnsAcceptedValues
      * Meta information extracted from the WSDL
-     * - documentation: This field returns the options a seller has for accepting or not accepting domestic item returns. <br><br> The values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to
+     * - documentation: This field returns the options a seller has for accepting or not accepting returns from domestic buyers. <br><br> The values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to
      * <code>true</code> for the associated marketplace and category.
      * - minOccurs: 0
      * @var \StructType\DomesticReturnsAcceptedCodeType
@@ -1173,8 +1166,8 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The InternationalReturnsAcceptedValues
      * Meta information extracted from the WSDL
-     * - documentation: This field returns the options a seller has for accepting or not accepting international item returns. <br><br> The values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to
-     * <code>true</code> for the associated marketplace and category.
+     * - documentation: This field returns the options a seller has for accepting or not accepting returns from international buyers. <br><br> The values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set
+     * to <code>true</code> for the associated marketplace and category.
      * - minOccurs: 0
      * @var \StructType\InternationalReturnsAcceptedCodeType
      */
@@ -1182,8 +1175,8 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The DomesticReturnsDurationValues
      * Meta information extracted from the WSDL
-     * - documentation: This field returns the options a seller has for specifying the return period for domestic item returns. The return period is the amount of time the buyer has to initiate a return once they have received the item. <br><br> The values
-     * returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated marketplace and category.
+     * - documentation: This field returns the options a seller has for specifying the return period for returns from domestic buyers. The return period is the amount of time the buyer has to initiate a return once they have received the item. <br><br> The
+     * values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated marketplace and category.
      * - minOccurs: 0
      * @var \StructType\DomesticReturnsDurationCodeType
      */
@@ -1191,8 +1184,8 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The InternationalReturnsDurationValues
      * Meta information extracted from the WSDL
-     * - documentation: This field returns the options a seller has for specifying the return period for international item returns. The return period is the amount of time the buyer has to initiate a return once they have received the item. <br><br> The
-     * values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated marketplace and category.
+     * - documentation: This field returns the options a seller has for specifying the return period for returns from international buyers. The return period is the amount of time the buyer has to initiate a return once they have received the item. <br><br>
+     * The values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated marketplace and category.
      * - minOccurs: 0
      * @var \StructType\InternationalReturnsDurationCodeType
      */
@@ -1242,6 +1235,11 @@ class SiteDefaultsType extends AbstractStructBase
      * @var bool
      */
     public $ReturnPolicyDescriptionEnabled;
+    /**
+     * The any
+     * @var \DOMDocument
+     */
+    public $any;
     /**
      * Constructor method for SiteDefaultsType
      * @uses SiteDefaultsType::setListingDuration()
@@ -1375,7 +1373,6 @@ class SiteDefaultsType extends AbstractStructBase
      * @uses SiteDefaultsType::setDepositSupported()
      * @uses SiteDefaultsType::setGlobalShippingEnabled()
      * @uses SiteDefaultsType::setAdditionalCompatibilityEnabled()
-     * @uses SiteDefaultsType::setAny()
      * @uses SiteDefaultsType::setPickupDropOffEnabled()
      * @uses SiteDefaultsType::setDigitalGoodDeliveryEnabled()
      * @uses SiteDefaultsType::setEpidSupported()
@@ -1390,6 +1387,7 @@ class SiteDefaultsType extends AbstractStructBase
      * @uses SiteDefaultsType::setDomesticRefundMethodValues()
      * @uses SiteDefaultsType::setInternationalRefundMethodValues()
      * @uses SiteDefaultsType::setReturnPolicyDescriptionEnabled()
+     * @uses SiteDefaultsType::setAny()
      * @param \StructType\ListingDurationReferenceType[] $listingDuration
      * @param bool $shippingTermsRequired
      * @param bool $bestOfferEnabled
@@ -1521,7 +1519,6 @@ class SiteDefaultsType extends AbstractStructBase
      * @param bool $depositSupported
      * @param bool $globalShippingEnabled
      * @param bool $additionalCompatibilityEnabled
-     * @param \DOMDocument $any
      * @param bool $pickupDropOffEnabled
      * @param bool $digitalGoodDeliveryEnabled
      * @param bool $epidSupported
@@ -1536,8 +1533,9 @@ class SiteDefaultsType extends AbstractStructBase
      * @param \StructType\DomesticRefundMethodCodeType $domesticRefundMethodValues
      * @param \StructType\InternationalRefundMethodCodeType $internationalRefundMethodValues
      * @param bool $returnPolicyDescriptionEnabled
+     * @param \DOMDocument $any
      */
-    public function __construct(array $listingDuration = array(), $shippingTermsRequired = null, $bestOfferEnabled = null, $dutchBINEnabled = null, $userConsentRequired = null, $homePageFeaturedEnabled = null, $proPackEnabled = null, $basicUpgradePackEnabled = null, $valuePackEnabled = null, $proPackPlusEnabled = null, $adFormatEnabled = null, $bestOfferCounterEnabled = null, $bestOfferAutoDeclineEnabled = null, $localMarketSpecialitySubscription = null, $localMarketRegularSubscription = null, $localMarketPremiumSubscription = null, $localMarketNonSubscription = null, $expressEnabled = null, $expressPicturesRequired = null, $expressConditionRequired = null, $minimumReservePrice = null, $sellerContactDetailsEnabled = null, $transactionConfirmationRequestEnabled = null, $storeInventoryEnabled = null, $skypeMeTransactionalEnabled = null, $skypeMeNonTransactionalEnabled = null, $localListingDistancesRegular = null, $localListingDistancesSpecialty = null, $localListingDistancesNonSubscription = null, $classifiedAdPaymentMethodEnabled = null, $classifiedAdShippingMethodEnabled = null, $classifiedAdBestOfferEnabled = null, $classifiedAdCounterOfferEnabled = null, $classifiedAdAutoDeclineEnabled = null, $classifiedAdContactByPhoneEnabled = null, $classifiedAdContactByEmailEnabled = null, $safePaymentRequired = null, $classifiedAdPayPerLeadEnabled = null, $itemSpecificsEnabled = null, $paisaPayFullEscrowEnabled = null, $iSBNIdentifierEnabled = null, $uPCIdentifierEnabled = null, $eANIdentifierEnabled = null, $brandMPNIdentifierEnabled = null, $classifiedAdAutoAcceptEnabled = null, $bestOfferAutoAcceptEnabled = null, $crossBorderTradeNorthAmericaEnabled = null, $crossBorderTradeGBEnabled = null, $crossBorderTradeAustraliaEnabled = null, $payPalBuyerProtectionEnabled = null, $buyerGuaranteeEnabled = null, $iNEscrowWorkflowTimeline = null, $combinedFixedPriceTreatmentEnabled = null, \StructType\ListingEnhancementDurationReferenceType $galleryFeaturedDurations = null, $payPalRequired = null, $eBayMotorsProAdFormatEnabled = null, $eBayMotorsProContactByPhoneEnabled = null, $eBayMotorsProPhoneCount = null, $eBayMotorsProContactByAddressEnabled = null, $eBayMotorsProStreetCount = null, $eBayMotorsProCompanyNameEnabled = null, $eBayMotorsProContactByEmailEnabled = null, $eBayMotorsProBestOfferEnabled = null, $eBayMotorsProAutoAcceptEnabled = null, $eBayMotorsProAutoDeclineEnabled = null, $eBayMotorsProPaymentMethodCheckOutEnabled = null, $eBayMotorsProShippingMethodEnabled = null, $eBayMotorsProCounterOfferEnabled = null, $eBayMotorsProSellerContactDetailsEnabled = null, $localMarketAdFormatEnabled = null, $localMarketContactByPhoneEnabled = null, $localMarketPhoneCount = null, $localMarketContactByAddressEnabled = null, $localMarketStreetCount = null, $localMarketCompanyNameEnabled = null, $localMarketContactByEmailEnabled = null, $localMarketBestOfferEnabled = null, $localMarketAutoAcceptEnabled = null, $localMarketAutoDeclineEnabled = null, $localMarketPaymentMethodCheckOutEnabled = null, $localMarketShippingMethodEnabled = null, $localMarketCounterOfferEnabled = null, $localMarketSellerContactDetailsEnabled = null, $classifiedAdPhoneCount = null, $classifiedAdContactByAddressEnabled = null, $classifiedAdStreetCount = null, $classifiedAdCompanyNameEnabled = null, $specialitySubscription = null, $regularSubscription = null, $premiumSubscription = null, $nonSubscription = null, $payPalRequiredForStoreOwner = null, $reviseQuantityAllowed = null, $revisePriceAllowed = null, $storeOwnerExtendedListingDurationsEnabled = null, \StructType\StoreOwnerExtendedListingDurationsType $storeOwnerExtendedListingDurations = null, $returnPolicyEnabled = null, $handlingTimeEnabled = null, \StructType\AmountType $maxFlatShippingCost = null, $maxFlatShippingCostCBTExempt = null, \StructType\AmountType $group1MaxFlatShippingCost = null, \StructType\AmountType $group2MaxFlatShippingCost = null, \StructType\AmountType $group3MaxFlatShippingCost = null, array $paymentMethod = array(), $variationsEnabled = null, $attributeConversionEnabled = null, $freeGalleryPlusEnabled = null, $freePicturePackEnabled = null, $itemCompatibilityEnabled = null, $minItemCompatibility = null, $maxItemCompatibility = null, $conditionEnabled = null, \StructType\ConditionValuesType $conditionValues = null, \StructType\ConditionValuesType $specialFeatures = null, $valueCategory = null, $productCreationEnabled = null, $eANEnabled = null, $iSBNEnabled = null, $uPCEnabled = null, $maxGranularFitmentCount = null, $compatibleVehicleType = null, $paymentOptionsGroup = null, $shippingProfileCategoryGroup = null, $paymentProfileCategoryGroup = null, $returnPolicyProfileCategoryGroup = null, $vINSupported = null, $vRMSupported = null, $sellerProvidedTitleSupported = null, $depositSupported = null, $globalShippingEnabled = null, $additionalCompatibilityEnabled = null, \DOMDocument $any = null, $pickupDropOffEnabled = null, $digitalGoodDeliveryEnabled = null, $epidSupported = null, $kTypeSupported = null, $productRequiredEnabled = null, \StructType\DomesticReturnsAcceptedCodeType $domesticReturnsAcceptedValues = null, \StructType\InternationalReturnsAcceptedCodeType $internationalReturnsAcceptedValues = null, \StructType\DomesticReturnsDurationCodeType $domesticReturnsDurationValues = null, \StructType\InternationalReturnsDurationCodeType $internationalReturnsDurationValues = null, \StructType\DomesticReturnsShipmentPayeeCodeType $domesticReturnsShipmentPayeeValues = null, \StructType\InternationalReturnsShipmentPayeeCodeType $internationalReturnsShipmentPayeeValues = null, \StructType\DomesticRefundMethodCodeType $domesticRefundMethodValues = null, \StructType\InternationalRefundMethodCodeType $internationalRefundMethodValues = null, $returnPolicyDescriptionEnabled = null)
+    public function __construct(array $listingDuration = array(), $shippingTermsRequired = null, $bestOfferEnabled = null, $dutchBINEnabled = null, $userConsentRequired = null, $homePageFeaturedEnabled = null, $proPackEnabled = null, $basicUpgradePackEnabled = null, $valuePackEnabled = null, $proPackPlusEnabled = null, $adFormatEnabled = null, $bestOfferCounterEnabled = null, $bestOfferAutoDeclineEnabled = null, $localMarketSpecialitySubscription = null, $localMarketRegularSubscription = null, $localMarketPremiumSubscription = null, $localMarketNonSubscription = null, $expressEnabled = null, $expressPicturesRequired = null, $expressConditionRequired = null, $minimumReservePrice = null, $sellerContactDetailsEnabled = null, $transactionConfirmationRequestEnabled = null, $storeInventoryEnabled = null, $skypeMeTransactionalEnabled = null, $skypeMeNonTransactionalEnabled = null, $localListingDistancesRegular = null, $localListingDistancesSpecialty = null, $localListingDistancesNonSubscription = null, $classifiedAdPaymentMethodEnabled = null, $classifiedAdShippingMethodEnabled = null, $classifiedAdBestOfferEnabled = null, $classifiedAdCounterOfferEnabled = null, $classifiedAdAutoDeclineEnabled = null, $classifiedAdContactByPhoneEnabled = null, $classifiedAdContactByEmailEnabled = null, $safePaymentRequired = null, $classifiedAdPayPerLeadEnabled = null, $itemSpecificsEnabled = null, $paisaPayFullEscrowEnabled = null, $iSBNIdentifierEnabled = null, $uPCIdentifierEnabled = null, $eANIdentifierEnabled = null, $brandMPNIdentifierEnabled = null, $classifiedAdAutoAcceptEnabled = null, $bestOfferAutoAcceptEnabled = null, $crossBorderTradeNorthAmericaEnabled = null, $crossBorderTradeGBEnabled = null, $crossBorderTradeAustraliaEnabled = null, $payPalBuyerProtectionEnabled = null, $buyerGuaranteeEnabled = null, $iNEscrowWorkflowTimeline = null, $combinedFixedPriceTreatmentEnabled = null, \StructType\ListingEnhancementDurationReferenceType $galleryFeaturedDurations = null, $payPalRequired = null, $eBayMotorsProAdFormatEnabled = null, $eBayMotorsProContactByPhoneEnabled = null, $eBayMotorsProPhoneCount = null, $eBayMotorsProContactByAddressEnabled = null, $eBayMotorsProStreetCount = null, $eBayMotorsProCompanyNameEnabled = null, $eBayMotorsProContactByEmailEnabled = null, $eBayMotorsProBestOfferEnabled = null, $eBayMotorsProAutoAcceptEnabled = null, $eBayMotorsProAutoDeclineEnabled = null, $eBayMotorsProPaymentMethodCheckOutEnabled = null, $eBayMotorsProShippingMethodEnabled = null, $eBayMotorsProCounterOfferEnabled = null, $eBayMotorsProSellerContactDetailsEnabled = null, $localMarketAdFormatEnabled = null, $localMarketContactByPhoneEnabled = null, $localMarketPhoneCount = null, $localMarketContactByAddressEnabled = null, $localMarketStreetCount = null, $localMarketCompanyNameEnabled = null, $localMarketContactByEmailEnabled = null, $localMarketBestOfferEnabled = null, $localMarketAutoAcceptEnabled = null, $localMarketAutoDeclineEnabled = null, $localMarketPaymentMethodCheckOutEnabled = null, $localMarketShippingMethodEnabled = null, $localMarketCounterOfferEnabled = null, $localMarketSellerContactDetailsEnabled = null, $classifiedAdPhoneCount = null, $classifiedAdContactByAddressEnabled = null, $classifiedAdStreetCount = null, $classifiedAdCompanyNameEnabled = null, $specialitySubscription = null, $regularSubscription = null, $premiumSubscription = null, $nonSubscription = null, $payPalRequiredForStoreOwner = null, $reviseQuantityAllowed = null, $revisePriceAllowed = null, $storeOwnerExtendedListingDurationsEnabled = null, \StructType\StoreOwnerExtendedListingDurationsType $storeOwnerExtendedListingDurations = null, $returnPolicyEnabled = null, $handlingTimeEnabled = null, \StructType\AmountType $maxFlatShippingCost = null, $maxFlatShippingCostCBTExempt = null, \StructType\AmountType $group1MaxFlatShippingCost = null, \StructType\AmountType $group2MaxFlatShippingCost = null, \StructType\AmountType $group3MaxFlatShippingCost = null, array $paymentMethod = array(), $variationsEnabled = null, $attributeConversionEnabled = null, $freeGalleryPlusEnabled = null, $freePicturePackEnabled = null, $itemCompatibilityEnabled = null, $minItemCompatibility = null, $maxItemCompatibility = null, $conditionEnabled = null, \StructType\ConditionValuesType $conditionValues = null, \StructType\ConditionValuesType $specialFeatures = null, $valueCategory = null, $productCreationEnabled = null, $eANEnabled = null, $iSBNEnabled = null, $uPCEnabled = null, $maxGranularFitmentCount = null, $compatibleVehicleType = null, $paymentOptionsGroup = null, $shippingProfileCategoryGroup = null, $paymentProfileCategoryGroup = null, $returnPolicyProfileCategoryGroup = null, $vINSupported = null, $vRMSupported = null, $sellerProvidedTitleSupported = null, $depositSupported = null, $globalShippingEnabled = null, $additionalCompatibilityEnabled = null, $pickupDropOffEnabled = null, $digitalGoodDeliveryEnabled = null, $epidSupported = null, $kTypeSupported = null, $productRequiredEnabled = null, \StructType\DomesticReturnsAcceptedCodeType $domesticReturnsAcceptedValues = null, \StructType\InternationalReturnsAcceptedCodeType $internationalReturnsAcceptedValues = null, \StructType\DomesticReturnsDurationCodeType $domesticReturnsDurationValues = null, \StructType\InternationalReturnsDurationCodeType $internationalReturnsDurationValues = null, \StructType\DomesticReturnsShipmentPayeeCodeType $domesticReturnsShipmentPayeeValues = null, \StructType\InternationalReturnsShipmentPayeeCodeType $internationalReturnsShipmentPayeeValues = null, \StructType\DomesticRefundMethodCodeType $domesticRefundMethodValues = null, \StructType\InternationalRefundMethodCodeType $internationalRefundMethodValues = null, $returnPolicyDescriptionEnabled = null, \DOMDocument $any = null)
     {
         $this
             ->setListingDuration($listingDuration)
@@ -1671,7 +1669,6 @@ class SiteDefaultsType extends AbstractStructBase
             ->setDepositSupported($depositSupported)
             ->setGlobalShippingEnabled($globalShippingEnabled)
             ->setAdditionalCompatibilityEnabled($additionalCompatibilityEnabled)
-            ->setAny($any)
             ->setPickupDropOffEnabled($pickupDropOffEnabled)
             ->setDigitalGoodDeliveryEnabled($digitalGoodDeliveryEnabled)
             ->setEpidSupported($epidSupported)
@@ -1685,7 +1682,8 @@ class SiteDefaultsType extends AbstractStructBase
             ->setInternationalReturnsShipmentPayeeValues($internationalReturnsShipmentPayeeValues)
             ->setDomesticRefundMethodValues($domesticRefundMethodValues)
             ->setInternationalRefundMethodValues($internationalRefundMethodValues)
-            ->setReturnPolicyDescriptionEnabled($returnPolicyDescriptionEnabled);
+            ->setReturnPolicyDescriptionEnabled($returnPolicyDescriptionEnabled)
+            ->setAny($any);
     }
     /**
      * Get ListingDuration value
@@ -4696,34 +4694,6 @@ class SiteDefaultsType extends AbstractStructBase
         return $this;
     }
     /**
-     * Get any value
-     * @uses \DOMDocument::loadXML()
-     * @param bool $asString true: returns XML string, false: returns \DOMDocument
-     * @return \DOMDocument|null
-     */
-    public function getAny($asString = true)
-    {
-        $domDocument = null;
-        if (!empty($this->any) && !$asString) {
-            $domDocument = new \DOMDocument('1.0', 'UTF-8');
-            $domDocument->loadXML($this->any);
-        }
-        return $asString ? $this->any : $domDocument;
-    }
-    /**
-     * Set any value
-     * @uses \DOMDocument::hasChildNodes()
-     * @uses \DOMDocument::saveXML()
-     * @uses \DOMNode::item()
-     * @param \DOMDocument $any
-     * @return \StructType\SiteDefaultsType
-     */
-    public function setAny(\DOMDocument $any = null)
-    {
-        $this->any = ($any instanceof \DOMDocument) && $any->hasChildNodes() ? $any->saveXML($any->childNodes->item(0)) : $any;
-        return $this;
-    }
-    /**
      * Get PickupDropOffEnabled value
      * @return bool|null
      */
@@ -5000,6 +4970,34 @@ class SiteDefaultsType extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a bool, %s given', var_export($returnPolicyDescriptionEnabled, true), gettype($returnPolicyDescriptionEnabled)), __LINE__);
         }
         $this->ReturnPolicyDescriptionEnabled = $returnPolicyDescriptionEnabled;
+        return $this;
+    }
+    /**
+     * Get any value
+     * @uses \DOMDocument::loadXML()
+     * @param bool $asString true: returns XML string, false: returns \DOMDocument
+     * @return \DOMDocument|null
+     */
+    public function getAny($asString = true)
+    {
+        $domDocument = null;
+        if (!empty($this->any) && !$asString) {
+            $domDocument = new \DOMDocument('1.0', 'UTF-8');
+            $domDocument->loadXML($this->any);
+        }
+        return $asString ? $this->any : $domDocument;
+    }
+    /**
+     * Set any value
+     * @uses \DOMDocument::hasChildNodes()
+     * @uses \DOMDocument::saveXML()
+     * @uses \DOMNode::item()
+     * @param \DOMDocument $any
+     * @return \StructType\SiteDefaultsType
+     */
+    public function setAny(\DOMDocument $any = null)
+    {
+        $this->any = ($any instanceof \DOMDocument) && $any->hasChildNodes() ? $any->saveXML($any->childNodes->item(0)) : $any;
         return $this;
     }
 }

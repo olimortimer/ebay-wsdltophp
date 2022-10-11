@@ -34,7 +34,7 @@ class GetOrdersResponseType extends AbstractResponseType
      * Meta information extracted from the WSDL
      * - documentation: The set of orders that match the order IDs or filter criteria specified.
      * - minOccurs: 0
-     * @var \ArrayType\OrderArrayType
+     * @var \StructType\OrderArrayType
      */
     public $OrderArray;
     /**
@@ -72,12 +72,12 @@ class GetOrdersResponseType extends AbstractResponseType
      * @uses GetOrdersResponseType::setReturnedOrderCountActual()
      * @param \StructType\PaginationResultType $paginationResult
      * @param bool $hasMoreOrders
-     * @param \ArrayType\OrderArrayType $orderArray
+     * @param \StructType\OrderArrayType $orderArray
      * @param int $ordersPerPage
      * @param int $pageNumber
      * @param int $returnedOrderCountActual
      */
-    public function __construct(\StructType\PaginationResultType $paginationResult = null, $hasMoreOrders = null, \ArrayType\OrderArrayType $orderArray = null, $ordersPerPage = null, $pageNumber = null, $returnedOrderCountActual = null)
+    public function __construct(\StructType\PaginationResultType $paginationResult = null, $hasMoreOrders = null, \StructType\OrderArrayType $orderArray = null, $ordersPerPage = null, $pageNumber = null, $returnedOrderCountActual = null)
     {
         $this
             ->setPaginationResult($paginationResult)
@@ -129,7 +129,7 @@ class GetOrdersResponseType extends AbstractResponseType
     }
     /**
      * Get OrderArray value
-     * @return \ArrayType\OrderArrayType|null
+     * @return \StructType\OrderArrayType|null
      */
     public function getOrderArray()
     {
@@ -137,10 +137,10 @@ class GetOrdersResponseType extends AbstractResponseType
     }
     /**
      * Set OrderArray value
-     * @param \ArrayType\OrderArrayType $orderArray
+     * @param \StructType\OrderArrayType $orderArray
      * @return \StructType\GetOrdersResponseType
      */
-    public function setOrderArray(\ArrayType\OrderArrayType $orderArray = null)
+    public function setOrderArray(\StructType\OrderArrayType $orderArray = null)
     {
         $this->OrderArray = $orderArray;
         return $this;

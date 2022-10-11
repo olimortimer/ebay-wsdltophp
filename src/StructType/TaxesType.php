@@ -7,22 +7,30 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for TaxesType StructType
  * Meta information extracted from the WSDL
- * - documentation: Type defining the Taxes container, which contains detailed sales tax information for an order line item. The Taxes container is only returned if the seller is using the Vertex- based Premium Sales Tax Engine solution. The information
- * in this container supercedes/overrides the sales tax information in the ShippingDetails.SalesTax container.
+ * - documentation: Type defining the <b>Taxes</b> container, which contains detailed tax information (sales tax and VAT) for an order line item. The information in this container supercedes/overrides the sales tax information in the
+ * <b>ShippingDetails.SalesTax</b> container.
  * @subpackage Structs
  */
 class TaxesType extends AbstractStructBase
 {
     /**
+     * The eBayReference
+     * Meta information extracted from the WSDL
+     * - documentation: The value returned in this field is the VAT ID for eBay, and this value may vary based on the region or country. The <b>eBayReference</b> field's <b>name</b> attribute will show the type of VAT ID, such as <code>IOSS</code>,
+     * <code>OSS</code>, or <code>ABN</code>. This field will be returned if VAT tax is applicable for the order. See the <a href="types/eBayTaxReferenceValue.html">eBayTaxReferenceValue</a> type page for more information on the VAT tax type strings that
+     * may appear for the <b>name</b> attribute. <br> <br> <span class="tablenote"><b>Note: </b> For all VAT ID/VATIN values to be returned (except for France), developers will need to use a Trading WSDL with a version number of 1211 (or newer). For French
+     * VAT ID/VATIN values to be returned, developers will need to use a Trading WSDL with a version number of 1225 (or newer). Otherwise, the VAT information will be returned in the <b>Order.ShippingAddress.Street2</b> field. Developers will also have the
+     * option of using older version, but setting the <b>X-EBAY-API-COMPATIBILITY-LEVEL</b> header value to 1211 or 1225 or higher. <br> <br> On January 31, 2022, the <b>Order.ShippingAddress.Street2</b> will stop being used to return VAT information
+     * regardless of WSDL version or compatibility level. </span> <br>
+     * - minOccurs: 0
+     * @var \StructType\EBayTaxReferenceValue
+     */
+    public $eBayReference;
+    /**
      * The TotalTaxAmount
      * Meta information extracted from the WSDL
      * - documentation: This value indicates the total tax amount for the order line item, for all tax types, which may include sales tax (seller-applied or 'eBay Collect and Remit'), 'Goods and Services' tax (for Australian or New Zealand sellers), or
-     * other fees like an electronic waste recycling fee. <br><br> <span class="tablenote"><b>Note: </b> If the corresponding tax type is <code>GST</code> or <code>SalesTax</code> (if found under both the <b>eBayCollectAndRemitTaxes</b> and <b>Taxes</b>
-     * containers), the order is subject to 'eBay Collect and Remit' tax, and a change in logic has rolled out as of early November 2019. For orders that are subject to eBay 'Collect and Remit' tax, which includes US sales tax for numerous states, and 'Good
-     * and Services' tax that is applicable to Australian and New Zealand sellers, the tax amount in this field will be included in the <b>Order.Total</b>, <b>Order.AmountPaid</b>, and <b>Transaction.AmountPaid</b> fields. <br><br> Sellers should be aware
-     * that the sales tax that the buyer pays for the order will initially be included when the order funds are distributed to their PayPal account, but that PayPal will pull out the sales tax amount shortly after the payment clears, and will distribute the
-     * sales tax to the appropriate taxing authority. Previous to this change, PayPal would strip out the 'Collect and Remit' tax before distributing order funds to the seller's account. <br><br> This logic change does not apply to sellers who are in eBay
-     * managed payments, so the amount in this field will never reflect any 'Collect and Remit' tax, even if the order is subject to 'Collect and Remit' tax. </span>
+     * other fees like an electronic waste recycling fee.
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -43,19 +51,40 @@ class TaxesType extends AbstractStructBase
     public $any;
     /**
      * Constructor method for TaxesType
+     * @uses TaxesType::setEBayReference()
      * @uses TaxesType::setTotalTaxAmount()
      * @uses TaxesType::setTaxDetails()
      * @uses TaxesType::setAny()
+     * @param \StructType\EBayTaxReferenceValue $eBayReference
      * @param \StructType\AmountType $totalTaxAmount
      * @param \StructType\TaxDetailsType[] $taxDetails
      * @param \DOMDocument $any
      */
-    public function __construct(\StructType\AmountType $totalTaxAmount = null, array $taxDetails = array(), \DOMDocument $any = null)
+    public function __construct(\StructType\EBayTaxReferenceValue $eBayReference = null, \StructType\AmountType $totalTaxAmount = null, array $taxDetails = array(), \DOMDocument $any = null)
     {
         $this
+            ->setEBayReference($eBayReference)
             ->setTotalTaxAmount($totalTaxAmount)
             ->setTaxDetails($taxDetails)
             ->setAny($any);
+    }
+    /**
+     * Get eBayReference value
+     * @return \StructType\EBayTaxReferenceValue|null
+     */
+    public function getEBayReference()
+    {
+        return $this->eBayReference;
+    }
+    /**
+     * Set eBayReference value
+     * @param \StructType\EBayTaxReferenceValue $eBayReference
+     * @return \StructType\TaxesType
+     */
+    public function setEBayReference(\StructType\EBayTaxReferenceValue $eBayReference = null)
+    {
+        $this->eBayReference = $eBayReference;
+        return $this;
     }
     /**
      * Get TotalTaxAmount value

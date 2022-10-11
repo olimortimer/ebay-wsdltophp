@@ -7,7 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for ShipmentType StructType
  * Meta information extracted from the WSDL
- * - documentation: Type defining the <b>Shipment</b> container, which is used by the seller in <b>CompleteSale</b> to provide shipping information. The <b>Shipment</b> container is also returned in the <b>GetSellingManagerSaleRecord</b> response.
+ * - documentation: Type defining the <b>Shipment</b> container, which is used by the seller in <b>CompleteSale</b> to provide shipping information.
  * @subpackage Structs
  */
 class ShipmentType extends AbstractStructBase
@@ -29,7 +29,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The PackageDepth
      * Meta information extracted from the WSDL
-     * - documentation: Depth dimension of the package needed to ship the item after it is sold. <br> For calculated shipping only.
      * - minOccurs: 0
      * @var \StructType\MeasureType
      */
@@ -37,7 +36,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The PackageLength
      * Meta information extracted from the WSDL
-     * - documentation: Length dimension of the package needed to ship the item after it is sold. <br> For calculated shipping only.
      * - minOccurs: 0
      * @var \StructType\MeasureType
      */
@@ -45,7 +43,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The PackageWidth
      * Meta information extracted from the WSDL
-     * - documentation: Width dimension of the package needed to ship the item after it is sold. <br> For calculated shipping only.
      * - minOccurs: 0
      * @var \StructType\MeasureType
      */
@@ -81,7 +78,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The ShipFromAddress
      * Meta information extracted from the WSDL
-     * - documentation: The address from which the item is being shipped.
      * - minOccurs: 0
      * @var \StructType\AddressType
      */
@@ -89,7 +85,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The ShippingAddress
      * Meta information extracted from the WSDL
-     * - documentation: The address to which the item is to be shipped.
      * - minOccurs: 0
      * @var \StructType\AddressType
      */
@@ -113,7 +108,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The ShippingPackage
      * Meta information extracted from the WSDL
-     * - documentation: The size of the package used to ship the item(s). See ShippingPackageCodeType for its possible values. Input.
      * - minOccurs: 0
      * @var string
      */
@@ -121,7 +115,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The ShippingServiceUsed
      * Meta information extracted from the WSDL
-     * - documentation: The size of the package used to ship the item(s). See ShippingPackageCodeType for its possible values. Input.
      * - minOccurs: 0
      * @var string
      */
@@ -137,7 +130,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The WeightMajor
      * Meta information extracted from the WSDL
-     * - documentation: The 'unit' attribute can have a value of lbs.
      * - minOccurs: 0
      * @var \StructType\MeasureType
      */
@@ -145,7 +137,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The WeightMinor
      * Meta information extracted from the WSDL
-     * - documentation: The 'unit' attribute is optional and assumed to be the minor compared to the value of 'unit' in WeightMajor.
      * - minOccurs: 0
      * @var \StructType\MeasureType
      */
@@ -161,7 +152,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The DeliveryDate
      * Meta information extracted from the WSDL
-     * - documentation: Revise only
      * - minOccurs: 0
      * @var string
      */
@@ -169,7 +159,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The DeliveryStatus
      * Meta information extracted from the WSDL
-     * - documentation: Revise only
      * - minOccurs: 0
      * @var string
      */
@@ -177,7 +166,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The RefundGrantedTime
      * Meta information extracted from the WSDL
-     * - documentation: Revise only
      * - minOccurs: 0
      * @var string
      */
@@ -185,7 +173,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The RefundRequestedTime
      * Meta information extracted from the WSDL
-     * - documentation: Revise only
      * - minOccurs: 0
      * @var string
      */
@@ -193,7 +180,6 @@ class ShipmentType extends AbstractStructBase
     /**
      * The Status
      * Meta information extracted from the WSDL
-     * - documentation: Status, for revise only
      * - minOccurs: 0
      * @var string
      */
@@ -210,8 +196,7 @@ class ShipmentType extends AbstractStructBase
     /**
      * The Notes
      * Meta information extracted from the WSDL
-     * - documentation: <span class="tablenote"><b>Note: </b> This field is only applicable for Half.com listings, and since API support for Half.com listings is being deprecated, this field is no longer applicable. </span> This string field allows a seller
-     * to provide notes to the buyer regarding shipment of a Half.com item. Only alphanumeric characters can be used in this field. This is an optional field that is only applicable to Half.com items.
+     * - documentation: This field is deprecated.
      * - minOccurs: 0
      * @var string
      */
@@ -226,14 +211,6 @@ class ShipmentType extends AbstractStructBase
      * @var \StructType\ShipmentTrackingDetailsType[]
      */
     public $ShipmentTrackingDetails;
-    /**
-     * The ShipmentLineItem
-     * Meta information extracted from the WSDL
-     * - documentation: Contains information about one or more order line items in a Global Shipping Program package. Required or returned if the value of <strong>ShippingCarrierUsed</strong> is <code>PBI</code>.
-     * - minOccurs: 0
-     * @var \StructType\ShipmentLineItemType
-     */
-    public $ShipmentLineItem;
     /**
      * The any
      * @var \DOMDocument
@@ -268,7 +245,6 @@ class ShipmentType extends AbstractStructBase
      * @uses ShipmentType::setShippedTime()
      * @uses ShipmentType::setNotes()
      * @uses ShipmentType::setShipmentTrackingDetails()
-     * @uses ShipmentType::setShipmentLineItem()
      * @uses ShipmentType::setAny()
      * @param string $estimatedDeliveryDate
      * @param \StructType\AmountType $insuredValue
@@ -297,10 +273,9 @@ class ShipmentType extends AbstractStructBase
      * @param string $shippedTime
      * @param string $notes
      * @param \StructType\ShipmentTrackingDetailsType[] $shipmentTrackingDetails
-     * @param \StructType\ShipmentLineItemType $shipmentLineItem
      * @param \DOMDocument $any
      */
-    public function __construct($estimatedDeliveryDate = null, \StructType\AmountType $insuredValue = null, \StructType\MeasureType $packageDepth = null, \StructType\MeasureType $packageLength = null, \StructType\MeasureType $packageWidth = null, $payPalShipmentID = null, $shipmentID = null, \StructType\AmountType $postageTotal = null, $printedTime = null, \StructType\AddressType $shipFromAddress = null, \StructType\AddressType $shippingAddress = null, $shippingCarrierUsed = null, array $shippingFeature = array(), $shippingPackage = null, $shippingServiceUsed = null, $shipmentTrackingNumber = null, \StructType\MeasureType $weightMajor = null, \StructType\MeasureType $weightMinor = null, array $itemTransactionID = array(), $deliveryDate = null, $deliveryStatus = null, $refundGrantedTime = null, $refundRequestedTime = null, $status = null, $shippedTime = null, $notes = null, array $shipmentTrackingDetails = array(), \StructType\ShipmentLineItemType $shipmentLineItem = null, \DOMDocument $any = null)
+    public function __construct($estimatedDeliveryDate = null, \StructType\AmountType $insuredValue = null, \StructType\MeasureType $packageDepth = null, \StructType\MeasureType $packageLength = null, \StructType\MeasureType $packageWidth = null, $payPalShipmentID = null, $shipmentID = null, \StructType\AmountType $postageTotal = null, $printedTime = null, \StructType\AddressType $shipFromAddress = null, \StructType\AddressType $shippingAddress = null, $shippingCarrierUsed = null, array $shippingFeature = array(), $shippingPackage = null, $shippingServiceUsed = null, $shipmentTrackingNumber = null, \StructType\MeasureType $weightMajor = null, \StructType\MeasureType $weightMinor = null, array $itemTransactionID = array(), $deliveryDate = null, $deliveryStatus = null, $refundGrantedTime = null, $refundRequestedTime = null, $status = null, $shippedTime = null, $notes = null, array $shipmentTrackingDetails = array(), \DOMDocument $any = null)
     {
         $this
             ->setEstimatedDeliveryDate($estimatedDeliveryDate)
@@ -330,7 +305,6 @@ class ShipmentType extends AbstractStructBase
             ->setShippedTime($shippedTime)
             ->setNotes($notes)
             ->setShipmentTrackingDetails($shipmentTrackingDetails)
-            ->setShipmentLineItem($shipmentLineItem)
             ->setAny($any);
     }
     /**
@@ -1016,24 +990,6 @@ class ShipmentType extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('The ShipmentTrackingDetails property can only contain items of type \StructType\ShipmentTrackingDetailsType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->ShipmentTrackingDetails[] = $item;
-        return $this;
-    }
-    /**
-     * Get ShipmentLineItem value
-     * @return \StructType\ShipmentLineItemType|null
-     */
-    public function getShipmentLineItem()
-    {
-        return $this->ShipmentLineItem;
-    }
-    /**
-     * Set ShipmentLineItem value
-     * @param \StructType\ShipmentLineItemType $shipmentLineItem
-     * @return \StructType\ShipmentType
-     */
-    public function setShipmentLineItem(\StructType\ShipmentLineItemType $shipmentLineItem = null)
-    {
-        $this->ShipmentLineItem = $shipmentLineItem;
         return $this;
     }
     /**

@@ -59,14 +59,6 @@ if ($add->AddItem(new \StructType\AddItemRequestType()) !== false) {
     print_r($add->getLastError());
 }
 /**
- * Sample call for AddItemFromSellingManagerTemplate operation/method
- */
-if ($add->AddItemFromSellingManagerTemplate(new \StructType\AddItemFromSellingManagerTemplateRequestType()) !== false) {
-    print_r($add->getResult());
-} else {
-    print_r($add->getLastError());
-}
-/**
  * Sample call for AddItems operation/method
  */
 if ($add->AddItems(new \StructType\AddItemsRequestType()) !== false) {
@@ -110,30 +102,6 @@ if ($add->AddOrder(new \StructType\AddOrderRequestType()) !== false) {
  * Sample call for AddSecondChanceItem operation/method
  */
 if ($add->AddSecondChanceItem(new \StructType\AddSecondChanceItemRequestType()) !== false) {
-    print_r($add->getResult());
-} else {
-    print_r($add->getLastError());
-}
-/**
- * Sample call for AddSellingManagerInventoryFolder operation/method
- */
-if ($add->AddSellingManagerInventoryFolder(new \StructType\AddSellingManagerInventoryFolderRequestType()) !== false) {
-    print_r($add->getResult());
-} else {
-    print_r($add->getLastError());
-}
-/**
- * Sample call for AddSellingManagerProduct operation/method
- */
-if ($add->AddSellingManagerProduct(new \StructType\AddSellingManagerProductRequestType()) !== false) {
-    print_r($add->getResult());
-} else {
-    print_r($add->getLastError());
-}
-/**
- * Sample call for AddSellingManagerTemplate operation/method
- */
-if ($add->AddSellingManagerTemplate(new \StructType\AddSellingManagerTemplateRequestType()) !== false) {
     print_r($add->getResult());
 } else {
     print_r($add->getLastError());
@@ -197,46 +165,6 @@ $delete->setSoapHeaderRequesterCredentials($RequesterCredentials);
  * Sample call for DeleteMyMessages operation/method
  */
 if ($delete->DeleteMyMessages(new \StructType\DeleteMyMessagesRequestType()) !== false) {
-    print_r($delete->getResult());
-} else {
-    print_r($delete->getLastError());
-}
-/**
- * Sample call for DeleteSellingManagerInventoryFolder operation/method
- */
-if ($delete->DeleteSellingManagerInventoryFolder(new \StructType\DeleteSellingManagerInventoryFolderRequestType()) !== false) {
-    print_r($delete->getResult());
-} else {
-    print_r($delete->getLastError());
-}
-/**
- * Sample call for DeleteSellingManagerItemAutomationRule operation/method
- */
-if ($delete->DeleteSellingManagerItemAutomationRule(new \StructType\DeleteSellingManagerItemAutomationRuleRequestType()) !== false) {
-    print_r($delete->getResult());
-} else {
-    print_r($delete->getLastError());
-}
-/**
- * Sample call for DeleteSellingManagerProduct operation/method
- */
-if ($delete->DeleteSellingManagerProduct(new \StructType\DeleteSellingManagerProductRequestType()) !== false) {
-    print_r($delete->getResult());
-} else {
-    print_r($delete->getLastError());
-}
-/**
- * Sample call for DeleteSellingManagerTemplate operation/method
- */
-if ($delete->DeleteSellingManagerTemplate(new \StructType\DeleteSellingManagerTemplateRequestType()) !== false) {
-    print_r($delete->getResult());
-} else {
-    print_r($delete->getLastError());
-}
-/**
- * Sample call for DeleteSellingManagerTemplateAutomationRule operation/method
- */
-if ($delete->DeleteSellingManagerTemplateAutomationRule(new \StructType\DeleteSellingManagerTemplateAutomationRuleRequestType()) !== false) {
     print_r($delete->getResult());
 } else {
     print_r($delete->getLastError());
@@ -563,14 +491,6 @@ if ($get->GetOrders(new \StructType\GetOrdersRequestType()) !== false) {
     print_r($get->getLastError());
 }
 /**
- * Sample call for GetPromotionalSaleDetails operation/method
- */
-if ($get->GetPromotionalSaleDetails(new \StructType\GetPromotionalSaleDetailsRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
  * Sample call for GetSellerDashboard operation/method
  */
 if ($get->GetSellerDashboard(new \StructType\GetSellerDashboardRequestType()) !== false) {
@@ -598,78 +518,6 @@ if ($get->GetSellerList(new \StructType\GetSellerListRequestType()) !== false) {
  * Sample call for GetSellerTransactions operation/method
  */
 if ($get->GetSellerTransactions(new \StructType\GetSellerTransactionsRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetSellingManagerAlerts operation/method
- */
-if ($get->GetSellingManagerAlerts(new \StructType\GetSellingManagerAlertsRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetSellingManagerEmailLog operation/method
- */
-if ($get->GetSellingManagerEmailLog(new \StructType\GetSellingManagerEmailLogRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetSellingManagerInventory operation/method
- */
-if ($get->GetSellingManagerInventory(new \StructType\GetSellingManagerInventoryRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetSellingManagerInventoryFolder operation/method
- */
-if ($get->GetSellingManagerInventoryFolder(new \StructType\GetSellingManagerInventoryFolderRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetSellingManagerItemAutomationRule operation/method
- */
-if ($get->GetSellingManagerItemAutomationRule(new \StructType\GetSellingManagerItemAutomationRuleRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetSellingManagerSaleRecord operation/method
- */
-if ($get->GetSellingManagerSaleRecord(new \StructType\GetSellingManagerSaleRecordRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetSellingManagerSoldListings operation/method
- */
-if ($get->GetSellingManagerSoldListings(new \StructType\GetSellingManagerSoldListingsRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetSellingManagerTemplateAutomationRule operation/method
- */
-if ($get->GetSellingManagerTemplateAutomationRule(new \StructType\GetSellingManagerTemplateAutomationRuleRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetSellingManagerTemplates operation/method
- */
-if ($get->GetSellingManagerTemplates(new \StructType\GetSellingManagerTemplatesRequestType()) !== false) {
     print_r($get->getResult());
 } else {
     print_r($get->getLastError());
@@ -837,19 +685,6 @@ if ($leave->LeaveFeedback(new \StructType\LeaveFeedbackRequestType()) !== false)
     print_r($leave->getLastError());
 }
 /**
- * Samples for Move ServiceType
- */
-$move = new \ServiceType\Move($options);
-$move->setSoapHeaderRequesterCredentials($RequesterCredentials);
-/**
- * Sample call for MoveSellingManagerInventoryFolder operation/method
- */
-if ($move->MoveSellingManagerInventoryFolder(new \StructType\MoveSellingManagerInventoryFolderRequestType()) !== false) {
-    print_r($move->getResult());
-} else {
-    print_r($move->getLastError());
-}
-/**
  * Samples for Place ServiceType
  */
 $place = new \ServiceType\Place($options);
@@ -923,14 +758,6 @@ if ($respond->RespondToFeedback(new \StructType\RespondToFeedbackRequestType()) 
 $revise = new \ServiceType\Revise($options);
 $revise->setSoapHeaderRequesterCredentials($RequesterCredentials);
 /**
- * Sample call for ReviseCheckoutStatus operation/method
- */
-if ($revise->ReviseCheckoutStatus(new \StructType\ReviseCheckoutStatusRequestType()) !== false) {
-    print_r($revise->getResult());
-} else {
-    print_r($revise->getLastError());
-}
-/**
  * Sample call for ReviseFixedPriceItem operation/method
  */
 if ($revise->ReviseFixedPriceItem(new \StructType\ReviseFixedPriceItemRequestType()) !== false) {
@@ -971,30 +798,6 @@ if ($revise->ReviseMyMessagesFolders(new \StructType\ReviseMyMessagesFoldersRequ
     print_r($revise->getLastError());
 }
 /**
- * Sample call for ReviseSellingManagerInventoryFolder operation/method
- */
-if ($revise->ReviseSellingManagerInventoryFolder(new \StructType\ReviseSellingManagerInventoryFolderRequestType()) !== false) {
-    print_r($revise->getResult());
-} else {
-    print_r($revise->getLastError());
-}
-/**
- * Sample call for ReviseSellingManagerProduct operation/method
- */
-if ($revise->ReviseSellingManagerProduct(new \StructType\ReviseSellingManagerProductRequestType()) !== false) {
-    print_r($revise->getResult());
-} else {
-    print_r($revise->getLastError());
-}
-/**
- * Sample call for ReviseSellingManagerTemplate operation/method
- */
-if ($revise->ReviseSellingManagerTemplate(new \StructType\ReviseSellingManagerTemplateRequestType()) !== false) {
-    print_r($revise->getResult());
-} else {
-    print_r($revise->getLastError());
-}
-/**
  * Samples for Revoke ServiceType
  */
 $revoke = new \ServiceType\Revoke($options);
@@ -1006,19 +809,6 @@ if ($revoke->RevokeToken(new \StructType\RevokeTokenRequestType()) !== false) {
     print_r($revoke->getResult());
 } else {
     print_r($revoke->getLastError());
-}
-/**
- * Samples for Save ServiceType
- */
-$save = new \ServiceType\Save($options);
-$save->setSoapHeaderRequesterCredentials($RequesterCredentials);
-/**
- * Sample call for SaveItemToSellingManagerTemplate operation/method
- */
-if ($save->SaveItemToSellingManagerTemplate(new \StructType\SaveItemToSellingManagerTemplateRequestType()) !== false) {
-    print_r($save->getResult());
-} else {
-    print_r($save->getLastError());
 }
 /**
  * Samples for Seller ServiceType
@@ -1063,46 +853,6 @@ if ($set->SetMessagePreferences(new \StructType\SetMessagePreferencesRequestType
  * Sample call for SetNotificationPreferences operation/method
  */
 if ($set->SetNotificationPreferences(new \StructType\SetNotificationPreferencesRequestType()) !== false) {
-    print_r($set->getResult());
-} else {
-    print_r($set->getLastError());
-}
-/**
- * Sample call for SetPromotionalSale operation/method
- */
-if ($set->SetPromotionalSale(new \StructType\SetPromotionalSaleRequestType()) !== false) {
-    print_r($set->getResult());
-} else {
-    print_r($set->getLastError());
-}
-/**
- * Sample call for SetPromotionalSaleListings operation/method
- */
-if ($set->SetPromotionalSaleListings(new \StructType\SetPromotionalSaleListingsRequestType()) !== false) {
-    print_r($set->getResult());
-} else {
-    print_r($set->getLastError());
-}
-/**
- * Sample call for SetSellingManagerFeedbackOptions operation/method
- */
-if ($set->SetSellingManagerFeedbackOptions(new \StructType\SetSellingManagerFeedbackOptionsRequestType()) !== false) {
-    print_r($set->getResult());
-} else {
-    print_r($set->getLastError());
-}
-/**
- * Sample call for SetSellingManagerItemAutomationRule operation/method
- */
-if ($set->SetSellingManagerItemAutomationRule(new \StructType\SetSellingManagerItemAutomationRuleRequestType()) !== false) {
-    print_r($set->getResult());
-} else {
-    print_r($set->getLastError());
-}
-/**
- * Sample call for SetSellingManagerTemplateAutomationRule operation/method
- */
-if ($set->SetSellingManagerTemplateAutomationRule(new \StructType\SetSellingManagerTemplateAutomationRuleRequestType()) !== false) {
     print_r($set->getResult());
 } else {
     print_r($set->getLastError());

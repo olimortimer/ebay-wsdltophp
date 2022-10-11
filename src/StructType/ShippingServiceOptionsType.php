@@ -26,9 +26,12 @@ class ShippingServiceOptionsType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: This enumeration value indicates a specific domestic shipping service option being offered by the seller to ship an item to a buyer who is located within the same country as the item. This field is required to identify each domestic
      * shipping service option that is specified with a <b>ShippingServiceOptions</b> container. <br><br> For a list of valid <b>ShippingService</b> values, call <b>GeteBayDetails</b> with <b>DetailName</b> set to <code>ShippingServiceDetails</code>. The
-     * <b>ShippingServiceDetails.ValidForSellingFlow</b> flag must also be present. Otherwise, that particular shipping service option is no longer valid and cannot be offered to buyers through a listing. <br><br> To view the full list of domestic shipping
+     * <b>ShippingServiceDetails.ValidForSellingFlow</b> flag must also be present. Otherwise, that particular shipping service option is no longer valid and cannot be offered to buyers through a listing.<br><br> To view the full list of domestic shipping
      * service options in the response, look for the <b>ShippingServiceDetails.ShippingService</b> fields. Domestic shipping service options will not have a <b>InternationalService</b> = <code>true</code> field, as this indicates that the
-     * <b>ShippingService</b> value is an International shipping service option.
+     * <b>ShippingService</b> value is an International shipping service option.<br><br> <span class="tablenote"><strong>Note:</strong> The eBay standard envelope (eSE) is a domestic envelope service with tracking through eBay. This service applies to
+     * specific sub-categories of Trading Cards categories, and to Coins & Paper Money, Postcards, and Stamps. To use this service, send envelopes using the USPS mail and set the <b>ShippingService</b> field to <code>US_eBayStandardEnvelope</code>. See <a
+     * href="https://pages.ebay.com/seller-center/shipping/ebay-standard-envelope.html#lower-cost-way">eBay standard envelope</a> for details and restrictions. For the REST equivalent, see <a
+     * href="https://developer.ebay.com/api-docs/sell/static/seller-accounts/using-the-ebay-standard-envelope-service.html" target=/"_blank/">Using the eBay standard envelope (eSE) service</a>. </span>
      * - minOccurs: 0
      * @var string
      */

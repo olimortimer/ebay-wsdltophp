@@ -39,7 +39,7 @@ class VariationType extends AbstractStructBase
      * The Quantity
      * Meta information extracted from the WSDL
      * - documentation: This value indicates the quantity of the specific variation that are available for purchase. If you set <b>Variation.Quantity</b> to <code>0</code> when you create, revise, or relist an item listing, the variation is dropped from the
-     * listing. To prevent this, you can set <a href="http://developer.ebay.com/DevZone/XML/docs/Reference/ebay/SetUserPreferences.html#Request.OutOfStockControlPreference">SetUserPreferences.OutOfStockControlPreference</a> to <code>true</code>. <br/><br/>
+     * listing. To prevent this, you can set <a href="https://developer.ebay.com/DevZone/XML/docs/Reference/ebay/SetUserPreferences.html#Request.OutOfStockControlPreference">SetUserPreferences.OutOfStockControlPreference</a> to <code>true</code>. <br/><br/>
      * For <b>GetItem</b> (and other related calls that retrieve the Item object), the <b>Variation.Quantity</b> value indicates the total quantity associated with the variation, including the quantity available and the quantity sold. To calculate the
      * quantity available for sale, subtract <b>SellingStatus.QuantitySold</b> from this value.<br> <br> <b>For RelistFixedPriceItem:</b> <ul> <li>For an item variation that had an available quantity greater than <code>0</code> when the listing ended, the
      * <b>Quantity</b> value of the item variation for the newly relisted item is set to the actual quantity available. For item variations, there is actually no <b>QuantityAvailable</b> field, but this value may be derived if you look at the corresponding
@@ -49,11 +49,11 @@ class VariationType extends AbstractStructBase
      * <b>Variation.Quantity</b> field of a relist call. Alternatively, you can update the correct quantity available by using a <b>ReviseInventoryStatus</b> call and passing in a <b>Quantity</b> value, while also making sure to pass in the correct
      * <b>SKU</b> value(s) to identify the correct item variation. A <b>ReviseInventoryStatus</b> call can be used to revise the quantity of up to four single item listings and/or item variations (from the same or different listings). <br> <br> <b>For
      * ReviseFixedPriceItem:</b> You can revise a variation's quantity at any time, even if it has purchases. However, unless you set the <a
-     * href="http://developer.ebay.com/DevZone/XML/docs/Reference/ebay/SetUserPreferences.html#Request.OutOfStockControlPreference">OutOfStockControlPreference</a> boolean field of the <b>SetUserPreferences</b> call to <code>true</code>, at least one
+     * href="https://developer.ebay.com/DevZone/XML/docs/Reference/ebay/SetUserPreferences.html#Request.OutOfStockControlPreference">OutOfStockControlPreference</a> boolean field of the <b>SetUserPreferences</b> call to <code>true</code>, at least one
      * variation must remain with a non-zero quantity in order for the listing to remain active. If you set the <b>OutOfStockControlPreference</b> field to <code>true</code>, a multiple-variation listing will remain active but hidden from search even if the
      * quantity of all variations in the listing is set to <code>0</code>. When you modify a variation during revise or relist, you need to include both its <b>StartPrice</b> and <b>Quantity</b>. If you revise the <b>Quantity</b> value for a variation after
      * items have already sold, specify the quantity available for sale. (eBay will automatically add the quantity sold to the value you specify.) If you set the quantity to <code>0</code> and the variation has no purchases, the variation may be dropped
-     * from the listing. <br> <br> <b>For GetSellerTransactions:</b> See <b>Item.Quantity</b> instead.<br> <br> See the <a href="http://developer.ebay.com/Devzone/guides/features-guide/default.html#development/Variations-Updating.html">eBay Features
+     * from the listing. <br> <br> <b>For GetSellerTransactions:</b> See <b>Item.Quantity</b> instead.<br> <br> See the <a href="https://developer.ebay.com/Devzone/guides/features-guide/default.html#development/Variations-Updating.html">eBay Features
      * Guide</a> for more details about setting and modifying a variation's quantity. <br><br> <span class="tablenote"><b>Note:</b> The number in the <b>Variation.Quantity</b> field represents the current quantity of the item variation that is available
      * using the "Ship to home" fulfillment method. This number does not take into account any quantity of the item variation that is available through "local" fulfillment methods such as In-Store Pickup or Click and Collect. This is due to the fact that
      * there is no current implementation (or API field) where the seller informs eBay about the quantity of item variations available through each local fulfillment method. In the case where a listing is only offering the item variations through a local
@@ -83,14 +83,6 @@ class VariationType extends AbstractStructBase
      * @var int
      */
     public $UnitsAvailable;
-    /**
-     * The UnitCost
-     * Meta information extracted from the WSDL
-     * - documentation: Cost of the Selling Manager product that matches this variation.
-     * - minOccurs: 0
-     * @var \StructType\AmountType
-     */
-    public $UnitCost;
     /**
      * The SellingStatus
      * Meta information extracted from the WSDL
@@ -130,14 +122,6 @@ class VariationType extends AbstractStructBase
      * @var bool
      */
     public $Delete;
-    /**
-     * The SellingManagerProductInventoryStatus
-     * Meta information extracted from the WSDL
-     * - documentation: Container for statistics about the Selling Manager product that is associated with this variation.
-     * - minOccurs: 0
-     * @var \StructType\SellingManagerProductInventoryStatusType
-     */
-    public $SellingManagerProductInventoryStatus;
     /**
      * The WatchCount
      * Meta information extracted from the WSDL
@@ -181,6 +165,15 @@ class VariationType extends AbstractStructBase
      */
     public $VariationProductListingDetails;
     /**
+     * The VariationExtendedProducerResponsibility
+     * Meta information extracted from the WSDL
+     * - documentation: This container defines variation-specific Extended Producer Responsibility information, specifically the <strong>EcoParticipationFee</strong>.
+     * - maxOccurs: 1
+     * - minOccurs: 0
+     * @var \StructType\VariationExtendedProducerResponsibilityType
+     */
+    public $VariationExtendedProducerResponsibility;
+    /**
      * The any
      * @var \DOMDocument
      */
@@ -192,35 +185,33 @@ class VariationType extends AbstractStructBase
      * @uses VariationType::setQuantity()
      * @uses VariationType::setVariationSpecifics()
      * @uses VariationType::setUnitsAvailable()
-     * @uses VariationType::setUnitCost()
      * @uses VariationType::setSellingStatus()
      * @uses VariationType::setVariationTitle()
      * @uses VariationType::setVariationViewItemURL()
      * @uses VariationType::setDelete()
-     * @uses VariationType::setSellingManagerProductInventoryStatus()
      * @uses VariationType::setWatchCount()
      * @uses VariationType::setPrivateNotes()
      * @uses VariationType::setDiscountPriceInfo()
      * @uses VariationType::setVariationProductListingDetails()
+     * @uses VariationType::setVariationExtendedProducerResponsibility()
      * @uses VariationType::setAny()
      * @param string $sKU
      * @param \StructType\AmountType $startPrice
      * @param int $quantity
      * @param \ArrayType\NameValueListArrayType $variationSpecifics
      * @param int $unitsAvailable
-     * @param \StructType\AmountType $unitCost
      * @param \StructType\SellingStatusType $sellingStatus
      * @param string $variationTitle
      * @param string $variationViewItemURL
      * @param bool $delete
-     * @param \StructType\SellingManagerProductInventoryStatusType $sellingManagerProductInventoryStatus
      * @param int $watchCount
      * @param string $privateNotes
      * @param \StructType\DiscountPriceInfoType $discountPriceInfo
      * @param \StructType\VariationProductListingDetailsType $variationProductListingDetails
+     * @param \StructType\VariationExtendedProducerResponsibilityType $variationExtendedProducerResponsibility
      * @param \DOMDocument $any
      */
-    public function __construct($sKU = null, \StructType\AmountType $startPrice = null, $quantity = null, \ArrayType\NameValueListArrayType $variationSpecifics = null, $unitsAvailable = null, \StructType\AmountType $unitCost = null, \StructType\SellingStatusType $sellingStatus = null, $variationTitle = null, $variationViewItemURL = null, $delete = false, \StructType\SellingManagerProductInventoryStatusType $sellingManagerProductInventoryStatus = null, $watchCount = null, $privateNotes = null, \StructType\DiscountPriceInfoType $discountPriceInfo = null, \StructType\VariationProductListingDetailsType $variationProductListingDetails = null, \DOMDocument $any = null)
+    public function __construct($sKU = null, \StructType\AmountType $startPrice = null, $quantity = null, \ArrayType\NameValueListArrayType $variationSpecifics = null, $unitsAvailable = null, \StructType\SellingStatusType $sellingStatus = null, $variationTitle = null, $variationViewItemURL = null, $delete = false, $watchCount = null, $privateNotes = null, \StructType\DiscountPriceInfoType $discountPriceInfo = null, \StructType\VariationProductListingDetailsType $variationProductListingDetails = null, \StructType\VariationExtendedProducerResponsibilityType $variationExtendedProducerResponsibility = null, \DOMDocument $any = null)
     {
         $this
             ->setSKU($sKU)
@@ -228,16 +219,15 @@ class VariationType extends AbstractStructBase
             ->setQuantity($quantity)
             ->setVariationSpecifics($variationSpecifics)
             ->setUnitsAvailable($unitsAvailable)
-            ->setUnitCost($unitCost)
             ->setSellingStatus($sellingStatus)
             ->setVariationTitle($variationTitle)
             ->setVariationViewItemURL($variationViewItemURL)
             ->setDelete($delete)
-            ->setSellingManagerProductInventoryStatus($sellingManagerProductInventoryStatus)
             ->setWatchCount($watchCount)
             ->setPrivateNotes($privateNotes)
             ->setDiscountPriceInfo($discountPriceInfo)
             ->setVariationProductListingDetails($variationProductListingDetails)
+            ->setVariationExtendedProducerResponsibility($variationExtendedProducerResponsibility)
             ->setAny($any);
     }
     /**
@@ -343,24 +333,6 @@ class VariationType extends AbstractStructBase
         return $this;
     }
     /**
-     * Get UnitCost value
-     * @return \StructType\AmountType|null
-     */
-    public function getUnitCost()
-    {
-        return $this->UnitCost;
-    }
-    /**
-     * Set UnitCost value
-     * @param \StructType\AmountType $unitCost
-     * @return \StructType\VariationType
-     */
-    public function setUnitCost(\StructType\AmountType $unitCost = null)
-    {
-        $this->UnitCost = $unitCost;
-        return $this;
-    }
-    /**
      * Get SellingStatus value
      * @return \StructType\SellingStatusType|null
      */
@@ -445,24 +417,6 @@ class VariationType extends AbstractStructBase
         return $this;
     }
     /**
-     * Get SellingManagerProductInventoryStatus value
-     * @return \StructType\SellingManagerProductInventoryStatusType|null
-     */
-    public function getSellingManagerProductInventoryStatus()
-    {
-        return $this->SellingManagerProductInventoryStatus;
-    }
-    /**
-     * Set SellingManagerProductInventoryStatus value
-     * @param \StructType\SellingManagerProductInventoryStatusType $sellingManagerProductInventoryStatus
-     * @return \StructType\VariationType
-     */
-    public function setSellingManagerProductInventoryStatus(\StructType\SellingManagerProductInventoryStatusType $sellingManagerProductInventoryStatus = null)
-    {
-        $this->SellingManagerProductInventoryStatus = $sellingManagerProductInventoryStatus;
-        return $this;
-    }
-    /**
      * Get WatchCount value
      * @return int|null
      */
@@ -540,6 +494,24 @@ class VariationType extends AbstractStructBase
     public function setVariationProductListingDetails(\StructType\VariationProductListingDetailsType $variationProductListingDetails = null)
     {
         $this->VariationProductListingDetails = $variationProductListingDetails;
+        return $this;
+    }
+    /**
+     * Get VariationExtendedProducerResponsibility value
+     * @return \StructType\VariationExtendedProducerResponsibilityType|null
+     */
+    public function getVariationExtendedProducerResponsibility()
+    {
+        return $this->VariationExtendedProducerResponsibility;
+    }
+    /**
+     * Set VariationExtendedProducerResponsibility value
+     * @param \StructType\VariationExtendedProducerResponsibilityType $variationExtendedProducerResponsibility
+     * @return \StructType\VariationType
+     */
+    public function setVariationExtendedProducerResponsibility(\StructType\VariationExtendedProducerResponsibilityType $variationExtendedProducerResponsibility = null)
+    {
+        $this->VariationExtendedProducerResponsibility = $variationExtendedProducerResponsibility;
         return $this;
     }
     /**

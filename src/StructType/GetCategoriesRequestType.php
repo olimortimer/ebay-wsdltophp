@@ -16,8 +16,8 @@ class GetCategoriesRequestType extends AbstractRequestType
     /**
      * The CategorySiteID
      * Meta information extracted from the WSDL
-     * - documentation: This field is used if the user wants to retrieve category data for another eBay site (other than the one specified in the <code>X-EBAY-API-SITEID</code> request header). <br> <br> If the user wishes to retrieve category data for the
-     * US eBay Motors site, the user must set the Site ID in the <code>X-EBAY-API-SITEID</code> request header to <code>0</code>, and then set this field's value to <code>100</code>.
+     * - documentation: This field is used if the user wants to retrieve category data for another eBay site (other than the one specified in the <code>X-EBAY-API-SITEID</code> request header). <br> <br> If this field is omitted, the categories from the
+     * site specified in the required <code>X-EBAY-API-SITEID</code> request header are returned. If this field is included, the site specified in this field overrides the site ID in the request header.
      * - minOccurs: 0
      * @var string
      */

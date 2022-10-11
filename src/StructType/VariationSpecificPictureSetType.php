@@ -54,7 +54,7 @@ class VariationSpecificPictureSetType extends AbstractStructBase
      * The ExternalPictureURL
      * Meta information extracted from the WSDL
      * - documentation: Returns the URL of a variation-specific picture that is hosted outside of eBay.<br> <br> When you list, revise, or relist a variation, use VariationSpecificPictureSet.PictureURL (not ExternalPictureURL) to specify your self-hosted
-     * picture or EPS picture.<br> <br/> <span class="tablenote"><b>Note: </b> All images must comply to the <a href="http://developer.ebay.com/DevZone/guides/features-guide/default.html#development/Pictures-Intro.html">Picture Requirements</a>. </span>
+     * picture or EPS picture.<br> <br/> <span class="tablenote"><b>Note: </b> All images must comply to the <a href="https://developer.ebay.com/DevZone/guides/features-guide/default.html#development/Pictures-Intro.html">Picture Requirements</a>. </span>
      * This is returned only when the seller used a self-hosted picture for the variation.
      * - maxOccurs: unbounded
      * - minOccurs: 0

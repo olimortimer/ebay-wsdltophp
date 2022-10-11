@@ -18,22 +18,22 @@ class GetOrderTransactionsResponseType extends AbstractResponseType
      * Meta information extracted from the WSDL
      * - documentation: This container consists of an array of eBay orders that match the input criteria that was passed into the call request.
      * - minOccurs: 0
-     * @var \ArrayType\OrderArrayType
+     * @var \StructType\OrderArrayType
      */
     public $OrderArray;
     /**
      * Constructor method for GetOrderTransactionsResponseType
      * @uses GetOrderTransactionsResponseType::setOrderArray()
-     * @param \ArrayType\OrderArrayType $orderArray
+     * @param \StructType\OrderArrayType $orderArray
      */
-    public function __construct(\ArrayType\OrderArrayType $orderArray = null)
+    public function __construct(\StructType\OrderArrayType $orderArray = null)
     {
         $this
             ->setOrderArray($orderArray);
     }
     /**
      * Get OrderArray value
-     * @return \ArrayType\OrderArrayType|null
+     * @return \StructType\OrderArrayType|null
      */
     public function getOrderArray()
     {
@@ -41,10 +41,10 @@ class GetOrderTransactionsResponseType extends AbstractResponseType
     }
     /**
      * Set OrderArray value
-     * @param \ArrayType\OrderArrayType $orderArray
+     * @param \StructType\OrderArrayType $orderArray
      * @return \StructType\GetOrderTransactionsResponseType
      */
-    public function setOrderArray(\ArrayType\OrderArrayType $orderArray = null)
+    public function setOrderArray(\StructType\OrderArrayType $orderArray = null)
     {
         $this->OrderArray = $orderArray;
         return $this;

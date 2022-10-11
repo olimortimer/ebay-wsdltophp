@@ -120,30 +120,6 @@ class Add extends AbstractSoapClientBase
         }
     }
     /**
-     * Method to call the operation originally named AddItemFromSellingManagerTemplate
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\AddItemFromSellingManagerTemplateRequestType $addItemFromSellingManagerTemplateRequest
-     * @return \StructType\AddItemFromSellingManagerTemplateResponseType|bool
-     */
-    public function AddItemFromSellingManagerTemplate(\StructType\AddItemFromSellingManagerTemplateRequestType $addItemFromSellingManagerTemplateRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->AddItemFromSellingManagerTemplate($addItemFromSellingManagerTemplateRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
      * Method to call the operation originally named AddItems
      * Meta information extracted from the WSDL
      * - SOAPHeaderNames: RequesterCredentials
@@ -288,78 +264,6 @@ class Add extends AbstractSoapClientBase
         }
     }
     /**
-     * Method to call the operation originally named AddSellingManagerInventoryFolder
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\AddSellingManagerInventoryFolderRequestType $addSellingManagerInventoryFolderRequest
-     * @return \StructType\AddSellingManagerInventoryFolderResponseType|bool
-     */
-    public function AddSellingManagerInventoryFolder(\StructType\AddSellingManagerInventoryFolderRequestType $addSellingManagerInventoryFolderRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->AddSellingManagerInventoryFolder($addSellingManagerInventoryFolderRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named AddSellingManagerProduct
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\AddSellingManagerProductRequestType $addSellingManagerProductRequest
-     * @return \StructType\AddSellingManagerProductResponseType|bool
-     */
-    public function AddSellingManagerProduct(\StructType\AddSellingManagerProductRequestType $addSellingManagerProductRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->AddSellingManagerProduct($addSellingManagerProductRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named AddSellingManagerTemplate
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\AddSellingManagerTemplateRequestType $addSellingManagerTemplateRequest
-     * @return \StructType\AddSellingManagerTemplateResponseType|bool
-     */
-    public function AddSellingManagerTemplate(\StructType\AddSellingManagerTemplateRequestType $addSellingManagerTemplateRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->AddSellingManagerTemplate($addSellingManagerTemplateRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
      * Method to call the operation originally named AddToItemDescription
      * Meta information extracted from the WSDL
      * - SOAPHeaderNames: RequesterCredentials
@@ -434,7 +338,7 @@ class Add extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\AddDisputeResponseResponseType|\StructType\AddDisputeResponseType|\StructType\AddFixedPriceItemResponseType|\StructType\AddItemFromSellingManagerTemplateResponseType|\StructType\AddItemResponseType|\StructType\AddItemsResponseType|\StructType\AddMemberMessageAAQToPartnerResponseType|\StructType\AddMemberMessageRTQResponseType|\StructType\AddMemberMessagesAAQToBidderResponseType|\StructType\AddOrderResponseType|\StructType\AddSecondChanceItemResponseType|\StructType\AddSellingManagerInventoryFolderResponseType|\StructType\AddSellingManagerProductResponseType|\StructType\AddSellingManagerTemplateResponseType|\StructType\AddToItemDescriptionResponseType|\StructType\AddToWatchListResponseType|\StructType\AddTransactionConfirmationItemResponseType
+     * @return \StructType\AddDisputeResponseResponseType|\StructType\AddDisputeResponseType|\StructType\AddFixedPriceItemResponseType|\StructType\AddItemResponseType|\StructType\AddItemsResponseType|\StructType\AddMemberMessageAAQToPartnerResponseType|\StructType\AddMemberMessageRTQResponseType|\StructType\AddMemberMessagesAAQToBidderResponseType|\StructType\AddOrderResponseType|\StructType\AddSecondChanceItemResponseType|\StructType\AddToItemDescriptionResponseType|\StructType\AddToWatchListResponseType|\StructType\AddTransactionConfirmationItemResponseType
      */
     public function getResult()
     {

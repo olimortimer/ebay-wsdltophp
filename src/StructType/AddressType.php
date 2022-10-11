@@ -7,7 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for AddressType StructType
  * Meta information extracted from the WSDL
- * - documentation: Contains the data for an eBay user's address. This is the base type for a number of user addresses, including seller payment address, buyer shipping address and buyer and seller registration address.
+ * - documentation: Contains the data for an eBay user's address. This is the base type for a number of user addresses, including seller payment address, buyer shipping address, and buyer and seller registration address.
  * @subpackage Structs
  */
 class AddressType extends AbstractStructBase
@@ -153,7 +153,7 @@ class AddressType extends AbstractStructBase
     /**
      * The AddressOwner
      * Meta information extracted from the WSDL
-     * - documentation: The realm to which the address belongs (e.g. eBay vs PayPal).
+     * - documentation: This enumeration value returned here indicates the company that has the address on file. Previously, this value could be <code>eBay</code> or <code>PayPal</code>, but now the value returned here should always be <code>eBay</code>.
      * - minOccurs: 0
      * @var string
      */
@@ -168,8 +168,7 @@ class AddressType extends AbstractStructBase
     /**
      * The ExternalAddressID
      * Meta information extracted from the WSDL
-     * - documentation: This is a unique identifier assigned to the customer address if the address is on file with PayPal. The <b>AddressOwner</b> field will indicate if the address is on file with eBay or PayPal. This field will only be
-     * applicable/returned if it is a PayPal-owned address. The ID changes if a user changes their address. <br>
+     * - documentation: This field is no longer applicable, and should not returned. <br>
      * - minOccurs: 0
      * @var string
      */

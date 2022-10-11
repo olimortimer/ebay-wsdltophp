@@ -325,8 +325,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The SafePaymentRequired
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether listings in this category need to have a safe payment method. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
-     * not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>SafePaymentRequired</code>.
+     * - documentation: This field is no longer applicable, as eBay now controls all online payment methods.
      * - minOccurs: 0
      * @var bool
      */
@@ -353,9 +352,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The PaisaPayFullEscrowEnabled
      * Meta information extracted from the WSDL
-     * - documentation: <span class="tablenote"><b>Note:</b> This field is deprecated since it is only applicable to the eBay India site, and this marketplace is no longer available.</span> Indicates whether the category supports the
-     * <code>PaisaPayEscrow</code> payment method. This feature is only applicable to the India site. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will
-     * not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>PaisaPayFullEscrowEnabled</code>.
+     * - documentation: <span class="tablenote"><b>Note:</b> This field is deprecated since it is only applicable to the eBay India site, and this marketplace is no longer available.</span>
      * - minOccurs: 0
      * @var bool
      */
@@ -421,9 +418,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The PayPalBuyerProtectionEnabled
      * Meta information extracted from the WSDL
-     * - documentation: For the Australia site, if both <b>PayPalBuyerProtectionEnabled</b> and <b>BuyerGuaranteeEnabled</b> are returned, then buyer protection is allowed for this category. <br/><br/> Only returned when this value (or this category's
-     * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
-     * include <code>PayPalBuyerProtectionEnabled</code>.
+     * - documentation: This field is no longer applicable, as PayPal Purchase Protection no longer directly applies to eBay orders.
      * - minOccurs: 0
      * @var bool
      */
@@ -431,9 +426,9 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The BuyerGuaranteeEnabled
      * Meta information extracted from the WSDL
-     * - documentation: For the Australia site, if both <b>PayPalBuyerProtectionEnabled</b> and <b>BuyerGuaranteeEnabled</b> are returned, then buyer protection is allowed for this category. <br/><br/> Only returned when this value (or this category's
-     * setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not
-     * include <code>PayPalBuyerProtectionEnabled</code>.
+     * - documentation: If this field is returned as <code>true</code>, the category supports the Best Price Guarantee feature on the Australia site. This field/feature is only applicable to Australia. <br/><br/> Only returned when this value (or this
+     * category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values
+     * does not include <code>PayPalBuyerProtectionEnabled</code>.
      * - minOccurs: 0
      * @var bool
      */
@@ -459,8 +454,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The PayPalRequired
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the category requires PayPal as a payment method. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be
-     * returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>PayPalRequired</code>.
+     * - documentation: PayPal or any online payment methods are never required for sellers, so this field can be disregarded even if it is returned as 'true'.
      * - minOccurs: 0
      * @var bool
      */
@@ -827,9 +821,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The INEscrowWorkflowTimeline
      * Meta information extracted from the WSDL
-     * - documentation: <span class="tablenote"><b>Note:</b> This field is deprecated since it is only applicable to the eBay India site, and this marketplace is no longer available.</span> Indicates the escrow workflow version that applies to the category
-     * on the India site: Default Workflow, Workflow A or Workflow B. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a
-     * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>INEscrowWorkflowTimeline</code>.
+     * - documentation: <span class="tablenote"><b>Note:</b> This field is deprecated since it is only applicable to the eBay India site, and this marketplace is no longer available.</span>
      * - minOccurs: 0
      * @var string
      */
@@ -1035,8 +1027,10 @@ class CategoryFeatureType extends AbstractStructBase
      * - documentation: This container specifies all of the item conditions that are supported for the corresponding category. The display name of the item condiation and the ID associated with the description are both shown. <br/><br/> This container will
      * not be returned for any eBay categories that don't support the use of an item condition value. To see which categories require, support, or don't support the use of item conditions, you can include a <b>FeatureID</b> value of
      * <code>ConditionEnabled</code>. Any eBay category that does not support the use of an item condition value will return a <b>ConditionEnabled</b> value of <code>Disabled</code>. <br/><br/> This container will also not be returned if one or more <a
-     * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ConditionValues</code>. <br/> <br/> <span class="tablenote"><b>Note:</b> The <b>Certified Refurbished</b> condition
-     * (Condition ID 2000) is now returned in the <b>SpecialFeatures</b> container. A seller must be pre-qualified by eBay to list items with the <b>Certified Refurbished</b> condition.</span>
+     * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ConditionValues</code>. <br/> <br/> <span class="tablenote"><b>Note:</b> The <b>Certified - Refurbished</b>
+     * condition (condition ID 2000), <b>Excellent - Refurbished</b> condition (condition ID 2010), <b>Very Good - Refurbished</b> condition (condition ID 2020), and <b>Good - Refurbished</b> condition (condition ID 2030) are returned in the
+     * <b>SpecialFeatures</b> container. A seller must be pre-qualified by eBay to list items with the any of these refurbished item conditions. The <b>Excellent - Refurbished</b>, <b>Very Good - Refurbished</b> and <b>Good - Refurbished</b> conditions are
+     * currently only applicable for the <strong>Cell Phones & Smartphones</strong> category (category ID 9355).</span>
      * - minOccurs: 0
      * @var \StructType\ConditionValuesType
      */
@@ -1044,9 +1038,11 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The SpecialFeatures
      * Meta information extracted from the WSDL
-     * - documentation: This container is only returned if the corresponding category supports a special item condition such as <b>Certified Refurbished</b> condition (Condition ID 2000). A seller must be pre-qualified by eBay to list items with the
-     * <b>Certified Refurbished</b> condition. All other item conditions supported by a category will be returned in the <b>ConditionValues</b> container instead. <br/><br/> Neither the <b>ConditionValues</b> or the <b>SpecialFeatures</b> containers will be
-     * returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ConditionValues</code>.
+     * - documentation: This container is only returned if the corresponding category supports a special item condition such as <b>Certified - Refurbished</b> condition (condition ID 2000), <b>Excellent - Refurbished</b> condition (condition ID 2010),
+     * <b>Very Good - Refurbished</b> condition (condition ID 2020), and <b>Good - Refurbished</b> condition (condition ID 2030). A seller must be pre-qualified by eBay to list items with the any of these refurbished item conditions. The <b>Excellent -
+     * Refurbished</b>, <b>Very Good - Refurbished</b> and <b>Good - Refurbished</b> conditions are currently only applicable for the <strong>Cell Phones & Smartphones</strong> category (category ID 9355). <br/><br/> All other item conditions supported by a
+     * category will be returned in the <b>ConditionValues</b> container instead. <br/><br/> Neither the <b>ConditionValues</b> or the <b>SpecialFeatures</b> containers will be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a>
+     * values are used in the call request, and one of those values does not include <code>ConditionValues</code>.
      * - minOccurs: 0
      * @var \StructType\ConditionValuesType
      */
@@ -1067,10 +1063,10 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ProductCreationEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether a category supports (or requires) the creation of a listing using an eBay Catalog product. To create a listing based on an eBay Catalog product, the seller passed in Global Trade Item Number (GTIN) or eBay Product
-     * ID (ePID) value in an Add/Revise/Relist call and then eBay tries to match the product identifier to a product in the eBay Catalog. If a match is found, the listing picks up the details of the eBay Catalog product, including product title, product
-     * description, product aspects, primary eBay listing category ID, and links to any product stock photos. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default.
-     * Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ProductCreationEnabled</code>.
+     * - documentation: Indicates whether a category supports the creation of a listing using an eBay Catalog product. To create a listing based on an eBay Catalog product, the seller passed in Global Trade Item Number (GTIN) or eBay Product ID (ePID) value
+     * in an Add/Revise/Relist call and then eBay tries to match the product identifier to a product in the eBay Catalog. If a match is found, the listing picks up the details of the eBay Catalog product, including product title, product description,
+     * product aspects, primary eBay listing category ID, and links to any product stock photos. <br/><br/> Only returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be
+     * returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ProductCreationEnabled</code>.
      * - minOccurs: 0
      * @var string
      */
@@ -1256,7 +1252,7 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: This field is returned as <code>true</code> if the category supports the use of an eBay Product ID (e.g. ePID) in an Add/Revise/Relist API call to identify which motorcycles and/or scooters are compatible with a motor vehicle part or
      * accessory. ePIDs can only be used to identify motorcycles and scooters on the Germany and UK sites. <br/><br/> For more information on using an ePID to identify a compatible motorcycle or scooter through an Add/Revise/Relist API call on the Germany
-     * or UK site, see the documentation for the <a href=" http://developer.ebay.com/Devzone/XML/docs/Reference/eBay/AddItem.html#Request.Item.ItemCompatibilityList.Compatibility.NameValueList">Compatibility.NameValueList</a> container. <br/><br/> Only
+     * or UK site, see the documentation for the <a href=" https://developer.ebay.com/Devzone/XML/docs/Reference/eBay/AddItem.html#Request.Item.ItemCompatibilityList.Compatibility.NameValueList">Compatibility.NameValueList</a> container. <br/><br/> Only
      * returned when this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call
      * request, and one of those values does not include <code>EpidSupported</code>.
      * - minOccurs: 0
@@ -1268,7 +1264,7 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: This field is returned as <code>true</code> if the category supports the use of a K Type vehicle number in an Add/Revise/Relist API call to identify which cars and/or trucks are compatible with a motor vehicle part or accessory. K
      * type vehicle numbers can only be used to identify cars and trucks on the Germany site. <br/><br/> For more information on using a K Type vehicle number to identify a compatible car or truck through an Add/Revise/Relist API call on the Germany site,
-     * see the documentation for the <a href=" http://developer.ebay.com/Devzone/XML/docs/Reference/eBay/AddItem.html#Request.Item.ItemCompatibilityList.Compatibility.NameValueList">Compatibility.NameValueList</a> container. <br/><br/> Only returned when
+     * see the documentation for the <a href=" https://developer.ebay.com/Devzone/XML/docs/Reference/eBay/AddItem.html#Request.Item.ItemCompatibilityList.Compatibility.NameValueList">Compatibility.NameValueList</a> container. <br/><br/> Only returned when
      * this value (or this category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and
      * one of those values does not include <code>KTypeSupported</code>.
      * - minOccurs: 0
@@ -1278,8 +1274,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The ProductRequiredEnabled
      * Meta information extracted from the WSDL
-     * - documentation: This field indicates if the category supports Product-Based Shopping Experience listings (listings associated with eBay catalog products). <br/><br/> <span class="tablenote"><b>Note:</b> Due to the rollback of the Product-Based
-     * Shopping Experience mandate for all eBay categories, the value for this field should never get returned as <code>Enabled</code> for any production categories.</span>
+     * - documentation: This field is no longer applicable, and if it is returned for a category, it can be ignored.
      * - minOccurs: 0
      * @var string
      */
@@ -1290,11 +1285,9 @@ class CategoryFeatureType extends AbstractStructBase
      * - documentation: The values returned in this field indicate whether or not the seller accepts domestic returns for items listed in the associated marketplace and category. <br><br>While most categories return the <b>ReturnsAccepted</b> flag
      * (indicating the category supports returns), some categories will also return the <b>ReturnsNotAccepted</b> flag to indicate the seller can choose to not accept returns for an item listed in that category. <br><br>The values returned in this field are
      * pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. Here, it's worth noting that not accepting
-     * returns is a return policy. The values returned in this field are valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br/><br/> <span
-     * class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings
-     * in the domestic return policy will be used instead. For more information on setting separate domestic and international return policies, see the <a
-     * href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help topic. For the international equivalent of this field, see the
-     * <b>InternationalReturnsAcceptedValues</b> field.</span>
+     * returns is a return policy. The values returned in this field are valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account API. <br/><br/> <span class="tablenote"><b>Note:</b> Sellers have
+     * the option of creating a separate international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For
+     * the international equivalent of this field, see the <b>InternationalReturnsAcceptedValues</b> field.</span>
      * - minOccurs: 0
      * @var \StructType\DomesticReturnsAcceptedCodeType
      */
@@ -1304,9 +1297,8 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The values returned in this field indicate whether or not the seller can offer international returns. <br><br>The values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to
      * <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values returned in this field are valid in AddItem and its related family of calls, and in the return policies you
-     * configure for use with the Account and Business Policies Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate international return policy for items that are shipped to international
-     * customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For more information on setting separate domestic and international return policies, see the <a
-     * href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help topic. </span>
+     * configure for use with the Account API. <br/><br/> <span class="tablenote"><b>Note:</b> Sellers have the option of creating a separate international return policy for items that are shipped to international customers. If a seller does not add a
+     * separate international return policy, the settings in the domestic return policy will be used instead. </span>
      * - minOccurs: 0
      * @var \StructType\InternationalReturnsAcceptedCodeType
      */
@@ -1316,10 +1308,9 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The values returned in this field indicate the return duration options that are available for domestic returns for items listed in the associated marketplace and category. <br><br>The values returned in this field are pertinent only
      * if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values returned in this field are valid in AddItem and
-     * its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate
-     * international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For more information on setting
-     * separate domestic and international return policies, see the <a href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help topic.
-     * For the international equivalent of this field, see the <b>InternationalReturnsDurationValues</b> field.</span>
+     * its related family of calls, and in the return policies you configure for use with the Account API. <br/><br/> <span class="tablenote"><b>Note:</b> Sellers have the option of creating a separate international return policy for items that are shipped
+     * to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For the international equivalent of this field, see the
+     * <b>InternationalReturnsDurationValues</b> field.</span>
      * - minOccurs: 0
      * @var \StructType\DomesticReturnsDurationCodeType
      */
@@ -1329,9 +1320,8 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The values returned in this field indicate the return duration options that are available for international returns for items listed in the associated marketplace and category. <br><br>The values returned in this field are pertinent
      * only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values returned in this field are valid in AddItem
-     * and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate
-     * international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For more information on setting
-     * separate domestic and international return policies, see the <a href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help topic.
+     * and its related family of calls, and in the return policies you configure for use with the Account API. <br/><br/> <span class="tablenote"><b>Note:</b> Sellers have the option of creating a separate international return policy for items that are
+     * shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead.</span>
      * - minOccurs: 0
      * @var \StructType\InternationalReturnsDurationCodeType
      */
@@ -1341,10 +1331,9 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The values returned in this field indicate the available options for who pays the return shipping for domestic returns. Possible values are <code>BUYER</code> and <code>SELLER</code>. <br><br>The values returned in this field are
      * pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values returned in this field are valid
-     * in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a
-     * separate international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For more information on
-     * setting separate domestic and international return policies, see the <a href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help
-     * topic. For the international equivalent of this field, see the <b>InternationalReturnsShipmentPayeeValues</b> field.</span>
+     * in AddItem and its related family of calls, and in the return policies you configure for use with the Account API. <br/><br/> <span class="tablenote"><b>Note:</b> Sellers have the option of creating a separate international return policy for items
+     * that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For the international equivalent of this field, see the
+     * <b>InternationalReturnsShipmentPayeeValues</b> field.</span>
      * - minOccurs: 0
      * @var \StructType\DomesticReturnsShipmentPayeeCodeType
      */
@@ -1354,10 +1343,8 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The values returned in this field indicate the available options for who pays the return shipping for international returns. Possible values are <code>BUYER</code> and <code>SELLER</code>. <br><br>The values returned in this field
      * are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values returned in this field are
-     * valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a
-     * separate international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. For more information on
-     * setting separate domestic and international return policies, see the <a href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help
-     * topic.
+     * valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account API. <br/><br/> <span class="tablenote"><b>Note:</b> Sellers have the option of creating a separate international return policy for
+     * items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead.</span>
      * - minOccurs: 0
      * @var \StructType\InternationalReturnsShipmentPayeeCodeType
      */
@@ -1366,11 +1353,9 @@ class CategoryFeatureType extends AbstractStructBase
      * The DomesticRefundMethodValues
      * Meta information extracted from the WSDL
      * - documentation: On the EBAY_US marketplace only, sellers can offer item replacement in addition to offering money back returns. This flag defines the availability of such options for the given US marketplace category. Sellers can offer item
-     * replacements only if returns are enabled (<b>returnPolicyEnabled</b> is set to <code>true</code>) for the item. You can specify item replacement in the AddItem family of calls and in the return policy settings of the Account and Business Policies
-     * Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay added the ability to create a separate international return policy for items that are shipped to international customers. If a seller does not add a separate
-     * international return policy, the settings in the domestic return policy will be used instead. For more information on setting separate domestic and international return policies, see the <a
-     * href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy" target="_blank">International returns policy</a> help topic. For the international equivalent of this field, see the
-     * <b>InternationalRefundMethodValues</b> field.</span>
+     * replacements only if returns are enabled (<b>returnPolicyEnabled</b> is set to <code>true</code>) for the item. You can specify item replacement in the AddItem family of calls and in the return policy settings of the Account API. <br/><br/> <span
+     * class="tablenote"><b>Note:</b> Sellers have the option of creating a separate international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the
+     * domestic return policy will be used instead. For the international equivalent of this field, see the <b>InternationalRefundMethodValues</b> field.</span>
      * - minOccurs: 0
      * @var \StructType\DomesticRefundMethodCodeType
      */
@@ -1380,10 +1365,8 @@ class CategoryFeatureType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: In US, sellers can offer an item replacement for returns, in addition to offering money back returns. The values returned in this field indicate the availability of such options for the given marketplace and category. <br><br>The
      * values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values
-     * returned in this field are valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs. <br/><br/> <span class="tablenote"><b>Note:</b> In May 2018, eBay
-     * added the ability to create a separate international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used
-     * instead. For more information on setting separate domestic and international return policies, see the <a href="https://pages.ebay.com/seller-center/seller-updates/2018-summer/simplified-returns.html#international-returns-policy"
-     * target="_blank">International returns policy</a> help topic. </span>
+     * returned in this field are valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account API. <br/><br/> <span class="tablenote"><b>Note:</b> Sellers have the option of creating a separate
+     * international return policy for items that are shipped to international customers. If a seller does not add a separate international return policy, the settings in the domestic return policy will be used instead. </span>
      * - minOccurs: 0
      * @var \StructType\InternationalRefundMethodCodeType
      */
@@ -1392,8 +1375,7 @@ class CategoryFeatureType extends AbstractStructBase
      * The ReturnPolicyDescriptionEnabled
      * Meta information extracted from the WSDL
      * - documentation: In some EU countries, sellers are legally required to describe the return policy they offer. The value returned by this field indicates if sellers can provide such a description within the given marketplace and category. <br><br>The
-     * values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy. The values
-     * returned in this field are valid in AddItem and its related family of calls, and in the return policies you configure for use with the Account and Business Policies Management APIs.
+     * values returned in this field are pertinent only if <b>ReturnPolicyEnabled</b> in GetCategoryFeatures is set to <code>true</code> for the associated category, which indicates that items listed in the category must include a return policy.
      * - minOccurs: 0
      * @var bool
      */

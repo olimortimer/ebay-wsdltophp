@@ -72,128 +72,6 @@ class Set extends AbstractSoapClientBase
         }
     }
     /**
-     * Method to call the operation originally named SetPromotionalSale
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\SetPromotionalSaleRequestType $setPromotionalSaleRequest
-     * @return \StructType\SetPromotionalSaleResponseType|bool
-     */
-    public function SetPromotionalSale(\StructType\SetPromotionalSaleRequestType $setPromotionalSaleRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->SetPromotionalSale($setPromotionalSaleRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named SetPromotionalSaleListings
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\SetPromotionalSaleListingsRequestType $setPromotionalSaleListingsRequest
-     * @return \StructType\SetPromotionalSaleListingsResponseType|bool
-     */
-    public function SetPromotionalSaleListings(\StructType\SetPromotionalSaleListingsRequestType $setPromotionalSaleListingsRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->SetPromotionalSaleListings($setPromotionalSaleListingsRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named SetSellingManagerFeedbackOptions
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\SetSellingManagerFeedbackOptionsRequestType $setSellingManagerFeedbackOptionsRequest
-     * @return \StructType\SetSellingManagerFeedbackOptionsResponseType|bool
-     */
-    public function SetSellingManagerFeedbackOptions(\StructType\SetSellingManagerFeedbackOptionsRequestType $setSellingManagerFeedbackOptionsRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->SetSellingManagerFeedbackOptions($setSellingManagerFeedbackOptionsRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named
-     * SetSellingManagerItemAutomationRule
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\SetSellingManagerItemAutomationRuleRequestType $setSellingManagerItemAutomationRuleRequest
-     * @return \StructType\SetSellingManagerItemAutomationRuleResponseType|bool
-     */
-    public function SetSellingManagerItemAutomationRule(\StructType\SetSellingManagerItemAutomationRuleRequestType $setSellingManagerItemAutomationRuleRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->SetSellingManagerItemAutomationRule($setSellingManagerItemAutomationRuleRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named
-     * SetSellingManagerTemplateAutomationRule
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\SetSellingManagerTemplateAutomationRuleRequestType $setSellingManagerTemplateAutomationRuleRequest
-     * @return \StructType\SetSellingManagerTemplateAutomationRuleResponseType|bool
-     */
-    public function SetSellingManagerTemplateAutomationRule(\StructType\SetSellingManagerTemplateAutomationRuleRequestType $setSellingManagerTemplateAutomationRuleRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->SetSellingManagerTemplateAutomationRule($setSellingManagerTemplateAutomationRuleRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
      * Method to call the operation originally named SetShippingDiscountProfiles
      * Meta information extracted from the WSDL
      * - SOAPHeaderNames: RequesterCredentials
@@ -388,7 +266,7 @@ class Set extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\SetMessagePreferencesResponseType|\StructType\SetNotificationPreferencesResponseType|\StructType\SetPromotionalSaleListingsResponseType|\StructType\SetPromotionalSaleResponseType|\StructType\SetSellingManagerFeedbackOptionsResponseType|\StructType\SetSellingManagerItemAutomationRuleResponseType|\StructType\SetSellingManagerTemplateAutomationRuleResponseType|\StructType\SetShippingDiscountProfilesResponseType|\StructType\SetStoreCategoriesResponseType|\StructType\SetStoreCustomPageResponseType|\StructType\SetStorePreferencesResponseType|\StructType\SetStoreResponseType|\StructType\SetTaxTableResponseType|\StructType\SetUserNotesResponseType|\StructType\SetUserPreferencesResponseType
+     * @return \StructType\SetMessagePreferencesResponseType|\StructType\SetNotificationPreferencesResponseType|\StructType\SetShippingDiscountProfilesResponseType|\StructType\SetStoreCategoriesResponseType|\StructType\SetStoreCustomPageResponseType|\StructType\SetStorePreferencesResponseType|\StructType\SetStoreResponseType|\StructType\SetTaxTableResponseType|\StructType\SetUserNotesResponseType|\StructType\SetUserPreferencesResponseType
      */
     public function getResult()
     {
