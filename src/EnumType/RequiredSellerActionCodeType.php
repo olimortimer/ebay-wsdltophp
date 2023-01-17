@@ -36,7 +36,7 @@ class RequiredSellerActionCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'ResolvePPPIcase'
      * Meta information extracted from the WSDL
-     * - documentation: This value should no longer get returned as eBay buyers no longer have the option of creating Item not Received (INR) or Significantly not as Described (SNAD) disputes through PayPal's system.
+     * - documentation: This value is deprecated.
      * @return string 'ResolvePPPIcase'
      */
     const VALUE_RESOLVE_PPPICASE = 'ResolvePPPIcase';

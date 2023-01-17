@@ -412,7 +412,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The PayPalBuyerProtectionEnabled
      * Meta information extracted from the WSDL
-     * - documentation: This field is deprecated. eBay now manages the complete payment and checkout process, so PayPal Purchase Protection no longer applies to eBay orders.
+     * - documentation: This field is deprecated.
      * - minOccurs: 0
      * @var bool
      */
@@ -452,7 +452,7 @@ class SiteDefaultsType extends AbstractStructBase
     /**
      * The PayPalRequired
      * Meta information extracted from the WSDL
-     * - documentation: This field is deprecated. eBay now controls the electronic payment methods avaialable to buyers, and the seller does not specify any electronic payment methods.
+     * - documentation: This field is deprecated.
      * - minOccurs: 0
      * @var bool
      */
@@ -950,9 +950,8 @@ class SiteDefaultsType extends AbstractStructBase
      * The SpecialFeatures
      * Meta information extracted from the WSDL
      * - documentation: This container shows the site default special item condition values, such as <b>Certified - Refurbished</b> condition (condition ID 2000), <b>Excellent - Refurbished</b> condition (condition ID 2010), <b>Very Good - Refurbished</b>
-     * condition (condition ID 2020), and <b>Good - Refurbished</b> condition (condition ID 2030). A seller must be pre-qualified by eBay to list items with the any of these refurbished item conditions. The <b>Excellent - Refurbished</b>, <b>Very Good -
-     * Refurbished</b> and <b>Good - Refurbished</b> conditions are currently only applicable for the <strong>Cell Phones & Smartphones</strong> category (category ID 9355). <br/><br/> All other item conditions supported by a category will be returned in
-     * the <b>ConditionValues</b> container instead. Individual leaf categories define their own default set of item condition values and always override this list.
+     * condition (condition ID 2020), and <b>Good - Refurbished</b> condition (condition ID 2030). A seller must be pre-qualified by eBay to list items with the any of these refurbished item conditions. <br/><br/> All other item conditions supported by a
+     * category will be returned in the <b>ConditionValues</b> container instead. Individual leaf categories define their own default set of item condition values and always override this list.
      * - minOccurs: 0
      * @var \StructType\ConditionValuesType
      */

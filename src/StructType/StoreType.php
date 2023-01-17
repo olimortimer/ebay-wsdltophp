@@ -7,7 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for StoreType StructType
  * Meta information extracted from the WSDL
- * - documentation: The configuration of an eBay Store.
+ * - documentation: This type is used to provide details about a seller's eBay Store.
  * @subpackage Structs
  */
 class StoreType extends AbstractStructBase
@@ -40,9 +40,9 @@ class StoreType extends AbstractStructBase
     /**
      * The SubscriptionLevel
      * Meta information extracted from the WSDL
-     * - documentation: For the <b>GetStore</b> call, the value returned in this field indicates the user's eBay Store subscription level. <br> <br> For the <b>SetStore</b> call, the user can only cancel the current eBay Store subscription (using the
-     * <b>Close</b> enumeration value), and cannot change the subscription level. A seller will have to go to the Subscriptions area of My eBay to change their subscription level. Keep in mind that an early termination fee may apply if a user has a yearly
-     * subscription, and then either cancels their subscription, or downgrades their subscription level.
+     * - documentation: The value returned in this field indicates the user's eBay Store subscription level. <br><br> <span class="tablenote"><b>Note:</b> This field is deprecated and will stop being returned beginning on March 31, 2023. The <a
+     * href="/api-docs/sell/account/resources/subscription/methods/getSubscription" target="_blank">getSubscription</a> method of the <a href="/api-docs/sell/account/overview.html" target="_blank">Account API</a> can be used to retrieve information on a
+     * seller's eBay store subscription.</span>
      * - minOccurs: 0
      * @var string
      */
@@ -50,7 +50,7 @@ class StoreType extends AbstractStructBase
     /**
      * The Description
      * Meta information extracted from the WSDL
-     * - documentation: Store description (300 characters maximum).
+     * - documentation: The seller-provided description of the eBay Store.
      * - minOccurs: 0
      * @var string
      */
@@ -58,75 +58,11 @@ class StoreType extends AbstractStructBase
     /**
      * The Logo
      * Meta information extracted from the WSDL
-     * - documentation: Store logo.
+     * - documentation: This container provides information about a Store logo. <br> <br> The <b>GetStore</b> call now only returns the <b>Logo.URL</b> value, but not <b>Logo.LogoID</b> or <b>Logo.Name</b>.
      * - minOccurs: 0
      * @var \StructType\StoreLogoType
      */
     public $Logo;
-    /**
-     * The Theme
-     * Meta information extracted from the WSDL
-     * - documentation: Store theme.
-     * - minOccurs: 0
-     * @var \StructType\StoreThemeType
-     */
-    public $Theme;
-    /**
-     * The HeaderStyle
-     * Meta information extracted from the WSDL
-     * - documentation: Style for the Store header.
-     * - minOccurs: 0
-     * @var string
-     */
-    public $HeaderStyle;
-    /**
-     * The HomePage
-     * Meta information extracted from the WSDL
-     * - documentation: Page to use as the Store's homepage (default is 0). To change the homepage, specify the PageID of one of the Store's custom pages.
-     * - minOccurs: 0
-     * @var int
-     */
-    public $HomePage;
-    /**
-     * The ItemListLayout
-     * Meta information extracted from the WSDL
-     * - documentation: The default layout type to use for the Store items.
-     * - minOccurs: 0
-     * @var string
-     */
-    public $ItemListLayout;
-    /**
-     * The ItemListSortOrder
-     * Meta information extracted from the WSDL
-     * - documentation: The default sort order to use for the items for sale in the Store.
-     * - minOccurs: 0
-     * @var string
-     */
-    public $ItemListSortOrder;
-    /**
-     * The CustomHeaderLayout
-     * Meta information extracted from the WSDL
-     * - documentation: Layout for the Store's custom header.
-     * - minOccurs: 0
-     * @var string
-     */
-    public $CustomHeaderLayout;
-    /**
-     * The CustomHeader
-     * Meta information extracted from the WSDL
-     * - documentation: Custom header text for the Store.
-     * - minOccurs: 0
-     * @var string
-     */
-    public $CustomHeader;
-    /**
-     * The ExportListings
-     * Meta information extracted from the WSDL
-     * - documentation: Specifies whether to export the Store listings to comparison shopping websites.
-     * - minOccurs: 0
-     * @var bool
-     */
-    public $ExportListings;
     /**
      * The CustomCategories
      * Meta information extracted from the WSDL
@@ -136,14 +72,6 @@ class StoreType extends AbstractStructBase
      * @var \ArrayType\StoreCustomCategoryArrayType
      */
     public $CustomCategories;
-    /**
-     * The CustomListingHeader
-     * Meta information extracted from the WSDL
-     * - documentation: Custom listing header for the Store.
-     * - minOccurs: 0
-     * @var \StructType\StoreCustomListingHeaderType
-     */
-    public $CustomListingHeader;
     /**
      * The MerchDisplay
      * Meta information extracted from the WSDL
@@ -161,15 +89,6 @@ class StoreType extends AbstractStructBase
      */
     public $LastOpenedTime;
     /**
-     * The TitleWithCompatibility
-     * Meta information extracted from the WSDL
-     * - documentation: A flag indicating if a Compatibility tab exists for the Store item listing. This field is only applicable to Parts & Accessories listings in eBay US Motors. The Compatibility tab will contain vehicles that are compatible with the
-     * part in the listing. The seller specifies this information at listing time.
-     * - minOccurs: 0
-     * @var bool
-     */
-    public $TitleWithCompatibility;
-    /**
      * The any
      * @var \DOMDocument
      */
@@ -182,19 +101,9 @@ class StoreType extends AbstractStructBase
      * @uses StoreType::setSubscriptionLevel()
      * @uses StoreType::setDescription()
      * @uses StoreType::setLogo()
-     * @uses StoreType::setTheme()
-     * @uses StoreType::setHeaderStyle()
-     * @uses StoreType::setHomePage()
-     * @uses StoreType::setItemListLayout()
-     * @uses StoreType::setItemListSortOrder()
-     * @uses StoreType::setCustomHeaderLayout()
-     * @uses StoreType::setCustomHeader()
-     * @uses StoreType::setExportListings()
      * @uses StoreType::setCustomCategories()
-     * @uses StoreType::setCustomListingHeader()
      * @uses StoreType::setMerchDisplay()
      * @uses StoreType::setLastOpenedTime()
-     * @uses StoreType::setTitleWithCompatibility()
      * @uses StoreType::setAny()
      * @param string $name
      * @param string $uRLPath
@@ -202,22 +111,12 @@ class StoreType extends AbstractStructBase
      * @param string $subscriptionLevel
      * @param string $description
      * @param \StructType\StoreLogoType $logo
-     * @param \StructType\StoreThemeType $theme
-     * @param string $headerStyle
-     * @param int $homePage
-     * @param string $itemListLayout
-     * @param string $itemListSortOrder
-     * @param string $customHeaderLayout
-     * @param string $customHeader
-     * @param bool $exportListings
      * @param \ArrayType\StoreCustomCategoryArrayType $customCategories
-     * @param \StructType\StoreCustomListingHeaderType $customListingHeader
      * @param string $merchDisplay
      * @param string $lastOpenedTime
-     * @param bool $titleWithCompatibility
      * @param \DOMDocument $any
      */
-    public function __construct($name = null, $uRLPath = null, $uRL = null, $subscriptionLevel = null, $description = null, \StructType\StoreLogoType $logo = null, \StructType\StoreThemeType $theme = null, $headerStyle = null, $homePage = null, $itemListLayout = null, $itemListSortOrder = null, $customHeaderLayout = null, $customHeader = null, $exportListings = null, \ArrayType\StoreCustomCategoryArrayType $customCategories = null, \StructType\StoreCustomListingHeaderType $customListingHeader = null, $merchDisplay = null, $lastOpenedTime = null, $titleWithCompatibility = null, \DOMDocument $any = null)
+    public function __construct($name = null, $uRLPath = null, $uRL = null, $subscriptionLevel = null, $description = null, \StructType\StoreLogoType $logo = null, \ArrayType\StoreCustomCategoryArrayType $customCategories = null, $merchDisplay = null, $lastOpenedTime = null, \DOMDocument $any = null)
     {
         $this
             ->setName($name)
@@ -226,19 +125,9 @@ class StoreType extends AbstractStructBase
             ->setSubscriptionLevel($subscriptionLevel)
             ->setDescription($description)
             ->setLogo($logo)
-            ->setTheme($theme)
-            ->setHeaderStyle($headerStyle)
-            ->setHomePage($homePage)
-            ->setItemListLayout($itemListLayout)
-            ->setItemListSortOrder($itemListSortOrder)
-            ->setCustomHeaderLayout($customHeaderLayout)
-            ->setCustomHeader($customHeader)
-            ->setExportListings($exportListings)
             ->setCustomCategories($customCategories)
-            ->setCustomListingHeader($customListingHeader)
             ->setMerchDisplay($merchDisplay)
             ->setLastOpenedTime($lastOpenedTime)
-            ->setTitleWithCompatibility($titleWithCompatibility)
             ->setAny($any);
     }
     /**
@@ -373,190 +262,6 @@ class StoreType extends AbstractStructBase
         return $this;
     }
     /**
-     * Get Theme value
-     * @return \StructType\StoreThemeType|null
-     */
-    public function getTheme()
-    {
-        return $this->Theme;
-    }
-    /**
-     * Set Theme value
-     * @param \StructType\StoreThemeType $theme
-     * @return \StructType\StoreType
-     */
-    public function setTheme(\StructType\StoreThemeType $theme = null)
-    {
-        $this->Theme = $theme;
-        return $this;
-    }
-    /**
-     * Get HeaderStyle value
-     * @return string|null
-     */
-    public function getHeaderStyle()
-    {
-        return $this->HeaderStyle;
-    }
-    /**
-     * Set HeaderStyle value
-     * @uses \EnumType\StoreHeaderStyleCodeType::valueIsValid()
-     * @uses \EnumType\StoreHeaderStyleCodeType::getValidValues()
-     * @throws \InvalidArgumentException
-     * @param string $headerStyle
-     * @return \StructType\StoreType
-     */
-    public function setHeaderStyle($headerStyle = null)
-    {
-        // validation for constraint: enumeration
-        if (!\EnumType\StoreHeaderStyleCodeType::valueIsValid($headerStyle)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \EnumType\StoreHeaderStyleCodeType', is_array($headerStyle) ? implode(', ', $headerStyle) : var_export($headerStyle, true), implode(', ', \EnumType\StoreHeaderStyleCodeType::getValidValues())), __LINE__);
-        }
-        $this->HeaderStyle = $headerStyle;
-        return $this;
-    }
-    /**
-     * Get HomePage value
-     * @return int|null
-     */
-    public function getHomePage()
-    {
-        return $this->HomePage;
-    }
-    /**
-     * Set HomePage value
-     * @param int $homePage
-     * @return \StructType\StoreType
-     */
-    public function setHomePage($homePage = null)
-    {
-        // validation for constraint: int
-        if (!is_null($homePage) && !(is_int($homePage) || ctype_digit($homePage))) {
-            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide an integer value, %s given', var_export($homePage, true), gettype($homePage)), __LINE__);
-        }
-        $this->HomePage = $homePage;
-        return $this;
-    }
-    /**
-     * Get ItemListLayout value
-     * @return string|null
-     */
-    public function getItemListLayout()
-    {
-        return $this->ItemListLayout;
-    }
-    /**
-     * Set ItemListLayout value
-     * @uses \EnumType\StoreItemListLayoutCodeType::valueIsValid()
-     * @uses \EnumType\StoreItemListLayoutCodeType::getValidValues()
-     * @throws \InvalidArgumentException
-     * @param string $itemListLayout
-     * @return \StructType\StoreType
-     */
-    public function setItemListLayout($itemListLayout = null)
-    {
-        // validation for constraint: enumeration
-        if (!\EnumType\StoreItemListLayoutCodeType::valueIsValid($itemListLayout)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \EnumType\StoreItemListLayoutCodeType', is_array($itemListLayout) ? implode(', ', $itemListLayout) : var_export($itemListLayout, true), implode(', ', \EnumType\StoreItemListLayoutCodeType::getValidValues())), __LINE__);
-        }
-        $this->ItemListLayout = $itemListLayout;
-        return $this;
-    }
-    /**
-     * Get ItemListSortOrder value
-     * @return string|null
-     */
-    public function getItemListSortOrder()
-    {
-        return $this->ItemListSortOrder;
-    }
-    /**
-     * Set ItemListSortOrder value
-     * @uses \EnumType\StoreItemListSortOrderCodeType::valueIsValid()
-     * @uses \EnumType\StoreItemListSortOrderCodeType::getValidValues()
-     * @throws \InvalidArgumentException
-     * @param string $itemListSortOrder
-     * @return \StructType\StoreType
-     */
-    public function setItemListSortOrder($itemListSortOrder = null)
-    {
-        // validation for constraint: enumeration
-        if (!\EnumType\StoreItemListSortOrderCodeType::valueIsValid($itemListSortOrder)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \EnumType\StoreItemListSortOrderCodeType', is_array($itemListSortOrder) ? implode(', ', $itemListSortOrder) : var_export($itemListSortOrder, true), implode(', ', \EnumType\StoreItemListSortOrderCodeType::getValidValues())), __LINE__);
-        }
-        $this->ItemListSortOrder = $itemListSortOrder;
-        return $this;
-    }
-    /**
-     * Get CustomHeaderLayout value
-     * @return string|null
-     */
-    public function getCustomHeaderLayout()
-    {
-        return $this->CustomHeaderLayout;
-    }
-    /**
-     * Set CustomHeaderLayout value
-     * @uses \EnumType\StoreCustomHeaderLayoutCodeType::valueIsValid()
-     * @uses \EnumType\StoreCustomHeaderLayoutCodeType::getValidValues()
-     * @throws \InvalidArgumentException
-     * @param string $customHeaderLayout
-     * @return \StructType\StoreType
-     */
-    public function setCustomHeaderLayout($customHeaderLayout = null)
-    {
-        // validation for constraint: enumeration
-        if (!\EnumType\StoreCustomHeaderLayoutCodeType::valueIsValid($customHeaderLayout)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \EnumType\StoreCustomHeaderLayoutCodeType', is_array($customHeaderLayout) ? implode(', ', $customHeaderLayout) : var_export($customHeaderLayout, true), implode(', ', \EnumType\StoreCustomHeaderLayoutCodeType::getValidValues())), __LINE__);
-        }
-        $this->CustomHeaderLayout = $customHeaderLayout;
-        return $this;
-    }
-    /**
-     * Get CustomHeader value
-     * @return string|null
-     */
-    public function getCustomHeader()
-    {
-        return $this->CustomHeader;
-    }
-    /**
-     * Set CustomHeader value
-     * @param string $customHeader
-     * @return \StructType\StoreType
-     */
-    public function setCustomHeader($customHeader = null)
-    {
-        // validation for constraint: string
-        if (!is_null($customHeader) && !is_string($customHeader)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($customHeader, true), gettype($customHeader)), __LINE__);
-        }
-        $this->CustomHeader = $customHeader;
-        return $this;
-    }
-    /**
-     * Get ExportListings value
-     * @return bool|null
-     */
-    public function getExportListings()
-    {
-        return $this->ExportListings;
-    }
-    /**
-     * Set ExportListings value
-     * @param bool $exportListings
-     * @return \StructType\StoreType
-     */
-    public function setExportListings($exportListings = null)
-    {
-        // validation for constraint: boolean
-        if (!is_null($exportListings) && !is_bool($exportListings)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a bool, %s given', var_export($exportListings, true), gettype($exportListings)), __LINE__);
-        }
-        $this->ExportListings = $exportListings;
-        return $this;
-    }
-    /**
      * Get CustomCategories value
      * @return \ArrayType\StoreCustomCategoryArrayType|null
      */
@@ -572,24 +277,6 @@ class StoreType extends AbstractStructBase
     public function setCustomCategories(\ArrayType\StoreCustomCategoryArrayType $customCategories = null)
     {
         $this->CustomCategories = $customCategories;
-        return $this;
-    }
-    /**
-     * Get CustomListingHeader value
-     * @return \StructType\StoreCustomListingHeaderType|null
-     */
-    public function getCustomListingHeader()
-    {
-        return $this->CustomListingHeader;
-    }
-    /**
-     * Set CustomListingHeader value
-     * @param \StructType\StoreCustomListingHeaderType $customListingHeader
-     * @return \StructType\StoreType
-     */
-    public function setCustomListingHeader(\StructType\StoreCustomListingHeaderType $customListingHeader = null)
-    {
-        $this->CustomListingHeader = $customListingHeader;
         return $this;
     }
     /**
@@ -637,28 +324,6 @@ class StoreType extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($lastOpenedTime, true), gettype($lastOpenedTime)), __LINE__);
         }
         $this->LastOpenedTime = $lastOpenedTime;
-        return $this;
-    }
-    /**
-     * Get TitleWithCompatibility value
-     * @return bool|null
-     */
-    public function getTitleWithCompatibility()
-    {
-        return $this->TitleWithCompatibility;
-    }
-    /**
-     * Set TitleWithCompatibility value
-     * @param bool $titleWithCompatibility
-     * @return \StructType\StoreType
-     */
-    public function setTitleWithCompatibility($titleWithCompatibility = null)
-    {
-        // validation for constraint: boolean
-        if (!is_null($titleWithCompatibility) && !is_bool($titleWithCompatibility)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a bool, %s given', var_export($titleWithCompatibility, true), gettype($titleWithCompatibility)), __LINE__);
-        }
-        $this->TitleWithCompatibility = $titleWithCompatibility;
         return $this;
     }
     /**

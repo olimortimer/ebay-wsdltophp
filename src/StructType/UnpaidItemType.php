@@ -7,7 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for UnpaidItemType StructType
  * Meta information extracted from the WSDL
- * - documentation: Type defining the <strong>UnpaidItem</strong> container, which consists of details related to the type and status of an Unpaid Item case.
+ * - documentation: <span class="tablenote"> <strong>Note:</strong> This type is deprecated since Unpaid Item cases are no longer supported. </span><br>
  * @subpackage Structs
  */
 class UnpaidItemType extends AbstractStructBase
@@ -15,7 +15,7 @@ class UnpaidItemType extends AbstractStructBase
     /**
      * The Status
      * Meta information extracted from the WSDL
-     * - documentation: This field indicates the status of the Unpaid Item case. This field is always returned with the <strong>UnpaidItem</strong> container.
+     * - documentation: <span class="tablenote"> <strong>Note:</strong> This field is deprecated (Unpaid Item cases are no longer supported). </span><br>
      * - minOccurs: 0
      * @var string
      */
@@ -23,7 +23,7 @@ class UnpaidItemType extends AbstractStructBase
     /**
      * The Type
      * Meta information extracted from the WSDL
-     * - documentation: This field indicates if the Unpaid Item case was opened manually by the customer or opened automatically by eBay's Unpaid Item Assistant feature. This field is always returned with the <strong>UnpaidItem</strong> container.
+     * - documentation: <span class="tablenote"> <strong>Note:</strong> This field is deprecated (Unpaid Item cases are no longer supported). </span><br>
      * - minOccurs: 0
      * @var string
      */

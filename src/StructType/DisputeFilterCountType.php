@@ -7,9 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for DisputeFilterCountType StructType
  * Meta information extracted from the WSDL
- * - documentation: This type is used by the <strong>DisputeFilterCount</strong> containers of the <b>GetUserDisputes</b> response to show how many disputes of a certain type that the user is involved in. <br/><br/> <span
- * class="tablenote"><strong>Note:</strong> The <b>GetUserDisputes</b> call now only retrieves Unpaid Item cases, and is no longer used to retrieve Item not Received (INR) disputes created through PayPal, since this is no longer an option for eBay
- * buyers. However, the <b>GetUserDisputes</b> call is still currently returning counts for <b>ItemNotReceivedDisputes</b>, but the count is most likely to be 0. </span>
+ * - documentation: This type is used by the <strong>DisputeFilterCount</strong> containers of the <b>GetUserDisputes</b> response to show how many disputes of a certain type that the user is involved in.
  * @subpackage Structs
  */
 class DisputeFilterCountType extends AbstractStructBase

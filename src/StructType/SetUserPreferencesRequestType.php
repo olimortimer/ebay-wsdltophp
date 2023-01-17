@@ -81,7 +81,7 @@ class SetUserPreferencesRequestType extends AbstractRequestType
     /**
      * The UnpaidItemAssistancePreferences
      * Meta information extracted from the WSDL
-     * - documentation: This container is included if the seller wishes to set Unpaid Item Assistant preferences. The Unpaid Item Assistant automatically opens an Unpaid Item case on the behalf of the seller if the buyer has not paid for the order after a
+     * - documentation: This container is included if the seller wishes to set or modify Unpaid Item preferences. The Unpaid Item preferences automatically opens an Unpaid Item case on the behalf of the seller if the buyer has not paid for the order after a
      * specified number of days. One or more preferences may be set or modified under this container.
      * - minOccurs: 0
      * @var \StructType\UnpaidItemAssistancePreferencesType

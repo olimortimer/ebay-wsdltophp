@@ -349,7 +349,7 @@ class TransactionType extends AbstractStructBase
     /**
      * The PayPalEmailAddress
      * Meta information extracted from the WSDL
-     * - documentation: This field is no longer applicable, as eBay now controls all electronic payment methods and handles the payment from the buyer.
+     * - documentation: This field is deprecated.
      * - minOccurs: 0
      * @var string
      */
@@ -502,9 +502,9 @@ class TransactionType extends AbstractStructBase
     /**
      * The IsMultiLegShipping
      * Meta information extracted from the WSDL
-     * - documentation: If <strong>IsMultilegShipping</strong> is <code>true</code>, the order line item will not be shipped directly to the buyer. Instead, the item may be shipped to eBay's Global Shipping Program (GSP) partner who will handle the
-     * international leg of shipment, or the item may be shipped to eBay's Authenticity Guarantee service partner if the item is subject to the Authenticity Guarantee service program. In both cases, the partner's shipping address can be found in the
-     * <strong>MultiLegShippingDetails.SellerShipmentToLogisticsProvider.ShipToAddress</strong> container. <br><br> If an order line item is subject to the Authenticity Guarantee service, the <b>Transaction.Program</b> container will be returned.
+     * - documentation: Order line items requiring multiple shipping legs include items being shipped through the Global Shipping Program or through eBay International Shipping, as well as order line items subject to/eligible for the Authenticity Guarantee
+     * program. For both international shipping options, the address of the shipping logistics provider is shown in the <b>MultiLegShippingDetails.SellerShipmentToLogisticsProvider.ShipToAddress</b> container. Similarly, for Authenticity Guarantee orders,
+     * the authentication partner's shipping address is shown in the same container. <br><br> If an order line item is subject to the Authenticity Guarantee service, the <b>Transaction.Program</b> container will be returned.
      * - minOccurs: 0
      * @var bool
      */
@@ -512,10 +512,9 @@ class TransactionType extends AbstractStructBase
     /**
      * The MultiLegShippingDetails
      * Meta information extracted from the WSDL
-     * - documentation: This container consists of details about the domestic leg of a Global Shipping Program (GSP) shipment or shipment to eBay's Authenticity Guarantee service partner. With GSP, the shipment has a domestic leg and an international leg.
-     * In the domestic leg, the seller ships the item to eBay's shipping partner. In the Authenticity Guarantee service, the seller ships the item to the authentication partner, and if the item passes an authentication inspection, the authentication partner
-     * ships it directly to the buyer. <br/><br/> This container is only returned if the order has one or more order line items that require shipping through GSP or shipment to an Authenticity Guarantee service partner. It is not returned if
-     * <strong>IsMultilegShipping</strong> is <code>false</code>.
+     * - documentation: This container consists of details related to the first leg of an order requiring multiple shipping legs. Types of orders that require multiple shipping legs include international orders going through the Global Shipping Program or
+     * through eBay International Shipping, as well as orders subject to/eligible for the Authenticity Guarantee program.</br/></br/>If the item is subject to the Authenticity Guarantee service program, the seller ships the item to the authentication
+     * partner, and if the item passes an authentication inspection, the authentication partner ships it directly to the buyer.<br/><br/> This container is only returned if the order has one or more order line items requiring multiple shipping legs.
      * - minOccurs: 0
      * @var \StructType\MultiLegShippingDetailsType
      */
@@ -531,7 +530,8 @@ class TransactionType extends AbstractStructBase
     /**
      * The UnpaidItem
      * Meta information extracted from the WSDL
-     * - documentation: Container consisting of details related to the type and status of an Unpaid Item case. This container is only returned if there is an open (or recently closed) Unpaid Item case associated with the order line item.
+     * - documentation: <span class="tablenote"><strong>Note:</strong> This container is deprecated (Unpaid Item cases are no longer supported). </span><br> Container consisting of details related to the type and status of an Unpaid Item case. This
+     * container is only returned if there is an open (or recently closed) Unpaid Item case associated with the order line item.
      * - minOccurs: 0
      * @var \StructType\UnpaidItemType
      */
@@ -539,8 +539,7 @@ class TransactionType extends AbstractStructBase
     /**
      * The IntangibleItem
      * Meta information extracted from the WSDL
-     * - documentation: This flag indicates whether or not the order line item is an intangible good, such as an MP3 track or a mobile phone ringtone. Intangible items are not eligible for PayPal's Seller Protection program, so the seller will not be able
-     * to open an Unpaid Item case against the buyer.
+     * - documentation: This flag indicates whether or not the order line item is an intangible good, such as an MP3 track or a mobile phone ringtone.
      * - minOccurs: 0
      * @var bool
      */

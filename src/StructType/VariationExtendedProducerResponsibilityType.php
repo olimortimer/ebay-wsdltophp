@@ -10,7 +10,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
  * - documentation: This type specifies variation-specific Extended Producer Responsibility information, specifically the <strong>EcoParticipationFee</strong>. For multiple-variation listings, this type's <b>EcoParticipationFee</b> is used and not the
  * <b>EcoParticipationFee</b> in the <b>ExtendedProducerResponsibility</b> type. This type is supported by a limited number of sites and specific categories. Use the <a
  * href="../../../../../api-docs/sell/metadata/resources/marketplace/methods/getExtendedProducerResponsibilityPolicies" target="_blank">getExtendedProducerResponsibilityPolicies</a> method of the <b>Sell Metadata API</b> to retrieve valid categories for
- * a site.
+ * a site. <br/><br/>For <b>GetItem</b> calls, this container is only returned to the listing owner, if the container is available.
  * @subpackage Structs
  */
 class VariationExtendedProducerResponsibilityType extends AbstractStructBase

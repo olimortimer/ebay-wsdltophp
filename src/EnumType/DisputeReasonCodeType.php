@@ -8,10 +8,7 @@ use \WsdlToPhp\PackageBase\AbstractStructEnumBase;
  * This class stands for DisputeReasonCodeType EnumType
  * Meta information extracted from the WSDL
  * - documentation: Enumerated type that contains the top-level reasons for a seller to create a Unpaid Item case against a buyer. These values are specified in the <b>DisputeReason</b> field of <b>AddDispute</b>, and are returned in the
- * <b>GetUserDisputes</b> and <b>GetDispute</b> calls. The <b>DisputeReason</b> value will dictate which <b>DisputeExplanation</b> values that can be used/returned. <br/><br/> <span class="tablenote"><strong>Note:</strong> The Dispute calls of the
- * Trading API now only support Unpaid Item cases, and no longer support Item not Received (INR) or Significantly not as Described (SNAD) disputes created through PayPal, since this is no longer an option for eBay buyers. eBay buyers must create an INR
- * case through eBay's Resolution Center, and these calls do not support eBay Money Back Guarantee cases. <br><br> To respond to an eBay Money Back Guarantee case, the seller should use the <a
- * href="https://developer.ebay.com/Devzone/post-order/index.html" target="_blank">Case Management calls</a> of the <b>Post-Order API</b> or manage/respond to cases manually through the eBay Resolution Center. </span>
+ * <b>GetUserDisputes</b> and <b>GetDispute</b> calls. The <b>DisputeReason</b> value will dictate which <b>DisputeExplanation</b> values that can be used/returned.
  * @subpackage Enumerations
  */
 class DisputeReasonCodeType extends AbstractStructEnumBase

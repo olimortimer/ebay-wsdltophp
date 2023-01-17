@@ -7,9 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for DisputeMessageType StructType
  * Meta information extracted from the WSDL
- * - documentation: Type used by a <strong>DisputeMessage</strong> container, which provides details on a message left by the buyer, the seller, or eBay related to an Unpaid Item case. <br/><br/> <span class="tablenote"><strong>Note:</strong> The
- * <b>GetDispute</b> and <b>GetUserDisputes</b> calls now only retrieve Unpaid Item cases. They are no longer used to retrieve Item not Received (INR) disputes created through PayPal, since this is no longer an option for eBay buyers. eBay buyers must
- * create an INR case through eBay's Resolution Center, and these calls also do not support eBay Money Back Guarantee cases. </span>
+ * - documentation: Type used by a <strong>DisputeMessage</strong> container, which provides details on a message left by the buyer, the seller, or eBay related to an Unpaid Item case.
  * @subpackage Structs
  */
 class DisputeMessageType extends AbstractStructBase

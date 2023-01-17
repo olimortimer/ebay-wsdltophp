@@ -150,14 +150,6 @@ class CharityInfoType extends AbstractStructBase
      */
     public $ShowMultipleDonationAmountInCheckout;
     /**
-     * The ExternalID
-     * Meta information extracted from the WSDL
-     * - documentation: A unique identifier created and used by PayPal Giving Fund to identify a registered nonprofit charity organization. This field is only returned for charities that are registered with PayPal Giving Fund.
-     * - minOccurs: 0
-     * @var string
-     */
-    public $ExternalID;
-    /**
      * The PopularityIndex
      * Meta information extracted from the WSDL
      * - documentation: An integer value that indicates a nonprofit charity organization's popularity rank in comparison with other registered eBay for Charity organizations. This value is determined and managed by PayPal Giving Fund and is based on various
@@ -232,7 +224,6 @@ class CharityInfoType extends AbstractStructBase
      * @uses CharityInfoType::setDisplayNameInCheckout()
      * @uses CharityInfoType::setDescription()
      * @uses CharityInfoType::setShowMultipleDonationAmountInCheckout()
-     * @uses CharityInfoType::setExternalID()
      * @uses CharityInfoType::setPopularityIndex()
      * @uses CharityInfoType::setEIN()
      * @uses CharityInfoType::setNonProfitSecondName()
@@ -256,7 +247,6 @@ class CharityInfoType extends AbstractStructBase
      * @param bool $displayNameInCheckout
      * @param string $description
      * @param bool $showMultipleDonationAmountInCheckout
-     * @param string $externalID
      * @param int $popularityIndex
      * @param string $eIN
      * @param string $nonProfitSecondName
@@ -265,7 +255,7 @@ class CharityInfoType extends AbstractStructBase
      * @param \DOMDocument $any
      * @param string $id
      */
-    public function __construct($name = null, $listingNPEmailNotifPref = null, $listingNPEmail = null, $listingNPContactName = null, $mission = null, $logoURL = null, $status = null, $searchableString = null, $charityRegion = null, array $charityDomain = array(), $charityID = null, $logoURLSelling = null, $displayLogoSelling = null, $displayNameInCheckout = null, $description = null, $showMultipleDonationAmountInCheckout = null, $externalID = null, $popularityIndex = null, $eIN = null, $nonProfitSecondName = null, array $nonProfitAddress = array(), array $nonProfitSocialAddress = array(), \DOMDocument $any = null, $id = null)
+    public function __construct($name = null, $listingNPEmailNotifPref = null, $listingNPEmail = null, $listingNPContactName = null, $mission = null, $logoURL = null, $status = null, $searchableString = null, $charityRegion = null, array $charityDomain = array(), $charityID = null, $logoURLSelling = null, $displayLogoSelling = null, $displayNameInCheckout = null, $description = null, $showMultipleDonationAmountInCheckout = null, $popularityIndex = null, $eIN = null, $nonProfitSecondName = null, array $nonProfitAddress = array(), array $nonProfitSocialAddress = array(), \DOMDocument $any = null, $id = null)
     {
         $this
             ->setName($name)
@@ -284,7 +274,6 @@ class CharityInfoType extends AbstractStructBase
             ->setDisplayNameInCheckout($displayNameInCheckout)
             ->setDescription($description)
             ->setShowMultipleDonationAmountInCheckout($showMultipleDonationAmountInCheckout)
-            ->setExternalID($externalID)
             ->setPopularityIndex($popularityIndex)
             ->setEIN($eIN)
             ->setNonProfitSecondName($nonProfitSecondName)
@@ -692,28 +681,6 @@ class CharityInfoType extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a bool, %s given', var_export($showMultipleDonationAmountInCheckout, true), gettype($showMultipleDonationAmountInCheckout)), __LINE__);
         }
         $this->ShowMultipleDonationAmountInCheckout = $showMultipleDonationAmountInCheckout;
-        return $this;
-    }
-    /**
-     * Get ExternalID value
-     * @return string|null
-     */
-    public function getExternalID()
-    {
-        return $this->ExternalID;
-    }
-    /**
-     * Set ExternalID value
-     * @param string $externalID
-     * @return \StructType\CharityInfoType
-     */
-    public function setExternalID($externalID = null)
-    {
-        // validation for constraint: string
-        if (!is_null($externalID) && !is_string($externalID)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($externalID, true), gettype($externalID)), __LINE__);
-        }
-        $this->ExternalID = $externalID;
         return $this;
     }
     /**

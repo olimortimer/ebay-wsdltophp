@@ -315,14 +315,6 @@ if ($get->GetCategoryMappings(new \StructType\GetCategoryMappingsRequestType()) 
     print_r($get->getLastError());
 }
 /**
- * Sample call for GetCategorySpecifics operation/method
- */
-if ($get->GetCategorySpecifics(new \StructType\GetCategorySpecificsRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
  * Sample call for GetChallengeToken operation/method
  */
 if ($get->GetChallengeToken(new \StructType\GetChallengeTokenRequestType()) !== false) {
@@ -550,30 +542,6 @@ if ($get->GetStore(new \StructType\GetStoreRequestType()) !== false) {
  * Sample call for GetStoreCategoryUpdateStatus operation/method
  */
 if ($get->GetStoreCategoryUpdateStatus(new \StructType\GetStoreCategoryUpdateStatusRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetStoreCustomPage operation/method
- */
-if ($get->GetStoreCustomPage(new \StructType\GetStoreCustomPageRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetStoreOptions operation/method
- */
-if ($get->GetStoreOptions(new \StructType\GetStoreOptionsRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetStorePreferences operation/method
- */
-if ($get->GetStorePreferences(new \StructType\GetStorePreferencesRequestType()) !== false) {
     print_r($get->getResult());
 } else {
     print_r($get->getLastError());
@@ -866,33 +834,9 @@ if ($set->SetShippingDiscountProfiles(new \StructType\SetShippingDiscountProfile
     print_r($set->getLastError());
 }
 /**
- * Sample call for SetStore operation/method
- */
-if ($set->SetStore(new \StructType\SetStoreRequestType()) !== false) {
-    print_r($set->getResult());
-} else {
-    print_r($set->getLastError());
-}
-/**
  * Sample call for SetStoreCategories operation/method
  */
 if ($set->SetStoreCategories(new \StructType\SetStoreCategoriesRequestType()) !== false) {
-    print_r($set->getResult());
-} else {
-    print_r($set->getLastError());
-}
-/**
- * Sample call for SetStoreCustomPage operation/method
- */
-if ($set->SetStoreCustomPage(new \StructType\SetStoreCustomPageRequestType()) !== false) {
-    print_r($set->getResult());
-} else {
-    print_r($set->getLastError());
-}
-/**
- * Sample call for SetStorePreferences operation/method
- */
-if ($set->SetStorePreferences(new \StructType\SetStorePreferencesRequestType()) !== false) {
     print_r($set->getResult());
 } else {
     print_r($set->getLastError());

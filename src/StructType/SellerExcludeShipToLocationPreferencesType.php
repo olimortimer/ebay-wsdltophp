@@ -21,8 +21,7 @@ class SellerExcludeShipToLocationPreferencesType extends AbstractStructBase
      * the seller can specify Alaska/Hawaii, US Protectorates (including American Samoa, Guam, Mariana Island, Marshall Islands, Micronesia, Palau, Puerto Rico, and U.S. Virgin Islands) as places he/she will not ship to. Internationally, the sellers can
      * exclude entire regions (including Africa, Asia, Central America and Caribbean, Europe, Middle East, North America, Oceania, Southeast Asia, and South America) or specific countries within those regions. <br><br> If a buyer's primary ship-to location
      * is a location that you have listed as an excluded ship-to location (or if the buyer does not have a primary ship-to location), they will receive an error message if they attempt to buy or place a bid on your item. <br><br> To see the valid exclude
-     * ship-to locations for a specified site, call <b>GeteBayDetails</b> with a <b>DetailName</b> field set to <b>ExcludeShippingLocationDetails</b>. <br><br> <span class="tablenote"><strong>Note:</strong> To enable your default Exclude Ship-To List, you
-     * must enable Exclude Shipping Locations and Buyer Requirements in your My eBay Site Preferences. For details, see the KnowledgeBase Article <a href= "https://ebaydts.com/eBayKBDetails?KBid=1495" >HowTo: ExcludeShipToLocation</a>. </span>
+     * ship-to locations for a specified site, call <b>GeteBayDetails</b> with a <b>DetailName</b> field set to <b>ExcludeShippingLocationDetails</b>.
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * @var string[]

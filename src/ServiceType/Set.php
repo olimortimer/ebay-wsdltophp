@@ -96,30 +96,6 @@ class Set extends AbstractSoapClientBase
         }
     }
     /**
-     * Method to call the operation originally named SetStore
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\SetStoreRequestType $setStoreRequest
-     * @return \StructType\SetStoreResponseType|bool
-     */
-    public function SetStore(\StructType\SetStoreRequestType $setStoreRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->SetStore($setStoreRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
      * Method to call the operation originally named SetStoreCategories
      * Meta information extracted from the WSDL
      * - SOAPHeaderNames: RequesterCredentials
@@ -137,54 +113,6 @@ class Set extends AbstractSoapClientBase
     {
         try {
             $this->setResult($this->getSoapClient()->SetStoreCategories($setStoreCategoriesRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named SetStoreCustomPage
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\SetStoreCustomPageRequestType $setStoreCustomPageRequest
-     * @return \StructType\SetStoreCustomPageResponseType|bool
-     */
-    public function SetStoreCustomPage(\StructType\SetStoreCustomPageRequestType $setStoreCustomPageRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->SetStoreCustomPage($setStoreCustomPageRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named SetStorePreferences
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\SetStorePreferencesRequestType $setStorePreferencesRequest
-     * @return \StructType\SetStorePreferencesResponseType|bool
-     */
-    public function SetStorePreferences(\StructType\SetStorePreferencesRequestType $setStorePreferencesRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->SetStorePreferences($setStorePreferencesRequest));
             return $this->getResult();
         } catch (\SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
@@ -266,7 +194,7 @@ class Set extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\SetMessagePreferencesResponseType|\StructType\SetNotificationPreferencesResponseType|\StructType\SetShippingDiscountProfilesResponseType|\StructType\SetStoreCategoriesResponseType|\StructType\SetStoreCustomPageResponseType|\StructType\SetStorePreferencesResponseType|\StructType\SetStoreResponseType|\StructType\SetTaxTableResponseType|\StructType\SetUserNotesResponseType|\StructType\SetUserPreferencesResponseType
+     * @return \StructType\SetMessagePreferencesResponseType|\StructType\SetNotificationPreferencesResponseType|\StructType\SetShippingDiscountProfilesResponseType|\StructType\SetStoreCategoriesResponseType|\StructType\SetTaxTableResponseType|\StructType\SetUserNotesResponseType|\StructType\SetUserPreferencesResponseType
      */
     public function getResult()
     {

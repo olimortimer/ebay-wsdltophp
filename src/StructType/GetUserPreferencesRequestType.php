@@ -93,9 +93,9 @@ class GetUserPreferencesRequestType extends AbstractRequestType
     /**
      * The ShowUnpaidItemAssistancePreference
      * Meta information extracted from the WSDL
-     * - documentation: If included and set to <code>true</code>, the seller's Unpaid Item Assistant preferences are returned in the response. The Unpaid Item Assistant automatically opens an Unpaid Item dispute on the behalf of the seller. <br><br> <span
-     * class="tablenote"><strong>Note:</strong> To return the list of buyers excluded from the Unpaid Item Assistant mechanism, the <b>ShowUnpaidItemAssistanceExclusionList</b> field must also be included and set to <code>true</code> in the request.
-     * Excluded buyers can be viewed in the <b>UnpaidItemAssistancePreferences.ExcludedUser</b> field. </span>
+     * - documentation: If included and set to <code>true</code>, the seller's Unpaid Item preferences are returned in the response. The Unpaid Item preferences can be used to automatically cancel an unpaid order and relist the item on the behalf of the
+     * seller. <br><br> <span class="tablenote"><strong>Note:</strong> To return the list of buyers excluded from the Unpaid Item preferences, the <b>ShowUnpaidItemAssistanceExclusionList</b> field must also be included and set to <code>true</code> in the
+     * request. Excluded buyers can be viewed in the <b>UnpaidItemAssistancePreferences.ExcludedUser</b> field. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -111,9 +111,9 @@ class GetUserPreferencesRequestType extends AbstractRequestType
     /**
      * The ShowUnpaidItemAssistanceExclusionList
      * Meta information extracted from the WSDL
-     * - documentation: If included and set to <code>true</code>, the list of eBay user IDs on the Unpaid Item Assistant Excluded User list is returned through the <b>UnpaidItemAssistancePreferences.ExcludedUser</b> field in the response. <br/><br/> For
-     * excluded users, an Unpaid Item dispute is not automatically filed through the UPI Assistance mechanism. The Excluded User list is managed through the <b>SetUserPreferences</b> call. <br><br> <span class="tablenote"><strong>Note:</strong> To return
-     * the list of buyers excluded from the Unpaid Item Assistant mechanism, the <b>ShowUnpaidItemAssistancePreference</b> field must also be included and set to <b>true</b> in the request. </span>
+     * - documentation: If included and set to <code>true</code>, the list of eBay user IDs on the Unpaid Item preferences Excluded User list is returned through the <b>UnpaidItemAssistancePreferences.ExcludedUser</b> field in the response. <br/><br/> For
+     * excluded users, an Unpaid Item is not automatically cancelled. The Excluded User list is managed through the <b>SetUserPreferences</b> call. <br><br> <span class="tablenote"><strong>Note:</strong> To return the list of buyers excluded from the Unpaid
+     * Item preferences, the <b>ShowUnpaidItemAssistancePreference</b> field must also be included and set to <b>true</b> in the request. </span>
      * - minOccurs: 0
      * @var bool
      */

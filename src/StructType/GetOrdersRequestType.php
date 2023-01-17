@@ -121,9 +121,9 @@ class GetOrdersRequestType extends AbstractRequestType
     /**
      * The NumberOfDays
      * Meta information extracted from the WSDL
-     * - documentation: This filter specifies the number of days (24-hour periods) in the past to search for orders. All eBay orders that were either created or modified within this period are returned in the output. This field cannot be used in conjunction
-     * with the <b>CreateTimeFrom</b>/<b>CreateTimeTo</b> or <b>ModTimeFrom</b>/<b>ModTimeTo</b> date filters. <br><br> <span class="tablenote"><strong>Note:</strong> This date filter only allows you to retrieve orders created/modified within the last 30
-     * days. So, if you wish to retrieve orders created and/or modified more than 30 days in the past, the <b>CreateTimeFrom</b>/<b>CreateTimeTo</b> or <b>ModTimeFrom</b>/<b>ModTimeTo</b> date filters should be used instead. </span> <br> <span
+     * - documentation: This filter specifies the number of days (24-hour periods) in the past to search for orders. All eBay orders that were created within this period are returned in the output. This field cannot be used in conjunction with the
+     * <b>CreateTimeFrom</b>/<b>CreateTimeTo</b> or <b>ModTimeFrom</b>/<b>ModTimeTo</b> date filters. <br><br> <span class="tablenote"><strong>Note:</strong> This date filter only allows you to retrieve orders created/modified within the last 30 days. So,
+     * if you wish to retrieve orders created and/or modified more than 30 days in the past, the <b>CreateTimeFrom</b>/<b>CreateTimeTo</b> or <b>ModTimeFrom</b>/<b>ModTimeTo</b> date filters should be used instead. </span> <br> <span
      * class="tablenote"><strong>Note:</strong> Unless one or more <b>OrderID</b> values are used, one of the three available date range filters must be used. </span>
      * - minOccurs: 0
      * @var int

@@ -7,8 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructEnumBase;
 /**
  * This class stands for PayPalAccountStatusCodeType EnumType
  * Meta information extracted from the WSDL
- * - documentation: Enumerated type that defines PayPal account states. <br><br> <span class="tablenote"><b>Note: </b> Although the <b>PayPalAccountStatus</b> field is still being returned for now, this field now has much less relevance since a seller's
- * eBay account and PayPal account are no longer linked together, and a seller having a PayPal account is no longer a requirement. </span>
+ * - documentation: This enumeration type is deprecated.
  * @subpackage Enumerations
  */
 class PayPalAccountStatusCodeType extends AbstractStructEnumBase
@@ -16,35 +15,35 @@ class PayPalAccountStatusCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'Active'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's PayPal account is active.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'Active'
      */
     const VALUE_ACTIVE = 'Active';
     /**
      * Constant for value 'Closed'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's PayPal account is closed.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'Closed'
      */
     const VALUE_CLOSED = 'Closed';
     /**
      * Constant for value 'HighRestricted'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's PayPal account is in a highly restricted state.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'HighRestricted'
      */
     const VALUE_HIGH_RESTRICTED = 'HighRestricted';
     /**
      * Constant for value 'LowRestricted'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's PayPal account is in a low restricted state.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'LowRestricted'
      */
     const VALUE_LOW_RESTRICTED = 'LowRestricted';
     /**
      * Constant for value 'Locked'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's PayPal account is locked.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'Locked'
      */
     const VALUE_LOCKED = 'Locked';
@@ -58,21 +57,21 @@ class PayPalAccountStatusCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'WireOff'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's PayPal account is wired off.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'WireOff'
      */
     const VALUE_WIRE_OFF = 'WireOff';
     /**
      * Constant for value 'Unknown'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the state of the user's PayPal account is unknown.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'Unknown'
      */
     const VALUE_UNKNOWN = 'Unknown';
     /**
      * Constant for value 'Invalid'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's PayPal account is invalid.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'Invalid'
      */
     const VALUE_INVALID = 'Invalid';

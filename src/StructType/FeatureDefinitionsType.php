@@ -458,7 +458,7 @@ class FeatureDefinitionsType extends AbstractStructBase
     /**
      * The PayPalBuyerProtectionEnabled
      * Meta information extracted from the WSDL
-     * - documentation: This field is deprecated. eBay now manages the complete payment and checkout process, so PayPal Purchase Protection no longer applies to eBay orders.
+     * - documentation: This field is deprecated..
      * - minOccurs: 0
      * @var \StructType\PayPalBuyerProtectionEnabledDefinitionType
      */
@@ -498,7 +498,7 @@ class FeatureDefinitionsType extends AbstractStructBase
     /**
      * The PayPalRequired
      * Meta information extracted from the WSDL
-     * - documentation: This field is deprecated. eBay now controls the electronic payment methods avaialable to buyers, and the seller does not specify any electronic payment methods.
+     * - documentation: This field is deprecated.
      * - minOccurs: 0
      * @var \StructType\PayPalRequiredDefinitionType
      */

@@ -7,7 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructEnumBase;
 /**
  * This class stands for UnpaidItemCaseOpenTypeCodeType EnumType
  * Meta information extracted from the WSDL
- * - documentation: Enumeration type that indicates the method used to open an Unpaid Item case.
+ * - documentation: <span class="tablenote"> <strong>Note:</strong> This type is deprecated since Unpaid Item cases are no longer supported. </span>
  * @subpackage Enumerations
  */
 class UnpaidItemCaseOpenTypeCodeType extends AbstractStructEnumBase
@@ -15,14 +15,14 @@ class UnpaidItemCaseOpenTypeCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'Auto'
      * Meta information extracted from the WSDL
-     * - documentation: This value indicates that the Unpaid Item case was opened automatically through eBay's Unpaid Item Assistant feature.
+     * - documentation: <span class="tablenote"><strong>Note:</strong> This field is deprecated (Unpaid Item cases are no longer supported). </span>
      * @return string 'Auto'
      */
     const VALUE_AUTO = 'Auto';
     /**
      * Constant for value 'Manual'
      * Meta information extracted from the WSDL
-     * - documentation: This value indicates that the seller opened an Unpaid Item case manually through the Resolution Center or by using the Trading API's <strong>AddDispute</strong> call.
+     * - documentation: <span class="tablenote"><strong>Note:</strong> This field is deprecated (Unpaid Item cases are no longer supported). </span>
      * @return string 'Manual'
      */
     const VALUE_MANUAL = 'Manual';

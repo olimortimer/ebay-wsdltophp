@@ -7,11 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructEnumBase;
 /**
  * This class stands for DisputeExplanationCodeType EnumType
  * Meta information extracted from the WSDL
- * - documentation: Enumerated type that contains the explanations that a seller can give for opening up an Unpaid Item case against a buyer. These values are specified in the <b>DisputeExplanation</b> field of <b>AddDispute</b> call, and are returned
- * in the <b>GetUserDisputes</b> and <b>GetDispute</b> calls. The <b>DisputeReason</b> value will dictate what <b>DisputeExplanation</b> values that can be used/returned. <br/><br/> <span class="tablenote"><strong>Note:</strong> Only Unpaid Item cases
- * are now supported by the Dispute calls of the Trading API. These calls no longer support Item not Received (INR) or Significantly not as Described (SNAD) disputes created through PayPal, since this is no longer an option for eBay buyers. eBay buyers
- * must create an INR case through eBay's Resolution Center, and these calls also do not support eBay Money Back Guarantee cases. <br><br> To respond to an eBay Money Back Guarantee case, the seller should use the <a
- * href="https://developer.ebay.com/Devzone/post-order/index.html" target="_blank">Case Management calls</a> of the <b>Post-Order API</b> or manage/respond to cases manually through the eBay Resolution Center. </span>
+ * - documentation: Enumerated type that contains the explanations why an order is being cancelled.
  * @subpackage Enumerations
  */
 class DisputeExplanationCodeType extends AbstractStructEnumBase
@@ -40,8 +36,7 @@ class DisputeExplanationCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'BuyerReturnedItemForRefund'
      * Meta information extracted from the WSDL
-     * - documentation: This value is no longer applicable and should not be used in an <b>AddDispute</b> call, as it only pertains to <i>Significantly Not As Described</i> disputes initiated through PayPal, and those disputes are no longer supported by the
-     * <b>AddDispute</b>.
+     * - documentation: This value is no longer applicable and should not be used.
      * @return string 'BuyerReturnedItemForRefund'
      */
     const VALUE_BUYER_RETURNED_ITEM_FOR_REFUND = 'BuyerReturnedItemForRefund';
@@ -113,7 +108,8 @@ class DisputeExplanationCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'UPIAssistance'
      * Meta information extracted from the WSDL
-     * - documentation: This value will be returned in <b>GetDispute</b> or <b>GetUserDisputes</b> calls if the Unpaid Item case was opened by eBay through the Unpaid Item Assistance mechanism. This value cannot be used in <b>AddDispute</b>.
+     * - documentation: This value will be returned in <b>GetDispute</b> or <b>GetUserDisputes</b> calls if the Unpaid Item preferences was used to automatically cancel an unpaid order and relist the item on the behalf of the seller. This value cannot be
+     * used in <b>AddDispute</b>.
      * @return string 'UPIAssistance'
      */
     const VALUE_UPIASSISTANCE = 'UPIAssistance';
@@ -142,7 +138,7 @@ class DisputeExplanationCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'UPIAssistanceDisabled'
      * Meta information extracted from the WSDL
-     * - documentation: This value indicates that the Unpaid Item case was opened by eBay through the Unpaid Item Assistance mechanism, and then was subsequently converted to a manual dispute, either by the seller or by eBay. This value cannot be used in
+     * - documentation: This value indicates that the Unpaid Item case was opened by eBay through Unpaid Item preferences, and then was subsequently converted to a manual dispute, either by the seller or by eBay. This value cannot be used in
      * <b>AddDispute</b>.
      * @return string 'UPIAssistanceDisabled'
      */

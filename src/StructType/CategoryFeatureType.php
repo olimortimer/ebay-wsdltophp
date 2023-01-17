@@ -418,7 +418,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The PayPalBuyerProtectionEnabled
      * Meta information extracted from the WSDL
-     * - documentation: This field is no longer applicable, as PayPal Purchase Protection no longer directly applies to eBay orders.
+     * - documentation: This field is no longer applicable.
      * - minOccurs: 0
      * @var bool
      */
@@ -426,9 +426,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The BuyerGuaranteeEnabled
      * Meta information extracted from the WSDL
-     * - documentation: If this field is returned as <code>true</code>, the category supports the Best Price Guarantee feature on the Australia site. This field/feature is only applicable to Australia. <br/><br/> Only returned when this value (or this
-     * category's setting) overrides the value inherited from the category's parent or the site default. Will not be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values
-     * does not include <code>PayPalBuyerProtectionEnabled</code>.
+     * - documentation: If this field is returned as <code>true</code>, the category supports the Best Price Guarantee feature on the Australia site. This field/feature is only applicable to Australia.
      * - minOccurs: 0
      * @var bool
      */
@@ -454,7 +452,7 @@ class CategoryFeatureType extends AbstractStructBase
     /**
      * The PayPalRequired
      * Meta information extracted from the WSDL
-     * - documentation: PayPal or any online payment methods are never required for sellers, so this field can be disregarded even if it is returned as 'true'.
+     * - documentation: This field is no longer applicable.
      * - minOccurs: 0
      * @var bool
      */
@@ -1027,10 +1025,7 @@ class CategoryFeatureType extends AbstractStructBase
      * - documentation: This container specifies all of the item conditions that are supported for the corresponding category. The display name of the item condiation and the ID associated with the description are both shown. <br/><br/> This container will
      * not be returned for any eBay categories that don't support the use of an item condition value. To see which categories require, support, or don't support the use of item conditions, you can include a <b>FeatureID</b> value of
      * <code>ConditionEnabled</code>. Any eBay category that does not support the use of an item condition value will return a <b>ConditionEnabled</b> value of <code>Disabled</code>. <br/><br/> This container will also not be returned if one or more <a
-     * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ConditionValues</code>. <br/> <br/> <span class="tablenote"><b>Note:</b> The <b>Certified - Refurbished</b>
-     * condition (condition ID 2000), <b>Excellent - Refurbished</b> condition (condition ID 2010), <b>Very Good - Refurbished</b> condition (condition ID 2020), and <b>Good - Refurbished</b> condition (condition ID 2030) are returned in the
-     * <b>SpecialFeatures</b> container. A seller must be pre-qualified by eBay to list items with the any of these refurbished item conditions. The <b>Excellent - Refurbished</b>, <b>Very Good - Refurbished</b> and <b>Good - Refurbished</b> conditions are
-     * currently only applicable for the <strong>Cell Phones & Smartphones</strong> category (category ID 9355).</span>
+     * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ConditionValues</code>. <br/> <br/>
      * - minOccurs: 0
      * @var \StructType\ConditionValuesType
      */
@@ -1039,10 +1034,9 @@ class CategoryFeatureType extends AbstractStructBase
      * The SpecialFeatures
      * Meta information extracted from the WSDL
      * - documentation: This container is only returned if the corresponding category supports a special item condition such as <b>Certified - Refurbished</b> condition (condition ID 2000), <b>Excellent - Refurbished</b> condition (condition ID 2010),
-     * <b>Very Good - Refurbished</b> condition (condition ID 2020), and <b>Good - Refurbished</b> condition (condition ID 2030). A seller must be pre-qualified by eBay to list items with the any of these refurbished item conditions. The <b>Excellent -
-     * Refurbished</b>, <b>Very Good - Refurbished</b> and <b>Good - Refurbished</b> conditions are currently only applicable for the <strong>Cell Phones & Smartphones</strong> category (category ID 9355). <br/><br/> All other item conditions supported by a
-     * category will be returned in the <b>ConditionValues</b> container instead. <br/><br/> Neither the <b>ConditionValues</b> or the <b>SpecialFeatures</b> containers will be returned if one or more <a href="types/FeatureIDCodeType.html">FeatureID</a>
-     * values are used in the call request, and one of those values does not include <code>ConditionValues</code>.
+     * <b>Very Good - Refurbished</b> condition (condition ID 2020), and <b>Good - Refurbished</b> condition (condition ID 2030). A seller must be pre-qualified by eBay to list items with the any of these refurbished item conditions. <br/><br/> All other
+     * item conditions supported by a category will be returned in the <b>ConditionValues</b> container instead. <br/><br/> Neither the <b>ConditionValues</b> or the <b>SpecialFeatures</b> containers will be returned if one or more <a
+     * href="types/FeatureIDCodeType.html">FeatureID</a> values are used in the call request, and one of those values does not include <code>ConditionValues</code>.
      * - minOccurs: 0
      * @var \StructType\ConditionValuesType
      */

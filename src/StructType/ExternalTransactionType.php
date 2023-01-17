@@ -50,7 +50,7 @@ class ExternalTransactionType extends AbstractStructBase
     /**
      * The ExternalTransactionStatus
      * Meta information extracted from the WSDL
-     * - documentation: The current processing status of a PayPal payment for an eBay order.
+     * - documentation: The current processing status of an external payment for an eBay order.
      * - minOccurs: 0
      * @var string
      */

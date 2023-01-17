@@ -52,7 +52,7 @@ class PaymentHoldReasonCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'NewPaypalAccountAdded'
      * Meta information extracted from the WSDL
-     * - documentation: This value should no longer get returned as a seller is no longer required to link their PayPal account to their eBay account.
+     * - documentation: This value is deprecated.
      * @return string 'NewPaypalAccountAdded'
      */
     const VALUE_NEW_PAYPAL_ACCOUNT_ADDED = 'NewPaypalAccountAdded';

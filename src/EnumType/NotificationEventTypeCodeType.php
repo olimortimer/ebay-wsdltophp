@@ -93,7 +93,7 @@ class NotificationEventTypeCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'ItemListed'
      * Meta information extracted from the WSDL
-     * - documentation: This notification is sent to a subscribed seller each time one of the subscribed seller's items is listed or relisted. This notification is also triggered when the Unpaid Item Assistant mechanism relists an item for the seller.
+     * - documentation: This notification is sent to a subscribed seller each time one of the subscribed seller's items is listed or relisted. This notification is also triggered when the Unpaid Item preferences relists an item for the seller.
      * @return string 'ItemListed'
      */
     const VALUE_ITEM_LISTED = 'ItemListed';

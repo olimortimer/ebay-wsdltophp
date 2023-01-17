@@ -49,9 +49,9 @@ class VariationsType extends AbstractStructBase
      * Variations are specified in a new listing, and when you modify the name of a variation by using ModifyNameList. When you modify variation specific names, VariationSpecificsSet must include the new names plus the names that are not changing (but omit
      * the old names), <br> <br> This set configures variation selection widgets that appear on eBay's View Item page. For example, if you specify Color and Size names in the set, eBay's View Item page displays Color and Size drop-down lists to enable a
      * buyer to choose a variation of interest.<br> <br> The order in which you specify the names and values also controls the order in which the selection widgets appear on the View Item page. For example, if you specify "Color", then "Size", and then
-     * "Sleeve Style" as names, the View Item page shows drop-down lists with those labels in that order. For "Size", if you specify "S", "M", and "L" as values, the View Item page shows the values in that order in the Size drop-down list.<br> <br> Use
-     * GetCategorySpecifics to retrieve recommendations for names, values, and order.<br> <br> Required when Variations are specified in a new listing (e.g., in AddFixedPriceItem). Also required when you change variation specific names or values in
-     * ReviseFixedPriceItem and RelistFixedPriceItem.
+     * "Sleeve Style" as names, the View Item page shows drop-down lists with those labels in that order. For "Size", if you specify "S", "M", and "L" as values, the View Item page shows the values in that order in the Size drop-down list.<br> <br> Use the
+     * <a href="/api-docs/commerce/taxonomy/resources/category_tree/methods/getItemAspectsForCategory" target="_blank">getItemAspectsForCategory</a> method of the Taxonomy API to retrieve recommendations for names and values.<br> <br> Required when
+     * Variations are specified in a new listing (e.g., in AddFixedPriceItem). Also required when you change variation specific names or values in ReviseFixedPriceItem and RelistFixedPriceItem.
      * - minOccurs: 0
      * @var \ArrayType\NameValueListArrayType
      */

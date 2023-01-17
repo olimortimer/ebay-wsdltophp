@@ -16,8 +16,7 @@ class ReviseInventoryStatusResponseType extends AbstractResponseType
      * The InventoryStatus
      * Meta information extracted from the WSDL
      * - documentation: One <b>InventoryStatus</b> container is returned for each item or item variation that was revised. Whether updating the price and/or quantity of a single-variation listing or a specific variation within a multiple-variation listing,
-     * the limit of items or item variations that can be modified with one call is four. <br> <br> Note that all four elements of this container are returned even if these fields would not supplied in the call request. The <b>SKU</b> field is returned as an
-     * empty tag if it is not defined for a single-variation listing.
+     * the limit of items or item variations that can be modified with one call is four. <br> <br> Note that the <b>SKU</b> field is returned as an empty tag if it is not defined for a single-variation listing.
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * @var \StructType\InventoryStatusType[]

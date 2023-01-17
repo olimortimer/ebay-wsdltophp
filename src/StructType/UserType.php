@@ -251,7 +251,7 @@ class UserType extends AbstractStructBase
     /**
      * The PayPalAccountLevel
      * Meta information extracted from the WSDL
-     * - documentation: This field is currently still returned, but is no longer relevant since having a PayPal account linked to your eBay account is no longer required.
+     * - documentation: This field is deprecated.
      * - minOccurs: 0
      * @var string
      */
@@ -259,7 +259,7 @@ class UserType extends AbstractStructBase
     /**
      * The PayPalAccountType
      * Meta information extracted from the WSDL
-     * - documentation: This field is currently still returned, but is no longer relevant since having a PayPal account linked to your eBay account is no longer required.
+     * - documentation: This field is deprecated.
      * - minOccurs: 0
      * @var string
      */
@@ -267,7 +267,7 @@ class UserType extends AbstractStructBase
     /**
      * The PayPalAccountStatus
      * Meta information extracted from the WSDL
-     * - documentation: This field is currently still returned, but is no longer relevant since having a PayPal account linked to your eBay account is no longer required.
+     * - documentation: This field is deprecated.
      * - minOccurs: 0
      * @var string
      */

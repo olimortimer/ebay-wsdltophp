@@ -33,8 +33,8 @@ class ListingDetailsType extends AbstractStructBase
     /**
      * The CheckoutEnabled
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether or not the seller's Checkout Enabled preference is turned on (at account level or at listing level). This preference is managed through Payment Preferences in My eBay. If this preference is enabled, a Pay Now button
-     * will appear in checkout flow pages and in the email notifications that are sent to buyers. This preferance is enabled by default if PayPal is one of the payment methods.
+     * - documentation: Indicates whether or not the seller's Checkout Enabled preference is turned on. <br> <span class="tablenote"><b>Note:</b> A 'Checkout Enabled' setting is no longer available to sellers, and this field is always returned as
+     * <code>true</code>. </span>
      * - minOccurs: 0
      * @var bool
      */

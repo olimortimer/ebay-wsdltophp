@@ -15,21 +15,21 @@ class PaymentMethodSearchCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'PayPal'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the item may be purchased using PayPal as the payment method.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'PayPal'
      */
     const VALUE_PAY_PAL = 'PayPal';
     /**
      * Constant for value 'PaisaPay'
      * Meta information extracted from the WSDL
-     * - documentation: PaisaPay is no longer a supported payment method, so this value is no longer applicable.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'PaisaPay'
      */
     const VALUE_PAISA_PAY = 'PaisaPay';
     /**
      * Constant for value 'PayPalOrPaisaPay'
      * Meta information extracted from the WSDL
-     * - documentation: PaisaPay is no longer a supported payment method, so this value is no longer applicable.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'PayPalOrPaisaPay'
      */
     const VALUE_PAY_PAL_OR_PAISA_PAY = 'PayPalOrPaisaPay';
@@ -43,7 +43,7 @@ class PaymentMethodSearchCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'PaisaPayEscrowEMI'
      * Meta information extracted from the WSDL
-     * - documentation: PaisaPay is no longer a supported payment method, so this value is no longer applicable.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'PaisaPayEscrowEMI'
      */
     const VALUE_PAISA_PAY_ESCROW_EMI = 'PaisaPayEscrowEMI';

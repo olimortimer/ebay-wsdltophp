@@ -7,10 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructEnumBase;
 /**
  * This class stands for DisputeFilterTypeCodeType EnumType
  * Meta information extracted from the WSDL
- * - documentation: Enumeration type that specifies the dispute filters that can be used in the <b>DisputeFilterType</b> field of the <b>GetUserDisputes</b> call. <br/><br/> <span class="tablenote"><strong>Note:</strong> The <b>GetUserDisputes</b> call
- * now only retrieves Unpaid Item cases. It is no longer used to retrieve Item not Received (INR) disputes created through PayPal, since this is no longer an option for eBay buyers. eBay buyers must create an INR case through eBay's Resolution Center,
- * and this call does not support eBay Money Back Guarantee cases. <br><br> To respond to an eBay Money Back Guarantee case, the seller should use the <a href="https://developer.ebay.com/Devzone/post-order/index.html" target="_blank">Case Management
- * calls</a> of the <b>Post-Order API</b> or manage/respond to cases manually through the eBay Resolution Center. </span>
+ * - documentation: Enumeration type that specifies the dispute filters that can be used in the <b>DisputeFilterType</b> field of the <b>GetUserDisputes</b> call.
  * @subpackage Enumerations
  */
 class DisputeFilterTypeCodeType extends AbstractStructEnumBase
@@ -61,7 +58,7 @@ class DisputeFilterTypeCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'ItemNotReceivedDisputes'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value is deprecated, and should not longer be used since PayPal INR disputes no longer exist.
+     * - documentation: This enumeration value is deprecated, and should not longer be used.
      * @return string 'ItemNotReceivedDisputes'
      */
     const VALUE_ITEM_NOT_RECEIVED_DISPUTES = 'ItemNotReceivedDisputes';

@@ -16,8 +16,7 @@ class SiteBuyerRequirementDetailsType extends AbstractStructBase
     /**
      * The LinkedPayPalAccount
      * Meta information extracted from the WSDL
-     * - documentation: <span class="tablenote"><b>Note: </b> Although this field is currently still returned (always as <code>false</code>), it is no longer applicable since having an eBay account linked to a PayPal account is no longer a requirement of
-     * any eBay user. </span>
+     * - documentation: This field is deprecated.
      * - minOccurs: 0
      * @var bool
      */

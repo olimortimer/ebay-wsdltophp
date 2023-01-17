@@ -7,10 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructEnumBase;
 /**
  * This class stands for DisputeRecordTypeCodeType EnumType
  * Meta information extracted from the WSDL
- * - documentation: Enumerated type that lists the different types of order disputes/cases that can occur between buyer and seller. <br/><br/> <span class="tablenote"><strong>Note:</strong> The <b>GetDispute</b> and <b>GetUserDisputes</b> calls now only
- * retrieve Unpaid Item cases. They are no longer used to retrieve Item not Received (INR) disputes created through PayPal, since this is no longer an option for eBay buyers. eBay buyers must create an INR case through eBay's Resolution Center, and
- * these calls do not support eBay Money Back Guarantee cases. <br><br> To respond to an eBay Money Back Guarantee case, the seller should use the <a href="https://developer.ebay.com/Devzone/post-order/index.html" target="_blank">Case Management
- * calls</a> of the <b>Post-Order API</b> or manage/respond to cases manually through the eBay Resolution Center. </span>
+ * - documentation: Enumerated type that lists the different types of order disputes/cases that can occur between buyer and seller.
  * @subpackage Enumerations
  */
 class DisputeRecordTypeCodeType extends AbstractStructEnumBase
@@ -18,9 +15,7 @@ class DisputeRecordTypeCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'UnpaidItem'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the dispute is an Unpaid Item case created by the seller against the buyer. A seller should always try to resolve an Unpaid Item issue with the buyer before opening up a case with eBay.
-     * Sometimes, just sending payment reminders to the buyer or messaging the buyer through the Messaging platform can be helpful. The <a href="https://www.ebay.com/help/selling/getting-paid/resolving-unpaid-items-buyers?id=4137">Resolving unpaid items
-     * with buyers</a> help topic provides more details and tips on trying to work Unpaid Item issues out with the buyer.
+     * - documentation: This enumeration value indicates that the dispute is an Unpaid Item case created by the seller against the buyer.
      * @return string 'UnpaidItem'
      */
     const VALUE_UNPAID_ITEM = 'UnpaidItem';

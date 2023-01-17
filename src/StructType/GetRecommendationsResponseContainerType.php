@@ -65,7 +65,7 @@ class GetRecommendationsResponseContainerType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: This field is deprecated.
      * - minOccurs: 0
-     * @var \StructType\RecommendationsType
+     * @var RecommendationsType
      */
     public $Recommendations;
     /**
@@ -107,12 +107,12 @@ class GetRecommendationsResponseContainerType extends AbstractStructBase
      * @param \StructType\AttributeRecommendationsType $attributeRecommendations
      * @param \StructType\ProductRecommendationsType $productRecommendations
      * @param string $correlationID
-     * @param \StructType\RecommendationsType $recommendations
+     * @param RecommendationsType $recommendations
      * @param \StructType\ProductListingDetailsType $productListingDetails
      * @param string $title
      * @param \DOMDocument $any
      */
-    public function __construct(\StructType\ListingAnalyzerRecommendationsType $listingAnalyzerRecommendations = null, \StructType\SIFFTASRecommendationsType $sIFFTASRecommendations = null, \StructType\PricingRecommendationsType $pricingRecommendations = null, \StructType\AttributeRecommendationsType $attributeRecommendations = null, \StructType\ProductRecommendationsType $productRecommendations = null, $correlationID = null, \StructType\RecommendationsType $recommendations = null, \StructType\ProductListingDetailsType $productListingDetails = null, $title = null, \DOMDocument $any = null)
+    public function __construct(\StructType\ListingAnalyzerRecommendationsType $listingAnalyzerRecommendations = null, \StructType\SIFFTASRecommendationsType $sIFFTASRecommendations = null, \StructType\PricingRecommendationsType $pricingRecommendations = null, \StructType\AttributeRecommendationsType $attributeRecommendations = null, \StructType\ProductRecommendationsType $productRecommendations = null, $correlationID = null, RecommendationsType $recommendations = null, \StructType\ProductListingDetailsType $productListingDetails = null, $title = null, \DOMDocument $any = null)
     {
         $this
             ->setListingAnalyzerRecommendations($listingAnalyzerRecommendations)
@@ -240,7 +240,7 @@ class GetRecommendationsResponseContainerType extends AbstractStructBase
     }
     /**
      * Get Recommendations value
-     * @return \StructType\RecommendationsType|null
+     * @return RecommendationsType|null
      */
     public function getRecommendations()
     {
@@ -248,10 +248,10 @@ class GetRecommendationsResponseContainerType extends AbstractStructBase
     }
     /**
      * Set Recommendations value
-     * @param \StructType\RecommendationsType $recommendations
+     * @param RecommendationsType $recommendations
      * @return \StructType\GetRecommendationsResponseContainerType
      */
-    public function setRecommendations(\StructType\RecommendationsType $recommendations = null)
+    public function setRecommendations(RecommendationsType $recommendations = null)
     {
         $this->Recommendations = $recommendations;
         return $this;

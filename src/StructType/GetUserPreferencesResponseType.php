@@ -93,8 +93,8 @@ class GetUserPreferencesResponseType extends AbstractResponseType
     /**
      * The UnpaidItemAssistancePreferences
      * Meta information extracted from the WSDL
-     * - documentation: Container consisting of a seller's Unpaid Item Assistant preferences. The Unpaid Item Assistant automatically opens an Unpaid Item dispute on the behalf of the seller. This container is returned if
-     * <b>ShowUnpaidItemAssistancePreference</b> is included and set to <code>true</code> in the request. <br><br> <span class="tablenote"><b>Note:</b> To return the list of buyers excluded from the Unpaid Item Assistant mechanism, the
+     * - documentation: Container consisting of a seller's Unpaid Item preferences. The Unpaid Item preferences can be used to automatically cancel an unpaid order and relist the item on the behalf of the seller. This container is returned if
+     * <b>ShowUnpaidItemAssistancePreference</b> is included and set to <code>true</code> in the request. <br><br> <span class="tablenote"><b>Note:</b> To return the list of buyers excluded from the Unpaid Item preferences, the
      * <b>ShowUnpaidItemAssistanceExclusionList</b> field must also be included and set to <code>true</code> in the request. Excluded buyers can be viewed in the <b>UnpaidItemAssistancePreferences.ExcludedUser</b> field. </span>
      * - minOccurs: 0
      * @var \StructType\UnpaidItemAssistancePreferencesType

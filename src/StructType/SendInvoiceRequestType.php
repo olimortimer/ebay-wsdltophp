@@ -61,8 +61,8 @@ class SendInvoiceRequestType extends AbstractRequestType
     /**
      * The InternationalShippingServiceOptions
      * Meta information extracted from the WSDL
-     * - documentation: If the buyer has an international shipping address, use this container to offer up to four international shipping service options (or five if one of them is Global Shipping Program). If one or more international shipping service
-     * options are offered through this container, the (domestic) <b>ShippingServiceOptions</b> container should not be included in the same request. <br>
+     * - documentation: If the buyer has an international shipping address, use this container to offer up to four international shipping service options (or five if one of the shipping service options is Global Shipping Program or eBay International
+     * Shipping). If one or more international shipping service options are offered through this container, the (domestic) <b>ShippingServiceOptions</b> container should not be included in the same request. <br>
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * @var \StructType\InternationalShippingServiceOptionsType[]
@@ -118,7 +118,7 @@ class SendInvoiceRequestType extends AbstractRequestType
     /**
      * The PayPalEmailAddress
      * Meta information extracted from the WSDL
-     * - documentation: <b>DO NOT USE</b>. This field is no longer applicable, as eBay now controls the available online payment options that are available to buyers, and not the seller.
+     * - documentation: <b>DO NOT USE</b>. This field is no longer applicable.
      * - minOccurs: 0
      * @var string
      */

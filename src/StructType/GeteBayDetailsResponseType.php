@@ -228,9 +228,8 @@ class GeteBayDetailsResponseType extends AbstractResponseType
     /**
      * The VariationDetails
      * Meta information extracted from the WSDL
-     * - documentation: Site-level validation rules for multi-variation listings (for example, the maximum number of variations per listing). Use <b>GetCategoryFeatures</b> to determine which categories on a site support variations. Use
-     * <b>GetCategorySpecifics</b> for rules related to recommended or required variation specifics. <br/><br/> <span class="tablenote"><b>Note: </b> This container is only returned if <b>VariationDetails</b> is included as a <b>DetailName</b> filter in the
-     * request, or if no <b>DetailName</b> filters are used in the request. </span>
+     * - documentation: Site-level validation rules for multiple-variation listings (for example, the maximum number of variations per listing). Use <b>GetCategoryFeatures</b> to determine which categories on a site support variations. <br/><br/> <span
+     * class="tablenote"><b>Note: </b> This container is only returned if <b>VariationDetails</b> is included as a <b>DetailName</b> filter in the request, or if no <b>DetailName</b> filters are used in the request. </span>
      * - minOccurs: 0
      * @var \StructType\VariationDetailsType
      */

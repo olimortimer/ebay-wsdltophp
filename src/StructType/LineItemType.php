@@ -7,7 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for LineItemType StructType
  * Meta information extracted from the WSDL
- * - documentation: This type provides information about one order line item in a Global Shipping package. The package can contain multiple units of a given order line item.
+ * - documentation: This type provides information about one order line item in a package. The package can contain multiple units of a given order line item.
  * @subpackage Structs
  */
 class LineItemType extends AbstractStructBase
@@ -34,8 +34,8 @@ class LineItemType extends AbstractStructBase
     /**
      * The Quantity
      * Meta information extracted from the WSDL
-     * - documentation: The number of units of the order line item in this package; this is required for customs. The seller must ensure that this matches the quantity of the order line item enclosed in the package. <br/><br/> This value must be a positive
-     * integer, and it can't be greater than the quantity of this item specified in the original transaction.
+     * - documentation: The number of units of the order line item in this package; this is required for customs. The seller must ensure that this matches the quantity of the order line item enclosed in the package.<br/><br/>This value must be a positive
+     * integer, and it can't be greater than the quantity of this item specified in the original transaction. This field is a required field in <b>CompleteSale</b> if the order type is a Global Shipping Program (GSP) order.
      * - minOccurs: 0
      * @var int
      */

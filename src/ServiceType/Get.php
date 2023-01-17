@@ -240,30 +240,6 @@ class Get extends AbstractSoapClientBase
         }
     }
     /**
-     * Method to call the operation originally named GetCategorySpecifics
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\GetCategorySpecificsRequestType $getCategorySpecificsRequest
-     * @return \StructType\GetCategorySpecificsResponseType|bool
-     */
-    public function GetCategorySpecifics(\StructType\GetCategorySpecificsRequestType $getCategorySpecificsRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->GetCategorySpecifics($getCategorySpecificsRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
      * Method to call the operation originally named GetChallengeToken
      * Meta information extracted from the WSDL
      * - SOAPHeaderNames: RequesterCredentials
@@ -960,78 +936,6 @@ class Get extends AbstractSoapClientBase
         }
     }
     /**
-     * Method to call the operation originally named GetStoreCustomPage
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\GetStoreCustomPageRequestType $getStoreCustomPageRequest
-     * @return \StructType\GetStoreCustomPageResponseType|bool
-     */
-    public function GetStoreCustomPage(\StructType\GetStoreCustomPageRequestType $getStoreCustomPageRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->GetStoreCustomPage($getStoreCustomPageRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named GetStoreOptions
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\GetStoreOptionsRequestType $getStoreOptionsRequest
-     * @return \StructType\GetStoreOptionsResponseType|bool
-     */
-    public function GetStoreOptions(\StructType\GetStoreOptionsRequestType $getStoreOptionsRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->GetStoreOptions($getStoreOptionsRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named GetStorePreferences
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\GetStorePreferencesRequestType $getStorePreferencesRequest
-     * @return \StructType\GetStorePreferencesResponseType|bool
-     */
-    public function GetStorePreferences(\StructType\GetStorePreferencesRequestType $getStorePreferencesRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->GetStorePreferences($getStorePreferencesRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
      * Method to call the operation originally named GetSuggestedCategories
      * Meta information extracted from the WSDL
      * - SOAPHeaderNames: RequesterCredentials
@@ -1250,7 +1154,7 @@ class Get extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\GetAccountResponseType|\StructType\GetAdFormatLeadsResponseType|\StructType\GetAllBiddersResponseType|\StructType\GetApiAccessRulesResponseType|\StructType\GetBestOffersResponseType|\StructType\GetBidderListResponseType|\StructType\GetCategoriesResponseType|\StructType\GetCategoryFeaturesResponseType|\StructType\GetCategoryMappingsResponseType|\StructType\GetCategorySpecificsResponseType|\StructType\GetChallengeTokenResponseType|\StructType\GetCharitiesResponseType|\StructType\GetClientAlertsAuthTokenResponseType|\StructType\GetContextualKeywordsResponseType|\StructType\GetDescriptionTemplatesResponseType|\StructType\GetDisputeResponseType|\StructType\GetFeedbackResponseType|\StructType\GetItemResponseType|\StructType\GetItemsAwaitingFeedbackResponseType|\StructType\GetItemShippingResponseType|\StructType\GetItemTransactionsResponseType|\StructType\GetMemberMessagesResponseType|\StructType\GetMessagePreferencesResponseType|\StructType\GetMyeBayBuyingResponseType|\StructType\GetMyeBayRemindersResponseType|\StructType\GetMyeBaySellingResponseType|\StructType\GetMyMessagesResponseType|\StructType\GetNotificationPreferencesResponseType|\StructType\GetNotificationsUsageResponseType|\StructType\GetOrdersResponseType|\StructType\GetOrderTransactionsResponseType|\StructType\GetSellerDashboardResponseType|\StructType\GetSellerEventsResponseType|\StructType\GetSellerListResponseType|\StructType\GetSellerTransactionsResponseType|\StructType\GetSessionIDResponseType|\StructType\GetShippingDiscountProfilesResponseType|\StructType\GetStoreCategoryUpdateStatusResponseType|\StructType\GetStoreCustomPageResponseType|\StructType\GetStoreOptionsResponseType|\StructType\GetStorePreferencesResponseType|\StructType\GetStoreResponseType|\StructType\GetSuggestedCategoriesResponseType|\StructType\GetTaxTableResponseType|\StructType\GetTokenStatusResponseType|\StructType\GetUserContactDetailsResponseType|\StructType\GetUserDisputesResponseType|\StructType\GetUserPreferencesResponseType|\StructType\GetUserResponseType|\StructType\GetVeROReasonCodeDetailsResponseType|\StructType\GetVeROReportStatusResponseType
+     * @return \StructType\GetAccountResponseType|\StructType\GetAdFormatLeadsResponseType|\StructType\GetAllBiddersResponseType|\StructType\GetApiAccessRulesResponseType|\StructType\GetBestOffersResponseType|\StructType\GetBidderListResponseType|\StructType\GetCategoriesResponseType|\StructType\GetCategoryFeaturesResponseType|\StructType\GetCategoryMappingsResponseType|\StructType\GetChallengeTokenResponseType|\StructType\GetCharitiesResponseType|\StructType\GetClientAlertsAuthTokenResponseType|\StructType\GetContextualKeywordsResponseType|\StructType\GetDescriptionTemplatesResponseType|\StructType\GetDisputeResponseType|\StructType\GetFeedbackResponseType|\StructType\GetItemResponseType|\StructType\GetItemsAwaitingFeedbackResponseType|\StructType\GetItemShippingResponseType|\StructType\GetItemTransactionsResponseType|\StructType\GetMemberMessagesResponseType|\StructType\GetMessagePreferencesResponseType|\StructType\GetMyeBayBuyingResponseType|\StructType\GetMyeBayRemindersResponseType|\StructType\GetMyeBaySellingResponseType|\StructType\GetMyMessagesResponseType|\StructType\GetNotificationPreferencesResponseType|\StructType\GetNotificationsUsageResponseType|\StructType\GetOrdersResponseType|\StructType\GetOrderTransactionsResponseType|\StructType\GetSellerDashboardResponseType|\StructType\GetSellerEventsResponseType|\StructType\GetSellerListResponseType|\StructType\GetSellerTransactionsResponseType|\StructType\GetSessionIDResponseType|\StructType\GetShippingDiscountProfilesResponseType|\StructType\GetStoreCategoryUpdateStatusResponseType|\StructType\GetStoreResponseType|\StructType\GetSuggestedCategoriesResponseType|\StructType\GetTaxTableResponseType|\StructType\GetTokenStatusResponseType|\StructType\GetUserContactDetailsResponseType|\StructType\GetUserDisputesResponseType|\StructType\GetUserPreferencesResponseType|\StructType\GetUserResponseType|\StructType\GetVeROReasonCodeDetailsResponseType|\StructType\GetVeROReportStatusResponseType
      */
     public function getResult()
     {

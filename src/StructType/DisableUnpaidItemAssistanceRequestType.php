@@ -7,8 +7,9 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for DisableUnpaidItemAssistanceRequestType StructType
  * Meta information extracted from the WSDL
- * - documentation: Enables a seller who has opted into the automated Unpaid Item Assistant mechanism to disable the Unpaid Item Assistant at the order line item level. This call can be made whether or not a Unpaid Item case exists for the order line
- * item. If an Unpaid Item case has already been created by the Unpaid Item Assistant, it is converted to a "manual" case for the seller to manage like any other manually-created case.
+ * - documentation: Enables a seller to disable the automatic cancellation setting for a specific line item. <br> <br> <span class="tablenote"><strong>Note:</strong> This call is deprecated and is scheduled for decommission on January 31, 2023. There is
+ * no alternative to this call since eBay no longer supports Unpaid Item cases and the Unpaid Item Assistant. However, there is a page in Selling Preferences in My eBay that allows a seller to cancel and relist any items that have not been paid for
+ * after a specified amount of days. </span>
  * @subpackage Structs
  */
 class DisableUnpaidItemAssistanceRequestType extends AbstractRequestType
@@ -16,8 +17,8 @@ class DisableUnpaidItemAssistanceRequestType extends AbstractRequestType
     /**
      * The ItemID
      * Meta information extracted from the WSDL
-     * - documentation: Unique identifier for an eBay listing. A listing can have multiple order line items, but only one <b>ItemID</b>. To identify a specific order line item for which to disable the Unpaid Item Assistant mechanism, either an
-     * <b>ItemID</b>/<b>TransactionID</b> pair, an <b>OrderLineItemID</b>, or a <b>DisputeID</b> (if an Unpaid Item case already exists) is required in the request. | Type that represents the unique identifier for an eBay listing.
+     * - documentation: Unique identifier for an eBay listing. A listing can have multiple order line items, but only one <b>ItemID</b>. To identify a specific order line item for which to disable the automatic cancellation setting, either an
+     * <b>ItemID</b>/<b>TransactionID</b> pair, or an <b>OrderLineItemID</b> is required in the request. | Type that represents the unique identifier for an eBay listing.
      * - base: xs:string
      * - minOccurs: 0
      * @var string
@@ -26,9 +27,9 @@ class DisableUnpaidItemAssistanceRequestType extends AbstractRequestType
     /**
      * The TransactionID
      * Meta information extracted from the WSDL
-     * - documentation: The unique identifier of an order line item. An order line item is created once there is a commitment from a buyer to purchase an item. To identify a specific order line item for which to disable the Unpaid Item Assistant mechanism,
-     * either an <b>ItemID</b>/<b>TransactionID</b> pair, an <b>OrderLineItemID</b>, or a <b>DisputeID</b> (if an Unpaid Item case already exists) is required in the request. <br> <br> The <b>TransactionID</b> value for auction listings is always
-     * <code>0</code> since there can be only one winning bidder/one sale for an auction listing.
+     * - documentation: The unique identifier of an order line item. An order line item is created once there is a commitment from a buyer to purchase an item. To identify a specific order line item for which to disable the automatic cancellation setting,
+     * either an <b>ItemID</b>/<b>TransactionID</b> pair or an <b>OrderLineItemID</b> is required in the request. <br> <br> The <b>TransactionID</b> value for auction listings is always <code>0</code> since there can be only one winning bidder/one sale for
+     * an auction listing.
      * - minOccurs: 0
      * @var string
      */
@@ -36,12 +37,8 @@ class DisableUnpaidItemAssistanceRequestType extends AbstractRequestType
     /**
      * The DisputeID
      * Meta information extracted from the WSDL
-     * - documentation: A unique identifier for an Unpaid Item case that is filed against an order line item. If an <b>ItemID</b>/<b>TransactionID</b> pair or an <b>OrderLineItemID</b> is used to identify an order line item, <b>DisputeID</b> cannot be used
-     * and will be ignored if it is included in the request. | The unique identifier of an Unpaid Item case involving a buyer and seller. <br/><br/> <span class="tablenote"><strong>Note:</strong> Despite the name, this type is now only used to identify an
-     * Unpaid Item case, and the identifier of an eBay case uses a 'case ID' and not a 'dispute ID'. However, the <strong>DisputeID</strong> field in Dispute calls handles Unpaid Item case IDs. These calls no longer support Item not Received (INR) or
-     * Significantly not as Described (SNAD) disputes created through PayPal, since this is no longer an option for eBay buyers. eBay buyers must create an INR case through eBay's Resolution Center, and these calls also do not support eBay Money Back
-     * Guarantee cases. <br/><br/> To respond to an eBay Money Back Guarantee case, the seller should use the <a href="https://developer.ebay.com/Devzone/post-order/index.html" target="_blank">Case Management calls</a> of the <b>Post-Order API</b> or
-     * manage/respond to cases manually through the eBay Resolution Center. </span>
+     * - documentation: <b>DO NOT USE</b>. This field is no longer applicable. | The unique identifier of an Unpaid Item case involving a buyer and seller. <br/><br/> <span class="tablenote"><strong>Note:</strong> Despite the name, this type is now only
+     * used to identify an Unpaid Item case, and the identifier of an eBay case uses a 'case ID' and not a 'dispute ID'. However, the <strong>DisputeID</strong> field in Dispute calls handles Unpaid Item case IDs. </span>
      * - base: xs:string
      * - minOccurs: 0
      * @var string
@@ -50,8 +47,8 @@ class DisableUnpaidItemAssistanceRequestType extends AbstractRequestType
     /**
      * The OrderLineItemID
      * Meta information extracted from the WSDL
-     * - documentation: <b>OrderLineItemID</b> is a unique identifier for an eBay order line item. To identify a specific order line item for which to disable the Unpaid Item Assistant mechanism, either an <b>ItemID</b>/<b>TransactionID</b> pair, an
-     * <b>OrderLineItemID</b>, or a <b>DisputeID</b> is required in the request.
+     * - documentation: <b>OrderLineItemID</b> is a unique identifier for an eBay order line item. To identify a specific order line item for which to disable the Unpaid Item preferences, either an <b>ItemID</b>/<b>TransactionID</b> pair or an
+     * <b>OrderLineItemID</b> is required in the request.
      * - minOccurs: 0
      * @var string
      */

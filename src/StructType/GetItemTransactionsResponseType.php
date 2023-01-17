@@ -78,7 +78,7 @@ class GetItemTransactionsResponseType extends AbstractResponseType
     /**
      * The PayPalPreferred
      * Meta information extracted from the WSDL
-     * - documentation: This field may still be returned for orders currently, but it can be ignored since eBay now manages all online payment methods available to buyers.
+     * - documentation: This field is deprecated.
      * - minOccurs: 0
      * @var bool
      */

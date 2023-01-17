@@ -7,31 +7,16 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for StoreLogoType StructType
  * Meta information extracted from the WSDL
- * - documentation: Store logo.
+ * - documentation: Store logo. <br> <br> <span class="tablenote"><strong>Note:</strong> The <b>Store.Logo</b> container can no longer be used in a <b>SetStore</b> call to upload a new logo to a store, and the <b>SetStore</b> call will be decommissioned
+ * on September 30, 2022. <br> <br> The <b>GetStore</b> call now only returns the <b>Logo.URL</b> value, but not <b>Logo.LogoID</b> or <b>Logo.Name</b>. </span>
  * @subpackage Structs
  */
 class StoreLogoType extends AbstractStructBase
 {
     /**
-     * The LogoID
-     * Meta information extracted from the WSDL
-     * - documentation: Store logo ID (use GetStoreOptions to get the list of valid logo IDs).
-     * - minOccurs: 0
-     * @var int
-     */
-    public $LogoID;
-    /**
-     * The Name
-     * Meta information extracted from the WSDL
-     * - documentation: Store logo name. Provides a user-friendly name for the logo.
-     * - minOccurs: 0
-     * @var string
-     */
-    public $Name;
-    /**
      * The URL
      * Meta information extracted from the WSDL
-     * - documentation: URL of the logo. Must have a .gif or .jpg extention. Specified when you are using a customized logo.
+     * - documentation: The URL of the seller's store logo.
      * - minOccurs: 0
      * @var string
      */
@@ -43,66 +28,16 @@ class StoreLogoType extends AbstractStructBase
     public $any;
     /**
      * Constructor method for StoreLogoType
-     * @uses StoreLogoType::setLogoID()
-     * @uses StoreLogoType::setName()
      * @uses StoreLogoType::setURL()
      * @uses StoreLogoType::setAny()
-     * @param int $logoID
-     * @param string $name
      * @param string $uRL
      * @param \DOMDocument $any
      */
-    public function __construct($logoID = null, $name = null, $uRL = null, \DOMDocument $any = null)
+    public function __construct($uRL = null, \DOMDocument $any = null)
     {
         $this
-            ->setLogoID($logoID)
-            ->setName($name)
             ->setURL($uRL)
             ->setAny($any);
-    }
-    /**
-     * Get LogoID value
-     * @return int|null
-     */
-    public function getLogoID()
-    {
-        return $this->LogoID;
-    }
-    /**
-     * Set LogoID value
-     * @param int $logoID
-     * @return \StructType\StoreLogoType
-     */
-    public function setLogoID($logoID = null)
-    {
-        // validation for constraint: int
-        if (!is_null($logoID) && !(is_int($logoID) || ctype_digit($logoID))) {
-            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide an integer value, %s given', var_export($logoID, true), gettype($logoID)), __LINE__);
-        }
-        $this->LogoID = $logoID;
-        return $this;
-    }
-    /**
-     * Get Name value
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->Name;
-    }
-    /**
-     * Set Name value
-     * @param string $name
-     * @return \StructType\StoreLogoType
-     */
-    public function setName($name = null)
-    {
-        // validation for constraint: string
-        if (!is_null($name) && !is_string($name)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($name, true), gettype($name)), __LINE__);
-        }
-        $this->Name = $name;
-        return $this;
     }
     /**
      * Get URL value

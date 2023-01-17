@@ -7,7 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for ShipmentLineItemType StructType
  * Meta information extracted from the WSDL
- * - documentation: This type provides information about one or more order line items in a Global Shipping Program package.
+ * - documentation: This type provides information about one or more order line items in a package.
  * @subpackage Structs
  */
 class ShipmentLineItemType extends AbstractStructBase
@@ -15,7 +15,7 @@ class ShipmentLineItemType extends AbstractStructBase
     /**
      * The LineItem
      * Meta information extracted from the WSDL
-     * - documentation: Contains information about one order line item in a Global Shipping Program package. The package can contain multiple units of a given order line item, and multiple order line items.
+     * - documentation: Contains information about one order line item in a package. The package can contain multiple units of a given order line item, and multiple order line items.
      * - maxOccurs: unbounded
      * - minOccurs: 1
      * @var \StructType\LineItemType[]

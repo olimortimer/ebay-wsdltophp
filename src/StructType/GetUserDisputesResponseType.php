@@ -7,7 +7,9 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for GetUserDisputesResponseType StructType
  * Meta information extracted from the WSDL
- * - documentation: The base response type for the <b>GetUserDisputes</b>, a call that retrieves a list of Unpaid Item cases that the user is involved in as a buyer or seller.
+ * - documentation: The base response type for the <b>GetUserDisputes</b>, a call that retrieves a list of cases that the user is involved in as a buyer or seller. <br> <br> <span class="tablenote"><strong>Note:</strong> The <b>GetUserDisputes</b> call
+ * is deprecated and is scheduled for decommission on January 31, 2023. The alternative API to search for cancellation requests is the <a href="https://developer.ebay.com/devzone/post-order/post-order_v2_cancellation_search__get.html"
+ * target="_blank">Search Cancellations</a> method of the <a href="https://developer.ebay.com/devzone/post-order/index.html" target="_blank">Post-Order API </a>. </span>
  * @subpackage Structs
  */
 class GetUserDisputesResponseType extends AbstractResponseType
@@ -18,9 +20,7 @@ class GetUserDisputesResponseType extends AbstractResponseType
      * - documentation: The index of the first dispute in the current result set, relative to the total number of disputes available. Primarily useful for interpreting paginated results. For example, if 228 disputes are available and 200 results are
      * returned per page: The first page returns a <b>StartingDisputeID</b> value of 0 (since a zero-based index is used) and the second page returns a <b>StartingDisputeID</b> value of 200. | The unique identifier of an Unpaid Item case involving a buyer
      * and seller. <br/><br/> <span class="tablenote"><strong>Note:</strong> Despite the name, this type is now only used to identify an Unpaid Item case, and the identifier of an eBay case uses a 'case ID' and not a 'dispute ID'. However, the
-     * <strong>DisputeID</strong> field in Dispute calls handles Unpaid Item case IDs. These calls no longer support Item not Received (INR) or Significantly not as Described (SNAD) disputes created through PayPal, since this is no longer an option for eBay
-     * buyers. eBay buyers must create an INR case through eBay's Resolution Center, and these calls also do not support eBay Money Back Guarantee cases. <br/><br/> To respond to an eBay Money Back Guarantee case, the seller should use the <a
-     * href="https://developer.ebay.com/Devzone/post-order/index.html" target="_blank">Case Management calls</a> of the <b>Post-Order API</b> or manage/respond to cases manually through the eBay Resolution Center. </span>
+     * <strong>DisputeID</strong> field in Dispute calls handles Unpaid Item case IDs. </span>
      * - base: xs:string
      * - minOccurs: 0
      * @var string
@@ -32,9 +32,7 @@ class GetUserDisputesResponseType extends AbstractResponseType
      * - documentation: The index of the last dispute in the current result set, relative to the total number of disputes available. Primarily useful for interpreting paginated results. For example, if 228 disputes are available and 200 results are returned
      * per page: The first page returns an <b>EndingDisputeID</b> value of 199 (since a zero-based index is used) and the second page returns an <b>EndingDisputeID</b> value of 227. | The unique identifier of an Unpaid Item case involving a buyer and
      * seller. <br/><br/> <span class="tablenote"><strong>Note:</strong> Despite the name, this type is now only used to identify an Unpaid Item case, and the identifier of an eBay case uses a 'case ID' and not a 'dispute ID'. However, the
-     * <strong>DisputeID</strong> field in Dispute calls handles Unpaid Item case IDs. These calls no longer support Item not Received (INR) or Significantly not as Described (SNAD) disputes created through PayPal, since this is no longer an option for eBay
-     * buyers. eBay buyers must create an INR case through eBay's Resolution Center, and these calls also do not support eBay Money Back Guarantee cases. <br/><br/> To respond to an eBay Money Back Guarantee case, the seller should use the <a
-     * href="https://developer.ebay.com/Devzone/post-order/index.html" target="_blank">Case Management calls</a> of the <b>Post-Order API</b> or manage/respond to cases manually through the eBay Resolution Center. </span>
+     * <strong>DisputeID</strong> field in Dispute calls handles Unpaid Item case IDs. </span>
      * - base: xs:string
      * - minOccurs: 0
      * @var string

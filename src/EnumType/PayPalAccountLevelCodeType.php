@@ -7,8 +7,7 @@ use \WsdlToPhp\PackageBase\AbstractStructEnumBase;
 /**
  * This class stands for PayPalAccountLevelCodeType EnumType
  * Meta information extracted from the WSDL
- * - documentation: Enumerated type that defines PayPal account levels. <br><br> <span class="tablenote"><b>Note: </b> Although the <b>PayPalAccountLevel</b> field is still being returned for now, this field now has much less relevance since a seller's
- * eBay account and PayPal account are no longer linked together, and a seller having a PayPal account is no longer a requirement. </span>
+ * - documentation: This enumeration type is deprecated.
  * @subpackage Enumerations
  */
 class PayPalAccountLevelCodeType extends AbstractStructEnumBase
@@ -16,49 +15,49 @@ class PayPalAccountLevelCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'Unverified'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's PayPal account is unverified.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'Unverified'
      */
     const VALUE_UNVERIFIED = 'Unverified';
     /**
      * Constant for value 'InternationalUnverified'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's international PayPal account is unverified.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'InternationalUnverified'
      */
     const VALUE_INTERNATIONAL_UNVERIFIED = 'InternationalUnverified';
     /**
      * Constant for value 'Verified'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's PayPal account is verified.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'Verified'
      */
     const VALUE_VERIFIED = 'Verified';
     /**
      * Constant for value 'InternationalVerified'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's international PayPal account is verified.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'InternationalVerified'
      */
     const VALUE_INTERNATIONAL_VERIFIED = 'InternationalVerified';
     /**
      * Constant for value 'Trusted'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's PayPal account is a trusted account.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'Trusted'
      */
     const VALUE_TRUSTED = 'Trusted';
     /**
      * Constant for value 'Unknown'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's PayPal account information is unknown.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'Unknown'
      */
     const VALUE_UNKNOWN = 'Unknown';
     /**
      * Constant for value 'Invalid'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the user's PayPal account is invalid.
+     * - documentation: This enumeration value is deprecated.
      * @return string 'Invalid'
      */
     const VALUE_INVALID = 'Invalid';
