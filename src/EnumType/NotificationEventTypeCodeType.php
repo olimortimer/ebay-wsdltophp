@@ -107,31 +107,32 @@ class NotificationEventTypeCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'BuyerResponseDispute'
      * Meta information extracted from the WSDL
-     * - documentation: This notification is sent to a subscribed seller each time a buyer responds to an Unpaid Item or Cancel Transaction case that the subscribed seller has opened up against the buyer.
+     * - documentation: <span class="tablenote"><b>Note: </b> This notification is no longer supported since the Trading API no longer supports seller-initiated cancellation requests. </span> This notification is sent to a subscribed seller each time a
+     * buyer responds to a Cancel Transaction request.
      * @return string 'BuyerResponseDispute'
      */
     const VALUE_BUYER_RESPONSE_DISPUTE = 'BuyerResponseDispute';
     /**
      * Constant for value 'SellerOpenedDispute'
      * Meta information extracted from the WSDL
-     * - documentation: This notification is sent to a subscribed buyer if a seller opens up an Unpaid Item or Cancel Transaction case against the subscribed buyer. <br><br> If subscribed to by a buyer and when applicable, this notification will appear
-     * through the <b>GetDispute</b> call response.
+     * - documentation: <span class="tablenote"><b>Note: </b> This notification is no longer supported since the Trading API no longer supports seller-initiated cancellation requests. </span> This notification is sent to a subscribed buyer if a seller
+     * initiates a Cancel Transaction request.
      * @return string 'SellerOpenedDispute'
      */
     const VALUE_SELLER_OPENED_DISPUTE = 'SellerOpenedDispute';
     /**
      * Constant for value 'SellerRespondedToDispute'
      * Meta information extracted from the WSDL
-     * - documentation: This notification is sent to a subscribed buyer each time a seller responds to an Item Not Received or (Item) Significantly Not As Described case that the subscribed buyer has opened up against the seller. <br><br> If subscribed to
-     * by a buyer and when applicable, this notification will appear in the <b>GetDispute</b> call response.
+     * - documentation: <span class="tablenote"><b>Note: </b> This notification is no longer supported since dispute calls in the Trading API are deprecated. </span> This notification is sent to a subscribed buyer each time a seller responds to an Item Not
+     * Received or Return case that the subscribed buyer has opened up against the seller.
      * @return string 'SellerRespondedToDispute'
      */
     const VALUE_SELLER_RESPONDED_TO_DISPUTE = 'SellerRespondedToDispute';
     /**
      * Constant for value 'SellerClosedDispute'
      * Meta information extracted from the WSDL
-     * - documentation: This notification is sent to the subscribed buyer and seller if the seller closes an Unpaid Item or Cancel Transaction case against the buyer. <br><br> If subscribed to by a buyer or seller, and when applicable, this notification
-     * will appear in the <b>GetDispute</b> call response.
+     * - documentation: <span class="tablenote"><b>Note: </b> This notification is no longer supported since dispute calls in the Trading API are deprecated. </span> This notification is sent to the subscribed buyer and seller if the seller closes a Cancel
+     * Transaction request.
      * @return string 'SellerClosedDispute'
      */
     const VALUE_SELLER_CLOSED_DISPUTE = 'SellerClosedDispute';
@@ -197,32 +198,28 @@ class NotificationEventTypeCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'INRBuyerOpenedDispute'
      * Meta information extracted from the WSDL
-     * - documentation: This notification is sent to a subscribed seller when a buyer opens an Item Not Received dispute against that seller. <br><br> If subscribed to by the seller and when applicable, this notification will appear in the <b>GetDispute</b>
-     * call response.
+     * - documentation: This notification is sent to a subscribed seller when a buyer opens an Item Not Received case against that seller.
      * @return string 'INRBuyerOpenedDispute'
      */
     const VALUE_INRBUYER_OPENED_DISPUTE = 'INRBuyerOpenedDispute';
     /**
      * Constant for value 'INRBuyerRespondedToDispute'
      * Meta information extracted from the WSDL
-     * - documentation: This notification is sent to a subscribed seller when a buyer responds to an Item Not Received dispute opened by that buyer. <br><br> If subscribed to by the seller and when applicable, this notification will appear in the
-     * <b>GetDispute</b> call response.
+     * - documentation: This notification is sent to a subscribed seller when a buyer responds to an Item Not Received case opened by that buyer.
      * @return string 'INRBuyerRespondedToDispute'
      */
     const VALUE_INRBUYER_RESPONDED_TO_DISPUTE = 'INRBuyerRespondedToDispute';
     /**
      * Constant for value 'INRBuyerClosedDispute'
      * Meta information extracted from the WSDL
-     * - documentation: This notification is sent to a subscribed seller when a buyer closes an Item Not Received dispute opened by that buyer. <br><br> If subscribed to by the seller and when applicable, this notification will appear in the
-     * <b>GetDispute</b> call response.
+     * - documentation: This notification is sent to a subscribed seller when a buyer closes an Item Not Received case opened by that buyer.
      * @return string 'INRBuyerClosedDispute'
      */
     const VALUE_INRBUYER_CLOSED_DISPUTE = 'INRBuyerClosedDispute';
     /**
      * Constant for value 'INRSellerRespondedToDispute'
      * Meta information extracted from the WSDL
-     * - documentation: This notification is sent to a subscribed buyer when a seller responds to an Item Not Received dispute opened by the buyer. <br><br> If subscribed to by the buyer and when applicable, this notification will appear in the
-     * <b>GetDispute</b> call response.
+     * - documentation: This notification is sent to a subscribed buyer when a seller responds to an Item Not Received case opened by the buyer.
      * @return string 'INRSellerRespondedToDispute'
      */
     const VALUE_INRSELLER_RESPONDED_TO_DISPUTE = 'INRSellerRespondedToDispute';

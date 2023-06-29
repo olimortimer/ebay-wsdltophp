@@ -31,7 +31,7 @@ class ErrorType extends AbstractStructBase
     /**
      * The ErrorCode
      * Meta information extracted from the WSDL
-     * - documentation: A unique code that identifies the particular error condition that occurred. Your application can use error codes as identifiers in your customized error-handling algorithms. See the "Errors by Number" document.
+     * - documentation: A unique code that identifies the particular error condition that occurred. Your application can use error codes as identifiers in your customized error-handling algorithms.
      * - minOccurs: 0
      * @var string
      */

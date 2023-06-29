@@ -62,13 +62,6 @@ class BuyerPaymentMethodCodeType extends AbstractStructEnumBase
      */
     const VALUE_PERSONAL_CHECK = 'PersonalCheck';
     /**
-     * Constant for value 'COD'
-     * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that cash on delivery of item is accepted for payment. This value is only applicable for offline payments.
-     * @return string 'COD'
-     */
-    const VALUE_COD = 'COD';
-    /**
      * Constant for value 'VisaMC'
      * Meta information extracted from the WSDL
      * - documentation: This enumeration value indicates that Visa or MasterCard are accepted for payment.
@@ -297,7 +290,6 @@ class BuyerPaymentMethodCodeType extends AbstractStructEnumBase
      * @uses self::VALUE_PAYMENT_SEE_DESCRIPTION
      * @uses self::VALUE_CCACCEPTED
      * @uses self::VALUE_PERSONAL_CHECK
-     * @uses self::VALUE_COD
      * @uses self::VALUE_VISA_MC
      * @uses self::VALUE_PAISA_PAY_ACCEPTED
      * @uses self::VALUE_OTHER
@@ -340,7 +332,6 @@ class BuyerPaymentMethodCodeType extends AbstractStructEnumBase
             self::VALUE_PAYMENT_SEE_DESCRIPTION,
             self::VALUE_CCACCEPTED,
             self::VALUE_PERSONAL_CHECK,
-            self::VALUE_COD,
             self::VALUE_VISA_MC,
             self::VALUE_PAISA_PAY_ACCEPTED,
             self::VALUE_OTHER,

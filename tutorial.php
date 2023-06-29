@@ -27,22 +27,6 @@ $options = array(
 $add = new \ServiceType\Add($options);
 $add->setSoapHeaderRequesterCredentials($RequesterCredentials);
 /**
- * Sample call for AddDispute operation/method
- */
-if ($add->AddDispute(new \StructType\AddDisputeRequestType()) !== false) {
-    print_r($add->getResult());
-} else {
-    print_r($add->getLastError());
-}
-/**
- * Sample call for AddDisputeResponse operation/method
- */
-if ($add->AddDisputeResponse(new \StructType\AddDisputeResponseRequestType()) !== false) {
-    print_r($add->getResult());
-} else {
-    print_r($add->getLastError());
-}
-/**
  * Sample call for AddFixedPriceItem operation/method
  */
 if ($add->AddFixedPriceItem(new \StructType\AddFixedPriceItemRequestType()) !== false) {
@@ -123,14 +107,6 @@ if ($add->AddToWatchList(new \StructType\AddToWatchListRequestType()) !== false)
     print_r($add->getLastError());
 }
 /**
- * Sample call for AddTransactionConfirmationItem operation/method
- */
-if ($add->AddTransactionConfirmationItem(new \StructType\AddTransactionConfirmationItemRequestType()) !== false) {
-    print_r($add->getResult());
-} else {
-    print_r($add->getLastError());
-}
-/**
  * Samples for Complete ServiceType
  */
 $complete = new \ServiceType\Complete($options);
@@ -168,19 +144,6 @@ if ($delete->DeleteMyMessages(new \StructType\DeleteMyMessagesRequestType()) !==
     print_r($delete->getResult());
 } else {
     print_r($delete->getLastError());
-}
-/**
- * Samples for Disable ServiceType
- */
-$disable = new \ServiceType\Disable($options);
-$disable->setSoapHeaderRequesterCredentials($RequesterCredentials);
-/**
- * Sample call for DisableUnpaidItemAssistance operation/method
- */
-if ($disable->DisableUnpaidItemAssistance(new \StructType\DisableUnpaidItemAssistanceRequestType()) !== false) {
-    print_r($disable->getResult());
-} else {
-    print_r($disable->getLastError());
 }
 /**
  * Samples for End ServiceType
@@ -267,14 +230,6 @@ if ($get->GetAllBidders(new \StructType\GetAllBiddersRequestType()) !== false) {
     print_r($get->getLastError());
 }
 /**
- * Sample call for GetApiAccessRules operation/method
- */
-if ($get->GetApiAccessRules(new \StructType\GetApiAccessRulesRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
  * Sample call for GetBestOffers operation/method
  */
 if ($get->GetBestOffers(new \StructType\GetBestOffersRequestType()) !== false) {
@@ -339,25 +294,9 @@ if ($get->GetClientAlertsAuthToken(new \StructType\GetClientAlertsAuthTokenReque
     print_r($get->getLastError());
 }
 /**
- * Sample call for GetContextualKeywords operation/method
- */
-if ($get->GetContextualKeywords(new \StructType\GetContextualKeywordsRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
  * Sample call for GetDescriptionTemplates operation/method
  */
 if ($get->GetDescriptionTemplates(new \StructType\GetDescriptionTemplatesRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
- * Sample call for GetDispute operation/method
- */
-if ($get->GetDispute(new \StructType\GetDisputeRequestType()) !== false) {
     print_r($get->getResult());
 } else {
     print_r($get->getLastError());
@@ -587,14 +526,6 @@ if ($get->GetUserContactDetails(new \StructType\GetUserContactDetailsRequestType
     print_r($get->getLastError());
 }
 /**
- * Sample call for GetUserDisputes operation/method
- */
-if ($get->GetUserDisputes(new \StructType\GetUserDisputesRequestType()) !== false) {
-    print_r($get->getResult());
-} else {
-    print_r($get->getLastError());
-}
-/**
  * Sample call for GetUserPreferences operation/method
  */
 if ($get->GetUserPreferences(new \StructType\GetUserPreferencesRequestType()) !== false) {
@@ -777,19 +708,6 @@ if ($revoke->RevokeToken(new \StructType\RevokeTokenRequestType()) !== false) {
     print_r($revoke->getResult());
 } else {
     print_r($revoke->getLastError());
-}
-/**
- * Samples for Seller ServiceType
- */
-$seller = new \ServiceType\Seller($options);
-$seller->setSoapHeaderRequesterCredentials($RequesterCredentials);
-/**
- * Sample call for SellerReverseDispute operation/method
- */
-if ($seller->SellerReverseDispute(new \StructType\SellerReverseDisputeRequestType()) !== false) {
-    print_r($seller->getResult());
-} else {
-    print_r($seller->getLastError());
 }
 /**
  * Samples for Send ServiceType

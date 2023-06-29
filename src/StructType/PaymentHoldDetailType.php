@@ -16,8 +16,9 @@ class PaymentHoldDetailType extends AbstractStructBase
     /**
      * The ExpectedReleaseDate
      * Meta information extracted from the WSDL
-     * - documentation: Timestamp that indicates the expected date in which eBay will distribute the funds to the seller's account. This is not a firm date and is subject to change. This field is only returned after checkout is complete and if the
-     * <b>PaymentHoldStatus</b> indicates a hold has been placed on payment.
+     * - documentation: <br> Timestamp that indicates the expected date in which eBay will distribute the funds to the seller's account. This is not a firm date and is subject to change. This field is only returned after checkout is complete and if the
+     * <b>PaymentHoldStatus</b> indicates a hold has been placed on payment. <br> <span class="tablenote"><b>Note: </b> The <b>Order.PaymentHoldDetails</b> and <b>ContainingOrder.PaymentHoldDetails</b> containers and child fields will stop being returned on
+     * January 31, 2024 and will be removed from the Trading WSDL. Payment hold details can be viewed at the transaction level instead. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -25,7 +26,9 @@ class PaymentHoldDetailType extends AbstractStructBase
     /**
      * The RequiredSellerActionArray
      * Meta information extracted from the WSDL
-     * - documentation: Container consisting of one or more <b>RequiredSellerAction</b> fields. <b>RequiredSellerAction</b> fields provide possible actions that a seller can take to expedite the release of funds into their account.
+     * - documentation: <br> Container consisting of one or more <b>RequiredSellerAction</b> fields. <b>RequiredSellerAction</b> fields provide possible actions that a seller can take to expedite the release of funds into their account. <br> <span
+     * class="tablenote"><b>Note: </b> The <b>Order.PaymentHoldDetails</b> and <b>ContainingOrder.PaymentHoldDetails</b> containers and child fields will stop being returned on January 31, 2024 and will be removed from the Trading WSDL. Payment hold details
+     * can be viewed at the transaction level instead. </span>
      * - minOccurs: 0
      * @var \ArrayType\RequiredSellerActionArrayType
      */
@@ -33,8 +36,9 @@ class PaymentHoldDetailType extends AbstractStructBase
     /**
      * The NumOfReqSellerActions
      * Meta information extracted from the WSDL
-     * - documentation: Integer value that indicates the number of possible actions that a seller can take to possibly expedite the release of funds into their account. This value should equal the number of <b>RequiredSellerAction</b> fields contained in
-     * the <b>RequiredSellerActionArray</b> container.
+     * - documentation: <br> Integer value that indicates the number of possible actions that a seller can take to possibly expedite the release of funds into their account. This value should equal the number of <b>RequiredSellerAction</b> fields contained
+     * in the <b>RequiredSellerActionArray</b> container. <br> <span class="tablenote"><b>Note: </b> The <b>Order.PaymentHoldDetails</b> and <b>ContainingOrder.PaymentHoldDetails</b> containers and child fields will stop being returned on January 31, 2024
+     * and will be removed from the Trading WSDL. Payment hold details can be viewed at the transaction level instead. </span>
      * - minOccurs: 0
      * @var int
      */
@@ -42,7 +46,8 @@ class PaymentHoldDetailType extends AbstractStructBase
     /**
      * The PaymentHoldReason
      * Meta information extracted from the WSDL
-     * - documentation: Enumerated value that indicates why the buyer's payment for the order is being held by eBay instead of being distributed to the seller's account.
+     * - documentation: <br> Enumerated value that indicates why the buyer's payment for the order is being held by eBay instead of being distributed to the seller's account. <br> <span class="tablenote"><b>Note: </b> The <b>Order.PaymentHoldDetails</b> and
+     * <b>ContainingOrder.PaymentHoldDetails</b> containers and child fields will stop being returned on January 31, 2024 and will be removed from the Trading WSDL. Payment hold details can be viewed at the transaction level instead. </span>
      * - minOccurs: 0
      * @var string
      */

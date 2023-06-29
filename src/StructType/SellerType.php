@@ -23,7 +23,8 @@ class SellerType extends AbstractStructBase
     /**
      * The AllowPaymentEdit
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the user as a seller by default allows buyers to edit the total cost of an item (while in checkout). (Sellers enable this property in their My eBay user preferences on the eBay site.)
+     * - documentation: <br> Indicates whether the seller allows buyers to edit the total cost of an item during checkout. <br> <span class="tablenote"><b>Note: </b> The <b>SellerInfo</b> container and its child fields will stop being returned in
+     * <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * @var bool
      */
     public $AllowPaymentEdit;
@@ -38,23 +39,24 @@ class SellerType extends AbstractStructBase
     /**
      * The CheckoutEnabled
      * Meta information extracted from the WSDL
-     * - documentation: This flag indicates whether or not the seller's Checkout Enabled preference is turned on (at account level or at listing level). This preference is managed through Payment Preferences in My eBay. If this preference is enabled, a Pay
-     * Now button will appear in checkout flow pages and in the email notifications that are sent to buyers.
+     * - documentation: <br> This flag indicates whether or not the seller's Checkout Enabled preference is turned on. <br> <span class="tablenote"><b>Note: </b> The <b>SellerInfo</b> container and its child fields will stop being returned in
+     * <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * @var bool
      */
     public $CheckoutEnabled;
     /**
      * The CIPBankAccountStored
      * Meta information extracted from the WSDL
-     * - documentation: If true, this flag indicates that the seller has stored bank account information on file with eBay. A seller must have stored bank account information on file with eBay in order to use 'CashOnPickup' as a payment method (known as
-     * 'Pay upon Pickup' on the site). This field is applicable to all eBay sites that support 'CashOnPickup' as a payment method.
+     * - documentation: <br> This boolean field indicates whether or not the seller has stored bank account information on file with eBay. <br> <span class="tablenote"><b>Note: </b> The <b>SellerInfo</b> container and its child fields will stop being
+     * returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * @var bool
      */
     public $CIPBankAccountStored;
     /**
      * The GoodStanding
      * Meta information extracted from the WSDL
-     * - documentation: If true, indicates that the user is in good standing with eBay. (One of the requirements for listing a new item with immediate payment.)
+     * - documentation: <br> This boolean field indicates whether or not the seller is in good standing with eBay. <br> <span class="tablenote"><b>Note: </b> The <b>SellerInfo</b> container and its child fields will stop being returned in
+     * <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * @var bool
      */
     public $GoodStanding;
@@ -69,7 +71,8 @@ class SellerType extends AbstractStructBase
     /**
      * The QualifiesForB2BVAT
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the user is subject to VAT. Users who have registered with eBay as VAT-exempt are not subject to VAT.
+     * - documentation: <br> Indicates whether the user is subject to VAT. Users who have registered with eBay as VAT-exempt are not subject to VAT. <br> <span class="tablenote"><b>Note: </b> The <b>SellerInfo</b> container and its child fields will stop
+     * being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * @var bool
      */
     public $QualifiesForB2BVAT;
@@ -84,9 +87,8 @@ class SellerType extends AbstractStructBase
     /**
      * The SellerLevel
      * Meta information extracted from the WSDL
-     * - documentation: The user's eBay PowerSeller tier. Possible values are enumerated in the SellerLevelCodeType code list. SellerInfo.SellerLevel is no longer returned in the GetUser, GetBidderList, GetSellerList, GetItem, and GetItemTransactions
-     * responses for the US, DE/AT/CH, and UK/IE sites, for version 629 and later. If you are using a version older than 629, SellerInfo.SellerLevel will still be returned. Developers should note that SellerInfo.SellerLevel could potentially be removed from
-     * other sites as well.
+     * - documentation: <br> This enumeration value indicates the user's eBay PowerSeller tier. <br> <span class="tablenote"><b>Note: </b> The <b>SellerInfo</b> container and its child fields will stop being returned in <b>GetItemTransactions</b> and
+     * <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -110,14 +112,16 @@ class SellerType extends AbstractStructBase
     /**
      * The StoreOwner
      * Meta information extracted from the WSDL
-     * - documentation: Boolean value indicates whether or not the seller is an eBay Store owner.
+     * - documentation: <br> Boolean value indicates whether or not the seller is an eBay Store owner. <br> <span class="tablenote"><b>Note: </b> The <b>SellerInfo</b> container and its child fields will stop being returned in <b>GetItemTransactions</b> and
+     * <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * @var bool
      */
     public $StoreOwner;
     /**
      * The StoreURL
      * Meta information extracted from the WSDL
-     * - documentation: The URL for the seller's eBay Store. This field is only returned if the seller is a store owner (look for a value of <code>true</code> in the <b>SellerInfo.StoreOwner</b> field).
+     * - documentation: <br> The URL for the seller's eBay Store. This field is only returned if the seller is a store owner (look for a value of <code>true</code> in the <b>SellerInfo.StoreOwner</b> field). <br> <span class="tablenote"><b>Note: </b> The
+     * <b>SellerInfo</b> container and its child fields will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -173,7 +177,8 @@ class SellerType extends AbstractStructBase
     /**
      * The SafePaymentExempt
      * Meta information extracted from the WSDL
-     * - documentation: If this field is <code>true</code>, the user is exempt from the requirement to offer at least one safe payment method when listing items.
+     * - documentation: <br> If this field is <code>true</code>, the user is exempt from the requirement to offer at least one safe payment method when listing items. <br> <span class="tablenote"><b>Note: </b> The <b>SellerInfo</b> container and its child
+     * fields will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -222,15 +227,14 @@ class SellerType extends AbstractStructBase
     /**
      * The TopRatedSeller
      * Meta information extracted from the WSDL
-     * - documentation: This boolean field indicates if the seller is certified as a <em>Top Rated Seller</em>. Only Top Rated Sellers can qualify for Top Rated Plus listings, which receive the Top Rated Plus seal, and will help those listings stand out.
-     * Top Rated Plus listings also receive a 20 percent discount on the Final Value Fee. <br/><br/> This field is only returned for the following sites: US (EBAY-US), Motors (EBAY-MOTOR), AT (EBAY-AT), CH (EBAY-CH), DE (EBAY-DE), IE (EBAY-IE), UK
-     * (EBAY-GB), and AU (EBAY-AU). The Top Rated Seller and Top Rated Plus listing requirements will differ by site. Below are some links to Help pages that discusss these requirements: <ul> <li>eBay US: <a
-     * href="http://pages.ebay.com/help/sell/top-rated.html">Becoming a Top Rated Seller and qualifying for Top Rated Plus</a></li> <li>eBay US Motors: <a href="http://pages.ebay.com/help/sell/top-rated.html#becoming">Becoming a Top Rated Seller in Motors
-     * vehicles categories</a></li> <li>eBay UK/IE: <a href="http://pages.ebay.co.uk/help/sell/top-rated.html">eBay Top-rated Seller status and the eBay Premium Service</a></li> <li>eBay DE/AT/CH: <a
-     * href="http://pages.ebay.de/help/sell/top-rated/2.html">Anforderungen fur den Verkaufer mit Top-Bewertung</a></li> <li>eBay AU: <a href="http://pages.ebay.com.au/help/sell/top-rated.html">Becoming a Top Rated Seller and qualifying for eBay Premium
-     * Service</a></li> </ul> Top Rated Sellers, registered in the US, can qualify for Top Rated Seller programs in other countries as long as they meet the selling requirements in those countries. However, even if US sellers qualify for programs in other
-     * countries, they will not receive the Final Value Fee discount on sales in those countries. For more information, see the <a href="http://pages.ebay.com/help/sell/top-rated.html#qualifying">Qualifying for Top Rated Seller status on other eBay
-     * sites</a> help topic.
+     * - documentation: <br/> This boolean field indicates if the seller is certified as a <em>Top Rated Seller</em>. Only Top Rated Sellers can qualify for Top Rated Plus listings, which receive the Top Rated Plus seal and other benefits. <br/> This field
+     * is only returned for the following sites: US, Germany, Austria, Switzerland, UK, Ireland, and Australia. The Top Rated Seller and Top Rated Plus listing requirements will differ by site. Below are some links to Help pages that discusss these
+     * requirements: <ul> <li>eBay US: <a href="https://www.ebay.com/help/policies/selling-policies/seller-standards-policy?id=4347&#section3">Requirements to become Top Rated</a></li> <li>eBay UK/IE: <a
+     * href="https://www.ebay.co.uk/help/policies/selling-policies/seller-standards-policy?id=4347&#section3">Requirements to become Top Rated and the eBay Premium Service</a></li> <li>eBay DE/AT/CH: <a
+     * href="https://pages.ebay.de/help/sell/top-rated/2.html">Anforderungen fur den Verkaufer mit Top-Bewertung</a></li> <li>eBay AU: <a href="https://www.ebay.com.au/help/policies/selling-policies/seller-standards-policy?id=4347&#section3">Requirements to
+     * become Top Rated</a></li> </ul> Top Rated Sellers, registered in the US, can qualify for Top Rated Seller programs in other countries as long as they meet the selling requirements in those countries. However, even if US sellers qualify for programs
+     * in other countries, they will not receive the Final Value Fee discount on sales in those countries. <br> <span class="tablenote"><b>Note: </b> The <b>SellerInfo</b> container and its child fields will stop being returned in <b>GetItemTransactions</b>
+     * and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -271,7 +275,7 @@ class SellerType extends AbstractStructBase
     /**
      * The SellereBayPaymentProcessStatus
      * Meta information extracted from the WSDL
-     * - documentation: This field is no longer used.
+     * - documentation: This field is no longer used/supported.
      * - minOccurs: 0
      * @var string
      */
@@ -279,7 +283,7 @@ class SellerType extends AbstractStructBase
     /**
      * The SellereBayPaymentProcessConsent
      * Meta information extracted from the WSDL
-     * - documentation: This field is no longer used.
+     * - documentation: This field is no longer used/supported.
      * - minOccurs: 0
      * @var \StructType\SellereBayPaymentProcessConsentCodeType
      */

@@ -17,7 +17,7 @@ class ListingDetailsType extends AbstractStructBase
      * The Adult
      * Meta information extracted from the WSDL
      * - documentation: If <code>true</code>, the item is listed in a Mature category. Users must accept the Mature Category agreement on the eBay site to retrieve items listed in Mature categories. (Users do not need to sign this agreement to be able to
-     * list items in Mature Categories.)
+     * list items in Mature Categories.) <br> <span class="tablenote"><b>Note: </b> This field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -25,7 +25,8 @@ class ListingDetailsType extends AbstractStructBase
     /**
      * The BindingAuction
      * Meta information extracted from the WSDL
-     * - documentation: Applicable for Real Estate auctions only. If <code>true</code>, buyers and sellers are expected to follow through on the sale. If false, bids for the Real Estate auction are only expressions of interest.
+     * - documentation: Applicable for Real Estate auctions only. If <code>true</code>, buyers and sellers are expected to follow through on the sale. If false, bids for the Real Estate auction are only expressions of interest. <br> <span
+     * class="tablenote"><b>Note: </b> This field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -34,7 +35,7 @@ class ListingDetailsType extends AbstractStructBase
      * The CheckoutEnabled
      * Meta information extracted from the WSDL
      * - documentation: Indicates whether or not the seller's Checkout Enabled preference is turned on. <br> <span class="tablenote"><b>Note:</b> A 'Checkout Enabled' setting is no longer available to sellers, and this field is always returned as
-     * <code>true</code>. </span>
+     * <code>true</code>. </span> <span class="tablenote"><b>Note: </b> This field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -42,7 +43,9 @@ class ListingDetailsType extends AbstractStructBase
     /**
      * The ConvertedBuyItNowPrice
      * Meta information extracted from the WSDL
-     * - documentation: Converted value of the <b>BuyItNowPrice</b> in the currency of the site that returned this response. For active items, refresh this value every 24 hours to pick up the current conversion rates.
+     * - documentation: <br> Converted value of the <b>BuyItNowPrice</b> in the currency of the site that returned this response. For active items, refresh this value every 24 hours to pick up the current conversion rates. <br> <span
+     * class="tablenote"><b>Note: </b> The <b>ListingDetails.ConvertedBuyItNowPrice</b> field will stop being returned in <b>GetItemTransactions</b>, <b>GetSellerTransactions</b>, and <b>GetMyeBaySelling</b> (SoldList and DeletedFromSoldList) on January 31,
+     * 2024. </span>
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -50,8 +53,9 @@ class ListingDetailsType extends AbstractStructBase
     /**
      * The ConvertedStartPrice
      * Meta information extracted from the WSDL
-     * - documentation: Converted value of the <b>StartPrice</b> in the currency of the site that returned this response. For active items, refresh this value every 24 hours to pick up the current conversion rates.<br> <br> In multi-variation listings, this
-     * value matches the lowest-priced variation that is still available for sale.
+     * - documentation: <br> Converted value of the <b>StartPrice</b> in the currency of the site that returned this response. For active items, refresh this value every 24 hours to pick up the current conversion rates.<br> <br> In multi-variation listings,
+     * this value matches the lowest-priced variation that is still available for sale. <br> <span class="tablenote"><b>Note: </b> The <b>ListingDetails.ConvertedStartPrice</b> field will stop being returned in <b>GetItemTransactions</b>,
+     * <b>GetSellerTransactions</b>, and <b>GetMyeBaySelling</b> (SoldList and DeletedFromSoldList) on January 31, 2024. </span>
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -59,8 +63,9 @@ class ListingDetailsType extends AbstractStructBase
     /**
      * The ConvertedReservePrice
      * Meta information extracted from the WSDL
-     * - documentation: Converted value of the <b>ReservePrice</b> in the currency of the site that returned this response. Only returned for listings with a reserve price when the requesting user is the listing's seller. For active items, refresh this
-     * value every 24 hours to pick up the current conversion rates. Not applicable to Fixed Price listings.
+     * - documentation: <br> Converted value of the <b>ReservePrice</b> in the currency of the site that returned this response. Only returned for listings with a reserve price when the requesting user is the listing's seller. For active items, refresh this
+     * value every 24 hours to pick up the current conversion rates. Not applicable to fixed-price listings. <br> <span class="tablenote"><b>Note: </b> The <b>ListingDetails.ConvertedReservePrice</b> field will stop being returned in
+     * <b>GetItemTransactions</b>, <b>GetSellerTransactions</b>, and <b>GetMyeBaySelling</b> (SoldList and DeletedFromSoldList) on January 31, 2024. </span>
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -68,7 +73,8 @@ class ListingDetailsType extends AbstractStructBase
     /**
      * The HasReservePrice
      * Meta information extracted from the WSDL
-     * - documentation: If <code>true</code>, the seller specified a value in <b>ReservePrice</b>.
+     * - documentation: If <code>true</code>, the seller specified a value in <b>ReservePrice</b>. <br> <span class="tablenote"><b>Note: </b> This field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31,
+     * 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -77,7 +83,8 @@ class ListingDetailsType extends AbstractStructBase
      * The RelistedItemID
      * Meta information extracted from the WSDL
      * - documentation: Indicates the new item ID for a re-listed item. When an item is re-listed, the item ID for the new item is added to the old listing, so buyers can navigate to the new listing. This value only appears when the old listing is
-     * retrieved. The <b>RelistedItemID</b> of the original item will reflect the last relist. | Type that represents the unique identifier for an eBay listing.
+     * retrieved. The <b>RelistedItemID</b> of the original item will reflect the last relist. <br> <span class="tablenote"><b>Note: </b> This field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024.
+     * </span> | Type that represents the unique identifier for an eBay listing.
      * - base: xs:string
      * - minOccurs: 0
      * @var string
@@ -113,7 +120,8 @@ class ListingDetailsType extends AbstractStructBase
      * The ViewItemURL
      * Meta information extracted from the WSDL
      * - documentation: The URL of the Web page where a user can view the listing. On the US site, this is called the View Item page. If you enabled affiliate tracking in a search-related call (for example, if you used the <b>AffiliateTrackingDetails</b>
-     * container in an applicable call), <b>ViewItemURL</b> contains a string that includes affiliate tracking information (see the <a href= "https://www.ebaypartnernetwork.com" target="_blank">eBay Partner Network</a>).
+     * container in an applicable call), <b>ViewItemURL</b> contains a string that includes affiliate tracking information (see the <a href= "https://www.ebaypartnernetwork.com" target="_blank">eBay Partner Network</a>). <br> <span
+     * class="tablenote"><b>Note: </b> This field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -129,7 +137,8 @@ class ListingDetailsType extends AbstractStructBase
     /**
      * The HasPublicMessages
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the item has any publicly displayed messages. Use <b>GetMemberMessages</b> to retrieve public messages for the item if this flag indicates that there are any.
+     * - documentation: Indicates whether the item has any publicly displayed messages. Use <b>GetMemberMessages</b> to retrieve public messages for the item if this flag indicates that there are any. <br> <span class="tablenote"><b>Note: </b> The
+     * <b>HasPublicMessages</b> field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b>, on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -159,7 +168,8 @@ class ListingDetailsType extends AbstractStructBase
      * seller wanted to disable the Best Offer auto-accept and/or Best Offer auto-reject feature when revising or relisting an item, the full path to one or both of these two corresponding fields would be provided in a <b>DeletedField</b> tag, like the
      * following: <br/> <pre><code> <DeletedField>Item.ListingDetails.MinimumBestOfferPrice</DeletedField> </code></pre> <br> <span class="tablenote"><b>Note:</b> The Best Offer feature is now available for auction listings on the following sites: US,
      * Canada, UK, Germany, Australia, France, Italy, and Spain. However, sellers must choose between offering Best Offer or Buy It Now on an auction listing, as both features cannot be enabled on the same auction listing. As of January 2019, the value set
-     * in this field for an auction listing can be more than the auction start price. </span>
+     * in this field for an auction listing can be more than the auction start price. </span> <span class="tablenote"><b>Note: </b> This field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024.
+     * </span>
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -186,8 +196,8 @@ class ListingDetailsType extends AbstractStructBase
     /**
      * The TCROriginalItemID
      * Meta information extracted from the WSDL
-     * - documentation: Indicates the item ID of the original item listing from which a Transaction Confirmation Request (TCR) was created. This value is only returned when the data for a TCR is retrieved. | Type that represents the unique identifier for an
-     * eBay listing.
+     * - documentation: Indicates the item ID of the original item listing from which a Transaction Confirmation Request (TCR) was created. This value is only returned when the data for a TCR is retrieved. <br> <span class="tablenote"><b>Note: </b> This
+     * field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span> | Type that represents the unique identifier for an eBay listing.
      * - base: xs:string
      * - minOccurs: 0
      * @var string
@@ -199,7 +209,7 @@ class ListingDetailsType extends AbstractStructBase
      * - documentation: This URL takes you to the same View Item page as ViewItemURL, but this URL is optimized to support natural search. That is, this URL is designed to make items on eBay easier to find via popular Internet search engines. The URL
      * includes the item title along with other optimizations. To note, "?" (question mark) optimizes to "_W0QQ", "&" (ampersand) optimizes to "QQ", and "=" (equals sign) optimizes to "Z". <br><br> If you are an eBay affiliate, use this URL to promote your
      * affiliate information. <br><br> <span class="tablenote"><b>Note:</b> This URL may include additional query parameters that don't appear in <b>ViewItemURL</b> and vice versa. You should not modify the query syntax. For example, eBay won't recognize
-     * the URL if you change QQ to ?. </span>
+     * the URL if you change QQ to ?. </span> <span class="tablenote"><b>Note: </b> This field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */

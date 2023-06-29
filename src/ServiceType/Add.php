@@ -24,54 +24,6 @@ class Add extends AbstractSoapClientBase
         return $this->setSoapHeader($nameSpace, 'RequesterCredentials', $requesterCredentials, $mustUnderstand, $actor);
     }
     /**
-     * Method to call the operation originally named AddDispute
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\AddDisputeRequestType $addDisputeRequest
-     * @return \StructType\AddDisputeResponseType|bool
-     */
-    public function AddDispute(\StructType\AddDisputeRequestType $addDisputeRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->AddDispute($addDisputeRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
-     * Method to call the operation originally named AddDisputeResponse
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\AddDisputeResponseRequestType $addDisputeResponseRequest
-     * @return \StructType\AddDisputeResponseResponseType|bool
-     */
-    public function AddDisputeResponse(\StructType\AddDisputeResponseRequestType $addDisputeResponseRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->AddDisputeResponse($addDisputeResponseRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
      * Method to call the operation originally named AddFixedPriceItem
      * Meta information extracted from the WSDL
      * - SOAPHeaderNames: RequesterCredentials
@@ -312,33 +264,9 @@ class Add extends AbstractSoapClientBase
         }
     }
     /**
-     * Method to call the operation originally named AddTransactionConfirmationItem
-     * Meta information extracted from the WSDL
-     * - SOAPHeaderNames: RequesterCredentials
-     * - SOAPHeaderNamespaces: urn:ebay:apis:eBLBaseComponents
-     * - SOAPHeaderTypes: \StructType\CustomSecurityHeaderType
-     * - SOAPHeaders: required
-     * @uses AbstractSoapClientBase::getSoapClient()
-     * @uses AbstractSoapClientBase::setResult()
-     * @uses AbstractSoapClientBase::getResult()
-     * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\AddTransactionConfirmationItemRequestType $addTransactionConfirmationItemRequest
-     * @return \StructType\AddTransactionConfirmationItemResponseType|bool
-     */
-    public function AddTransactionConfirmationItem(\StructType\AddTransactionConfirmationItemRequestType $addTransactionConfirmationItemRequest)
-    {
-        try {
-            $this->setResult($this->getSoapClient()->AddTransactionConfirmationItem($addTransactionConfirmationItemRequest));
-            return $this->getResult();
-        } catch (\SoapFault $soapFault) {
-            $this->saveLastError(__METHOD__, $soapFault);
-            return false;
-        }
-    }
-    /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\AddDisputeResponseResponseType|\StructType\AddDisputeResponseType|\StructType\AddFixedPriceItemResponseType|\StructType\AddItemResponseType|\StructType\AddItemsResponseType|\StructType\AddMemberMessageAAQToPartnerResponseType|\StructType\AddMemberMessageRTQResponseType|\StructType\AddMemberMessagesAAQToBidderResponseType|\StructType\AddOrderResponseType|\StructType\AddSecondChanceItemResponseType|\StructType\AddToItemDescriptionResponseType|\StructType\AddToWatchListResponseType|\StructType\AddTransactionConfirmationItemResponseType
+     * @return \StructType\AddFixedPriceItemResponseType|\StructType\AddItemResponseType|\StructType\AddItemsResponseType|\StructType\AddMemberMessageAAQToPartnerResponseType|\StructType\AddMemberMessageRTQResponseType|\StructType\AddMemberMessagesAAQToBidderResponseType|\StructType\AddOrderResponseType|\StructType\AddSecondChanceItemResponseType|\StructType\AddToItemDescriptionResponseType|\StructType\AddToWatchListResponseType
      */
     public function getResult()
     {

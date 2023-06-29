@@ -126,8 +126,9 @@ class ShippingServiceOptionsType extends AbstractStructBase
     /**
      * The ImportCharge
      * Meta information extracted from the WSDL
-     * - documentation: The total cost of customs and taxes for the international leg of an order shipped using the Global Shipping Program. This amount is calculated and supplied for each item by the international shipping provider when a buyer views the
-     * item properties.
+     * - documentation: For orders using eBay International Shipping, when using the <b>GetOrders</b> and <b>GetOrderTransactions</b> calls, the <b>OrderArray.Order.ShippingServiceSelected.ImportCharge</b> field contains only customs charges.<br /><br />For
+     * the Global Shipping Program, which is only supported in the UK, this field contains the total cost of customs and taxes for the international leg of an order shipped using the Global Shipping Program. This amount is calculated and supplied for each
+     * item by the international shipping provider when a buyer views the item properties.
      * - minOccurs: 0
      * @var \StructType\AmountType
      */

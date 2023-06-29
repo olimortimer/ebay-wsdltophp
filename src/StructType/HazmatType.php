@@ -7,8 +7,9 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
 /**
  * This class stands for HazmatType StructType
  * Meta information extracted from the WSDL
- * - documentation: Type defining the <b>Pictograms</b> and <b>Statements</b> containers, and the <b>Component</b> and <b>SignalWord</b> fields, that provide hazardous material related information. For additional information, see <a
- * href="https://developer.ebay.com/api-docs/sell/static/metadata/feature-regulatorhazmatcontainer.html#Signal" target="_blank">Signal word information</a>.
+ * - documentation: <span class="tablenote"><b>Note: </b> This type is currently available only on the German (DE) marketplace.</span> <br />Type defining the <b>Pictograms</b> and <b>Statements</b> containers, and the <b>Component</b> and
+ * <b>SignalWord</b> fields, that provide hazardous material related information. For additional information, see <a href="https://developer.ebay.com/api-docs/sell/static/metadata/feature-regulatorhazmatcontainer.html#Signal" target="_blank">Signal word
+ * information</a>.
  * @subpackage Structs
  */
 class HazmatType extends AbstractStructBase
@@ -16,7 +17,7 @@ class HazmatType extends AbstractStructBase
     /**
      * The Pictograms
      * Meta information extracted from the WSDL
-     * - documentation: This container is used by the seller to provide pictograms for the listing.
+     * - documentation: This container is used by the seller to provide pictograms for the listing. This field is required if hazmat information is supplied.
      * - maxOccurs: 1
      * - minOccurs: 0
      * @var \StructType\PictogramsType
@@ -26,10 +27,10 @@ class HazmatType extends AbstractStructBase
      * The SignalWord
      * Meta information extracted from the WSDL
      * - documentation: This field sets the signal word for hazardous materials in the listing. If your product contains hazardous substances or mixtures, please select a value corresponding to the signal word that is stated on your product's Safety Data
-     * Sheet. The selected hazard information will be displayed on your listing. Example values include: <br> <ul><li> <code>Danger</code></li><li> <code>Warning</code></li></ul><span class="tablenote"><strong>Note:</strong> Use the <a
-     * href="https://developer.ebay.com/api-docs/sell/metadata/resources/marketplace/methods/getHazardousMaterialsLabels">getHazardousMaterialsLabels</a> method in the <a href="https://developer.ebay.com/api-docs/sell/metadata/resources/methods">Metadata
-     * API</a> to find supported values for a specific marketplace/site. For additional information, see <a href="https://developer.ebay.com/api-docs/sell/static/metadata/feature-regulatorhazmatcontainer.html#Signal" target="_blank">Signal word
-     * information</a>.
+     * Sheet. The selected hazard information will be displayed on your listing. This field is required if hazmat information is supplied. Example values include: <br> <ul><li> <code>Danger</code></li><li> <code>Warning</code></li></ul><span
+     * class="tablenote"><strong>Note:</strong> Use the <a href="https://developer.ebay.com/api-docs/sell/metadata/resources/marketplace/methods/getHazardousMaterialsLabels">getHazardousMaterialsLabels</a> method in the <a
+     * href="https://developer.ebay.com/api-docs/sell/metadata/resources/methods">Metadata API</a> to find supported values for a specific marketplace/site. For additional information, see <a
+     * href="https://developer.ebay.com/api-docs/sell/static/metadata/feature-regulatorhazmatcontainer.html#Signal" target="_blank">Signal word information</a>.
      * - maxOccurs: 1
      * - minOccurs: 0
      * @var string
@@ -38,7 +39,7 @@ class HazmatType extends AbstractStructBase
     /**
      * The Statements
      * Meta information extracted from the WSDL
-     * - documentation: This container is used by the seller to provide hazard statements for the listing.
+     * - documentation: This container is used by the seller to provide hazard statements for the listing. This field is required if hazmat information is supplied.
      * - maxOccurs: 1
      * - minOccurs: 0
      * @var \StructType\StatementsType

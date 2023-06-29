@@ -59,7 +59,8 @@ class ShippingDetailsType extends AbstractStructBase
     /**
      * The ChangePaymentInstructions
      * Meta information extracted from the WSDL
-     * - documentation: Whether the seller specified payment and shipping instructions during checkout (for example, to update the details of an order). Valid for flat and calculated shipping.
+     * - documentation: Indicates whether the seller specified payment and shipping instructions during checkout. <br> <span class="tablenote"><b>Note: </b> This field is deprecated and will stop being returned in <b>GetItemTransactions</b> and
+     * <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -106,8 +107,7 @@ class ShippingDetailsType extends AbstractStructBase
     /**
      * The ShippingRateErrorMessage
      * Meta information extracted from the WSDL
-     * - documentation: For most applicable calls, returns the words No Error or returns an error message related to an attempt to calculate shipping rates. For calculated shipping only. <br><br> The message text explains that a postal code is needed to
-     * calculate shipping. Only returned when <b>ItemDetails</b> is set to <code>Fine</code>.
+     * - documentation: <br> <span class="tablenote"><b>Note: </b> This field is deprecated and will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -186,7 +186,7 @@ class ShippingDetailsType extends AbstractStructBase
     /**
      * The ThirdPartyCheckout
      * Meta information extracted from the WSDL
-     * - documentation: This field is deprecated.
+     * - documentation: <br> <span class="tablenote"><b>Note: </b> This field is deprecated and will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -204,7 +204,7 @@ class ShippingDetailsType extends AbstractStructBase
     /**
      * The GetItFast
      * Meta information extracted from the WSDL
-     * - documentation: This field is deprecated.
+     * - documentation: <br> <span class="tablenote"><b>Note: </b> This field is deprecated and will stop being returned in order management calls on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -312,10 +312,11 @@ class ShippingDetailsType extends AbstractStructBase
     /**
      * The CODCost
      * Meta information extracted from the WSDL
-     * - documentation: This dollar value indicates the money due from the buyer upon delivery of the item. <br><br> This field should only be specified in the request if 'COD' (cash-on-delivery) is a valid payment method for the site and listing category,
-     * and it is included as a <b>PaymentMethods</b> value in the same request. <br><br> This field is only returned if set for the listing. <br><br> To see if 'COD' is a supported payment method for a site and category, call <b>GetCategoryFeatures</b>,
-     * specifying the listing category ID, and including the <b>FeatureID</b> field set to <b>PaymentMethods</b>. Look for a value of 'CashOnPickup' in one of the <b>Category.PaymentMethod</b> fields in the response. For some eBay sites, the 'COD' enum may
-     * also get returned.
+     * - documentation: <span class="tablenote"><strong>Note:</strong> This field was deprecated since COD is no longer a supported payment method on any marketplace. This field will be removed from the Trading WSDL and docs on July 17, 2023. </span> <br>
+     * This dollar value indicates the money due from the buyer upon delivery of the item. <br><br> This field should only be specified in the request if 'COD' (cash-on-delivery) is a valid payment method for the site and listing category, and it is
+     * included as a <b>PaymentMethods</b> value in the same request. <br><br> This field is only returned if set for the listing. <br><br> To see if 'COD' is a supported payment method for a site and category, call <b>GetCategoryFeatures</b>, specifying
+     * the listing category ID, and including the <b>FeatureID</b> field set to <b>PaymentMethods</b>. Look for a value of 'CashOnPickup' in one of the <b>Category.PaymentMethod</b> fields in the response. For some eBay sites, the 'COD' enum may also get
+     * returned.
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -323,16 +324,17 @@ class ShippingDetailsType extends AbstractStructBase
     /**
      * The ExcludeShipToLocation
      * Meta information extracted from the WSDL
-     * - documentation: Use this field to specify an international country or region, or a special domestic location, such as 'PO Box' (in US) or 'Packstation' (in DE), to where you will not ship the associated item. Repeat this element in the call request
-     * for each location that you want to exclude as a shipping destination for your item. <br><br> The exclude ship-to location values are eBay regions and countries. To see the valid exclude ship-to locations for a specified site, call
-     * <b>GeteBayDetails</b> with <b>DetailName</b> set to <b>ExcludeShippingLocationDetails</b>, and then look for the <b>ExcludeShippingLocationDetails.Location</b> fields in the response. Repeat <b>GeteBayDetails</b> for each site on which you list.
-     * <br><br> This field works in conjunction with <b>Item.ShipToLocation</b>s to create a set of international countries and regions to where you will, and will not, ship. You can list a region in the <b>ShipToLocations</b> field, then exclude specific
-     * countries within that region with this field (for example, you can specify Africa in <b>ShipToLocations</b>, yet exclude Chad with a <b>ExcludeShipToLocation</b> setting). In addition, if your <b>ShipToLocations</b> is <code>Worldwide</code>, you can
-     * use this field to specify both regions and countries that you want to exclude from your shipping destinations. <br> <br> <span class="tablenote"><b>Note: </b> The <b>ShipToLocations</b> and <b>ShippingDetails.ExcludeShipToLocation</b> containers are
-     * not applicable for motor vehicle listings on the US, CA, or UK marketplaces. If these containers are sent in the request, they are ignored and a warning is returned. </span> <br> You can specify a default set of locations to where you will not ship
-     * in My eBay. If you create an Exclude Ship-To List, it is, by default, in effect when you list items. However, if you specify any value in this field on input, it nullifies the default settings in your Exclude Ship-To List. (If you use
-     * <b>ExcludeShipToLocation</b> when you list an item, you will need to list all the locations to where you will not ship the associated item, regardless of the default settings in your Exclude Ship-To List.) <br><br> Specify <code>none</code> in this
-     * field to override the default Exclude Ship-To List you might have set up in My eBay and indicate that you do not want to exclude any shipping locations from the respective item listing.
+     * - documentation: <br> Use this field in an Add/Revise/Relist call to specify an international country or region, or a special domestic location, such as 'PO Box' (in US) or 'Packstation' (in DE), to where you will not ship the associated item. Repeat
+     * this element in the call request for each location that you want to exclude as a shipping destination for your item. <br><br> The exclude ship-to location values are eBay regions and countries. To see the valid exclude ship-to locations for a
+     * specified site, call <b>GeteBayDetails</b> with <b>DetailName</b> set to <b>ExcludeShippingLocationDetails</b>, and then look for the <b>ExcludeShippingLocationDetails.Location</b> fields in the response. Repeat <b>GeteBayDetails</b> for each site on
+     * which you list. <br><br> This field works in conjunction with <b>Item.ShipToLocation</b>s to create a set of international countries and regions to where you will, and will not, ship. You can list a region in the <b>ShipToLocations</b> field, then
+     * exclude specific countries within that region with this field (for example, you can specify Africa in <b>ShipToLocations</b>, yet exclude Chad with a <b>ExcludeShipToLocation</b> setting). In addition, if your <b>ShipToLocations</b> is
+     * <code>Worldwide</code>, you can use this field to specify both regions and countries that you want to exclude from your shipping destinations. <br> <br> <span class="tablenote"><b>Note: </b> The <b>ShipToLocations</b> and
+     * <b>ShippingDetails.ExcludeShipToLocation</b> containers are not applicable for motor vehicle listings on the US, CA, or UK marketplaces. If these containers are sent in the request, they are ignored and a warning is returned. </span> <br> You can
+     * specify a default set of locations to where you will not ship in My eBay. If you create an Exclude Ship-To List, it is, by default, in effect when you list items. However, if you specify any value in this field on input, it nullifies the default
+     * settings in your Exclude Ship-To List. (If you use <b>ExcludeShipToLocation</b> when you list an item, you will need to list all the locations to where you will not ship the associated item, regardless of the default settings in your Exclude Ship-To
+     * List.) <br><br> Specify <code>none</code> in this field to override the default Exclude Ship-To List you might have set up in My eBay and indicate that you do not want to exclude any shipping locations from the respective item listing. <br> <span
+     * class="tablenote"><b>Note: </b> This field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> responses on January 31, 2024. </span>
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * @var string[]

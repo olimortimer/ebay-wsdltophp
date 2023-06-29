@@ -38,16 +38,6 @@ class StoreType extends AbstractStructBase
      */
     public $URL;
     /**
-     * The SubscriptionLevel
-     * Meta information extracted from the WSDL
-     * - documentation: The value returned in this field indicates the user's eBay Store subscription level. <br><br> <span class="tablenote"><b>Note:</b> This field is deprecated and will stop being returned beginning on March 31, 2023. The <a
-     * href="/api-docs/sell/account/resources/subscription/methods/getSubscription" target="_blank">getSubscription</a> method of the <a href="/api-docs/sell/account/overview.html" target="_blank">Account API</a> can be used to retrieve information on a
-     * seller's eBay store subscription.</span>
-     * - minOccurs: 0
-     * @var string
-     */
-    public $SubscriptionLevel;
-    /**
      * The Description
      * Meta information extracted from the WSDL
      * - documentation: The seller-provided description of the eBay Store.
@@ -98,7 +88,6 @@ class StoreType extends AbstractStructBase
      * @uses StoreType::setName()
      * @uses StoreType::setURLPath()
      * @uses StoreType::setURL()
-     * @uses StoreType::setSubscriptionLevel()
      * @uses StoreType::setDescription()
      * @uses StoreType::setLogo()
      * @uses StoreType::setCustomCategories()
@@ -108,7 +97,6 @@ class StoreType extends AbstractStructBase
      * @param string $name
      * @param string $uRLPath
      * @param string $uRL
-     * @param string $subscriptionLevel
      * @param string $description
      * @param \StructType\StoreLogoType $logo
      * @param \ArrayType\StoreCustomCategoryArrayType $customCategories
@@ -116,13 +104,12 @@ class StoreType extends AbstractStructBase
      * @param string $lastOpenedTime
      * @param \DOMDocument $any
      */
-    public function __construct($name = null, $uRLPath = null, $uRL = null, $subscriptionLevel = null, $description = null, \StructType\StoreLogoType $logo = null, \ArrayType\StoreCustomCategoryArrayType $customCategories = null, $merchDisplay = null, $lastOpenedTime = null, \DOMDocument $any = null)
+    public function __construct($name = null, $uRLPath = null, $uRL = null, $description = null, \StructType\StoreLogoType $logo = null, \ArrayType\StoreCustomCategoryArrayType $customCategories = null, $merchDisplay = null, $lastOpenedTime = null, \DOMDocument $any = null)
     {
         $this
             ->setName($name)
             ->setURLPath($uRLPath)
             ->setURL($uRL)
-            ->setSubscriptionLevel($subscriptionLevel)
             ->setDescription($description)
             ->setLogo($logo)
             ->setCustomCategories($customCategories)
@@ -194,31 +181,6 @@ class StoreType extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($uRL, true), gettype($uRL)), __LINE__);
         }
         $this->URL = $uRL;
-        return $this;
-    }
-    /**
-     * Get SubscriptionLevel value
-     * @return string|null
-     */
-    public function getSubscriptionLevel()
-    {
-        return $this->SubscriptionLevel;
-    }
-    /**
-     * Set SubscriptionLevel value
-     * @uses \EnumType\StoreSubscriptionLevelCodeType::valueIsValid()
-     * @uses \EnumType\StoreSubscriptionLevelCodeType::getValidValues()
-     * @throws \InvalidArgumentException
-     * @param string $subscriptionLevel
-     * @return \StructType\StoreType
-     */
-    public function setSubscriptionLevel($subscriptionLevel = null)
-    {
-        // validation for constraint: enumeration
-        if (!\EnumType\StoreSubscriptionLevelCodeType::valueIsValid($subscriptionLevel)) {
-            throw new \InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \EnumType\StoreSubscriptionLevelCodeType', is_array($subscriptionLevel) ? implode(', ', $subscriptionLevel) : var_export($subscriptionLevel, true), implode(', ', \EnumType\StoreSubscriptionLevelCodeType::getValidValues())), __LINE__);
-        }
-        $this->SubscriptionLevel = $subscriptionLevel;
         return $this;
     }
     /**

@@ -15,7 +15,8 @@ class AddressType extends AbstractStructBase
     /**
      * The Name
      * Meta information extracted from the WSDL
-     * - documentation: The eBay user's name associated with an address on file with eBay. <br>
+     * - documentation: <br> The eBay user's name associated with an address on file with eBay. <br> <span class="tablenote"><b>Note: </b> The <b>Seller.RegistrationAddress</b> container and its child fields will stop being returned in
+     * <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -144,9 +145,10 @@ class AddressType extends AbstractStructBase
     /**
      * The AddressID
      * Meta information extracted from the WSDL
-     * - documentation: Unique ID for a user's address in the eBay database. This value can help prevent the need to store an address multiple times across multiple orders. The ID changes if a user changes their address. <br> <br> <span
+     * - documentation: <br> Unique ID for a user's address in the eBay database. This value can help prevent the need to store an address multiple times across multiple orders. The ID changes if a user changes their address. <br> <br> <span
      * class="tablenote"><b>Note:</b> For orders subject to Australian 'Goods and Services' tax (GST), in addition to the unique identifier for the address, the last two digits of the user's Australian Business Number (ABN) will also appear in this field.
-     * Australian 'Goods and Services' tax (GST) is automatically charged to buyers outside of Australia when they purchase items on the eBay Australia site. </span>
+     * Australian 'Goods and Services' tax (GST) is automatically charged to buyers outside of Australia when they purchase items on the eBay Australia site. </span> <span class="tablenote"><b>Note: </b> The <b>Seller.RegistrationAddress</b> container and
+     * its child fields will stop being returned in <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -169,7 +171,7 @@ class AddressType extends AbstractStructBase
     /**
      * The ExternalAddressID
      * Meta information extracted from the WSDL
-     * - documentation: This field is no longer applicable, and should not returned. <br>
+     * - documentation: <br> This field is no longer applicable, and should no longer be returned. <br> <span class="tablenote"><b>Note: </b> This field will stop being returned and removed from the WSDL on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -240,7 +242,8 @@ class AddressType extends AbstractStructBase
     /**
      * The AddressUsage
      * Meta information extracted from the WSDL
-     * - documentation: This tag tells whether current address is a default shipping address or one of the shipping addresses in address book.
+     * - documentation: <br> This tag tells whether current address is a default shipping address or one of the shipping addresses in address book. <br> <span class="tablenote"><b>Note: </b> This field will stop being returned and removed from the WSDL on
+     * January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -258,8 +261,8 @@ class AddressType extends AbstractStructBase
     /**
      * The AddressAttribute
      * Meta information extracted from the WSDL
-     * - documentation: This field shows an attribute for the address, and its corresponding value. Currently, this field is only used to display the reference ID for a "Click and Collect" order, but in the future, other address attributes may be returned
-     * in this field.
+     * - documentation: <br> This field shows an attribute for the address, and its corresponding value. Currently, this field is only used to display the reference ID for a "Click and Collect" order, but in the future, other address attributes may be
+     * returned in this field. <br> <span class="tablenote"><b>Note: </b> The <b>Seller.RegistrationAddress</b> container and its child fields will stop being returned in <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * @var \StructType\AddressAttributeType[]

@@ -41,7 +41,7 @@ class SellerFavoriteItemPreferencesType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: The sort order chosen from the standard ebay sorts for the automatic search criteria.
      * - minOccurs: 0
-     * @var StoreItemListSortOrderCodeType
+     * @var string
      */
     public $SearchSortOrder;
     /**
@@ -88,13 +88,13 @@ class SellerFavoriteItemPreferencesType extends AbstractStructBase
      * @param string $searchKeywords
      * @param int $storeCategoryID
      * @param string $listingType
-     * @param StoreItemListSortOrderCodeType $searchSortOrder
+     * @param string $searchSortOrder
      * @param \StructType\AmountType $minPrice
      * @param \StructType\AmountType $maxPrice
      * @param string[] $favoriteItemID
      * @param \DOMDocument $any
      */
-    public function __construct($searchKeywords = null, $storeCategoryID = null, $listingType = null, StoreItemListSortOrderCodeType $searchSortOrder = null, \StructType\AmountType $minPrice = null, \StructType\AmountType $maxPrice = null, array $favoriteItemID = array(), \DOMDocument $any = null)
+    public function __construct($searchKeywords = null, $storeCategoryID = null, $listingType = null, $searchSortOrder = null, \StructType\AmountType $minPrice = null, \StructType\AmountType $maxPrice = null, array $favoriteItemID = array(), \DOMDocument $any = null)
     {
         $this
             ->setSearchKeywords($searchKeywords)
@@ -177,7 +177,7 @@ class SellerFavoriteItemPreferencesType extends AbstractStructBase
     }
     /**
      * Get SearchSortOrder value
-     * @return StoreItemListSortOrderCodeType|null
+     * @return string|null
      */
     public function getSearchSortOrder()
     {
@@ -185,11 +185,18 @@ class SellerFavoriteItemPreferencesType extends AbstractStructBase
     }
     /**
      * Set SearchSortOrder value
-     * @param StoreItemListSortOrderCodeType $searchSortOrder
+     * @uses \EnumType\StoreItemListSortOrderCodeType::valueIsValid()
+     * @uses \EnumType\StoreItemListSortOrderCodeType::getValidValues()
+     * @throws \InvalidArgumentException
+     * @param string $searchSortOrder
      * @return \StructType\SellerFavoriteItemPreferencesType
      */
-    public function setSearchSortOrder(StoreItemListSortOrderCodeType $searchSortOrder = null)
+    public function setSearchSortOrder($searchSortOrder = null)
     {
+        // validation for constraint: enumeration
+        if (!\EnumType\StoreItemListSortOrderCodeType::valueIsValid($searchSortOrder)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \EnumType\StoreItemListSortOrderCodeType', is_array($searchSortOrder) ? implode(', ', $searchSortOrder) : var_export($searchSortOrder, true), implode(', ', \EnumType\StoreItemListSortOrderCodeType::getValidValues())), __LINE__);
+        }
         $this->SearchSortOrder = $searchSortOrder;
         return $this;
     }

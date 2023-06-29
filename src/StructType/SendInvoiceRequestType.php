@@ -142,8 +142,9 @@ class SendInvoiceRequestType extends AbstractRequestType
     /**
      * The CODCost
      * Meta information extracted from the WSDL
-     * - documentation: This dollar value indicates the money due from the buyer upon delivery of the item. <br><br> This field should only be specified in the <b>SendInvoice</b> request if 'COD' (cash-on-delivery) was the payment method selected by the
-     * buyer and it is included as the <b>PaymentMethods</b> value in the same request.
+     * - documentation: <span class="tablenote"><strong>Note:</strong> This field was deprecated since COD is no longer a supported payment method on any marketplace. This field will be removed from the Trading WSDL and docs on July 17, 2023. </span> <br>
+     * This dollar value indicates the money due from the buyer upon delivery of the item. <br><br> This field should only be specified in the <b>SendInvoice</b> request if 'COD' (cash-on-delivery) was the payment method selected by the buyer and it is
+     * included as the <b>PaymentMethods</b> value in the same request.
      * - minOccurs: 0
      * @var \StructType\AmountType
      */

@@ -16,7 +16,8 @@ class UserType extends AbstractStructBase
     /**
      * The AboutMePage
      * Meta information extracted from the WSDL
-     * - documentation: If <code>true</code>, indicates that the user has set up an About Me page.
+     * - documentation: <br> A value of <code>true</code> indicates that the user has set up an About Me page. <br> <span class="tablenote"><b>Note: </b> This field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on
+     * January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -101,9 +102,8 @@ class UserType extends AbstractStructBase
     /**
      * The FeedbackRatingStar
      * Meta information extracted from the WSDL
-     * - documentation: Visual indicator of user's feedback score. See <b>FeedbackRatingStarCodeType</b> for specific values. <br><br> <b>For GetOrders, GetOrderTransactions, and GetItemTransactions only:</b> If using Trading WSDL Version 1019 or above,
-     * this field will only be returned to the buyer or seller, and no longer returned at all to third parties. If using a Trading WSDL older than Version 1019, the accurate Feedback Rating Star value for the user is returned to the buyer or seller, but a
-     * dummy value of <code>None</code> will be returned to all third parties.
+     * - documentation: <br> A visual indicator of an eBay user's Feedback score. A different colored star is used for each range of Feedback scores. See <b>FeedbackRatingStarCodeType</b> for specific values. <br> <span class="tablenote"><b>Note: </b> This
+     * field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -111,7 +111,8 @@ class UserType extends AbstractStructBase
     /**
      * The IDVerified
      * Meta information extracted from the WSDL
-     * - documentation: Indicates whether the user has been verified. For more information about the ID Verify program, see: <a href="http://pages.ebay.com/help/policies/identity-idverify.html">Protecting your account</a>
+     * - documentation: <br> Indicates whether the user has been verified. For more information about the ID Verify program, see: <a href="https://pages.ebay.com/help/policies/identity-idverify.html">Protecting your account</a> <br> <span
+     * class="tablenote"><b>Note: </b> This field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -119,7 +120,8 @@ class UserType extends AbstractStructBase
     /**
      * The eBayGoodStanding
      * Meta information extracted from the WSDL
-     * - documentation: If <code>true</code>, indicates that the user is in good standing with eBay.
+     * - documentation: <br> This boolean field is returned as <code>true</code> if the eBay user is in good standing with eBay. <br> <span class="tablenote"><b>Note: </b> This field will stop being returned in <b>GetItemTransactions</b> and
+     * <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -127,8 +129,8 @@ class UserType extends AbstractStructBase
     /**
      * The NewUser
      * Meta information extracted from the WSDL
-     * - documentation: If <code>true</code>, identifies a new user who has been a registered eBay user for 30 days or less. This is always <code>false</code> after the user has been registered for more than 30 days. Does not indicate an ID change (see
-     * <b>UserIdChanged</b>).
+     * - documentation: This boolean is returned as <code>true</code> if the eBay user has been registered on eBay for 30 days or less. <br> <span class="tablenote"><b>Note: </b> The <b>Buyer.NewUser</b> field will stop being returned in
+     * <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */
@@ -136,10 +138,11 @@ class UserType extends AbstractStructBase
     /**
      * The RegistrationAddress
      * Meta information extracted from the WSDL
-     * - documentation: This container consists of the Registration address for the eBay user making the call.<br> <br> <b>GetUser:</b> eBay returns complete <b>RegistrationAddress</b> details (including Phone), as applicable to the registration site for
-     * the eBay user making the call. <br><br> <b>GetItem and GetSellerTransactions:</b> <b>RegistrationAddress</b> for another user (except for Phone) is only returned if you have an order relationship with that user AND that user is registered on
-     * DE/AT/CH, regardless of your registration site and the site to which you send the request. For example, the seller can see the buyer's registration address if the buyer is registered on DE/AT/CH, or the buyer can see the seller's registration address
-     * if the seller is registered on DE/AT/CH. (The buyer and seller won't see their own registration addresses in <b>GetItem</b>.)
+     * - documentation: <br> This container consists of the Registration address for the eBay user.<br> <br> <b>GetUser:</b> eBay returns complete <b>RegistrationAddress</b> details (including Phone), as applicable to the registration site for the eBay user
+     * making the call. <br><br> <b>GetItem and GetSellerTransactions:</b> <b>RegistrationAddress</b> for another user (except for Phone) is only returned if you have an order relationship with that user AND that user is registered on DE/AT/CH, regardless
+     * of your registration site and the site to which you send the request. For example, the seller can see the buyer's registration address if the buyer is registered on DE/AT/CH, or the buyer can see the seller's registration address if the seller is
+     * registered on DE/AT/CH. (The buyer and seller won't see their own registration addresses in <b>GetItem</b>.) <br> <span class="tablenote"><b>Note: </b> This container and its child fields will stop being returned in <b>GetSellerTransactions</b> on
+     * January 31, 2024. </span>
      * - minOccurs: 0
      * @var \StructType\AddressType
      */
@@ -178,9 +181,9 @@ class UserType extends AbstractStructBase
      * indicating the order of that user's first bid. For example, if the user was the third bidder, <b>UserID</b> = <code>Bidder 3</code>. Note that in this Philippines site format, the anonymous bidder ID stays the same for a given auction, but is
      * different for different auctions. For example, a bidder who is the third and then the seventh bidder in an auction will be listed for both bids as "Bidder 3". However, if that same bidder is the first bidder on a different auction, the bidder will be
      * listed for that auction as "Bidder 1", not "Bidder 3". <br><br> For <b>GetMyeBayBuying</b> only, when bidding on items listed on the UK and AU sites: <b>UserID</b> is replaced with the string "High Bidder". <br><br> For <b>PlaceOffer</b>, see also
-     * <b>SellingStatus.HighBidder</b>. | This is a string wrapper for the eBay ID that uniquely identifies a user. This is used by several other types to identify a specific eBay user, such as DisputeType.xsd, FeedbackInfoType.xsd, GetAllBidders,
-     * OrderType, and so on. <br><br>For GetAllBidders, some bidder information is anonymous, to protect bidders from fraud. If the seller makes this API call, the actual IDs of all bidders on the seller's item will be returned. If a bidder makes this API
-     * call, the bidder's actual ID will be returned, but information for all competing bidders or outside watchers will be returned as anonymized userIDs.
+     * <b>SellingStatus.HighBidder</b>. | This is a string wrapper for the eBay ID that uniquely identifies a user. This is used by several other types to identify a specific eBay user. <br><br>For GetAllBidders, some bidder information is anonymous, to
+     * protect bidders from fraud. If the seller makes this API call, the actual IDs of all bidders on the seller's item will be returned. If a bidder makes this API call, the bidder's actual ID will be returned, but information for all competing bidders or
+     * outside watchers will be returned as anonymized userIDs.
      * - base: xs:string
      * - minOccurs: 0
      * @var string
@@ -199,8 +202,8 @@ class UserType extends AbstractStructBase
     /**
      * The UserIDLastChanged
      * Meta information extracted from the WSDL
-     * - documentation: Date and time the user's data was last changed (in GMT). <br><br> Since a bidder's user info is anonymous, this tag will be returned only to that bidder, and to the seller of an item that the user is bidding on. <br> <br> <span
-     * class="tablenote"><b>Note:</b> For the <strong>GetItemTransactions</strong> call, this field is only returned to the seller of the order; this field is not returned for the buyer or third party. </span>
+     * - documentation: <br> Date and time when the user last changed their eBay user ID (in GMT). <br> <span class="tablenote"><b>Note: </b> The <b>Buyer.UserIDLastChanged</b> field will stop being returned in <b>GetItemTransactions</b> and
+     * <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -225,8 +228,8 @@ class UserType extends AbstractStructBase
     /**
      * The SellerInfo
      * Meta information extracted from the WSDL
-     * - documentation: Contains information about a seller, including listing settings, listing preferences, seller rankings, and seller type. <br><br> This field is replaced by the <b>SellerBusinessType</b> field if the user is a business seller with a
-     * site ID of 77 (Germany), ID of 3 (UK), ID of 205 (Ireland) or ID of 0 (US Motors). <br><br> See <b>SellerType</b> or <b>SellerBusinessCodeType</b> for the child elements.
+     * - documentation: <br> Contains information about a seller, including listing settings, listing preferences, seller rankings, and seller type. <br> <span class="tablenote"><b>Note: </b> This container will stop being returned in
+     * <b>GetItemTransactions</b> and <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var \StructType\SellerType
      */
@@ -384,7 +387,8 @@ class UserType extends AbstractStructBase
     /**
      * The StaticAlias
      * Meta information extracted from the WSDL
-     * - documentation: Contains the static email address of an eBay member, used within the "reply to" email address when the eBay member sends a message. (Each eBay member is assigned a static alias. The alias is used within a static email address.)
+     * - documentation: <br> Contains the static email address of an eBay member, used within the "reply to" email address when the eBay member sends a message. (Each eBay member is assigned a static alias. The alias is used within a static email address.)
+     * <br> <span class="tablenote"><b>Note: </b> This field will stop being returned on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -412,7 +416,8 @@ class UserType extends AbstractStructBase
     /**
      * The UserFirstName
      * Meta information extracted from the WSDL
-     * - documentation: The first name of the buyer who purchased the order.
+     * - documentation: <br> The first name of the buyer or seller involved in the order. <br> <span class="tablenote"><b>Note: </b> The <b>Seller.UserFirstName</b> field will stop being returned in <b>GetItemTransactions</b> and
+     * <b>GetSellerTransactions</b> on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -420,7 +425,8 @@ class UserType extends AbstractStructBase
     /**
      * The UserLastName
      * Meta information extracted from the WSDL
-     * - documentation: The last name of the buyer who purchased the order.
+     * - documentation: <br> The last name of the buyer or seller involved in the order. <br> <span class="tablenote"><b>Note: </b> The <b>Seller.UserLastName</b> field will stop being returned in <b>GetItemTransactions</b> and <b>GetSellerTransactions</b>
+     * on January 31, 2024. </span>
      * - minOccurs: 0
      * @var string
      */

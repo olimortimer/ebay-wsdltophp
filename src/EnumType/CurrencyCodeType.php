@@ -1251,6 +1251,13 @@ class CurrencyCodeType extends AbstractStructEnumBase
      */
     const VALUE_ATS = 'ATS';
     /**
+     * Constant for value 'RON'
+     * Meta information extracted from the WSDL
+     * - documentation: This value is a 3-digit code for the new Romanian leu, a currency used in Romania.
+     * @return string 'RON'
+     */
+    const VALUE_RON = 'RON';
+    /**
      * Constant for value 'CustomCode'
      * Meta information extracted from the WSDL
      * - documentation: Reserved for internal or future use.
@@ -1434,6 +1441,7 @@ class CurrencyCodeType extends AbstractStructEnumBase
      * @uses self::VALUE_ZMK
      * @uses self::VALUE_ZWD
      * @uses self::VALUE_ATS
+     * @uses self::VALUE_RON
      * @uses self::VALUE_CUSTOM_CODE
      * @return string[]
      */
@@ -1615,6 +1623,7 @@ class CurrencyCodeType extends AbstractStructEnumBase
             self::VALUE_ZMK,
             self::VALUE_ZWD,
             self::VALUE_ATS,
+            self::VALUE_RON,
             self::VALUE_CUSTOM_CODE,
         );
     }

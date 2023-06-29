@@ -187,8 +187,7 @@ class AccountDetailEntryCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'CreditInsertion'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the account entry is an insertion fee credit issued by eBay to the seller. If a listed item does not sell or results in an Unpaid Item case/dispute, the seller can relist the item with no
-     * additional charge.
+     * - documentation: This enumeration value indicates that the account entry is an insertion fee credit issued by eBay to the seller.
      * @return string 'CreditInsertion'
      */
     const VALUE_CREDIT_INSERTION = 'CreditInsertion';
@@ -570,8 +569,7 @@ class AccountDetailEntryCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'FVFCreditReversal'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the account entry is a reversal of a Final Value Fee credit, resulting in the fee again being charged to the seller. The Final Value Fee can be credited as a result of an Unpaid Item Dispute, but
-     * if the buyer ultimately pays for the line item, the Final Value Fee will apply once again.
+     * - documentation: This enumeration value indicates that the account entry is a reversal of a Final Value Fee credit, resulting in the fee again being charged to the seller.
      * @return string 'FVFCreditReversal'
      */
     const VALUE_FVFCREDIT_REVERSAL = 'FVFCreditReversal';
@@ -1000,8 +998,7 @@ class AccountDetailEntryCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'CreditInsertionFixedPrice'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the account entry is an insertion fee credit for a fixed-price listing. If a listed item does not sell or results in an Unpaid Item case/dispute, the seller can relist the item with no additional
-     * charge.
+     * - documentation: This enumeration value indicates that the account entry is an insertion fee credit for a fixed-price listing.
      * @return string 'CreditInsertionFixedPrice'
      */
     const VALUE_CREDIT_INSERTION_FIXED_PRICE = 'CreditInsertionFixedPrice';
@@ -2169,7 +2166,7 @@ class AccountDetailEntryCodeType extends AbstractStructEnumBase
      * Constant for value 'SnadOutlierFinalValueFeeCredit'
      * Meta information extracted from the WSDL
      * - documentation: This enumeration value indicates the invoice credit is for a Final Value Fee (for item cost) that was charged to the seller's account after a buyer created a 'significantly not as described' (SNAD) case against the seller, but the
-     * seller won the dispute.
+     * seller won the case.
      * @return string 'SnadOutlierFinalValueFeeCredit'
      */
     const VALUE_SNAD_OUTLIER_FINAL_VALUE_FEE_CREDIT = 'SnadOutlierFinalValueFeeCredit';
@@ -2177,7 +2174,7 @@ class AccountDetailEntryCodeType extends AbstractStructEnumBase
      * Constant for value 'SnadOutlierFinalValueFeeOnShippingCredit'
      * Meta information extracted from the WSDL
      * - documentation: This enumeration value indicates the invoice credit is for a Final Value Fee (for shipping cost) that was charged to the seller's account after a buyer created a 'significantly not as described' (SNAD) case against the seller, but
-     * the seller won the dispute.
+     * the seller won the case.
      * @return string 'SnadOutlierFinalValueFeeOnShippingCredit'
      */
     const VALUE_SNAD_OUTLIER_FINAL_VALUE_FEE_ON_SHIPPING_CREDIT = 'SnadOutlierFinalValueFeeOnShippingCredit';
@@ -2627,10 +2624,123 @@ class AccountDetailEntryCodeType extends AbstractStructEnumBase
     /**
      * Constant for value 'OffsiteAdsFeeCredit'
      * Meta information extracted from the WSDL
-     * - documentation: This enumeration value indicates that the seller was issue a credit against a fee for offsite ad clicks for a Promoted Listing Advanced campaign.
+     * - documentation: This enumeration value indicates that the seller was issued a credit against a fee for offsite ad clicks for a Promoted Listing Advanced campaign.
      * @return string 'OffsiteAdsFeeCredit'
      */
     const VALUE_OFFSITE_ADS_FEE_CREDIT = 'OffsiteAdsFeeCredit';
+    /**
+     * Constant for value 'PromotedDisplayFee'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was charged a fee for Promoted Display.
+     * @return string 'PromotedDisplayFee'
+     */
+    const VALUE_PROMOTED_DISPLAY_FEE = 'PromotedDisplayFee';
+    /**
+     * Constant for value 'PromotedDisplayFeeCredit'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was issued a credit against a fee for Promoted Display.
+     * @return string 'PromotedDisplayFeeCredit'
+     */
+    const VALUE_PROMOTED_DISPLAY_FEE_CREDIT = 'PromotedDisplayFeeCredit';
+    /**
+     * Constant for value 'USWHTFederal'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that US Federal tax was witheld and deducted from the seller's payout funds.
+     * @return string 'USWHTFederal'
+     */
+    const VALUE_USWHTFEDERAL = 'USWHTFederal';
+    /**
+     * Constant for value 'USWHTFederalCredit'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was issued a credit against US Federal tax that was witheld and deducted from the seller's payout funds.
+     * @return string 'USWHTFederalCredit'
+     */
+    const VALUE_USWHTFEDERAL_CREDIT = 'USWHTFederalCredit';
+    /**
+     * Constant for value 'USWHTState'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that US State tax was witheld and deducted from the seller's payout funds.
+     * @return string 'USWHTState'
+     */
+    const VALUE_USWHTSTATE = 'USWHTState';
+    /**
+     * Constant for value 'USWHTStateCredit'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was issued a credit against US State tax that was witheld and deducted from the seller's payout funds.
+     * @return string 'USWHTStateCredit'
+     */
+    const VALUE_USWHTSTATE_CREDIT = 'USWHTStateCredit';
+    /**
+     * Constant for value 'EPRFee'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was charged an Eco Participation fee.
+     * @return string 'EPRFee'
+     */
+    const VALUE_EPRFEE = 'EPRFee';
+    /**
+     * Constant for value 'EPRFeeCredit'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was issued a credit against an Eco Participation fee.
+     * @return string 'EPRFeeCredit'
+     */
+    const VALUE_EPRFEE_CREDIT = 'EPRFeeCredit';
+    /**
+     * Constant for value 'CAPostReturnLabelFee'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was charged a fee for a Canadian Post return shipping label.
+     * @return string 'CAPostReturnLabelFee'
+     */
+    const VALUE_CAPOST_RETURN_LABEL_FEE = 'CAPostReturnLabelFee';
+    /**
+     * Constant for value 'CAPostReturnLabelFeeCredit'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was issued a credit against a fee for a Canadian Post return shipping label.
+     * @return string 'CAPostReturnLabelFeeCredit'
+     */
+    const VALUE_CAPOST_RETURN_LABEL_FEE_CREDIT = 'CAPostReturnLabelFeeCredit';
+    /**
+     * Constant for value 'HermesReturnLabelFee'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was charged a fee for a Hermes return shipping label.
+     * @return string 'HermesReturnLabelFee'
+     */
+    const VALUE_HERMES_RETURN_LABEL_FEE = 'HermesReturnLabelFee';
+    /**
+     * Constant for value 'HermesReturnLabelFeeCredit'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was issued a credit against a fee for a Hermes return shipping label.
+     * @return string 'HermesReturnLabelFeeCredit'
+     */
+    const VALUE_HERMES_RETURN_LABEL_FEE_CREDIT = 'HermesReturnLabelFeeCredit';
+    /**
+     * Constant for value 'BankPayoutFee'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was charged a fee for a payout to their bank account. <br> <span class="tablenote"><b>Note:</b> This fee is for future use, and will initially only apply to sellers based in mainland
+     * China if they choose to receive payout funds through a bank account instead of through their Payoneer account. </span>
+     * @return string 'BankPayoutFee'
+     */
+    const VALUE_BANK_PAYOUT_FEE = 'BankPayoutFee';
+    /**
+     * Constant for value 'BankPayoutFeeCredit'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was issued a credit against a fee for a payout to their bank account.
+     * @return string 'BankPayoutFeeCredit'
+     */
+    const VALUE_BANK_PAYOUT_FEE_CREDIT = 'BankPayoutFeeCredit';
+    /**
+     * Constant for value 'CharityDonation'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller donated a portion of their sale proceeds to a charitable organization.
+     * @return string 'CharityDonation'
+     */
+    const VALUE_CHARITY_DONATION = 'CharityDonation';
+    /**
+     * Constant for value 'CharityDonationCredit'
+     * Meta information extracted from the WSDL
+     * - documentation: This enumeration value indicates that the seller was issued a credit against a donation to a charitable organization.
+     * @return string 'CharityDonationCredit'
+     */
+    const VALUE_CHARITY_DONATION_CREDIT = 'CharityDonationCredit';
     /**
      * Return allowed values
      * @uses self::VALUE_UNKNOWN
@@ -2999,6 +3109,22 @@ class AccountDetailEntryCodeType extends AbstractStructEnumBase
      * @uses self::VALUE_PARCEL_FORCE_POST_RETURN_LABEL_FEE_CREDIT
      * @uses self::VALUE_OFFSITE_ADS_FEE
      * @uses self::VALUE_OFFSITE_ADS_FEE_CREDIT
+     * @uses self::VALUE_PROMOTED_DISPLAY_FEE
+     * @uses self::VALUE_PROMOTED_DISPLAY_FEE_CREDIT
+     * @uses self::VALUE_USWHTFEDERAL
+     * @uses self::VALUE_USWHTFEDERAL_CREDIT
+     * @uses self::VALUE_USWHTSTATE
+     * @uses self::VALUE_USWHTSTATE_CREDIT
+     * @uses self::VALUE_EPRFEE
+     * @uses self::VALUE_EPRFEE_CREDIT
+     * @uses self::VALUE_CAPOST_RETURN_LABEL_FEE
+     * @uses self::VALUE_CAPOST_RETURN_LABEL_FEE_CREDIT
+     * @uses self::VALUE_HERMES_RETURN_LABEL_FEE
+     * @uses self::VALUE_HERMES_RETURN_LABEL_FEE_CREDIT
+     * @uses self::VALUE_BANK_PAYOUT_FEE
+     * @uses self::VALUE_BANK_PAYOUT_FEE_CREDIT
+     * @uses self::VALUE_CHARITY_DONATION
+     * @uses self::VALUE_CHARITY_DONATION_CREDIT
      * @return string[]
      */
     public static function getValidValues()
@@ -3370,6 +3496,22 @@ class AccountDetailEntryCodeType extends AbstractStructEnumBase
             self::VALUE_PARCEL_FORCE_POST_RETURN_LABEL_FEE_CREDIT,
             self::VALUE_OFFSITE_ADS_FEE,
             self::VALUE_OFFSITE_ADS_FEE_CREDIT,
+            self::VALUE_PROMOTED_DISPLAY_FEE,
+            self::VALUE_PROMOTED_DISPLAY_FEE_CREDIT,
+            self::VALUE_USWHTFEDERAL,
+            self::VALUE_USWHTFEDERAL_CREDIT,
+            self::VALUE_USWHTSTATE,
+            self::VALUE_USWHTSTATE_CREDIT,
+            self::VALUE_EPRFEE,
+            self::VALUE_EPRFEE_CREDIT,
+            self::VALUE_CAPOST_RETURN_LABEL_FEE,
+            self::VALUE_CAPOST_RETURN_LABEL_FEE_CREDIT,
+            self::VALUE_HERMES_RETURN_LABEL_FEE,
+            self::VALUE_HERMES_RETURN_LABEL_FEE_CREDIT,
+            self::VALUE_BANK_PAYOUT_FEE,
+            self::VALUE_BANK_PAYOUT_FEE_CREDIT,
+            self::VALUE_CHARITY_DONATION,
+            self::VALUE_CHARITY_DONATION_CREDIT,
         );
     }
 }

@@ -44,9 +44,8 @@ class GetStoreRequestType extends AbstractRequestType
      * Meta information extracted from the WSDL
      * - documentation: The eBay user ID of the eBay seller that owns the eBay Store to be retrieved. This field is only needed if the user wants to view the eBay Store information owned by a different seller (than the seller associated with the
      * authenticated user token). If this field is omitted, the eBay Store information for the seller associated with the authenticated user token is returned. | This is a string wrapper for the eBay ID that uniquely identifies a user. This is used by
-     * several other types to identify a specific eBay user, such as DisputeType.xsd, FeedbackInfoType.xsd, GetAllBidders, OrderType, and so on. <br><br>For GetAllBidders, some bidder information is anonymous, to protect bidders from fraud. If the seller
-     * makes this API call, the actual IDs of all bidders on the seller's item will be returned. If a bidder makes this API call, the bidder's actual ID will be returned, but information for all competing bidders or outside watchers will be returned as
-     * anonymized userIDs.
+     * several other types to identify a specific eBay user. <br><br>For GetAllBidders, some bidder information is anonymous, to protect bidders from fraud. If the seller makes this API call, the actual IDs of all bidders on the seller's item will be
+     * returned. If a bidder makes this API call, the bidder's actual ID will be returned, but information for all competing bidders or outside watchers will be returned as anonymized userIDs.
      * - base: xs:string
      * - minOccurs: 0
      * @var string

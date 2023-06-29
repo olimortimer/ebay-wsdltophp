@@ -16,14 +16,15 @@ class VariationsType extends AbstractStructBase
     /**
      * The Variation
      * Meta information extracted from the WSDL
-     * - documentation: Contains data that distinguishes one item variation from another. For example, if an item varies by color and size, each <b>Variation</b> node specifies a combination of one of those colors and sizes.<br> <br> When listing or
+     * - documentation: <br> Contains data that distinguishes one item variation from another. For example, if an item varies by color and size, each <b>Variation</b> node specifies a combination of one of those colors and sizes.<br> <br> When listing or
      * relisting an item, you are allowed to create a listing with only one item variation, and you might have a plan to add more item variations to the listing in the future. However, if you don't plan to add other item variations in the future, we
      * recommend that you avoid listing with only one variation, so that you avoid confusing buyers. <br> <br> If you specify multiple <b>Variation</b> containers in an add/revise/relist/verify add call to define multiple item variations, the
      * <b>Variation</b> containers must be contiguous or an error will occur. This means that you would not want to input a <b>Pictures</b> or a <b>VariationSpecificsSet</b> container in between <b>Variation</b> containers in an API call. <br> <br> When you
      * modify an item variation with a <b>ReviseFixedPriceItem</b> call, the best practice is to include all applicable fields under the <b>Variation</b> container, even if some of the values/settings are not being modified. The <b>StartPrice</b> and
      * <b>VariationSpecifics</b> must be included when modifying an existing item variation, even if these values are not being changed. If a SKU value is defined for the item variation, it is strongly recommended that you include the <b>SKU</b> field,
      * regardless of whether the SKU value is changing or not. If the <b>SKU</b> field is not included, any existing SKU value will be removed from the item variation. It is also strongly recommended that you include the <b>Quantity</b> field and input an
-     * accurate value, because if the <b>Quantity</b> field is omitted in the API call, the quantity for the item variation is set to <code>0</code>.
+     * accurate value, because if the <b>Quantity</b> field is omitted in the API call, the quantity for the item variation is set to <code>0</code>. <br> <span class="tablenote"><b>Note: </b> The <b>Item.Variations</b> container and its child fields will
+     * stop being returned in <b>GetItemTransactions</b> on January 31, 2024. </span>
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * @var \StructType\VariationType[]

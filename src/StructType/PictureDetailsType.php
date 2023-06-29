@@ -17,8 +17,8 @@ class PictureDetailsType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: <a name="galleryTypeField"></a> This field is used to specify the type of picture gallery to use for the listing. If this field is omitted, a standard picture gallery is used for the listing. There is no listing fee for a standard
      * picture gallery. <br/><br/> To use the Gallery Plus feature, you must include this field and set its value to <code>Plus</code>. <br/><br/> The Gallery image will be the first URL passed into the first <b>PictureURL</b> field, so if you want a
-     * specific picture to be the Gallery image, you should make sure you pass the URL for this picture in the first <b>PictureURL</b> field. <br/><br/> When revising a listing, if you disable the Gallery Plus or Featured Gallery feature by including the
-     * <b>GalleryType</b> and setting its value to <code>Gallery</code>, the original feature fee for either of these features will not be credited to the seller. <br/>
+     * specific picture to be the Gallery image, you should make sure you pass the URL for this picture in the first <b>PictureURL</b> field. <br/><br/> When revising a listing, if you disable the Gallery Plus feature by including the <b>GalleryType</b>
+     * field and setting its value to <code>Gallery</code>, the original feature fee for this feature will not be credited to the seller. <br/>
      * - minOccurs: 0
      * @var string
      */
@@ -26,10 +26,10 @@ class PictureDetailsType extends AbstractStructBase
     /**
      * The PhotoDisplay
      * Meta information extracted from the WSDL
-     * - documentation: Specifies the type of image display used in a listing. Some options are only available if images are hosted through eBay Picture Services (EPS). eBay determines this by parsing the associated <b>PictureURL</b>. <br><br> Some
-     * <b>PhotoDisplay</b> options can result in listing fees, even when the item is relisted. If you are relisting an item that was originally listed with a <b>PhotoDisplay</b> option, and you do not want that <b>PhotoDisplay</b> enhancement in your
-     * relisted item, you need to specifically remove <b>PhotoDisplay</b> in your <b>RelistItem</b> call (or <b>RelistFixedPriceItem</b>, as applicable) by setting <b>PhotoDisplay</b> to <code>None</code>. Use <b>VerifyRelistItem</b> to review your listing
-     * fees before you relist an item.
+     * - documentation: <span class="tablenote"><b>Note: </b> This field is deprecated and will be removed from WSDL and docs on July 31, 2023. All sellers on all eBay marketplaces now get all picture features and functionality (like Super Size/Zoom) at no
+     * extra cost, so this field is no longer required to be included in Add/Revise/Relist request payloads. <br><br> If this field is passed in now, it does not have an effect. If this field is passed in after the decommission date, a generic warning
+     * message will be returned that indicates that the element is not recognized. <br><br> After decommission date, this field will stop being displayed in <b>GetBidderList</b> and <b>GetItem</b> responses. </span> <br> Specifies the type of image display
+     * to use in a listing.
      * - minOccurs: 0
      * @var string
      */

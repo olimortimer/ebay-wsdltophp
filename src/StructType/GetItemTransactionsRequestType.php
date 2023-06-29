@@ -33,10 +33,11 @@ class GetItemTransactionsRequestType extends AbstractRequestType
     /**
      * The ModTimeFrom
      * Meta information extracted from the WSDL
-     * - documentation: The <b>ModTimeFrom</b> and <b>ModTimeTo</b> fields specify a date range for retrieving order line items associated with the specified <b>ItemID</b> value. The <b>ModTimeFrom</b> field is the starting date range. All of the listing's
-     * order line items that were generated (or last modified)within this date range are returned in the output. The maximum date range that may be specified is 30 days. This value cannot be set back more than 90 days in the past, as this call cannot
-     * retrieve sales older than 90 days old. The maximum date range that may be specified is 30 days. This field is not applicable (and is ignored) if the user is looking for a specific order line item by either using an <b>ItemID</b>/<b>TransactionID</b>
-     * pair, or an <b>OrderLineItemID</b> value.
+     * - documentation: The <b>ModTimeFrom</b> and <b>ModTimeTo</b> fields are used to retrieve order line items that were created or modified within a specified date range. The <b>ModTimeFrom</b> field is the starting date range. All of the listing's order
+     * line items that were generated or modified within this date range are returned in the output. The maximum date range that may be specified is 30 days. This value cannot be set back more than 90 days in the past, as this call cannot retrieve sales
+     * older than 90 days old. The maximum date range that may be specified is 30 days. This field is not applicable (and is ignored) if the user is looking for a specific order line item by either using an <b>ItemID</b>/<b>TransactionID</b> pair, or an
+     * <b>OrderLineItemID</b> value. <br> <span class="tablenote"><b>Note: </b> Please note that for a multiple line item order, all line items of that order that meet the filter criteria may be returned in the responses, even the line item(s) that were not
+     * actually modified. In other words, if any part of the order was modified, all line items of that order may be returned. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -44,10 +45,11 @@ class GetItemTransactionsRequestType extends AbstractRequestType
     /**
      * The ModTimeTo
      * Meta information extracted from the WSDL
-     * - documentation: The <b>ModTimeFrom</b> and <b>ModTimeTo</b> fields specify a date range for retrieving order line items associated with the specified <b>ItemID</b> value. The <b>ModTimeTo</b> field is the ending date range. All eBay order line items
-     * that were generated (or last modified) within this date range are returned in the output. The maximum date range that may be specified is 30 days. If the <b>ModTimeFrom</b> field is used and the <b>ModTimeTo</b> field is omitted, the <b>ModTimeTo</b>
+     * - documentation: The <b>ModTimeFrom</b> and <b>ModTimeTo</b> fields are used to retrieve order line items that were created or modified within a specified date range. The <b>ModTimeTo</b> field is the ending date range. All eBay order line items that
+     * were generated (or last modified) within this date range are returned in the output. The maximum date range that may be specified is 30 days. If the <b>ModTimeFrom</b> field is used and the <b>ModTimeTo</b> field is omitted, the <b>ModTimeTo</b>
      * value defaults to the present time or to 30 days after the date specified with the <b>ModTimeFrom</b> value (if <b>ModTimeFrom</b> value is more than 30 days in the past). This field is not applicable (and is ignored) if the user is looking for a
-     * specific order line item by either using an <b>ItemID</b>/<b>TransactionID</b> pair, or an <b>OrderLineItemID</b> value.
+     * specific order line item by either using an <b>ItemID</b>/<b>TransactionID</b> pair, or an <b>OrderLineItemID</b> value. <br> <span class="tablenote"><b>Note: </b> Please note that for a multiple line item order, all line items of that order that
+     * meet the filter criteria may be returned in the responses, even the line item(s) that were not actually modified. In other words, if any part of the order was modified, all line items of that order may be returned. </span>
      * - minOccurs: 0
      * @var string
      */

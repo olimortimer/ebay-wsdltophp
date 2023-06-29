@@ -20,9 +20,11 @@ class InventoryStatusType extends AbstractStructBase
      * <code>SKU</code>, the <b>SKU</b> field should be used. <code>ItemID</code> is the default value of <b>InventoryTrackingMethod</b>, and its value can only be set/changed to <code>SKU</code> through either an <b>AddFixedPriceItem</b> or
      * <b>RelistFixedPriceItem</b> call. <br> <br> For a multiple-variation listing, the <b>SKU</b> value of the item variation is required in order to identify a specific item variation. An <b>ItemID</b> field is also required if the
      * <b>InventoryTrackingMethod</b> value is set to <code>ItemID</code>. However, if the <b>InventoryTrackingMethod</b> value is set to <code>SKU</code>, only the <b>SKU</b> value of the item variation is needed to identify a specific item variation. Note
-     * that a seller-defined <b>SKU</b> value is required when a seller creates a multiple-variation listing, regardless of whether they decide to track inventory by Item ID or SKU. <br> <br> The <b>SKU</b> field is always returned in the response, and if a
-     * SKU value doesn't exist for a single-variation listing, it is returned as an empty tag. | Primitive type that represents a stock-keeping unit (SKU). The usage of this string may vary in different contexts. For usage information and rules, see the
-     * fields that reference this type.
+     * that a seller-defined <b>SKU</b> value is required when a seller creates a multiple-variation listing, regardless of whether they decide to track inventory by Item ID or SKU. <br> <span class="tablenote"><b>Note: </b> When using an
+     * LMS_REVISE_INVENTORY_STATUS upload feed in <b>Sell Feed API</b> to revise the price and/or quantity for multiple SKUs for a multiple-SKU listing, you must include both the <b>ItemID</b> and <b>SKU</b> values for each variation. See the <a
+     * href="/api-docs/sell/static/feed/trading-upload-flow.html#upload-flow">Upload flow</a> and <a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#Trading">Inventory upload feed types</a> for more information.</span> The <b>SKU</b> field
+     * is always returned in the response, and if a SKU value doesn't exist for a single-variation listing, it is returned as an empty tag. | Primitive type that represents a stock-keeping unit (SKU). The usage of this string may vary in different contexts.
+     * For usage information and rules, see the fields that reference this type.
      * - base: xs:string
      * - minOccurs: 0
      * @var string
@@ -36,8 +38,11 @@ class InventoryStatusType extends AbstractStructBase
      * field should be used. <code>ItemID</code> is the default value of <b>InventoryTrackingMethod</b>, and its value can only be set/changed to <code>SKU</code> through either an <b>AddFixedPriceItem</b> or <b>RelistFixedPriceItem</b> call. <br> <br> For
      * a multiple-variation listing, the <b>SKU</b> value of the item variation is required in order to identify a specific item variation. An <b>ItemID</b> field is also required if the <b>InventoryTrackingMethod</b> value is set to <code>ItemID</code>.
      * However, if the <b>InventoryTrackingMethod</b> value is set to <code>SKU</code>, only the <b>SKU</b> value of the item variation is needed to identify a specific item variation. Note that a seller-defined <b>SKU</b> value is required when a seller
-     * creates a multiple-variation listing, regardless of whether they decide to track inventory by Item ID or SKU. <br> <br> Please note that the same <b>ItemID</b> value can be used multiple times in the same call if you revise several item variations
-     * from the same multiple-variation listing. <br> <br> The <b>ItemID</b> field is always returned in the response, even if an <b>ItemID</b> value was not included in the request. | Type that represents the unique identifier for an eBay listing.
+     * creates a multiple-variation listing, regardless of whether they decide to track inventory by Item ID or SKU. <br> <span class="tablenote"><b>Note: </b> When using an LMS_REVISE_INVENTORY_STATUS upload feed in <b>Sell Feed API</b> to revise the price
+     * and/or quantity for multiple SKUs for a multiple-SKU listing, you must include both the <b>ItemID</b> and <b>SKU</b> values for each variation. See the <a href="/api-docs/sell/static/feed/trading-upload-flow.html#upload-flow">Upload flow</a> and <a
+     * href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#Trading">Inventory upload feed types</a> for more information.</span> Please note that the same <b>ItemID</b> value can be used multiple times in the same call if you revise several item
+     * variations from the same multiple-variation listing. <br> <br> The <b>ItemID</b> field is always returned in the response, even if an <b>ItemID</b> value was not included in the request. | Type that represents the unique identifier for an eBay
+     * listing.
      * - base: xs:string
      * - minOccurs: 0
      * @var string

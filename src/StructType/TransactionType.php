@@ -175,9 +175,8 @@ class TransactionType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: Container consisting of payment details for an eBay sales transaction, including an identifier for the monetary transaction and a field to express any fees or credits applied to the monetary transaction. This field is only returned
      * after payment for the order has occurred. <br><br> <b>For GetItemTransactions only:</b> If using Trading WSDL Version 1019 or above, this field will only be returned to the buyer or seller, and no longer returned at all to third parties. If using a
-     * Trading WSDL older than Version 1019, the real transaction identifier is only returned to the buyer or seller, and a string value of <code>Unavailable</code> will be returned to all third parties. <br><br> <span class="tablenote">
-     * <strong>Note:</strong> The <strong>MonetaryDetails</strong> container also shows payment information for the order. In the future, it is possible that the <strong>ExternalTransaction</strong> container will be deprecated, so you are encouraged to
-     * start using <strong>MonetaryDetails</strong> as soon as possible. </span>
+     * Trading WSDL older than Version 1019, the real transaction identifier is only returned to the buyer or seller, and a string value of <code>Unavailable</code> will be returned to all third parties. <br> <span class="tablenote"><b>Note: </b> This
+     * container will stop being returned on January 31, 2024. The <strong>MonetaryDetails</strong> container should be used instead. </span>
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * @var \StructType\ExternalTransactionType[]
@@ -186,7 +185,8 @@ class TransactionType extends AbstractStructBase
     /**
      * The SellingManagerProductDetails
      * Meta information extracted from the WSDL
-     * - documentation: This container consists of Selling Manager product details and is only returned if the item was listed through Selling Manager Pro.
+     * - documentation: This container consists of Selling Manager product details and is only returned if the item was listed through Selling Manager Pro. <br> <span class="tablenote"><b>Note: </b> This container will stop being returned on January 31,
+     * 2024. </span>
      * - minOccurs: 0
      * @var \StructType\SellingManagerProductDetailsType
      */
@@ -365,7 +365,7 @@ class TransactionType extends AbstractStructBase
     /**
      * The BuyerGuaranteePrice
      * Meta information extracted from the WSDL
-     * - documentation: The Buyer Guarantee price. This field is only applicable to the Australian site.
+     * - documentation: <br> The Buyer Guarantee price. This field is only applicable to the Australian site. <br> <span class="tablenote"><b>Note: </b> This field will stop being returned on January 31, 2024. </span>
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -530,8 +530,7 @@ class TransactionType extends AbstractStructBase
     /**
      * The UnpaidItem
      * Meta information extracted from the WSDL
-     * - documentation: <span class="tablenote"><strong>Note:</strong> This container is deprecated (Unpaid Item cases are no longer supported). </span><br> Container consisting of details related to the type and status of an Unpaid Item case. This
-     * container is only returned if there is an open (or recently closed) Unpaid Item case associated with the order line item.
+     * - documentation: <br> <span class="tablenote"><strong>Note:</strong> This container is deprecated (Unpaid Item cases are no longer supported). This container will stop being returned on January 31, 2024.</span>
      * - minOccurs: 0
      * @var \StructType\UnpaidItemType
      */
@@ -614,14 +613,10 @@ class TransactionType extends AbstractStructBase
     /**
      * The ExtendedOrderID
      * Meta information extracted from the WSDL
-     * - documentation: A unique identifier for an eBay order in the new eBay REST API model. <b>ExtendedOrderID</b> values will be used to identify orders in REST-based APIs, including the Post-Order API and the Fulfillment API. <br><br> <b>For GetOrders,
-     * GetOrderTransactions, and GetItemTransactions only:</b> If using Trading WSDL Version 1019 or above, this field will only be returned to the buyer or seller, and no longer returned at all to third parties. If using a Trading WSDL older than Version
-     * 1019, the correct Order ID is returned to the buyer or seller, but a dummy Order ID value of <code>1000000000000</code> will be returned to all third parties. <br><br> <span class="tablenote"><b>Note: </b> As of June 2019, eBay has changed the format
-     * of order identifier values, and this new format is relevant to both legacy and REST API-based order ID fields. The new format is a non-parsable string, globally unique across all eBay marketplaces, and consistent for both single line item and
-     * multiple line item orders. Unlike in the past, instead of just being known and exposed to the seller, these unique order identifiers will also be known and used/referenced by the buyer and eBay customer support. <br><br> Please note that the
-     * identifier for an order (for <b>OrderID</b> and <b>ExtendedOrderID</b>) will change as it goes from unpaid to paid status. Sellers can check to see if an order has been paid by looking for a value of 'Complete' in the <b>CheckoutStatus.Status</b>
-     * field in the response of <b>GetOrders</b> or <b>GetOrderTransactions</b> call, or in the <b>Status.CompleteStatus</b> field in the response of <b>GetItemTransactions</b> or <b>GetSellerTransactions</b> call. Both the paid and unpaid Order IDs will be
-     * accepted in all Trading API call request payloads. </span> <br>
+     * - documentation: A unique identifier for an eBay order. This field is only returned for paid orders, and not unpaid orders. <br> <span class="tablenote"><b>Note: </b> <b>ExtendedOrderID</b> was first created when eBay changed the format of Order IDs
+     * back in June 2019. For a short period, the <b>OrderID</b> field showed the old Order ID format and the <b>ExtendedOrderID</b> field showed the new Order ID format. For paid orders, both <b>OrderID</b> and <b>ExtendedOrderID</b> now show the same
+     * Order ID value. <br> <b>For GetOrders, GetOrderTransactions, and GetItemTransactions only:</b> If using Trading WSDL Version 1019 or above, this field will only be returned to the buyer or seller, and no longer returned at all to third parties. If
+     * using a Trading WSDL older than Version 1019, the correct Order ID is returned to the buyer or seller, but a dummy Order ID value of <code>1000000000000</code> will be returned to all third parties. <br>
      * - minOccurs: 0
      * @var string
      */
@@ -676,14 +671,7 @@ class TransactionType extends AbstractStructBase
     /**
      * The GuaranteedDelivery
      * Meta information extracted from the WSDL
-     * - documentation: This field is returned as <code>true</code> if the order line item is qualified for eBay Guaranteed Delivery, or <code>false</code> if it is not eligible. At this time, eBay Guaranteed Delivery is only available to a select number of
-     * sellers on the US and Australia sites, but this feature will be enabled on more eBay sites in 2019. <br/><br/>Only domestic shipments are available for eBay Guaranteed Delivery. For an order line item to be qualified for eBay Guaranteed Delivery, the
-     * following must be true: <ul> <li>The eBay Guaranteed Delivery feature must be available to the seller</li> <li>That seller must be opted in to one of the two eBay Guaranteed Delivery programs</li> <li>If the seller is opted into the "Door-to-Door"
-     * program, a domestic shipping rate table must be applied to the listing, and that shipping rate table must include the buyer's location with a transit time (handling + shipping time) of 3 business days or less; </li> <li>If the seller is opted into
-     * the "Handling Time" program, the handling time plus the max shipping time must equal 3 business days or less, and that shipping rate table must include the buyer's location with a transit time (handling + shipping time) of 3 business days or
-     * less</li> <li>The listing must have a return policy</li> </ul> With eBay Guaranteed Delivery, the sellers are committed to getting the order line item to the buyer within 3 business days. The seller's defined "Order Cutoff" time will control what is
-     * considered 3 business days. If a buyer wanted to get an order by Friday, that buyer would have to purchase that item on Monday before the seller's "Order Cutoff" time. The seller's "Order Cutoff" time is generally set in their timezone, so the buyer
-     * should take this into account before the purchase.
+     * - documentation: This field is deprecated, and can be ignored if returned. The Guaranteed Delivery program is no longer supported on any eBay marketplace.
      * - minOccurs: 0
      * @var bool
      */
@@ -695,8 +683,8 @@ class TransactionType extends AbstractStructBase
      * field is also returned if <code>false</code> (not subject to eBay Collect and Remit). An <b>eBayCollectAndRemitTaxes</b> container is returned if the order line item is subject to such a tax, and the type and amount of this tax is displayed in the
      * <b>eBayCollectAndRemitTaxes.TaxDetails</b> container. <br/><br/> Australian 'Goods and Services' tax (GST) is automatically charged to buyers outside of Australia when they purchase items on the eBay Australia site. Sellers on the Australia site do
      * not have to take any extra steps to enable the collection of GST, as this tax is collected by eBay and remitted to the Australian government. For more information about Australian GST, see the <a
-     * href="https://www.ebay.com.au/help/selling/fees-credits-invoices/taxes-import-charges?id=4121">Taxes and import charges</a> help topic. <br/><br/> As of November 2021, buyers in all US states except for Missouri (and several US territories), will
-     * automatically be charged sales tax for purchases, and the seller does not set this rate. eBay will collect and remit this sales tax to the proper taxing authority on the buyer's behalf. For more US state-level information on sales tax, see the <a
+     * href="https://www.ebay.com.au/help/selling/fees-credits-invoices/taxes-import-charges?id=4121">Taxes and import charges</a> help topic. <br/><br/> As of January 2023, buyers in all US states will automatically be charged sales tax for purchases, and
+     * the seller does not set this rate. eBay will collect and remit this sales tax to the proper taxing authority on the buyer's behalf. For more US state-level information on sales tax, see the <a
      * href="https://www.ebay.com/help/selling/fees-credits-invoices/taxes-import-charges?id=4121#section4">eBay sales tax collection</a> help topic.
      * - minOccurs: 0
      * @var bool
@@ -708,9 +696,9 @@ class TransactionType extends AbstractStructBase
      * - documentation: This container is returned if the order line item is subject to a tax (US sales tax or Australian Goods and Services tax) that eBay will collect and remit to the proper taxing authority on the buyer's behalf. The type of tax will be
      * shown in the <b>TaxDetails.Imposition</b> and <b>TaxDetails.TaxDescription</b> fields, and the amount of this tax will be displayed in the <b>TaxDetails.TaxAmount</b> field. <br/><br/> Australian 'Goods and Services' tax (GST) is automatically
      * charged to buyers outside of Australia when they purchase items on the eBay Australia site. Sellers on the Australia site do not have to take any extra steps to enable the collection of GST, as this tax is collected by eBay and remitted to the
-     * Australian government. For more information about Australian GST, see the <a href="https://www.ebay.com.au/help/selling/fees-credits-invoices/taxes-import-charges?id=4121">Taxes and import charges</a> help topic. <br/><br/> As of November 2021,
-     * buyers in all US states except for Missouri (and several US territories), will automatically be charged sales tax for purchases, and the seller does not set this rate. eBay will collect and remit this sales tax to the proper taxing authority on the
-     * buyer's behalf. For more US state-level information on sales tax, see the <a href="https://www.ebay.com/help/selling/fees-credits-invoices/taxes-import-charges?id=4121#section4">eBay sales tax collection</a> help topic.
+     * Australian government. For more information about Australian GST, see the <a href="https://www.ebay.com.au/help/selling/fees-credits-invoices/taxes-import-charges?id=4121">Taxes and import charges</a> help topic. <br/><br/> As of January 2023, buyers
+     * in all US states will automatically be charged sales tax for purchases, and the seller does not set this rate. eBay will collect and remit this sales tax to the proper taxing authority on the buyer's behalf. For more US state-level information on
+     * sales tax, see the <a href="https://www.ebay.com/help/selling/fees-credits-invoices/taxes-import-charges?id=4121#section4">eBay sales tax collection</a> help topic.
      * - minOccurs: 0
      * @var \StructType\TaxesType
      */
@@ -731,6 +719,14 @@ class TransactionType extends AbstractStructBase
      * @var \DOMDocument
      */
     public $any;
+    /**
+     * The LinkedLineItemArray
+     * Meta information extracted from the WSDL
+     * - documentation: <span class="tablenote"><b>Note: </b> This array is only returned if the order has associated linked line items.</span> Container consisting of an array of linked line item objects.
+     * - minOccurs: 0
+     * @var \ArrayType\LinkedLineItemArrayType
+     */
+    public $LinkedLineItemArray;
     /**
      * Constructor method for TransactionType
      * @uses TransactionType::setAmountPaid()
@@ -809,6 +805,7 @@ class TransactionType extends AbstractStructBase
      * @uses TransactionType::setEBayCollectAndRemitTaxes()
      * @uses TransactionType::setProgram()
      * @uses TransactionType::setAny()
+     * @uses TransactionType::setLinkedLineItemArray()
      * @param \StructType\AmountType $amountPaid
      * @param \StructType\AmountType $adjustmentAmount
      * @param \StructType\AmountType $convertedAdjustmentAmount
@@ -885,8 +882,9 @@ class TransactionType extends AbstractStructBase
      * @param \StructType\TaxesType $eBayCollectAndRemitTaxes
      * @param \StructType\TransactionProgramType $program
      * @param \DOMDocument $any
+     * @param \ArrayType\LinkedLineItemArrayType $linkedLineItemArray
      */
-    public function __construct(\StructType\AmountType $amountPaid = null, \StructType\AmountType $adjustmentAmount = null, \StructType\AmountType $convertedAdjustmentAmount = null, \StructType\UserType $buyer = null, \StructType\ShippingDetailsType $shippingDetails = null, \StructType\AmountType $convertedAmountPaid = null, \StructType\AmountType $convertedTransactionPrice = null, $createdDate = null, $depositType = null, \StructType\ItemType $item = null, $quantityPurchased = null, \StructType\TransactionStatusType $status = null, $transactionID = null, \StructType\AmountType $transactionPrice = null, $bestOfferSale = null, $vATPercent = null, array $externalTransaction = array(), \StructType\SellingManagerProductDetailsType $sellingManagerProductDetails = null, \StructType\ShippingServiceOptionsType $shippingServiceSelected = null, $buyerMessage = null, \StructType\AmountType $dutchAuctionBid = null, $buyerPaidStatus = null, $sellerPaidStatus = null, $paidTime = null, $shippedTime = null, \StructType\AmountType $totalPrice = null, \StructType\FeedbackInfoType $feedbackLeft = null, \StructType\FeedbackInfoType $feedbackReceived = null, \StructType\OrderType $containingOrder = null, \StructType\AmountType $finalValueFee = null, \StructType\ListingCheckoutRedirectPreferenceType $listingCheckoutRedirectPreference = null, \ArrayType\RefundArrayType $refundArray = null, $transactionSiteID = null, $platform = null, $cartID = null, $sellerContactBuyerByEmail = null, $payPalEmailAddress = null, $paisaPayID = null, \StructType\AmountType $buyerGuaranteePrice = null, \StructType\VariationType $variation = null, $buyerCheckoutMessage = null, \StructType\AmountType $totalTransactionPrice = null, \StructType\TaxesType $taxes = null, $bundlePurchase = null, \StructType\AmountType $actualShippingCost = null, \StructType\AmountType $actualHandlingCost = null, $orderLineItemID = null, $eBayPaymentID = null, \StructType\PaymentHoldDetailType $paymentHoldDetails = null, \StructType\SellerDiscountsType $sellerDiscounts = null, \StructType\AmountType $refundAmount = null, $refundStatus = null, $codiceFiscale = null, $isMultiLegShipping = null, \StructType\MultiLegShippingDetailsType $multiLegShippingDetails = null, $invoiceSentTime = null, \StructType\UnpaidItemType $unpaidItem = null, $intangibleItem = null, \StructType\PaymentsInformationType $monetaryDetails = null, \StructType\PickupDetailsType $pickupDetails = null, \StructType\PickupMethodSelectedType $pickupMethodSelected = null, \StructType\AmountType $shippingConvenienceCharge = null, $logisticsPlanType = null, \StructType\BuyerPackageEnclosuresType $buyerPackageEnclosures = null, $inventoryReservationID = null, $extendedOrderID = null, $eBayPlusTransaction = null, \StructType\GiftSummaryType $giftSummary = null, \StructType\DigitalDeliverySelectedType $digitalDeliverySelected = null, $gift = null, $guaranteedShipping = null, $guaranteedDelivery = null, $eBayCollectAndRemitTax = null, \StructType\TaxesType $eBayCollectAndRemitTaxes = null, \StructType\TransactionProgramType $program = null, \DOMDocument $any = null)
+    public function __construct(\StructType\AmountType $amountPaid = null, \StructType\AmountType $adjustmentAmount = null, \StructType\AmountType $convertedAdjustmentAmount = null, \StructType\UserType $buyer = null, \StructType\ShippingDetailsType $shippingDetails = null, \StructType\AmountType $convertedAmountPaid = null, \StructType\AmountType $convertedTransactionPrice = null, $createdDate = null, $depositType = null, \StructType\ItemType $item = null, $quantityPurchased = null, \StructType\TransactionStatusType $status = null, $transactionID = null, \StructType\AmountType $transactionPrice = null, $bestOfferSale = null, $vATPercent = null, array $externalTransaction = array(), \StructType\SellingManagerProductDetailsType $sellingManagerProductDetails = null, \StructType\ShippingServiceOptionsType $shippingServiceSelected = null, $buyerMessage = null, \StructType\AmountType $dutchAuctionBid = null, $buyerPaidStatus = null, $sellerPaidStatus = null, $paidTime = null, $shippedTime = null, \StructType\AmountType $totalPrice = null, \StructType\FeedbackInfoType $feedbackLeft = null, \StructType\FeedbackInfoType $feedbackReceived = null, \StructType\OrderType $containingOrder = null, \StructType\AmountType $finalValueFee = null, \StructType\ListingCheckoutRedirectPreferenceType $listingCheckoutRedirectPreference = null, \ArrayType\RefundArrayType $refundArray = null, $transactionSiteID = null, $platform = null, $cartID = null, $sellerContactBuyerByEmail = null, $payPalEmailAddress = null, $paisaPayID = null, \StructType\AmountType $buyerGuaranteePrice = null, \StructType\VariationType $variation = null, $buyerCheckoutMessage = null, \StructType\AmountType $totalTransactionPrice = null, \StructType\TaxesType $taxes = null, $bundlePurchase = null, \StructType\AmountType $actualShippingCost = null, \StructType\AmountType $actualHandlingCost = null, $orderLineItemID = null, $eBayPaymentID = null, \StructType\PaymentHoldDetailType $paymentHoldDetails = null, \StructType\SellerDiscountsType $sellerDiscounts = null, \StructType\AmountType $refundAmount = null, $refundStatus = null, $codiceFiscale = null, $isMultiLegShipping = null, \StructType\MultiLegShippingDetailsType $multiLegShippingDetails = null, $invoiceSentTime = null, \StructType\UnpaidItemType $unpaidItem = null, $intangibleItem = null, \StructType\PaymentsInformationType $monetaryDetails = null, \StructType\PickupDetailsType $pickupDetails = null, \StructType\PickupMethodSelectedType $pickupMethodSelected = null, \StructType\AmountType $shippingConvenienceCharge = null, $logisticsPlanType = null, \StructType\BuyerPackageEnclosuresType $buyerPackageEnclosures = null, $inventoryReservationID = null, $extendedOrderID = null, $eBayPlusTransaction = null, \StructType\GiftSummaryType $giftSummary = null, \StructType\DigitalDeliverySelectedType $digitalDeliverySelected = null, $gift = null, $guaranteedShipping = null, $guaranteedDelivery = null, $eBayCollectAndRemitTax = null, \StructType\TaxesType $eBayCollectAndRemitTaxes = null, \StructType\TransactionProgramType $program = null, \DOMDocument $any = null, \ArrayType\LinkedLineItemArrayType $linkedLineItemArray = null)
     {
         $this
             ->setAmountPaid($amountPaid)
@@ -964,7 +962,8 @@ class TransactionType extends AbstractStructBase
             ->setEBayCollectAndRemitTax($eBayCollectAndRemitTax)
             ->setEBayCollectAndRemitTaxes($eBayCollectAndRemitTaxes)
             ->setProgram($program)
-            ->setAny($any);
+            ->setAny($any)
+            ->setLinkedLineItemArray($linkedLineItemArray);
     }
     /**
      * Get AmountPaid value
@@ -2535,6 +2534,24 @@ class TransactionType extends AbstractStructBase
     public function setAny(\DOMDocument $any = null)
     {
         $this->any = ($any instanceof \DOMDocument) && $any->hasChildNodes() ? $any->saveXML($any->childNodes->item(0)) : $any;
+        return $this;
+    }
+    /**
+     * Get LinkedLineItemArray value
+     * @return \ArrayType\LinkedLineItemArrayType|null
+     */
+    public function getLinkedLineItemArray()
+    {
+        return $this->LinkedLineItemArray;
+    }
+    /**
+     * Set LinkedLineItemArray value
+     * @param \ArrayType\LinkedLineItemArrayType $linkedLineItemArray
+     * @return \StructType\TransactionType
+     */
+    public function setLinkedLineItemArray(\ArrayType\LinkedLineItemArrayType $linkedLineItemArray = null)
+    {
+        $this->LinkedLineItemArray = $linkedLineItemArray;
         return $this;
     }
 }

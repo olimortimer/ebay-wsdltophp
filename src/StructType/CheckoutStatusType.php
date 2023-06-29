@@ -23,7 +23,7 @@ class CheckoutStatusType extends AbstractStructBase
     /**
      * The LastModifiedTime
      * Meta information extracted from the WSDL
-     * - documentation: Indicates the last time that there was a change in value of the <b>CheckoutStatus.Status</b> field, such as 'Pending' to 'Complete'.
+     * - documentation: This timestamp indicates when the order was last modified.
      * - minOccurs: 0
      * @var string
      */

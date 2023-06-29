@@ -78,7 +78,7 @@ class GetItemTransactionsResponseType extends AbstractResponseType
     /**
      * The PayPalPreferred
      * Meta information extracted from the WSDL
-     * - documentation: This field is deprecated.
+     * - documentation: <span class="tablenote"><b>Note: </b> This field is deprecated and will be removed from WSDL and docs on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */

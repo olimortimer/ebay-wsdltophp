@@ -17,22 +17,50 @@ class CustomPoliciesType extends AbstractStructBase
     /**
      * The TakeBackPolicyID
      * Meta information extracted from the WSDL
-     * - documentation: This field is used if the seller wants to apply a take-back policy to the listing. The seller will specify the identifier of the take-back policy in this field. The law in some countries may require sellers to take back a used
-     * product when the buyer buys a new product. Use this field to specify one take-back policy ID for the listing.
+     * - documentation: <span class="tablenote"><strong>Note: </strong> Global take-back policies are currently available only on the German (DE) marketplace. </span> This field is used if the seller wants to apply a <i>global</i> take-back policy to the
+     * listing. The law in some countries may require sellers to take back a used product when the buyer buys a new product.<br /><br />Use this field to specify one <i>global</i> take-back policy ID for the listing. <span class="tablenote"><strong>Note:
+     * </strong> For countries that support country-specific policies, use <b>RegionalTakeBackPolicies</b> to apply them to a listing. </span>
      * - minOccurs: 0
      * @var int
      */
     public $TakeBackPolicyID;
     /**
+     * The RegionalTakeBackPolicies
+     * Meta information extracted from the WSDL
+     * - documentation: <span class="tablenote"><strong>Note: </strong> Global take-back policies are currently available only on the German (DE) marketplace. </span> The list of unique identifiers indicating the seller-created country-specific take-back
+     * policies that will be used for a listing. The law in some countries may require sellers to take back a used product when the buyer buys a new product.<br /><br /> Each listing may include one (1) country-specific take-back policy for <i>each</i> of
+     * the following countries:<ul><li>United Kingdom [GB]</li><li>Germany [DE]</li><li>France [FR]</li><li>Italy [IT]</li><li>Spain [ES]</li></ul> <span class="tablenote"><strong>Note: </strong> Take-back policies that apply to <i>all</i> countries to
+     * which a seller ships are specified using <b>TakeBackPolicyID</b>. </span>
+     * - minOccurs: 0
+     * @var \ArrayType\CountryPoliciesArrayType
+     */
+    public $RegionalTakeBackPolicies;
+    /**
      * The ProductCompliancePolicyID
      * Meta information extracted from the WSDL
-     * - documentation: This field is used if the seller wants to apply one or more product compliance policies to the listing. A separate <b>ProductCompliancePolicyID</b> field is required for each policy to be applied, and the seller specifies the
-     * identifier of each policy in this field.
+     * - documentation: <span class="tablenote"><strong>Note: </strong> Global product compliance policies are currently available only on the German (DE) marketplace. </span> This field is used if the seller wants to apply one or more seller-created
+     * <i>global</i> product compliance policies that will be used in a listing. A separate <b>ProductCompliancePolicyID</b> field is required for each policy to be applied, and the seller specifies the identifier of each policy in this field.<br /> Product
+     * compliance policies provide buyers with important information and disclosures about products. For example, if you sell batteries and specific disclosures are required to be shared with all potential buyers, your global product compliance policy could
+     * contain the required disclosures.<br /><br />A maximum of six (6) global product compliance policies may be applied to each listing. <span class="tablenote"><strong>Note: </strong> For countries that support country-specific policies, use
+     * <b>RegionalProductCompliancePolicies</b> to apply them to a listing. </span>
      * - maxOccurs: 5
      * - minOccurs: 0
      * @var int[]
      */
     public $ProductCompliancePolicyID;
+    /**
+     * The RegionalProductCompliancePolicies
+     * Meta information extracted from the WSDL
+     * - documentation: <span class="tablenote"><strong>Note: </strong> Regional product compliance policies are currently available only on the German (DE) marketplace. </span> The set of compliance policies for indicating the seller-created
+     * country-specific product compliance policies that that will be used for a listing.<br /><br /> Product compliance policies provide buyers with important information and disclosures about products. For example, if you sell batteries in a country
+     * requiring disclosures that apply <i>only</i> to that country, a country-specific product compliance policy could contain this information.<br /><br /> Each listing may include up to six (6) product compliance policies for <i>each</i> of the following
+     * countries:<ul><li>United Kingdom [GB]</li><li>Germany [DE]</li><li>France [FR]</li><li>Italy [IT]</li><li>Spain [ES]</li></ul> For example, if a seller offers products in the UK, Germany, and Italy, each of which requires custom product compliance
+     * information, up to 18 policies (in other words, 6 policies x 3 countries) may be included for each listing. <span class="tablenote"><strong>Note: </strong> Product compliance policies that apply to <i>all</i> countries to which a seller ships are
+     * specified using <b>ProductCompliancePolicyID</b>. </span>
+     * - minOccurs: 0
+     * @var \ArrayType\CountryPoliciesArrayType
+     */
+    public $RegionalProductCompliancePolicies;
     /**
      * The any
      * @var \DOMDocument
@@ -41,17 +69,23 @@ class CustomPoliciesType extends AbstractStructBase
     /**
      * Constructor method for CustomPoliciesType
      * @uses CustomPoliciesType::setTakeBackPolicyID()
+     * @uses CustomPoliciesType::setRegionalTakeBackPolicies()
      * @uses CustomPoliciesType::setProductCompliancePolicyID()
+     * @uses CustomPoliciesType::setRegionalProductCompliancePolicies()
      * @uses CustomPoliciesType::setAny()
      * @param int $takeBackPolicyID
+     * @param \ArrayType\CountryPoliciesArrayType $regionalTakeBackPolicies
      * @param int[] $productCompliancePolicyID
+     * @param \ArrayType\CountryPoliciesArrayType $regionalProductCompliancePolicies
      * @param \DOMDocument $any
      */
-    public function __construct($takeBackPolicyID = null, array $productCompliancePolicyID = array(), \DOMDocument $any = null)
+    public function __construct($takeBackPolicyID = null, \ArrayType\CountryPoliciesArrayType $regionalTakeBackPolicies = null, array $productCompliancePolicyID = array(), \ArrayType\CountryPoliciesArrayType $regionalProductCompliancePolicies = null, \DOMDocument $any = null)
     {
         $this
             ->setTakeBackPolicyID($takeBackPolicyID)
+            ->setRegionalTakeBackPolicies($regionalTakeBackPolicies)
             ->setProductCompliancePolicyID($productCompliancePolicyID)
+            ->setRegionalProductCompliancePolicies($regionalProductCompliancePolicies)
             ->setAny($any);
     }
     /**
@@ -74,6 +108,24 @@ class CustomPoliciesType extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide an integer value, %s given', var_export($takeBackPolicyID, true), gettype($takeBackPolicyID)), __LINE__);
         }
         $this->TakeBackPolicyID = $takeBackPolicyID;
+        return $this;
+    }
+    /**
+     * Get RegionalTakeBackPolicies value
+     * @return \ArrayType\CountryPoliciesArrayType|null
+     */
+    public function getRegionalTakeBackPolicies()
+    {
+        return $this->RegionalTakeBackPolicies;
+    }
+    /**
+     * Set RegionalTakeBackPolicies value
+     * @param \ArrayType\CountryPoliciesArrayType $regionalTakeBackPolicies
+     * @return \StructType\CustomPoliciesType
+     */
+    public function setRegionalTakeBackPolicies(\ArrayType\CountryPoliciesArrayType $regionalTakeBackPolicies = null)
+    {
+        $this->RegionalTakeBackPolicies = $regionalTakeBackPolicies;
         return $this;
     }
     /**
@@ -142,6 +194,24 @@ class CustomPoliciesType extends AbstractStructBase
             throw new \InvalidArgumentException(sprintf('You can\'t add anymore element to this property that already contains %s elements, the number of elements contained by the property must be less than or equal to 5', count($this->ProductCompliancePolicyID)), __LINE__);
         }
         $this->ProductCompliancePolicyID[] = $item;
+        return $this;
+    }
+    /**
+     * Get RegionalProductCompliancePolicies value
+     * @return \ArrayType\CountryPoliciesArrayType|null
+     */
+    public function getRegionalProductCompliancePolicies()
+    {
+        return $this->RegionalProductCompliancePolicies;
+    }
+    /**
+     * Set RegionalProductCompliancePolicies value
+     * @param \ArrayType\CountryPoliciesArrayType $regionalProductCompliancePolicies
+     * @return \StructType\CustomPoliciesType
+     */
+    public function setRegionalProductCompliancePolicies(\ArrayType\CountryPoliciesArrayType $regionalProductCompliancePolicies = null)
+    {
+        $this->RegionalProductCompliancePolicies = $regionalProductCompliancePolicies;
         return $this;
     }
     /**

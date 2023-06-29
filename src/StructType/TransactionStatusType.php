@@ -31,7 +31,8 @@ class TransactionStatusType extends AbstractStructBase
     /**
      * The LastTimeModified
      * Meta information extracted from the WSDL
-     * - documentation: Indicates date and time an order's status was last updated (in GMT).
+     * - documentation: Indicates date and time an order's status was last updated (in GMT). <br> <span class="tablenote"><b>Note: </b> Please note that for a multiple line item order, if any part of the order was modified, all line items of that order may
+     * be returned in the response, and each line item of that order should have the same timestamp value in this field. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -39,10 +40,10 @@ class TransactionStatusType extends AbstractStructBase
     /**
      * The PaymentMethodUsed
      * Meta information extracted from the WSDL
-     * - documentation: The payment method that the buyer selected to pay for the order. <br><br> <span class="tablenote"><b>Note: </b> Sellers no longer have to specify any electronic payment methods at listing time, but this field is still returned. The
-     * value returned in this field will generally be <code>CreditCard</code>, unless an eBay gift card was used by the buyer to pay a partial or full balance of the order. If this is the case, the value returned in this field will be
-     * <code>CCAccepted</code>. Either of these two values will be returned, but neither accurately reflects the actual payment method that the buyer used. If the order was paid for off of eBay's platform using an 'offline' payment method such as
-     * 'CashOnPickup' or 'MOCC' (money order or cashier's check), and the seller marked the order as paid, either of those values may get returned here. </span>
+     * - documentation: The payment method that the buyer selected to pay for the order. <br> <span class="tablenote"><b>Note: </b> Sellers no longer have to specify any electronic payment methods at listing time, but this field is still returned. The value
+     * returned in this field will generally be <code>CreditCard</code>, unless an eBay gift card was used by the buyer to pay a partial or full balance of the order. If this is the case, the value returned in this field will be <code>CCAccepted</code>.
+     * Either of these two values will be returned, but neither accurately reflects the actual payment method that the buyer used. If the order was paid for off of eBay's platform using an 'offline' payment method such as 'CashOnPickup' or 'MOCC' (money
+     * order or cashier's check), and the seller marked the order as paid, either of those values may get returned here. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -67,8 +68,8 @@ class TransactionStatusType extends AbstractStructBase
     /**
      * The PaymentHoldStatus
      * Meta information extracted from the WSDL
-     * - documentation: This field indicates the type and/or status of a payment hold on the item. <br> <br> <span class="tablenote"><b>Note:</b> For the <strong>GetItemTransactions</strong>, <strong>GetOrders</strong>, and
-     * <strong>GetOrderTransactions</strong> calls, this field is only returned to the seller of the order; this field is not returned for the buyer or third party. </span>
+     * - documentation: This field indicates the type and/or status of a payment hold on the item. <br> <span class="tablenote"><b>Note:</b> For the <strong>GetItemTransactions</strong>, <strong>GetOrders</strong>, and <strong>GetOrderTransactions</strong>
+     * calls, this field is only returned to the seller of the order; this field is not returned for the buyer or third party. </span>
      * - minOccurs: 0
      * @var string
      */
@@ -76,7 +77,8 @@ class TransactionStatusType extends AbstractStructBase
     /**
      * The IntegratedMerchantCreditCardEnabled
      * Meta information extracted from the WSDL
-     * - documentation: This field is no longer applicable as eBay sellers can no longer use iMCC gateway accounts to handle buyer payments.
+     * - documentation: This field is no longer applicable as eBay sellers can no longer use iMCC gateway accounts to handle buyer payments. <br> <span class="tablenote"><b>Note: </b> This field is deprecated and will stop being returned in order management
+     * calls on January 31, 2024. </span>
      * - minOccurs: 0
      * @var bool
      */

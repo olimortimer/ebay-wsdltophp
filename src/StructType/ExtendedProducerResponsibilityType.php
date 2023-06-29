@@ -10,9 +10,8 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
  * - documentation: This type is used by the <b>ExtendedProducerResponsibility</b> container, which provides IDs for the producer or importer related to the new item, packaging, added documentation, or an eco-participation fee. In some markets, such as
  * in France, this may be the importer of the item. For more information, see the <b>Extended Producer Responsibility for business sellers</b> page for your site (for example, <a
  * href="https://www.ebay.com/help/selling/all-about-selling/selling-internationally/extended-producer-responsibility-for-business-sellers?id=5314"
- * target="_blank">https://www.ebay.com/help/selling/all-about-selling/selling-internationally/extended-producer-responsibility-for-business-sellers?id=5314</a>). This field is supported by a limited number of sites and specific categories. Use the <a
- * href="https://developer.ebay.com/api-docs/sell/metadata/resources/marketplace/methods/getExtendedProducerResponsibilityPolicies" target="_blank">getExtendedProducerResponsibilityPolicies</a> method of the <b>Sell Metadata API</b> to retrieve valid
- * categories for a site. <br/><br/>For <b>GetItem</b> calls, this container is only returned to the listing owner, if the container is available.
+ * target="_blank">https://www.ebay.com/help/selling/all-about-selling/selling-internationally/extended-producer-responsibility-for-business-sellers?id=5314</a>). <br/><br/>For <b>GetItem</b> calls, this container is only returned to the listing owner,
+ * if the container is available.
  * @subpackage Structs
  */
 class ExtendedProducerResponsibilityType extends AbstractStructBase
@@ -20,7 +19,9 @@ class ExtendedProducerResponsibilityType extends AbstractStructBase
     /**
      * The ProducerProductID
      * Meta information extracted from the WSDL
-     * - documentation: This ID is the Unique Identifier of the producer related to the item. For instance, if the seller is selling a cell phone, it is the ID related to the cell phone.
+     * - documentation: <span class="tablenote"><strong>Note:</strong> Extended Producer Responsibility IDs are no longer set at the listing level and will be ignored/dropped if used. Instead, sellers will provide/manage these IDs at the account level by
+     * going to <a href="https://accountsettings.ebay.fr/epr-fr/" target="_blank">account settings</a>. </span> <br> This ID is the Unique Identifier of the producer related to the item. For instance, if the seller is selling a cell phone, it is the ID
+     * related to the cell phone.
      * - minOccurs: 0
      * @var string
      */
@@ -28,8 +29,9 @@ class ExtendedProducerResponsibilityType extends AbstractStructBase
     /**
      * The ProductPackageID
      * Meta information extracted from the WSDL
-     * - documentation: This ID is the Unique Identifier of the producer of any packaging related to the product added by the seller. This does not include packaging in which the product is shipped (see <b>ShipmentPackageID</b>). For instance, if the seller
-     * adds bubble wrap, it is the ID related to the bubble wrap.
+     * - documentation: <span class="tablenote"><strong>Note:</strong> Extended Producer Responsibility IDs are no longer set at the listing level and will be ignored/dropped if used. Instead, sellers will provide/manage these IDs at the account level by
+     * going to <a href="https://accountsettings.ebay.fr/epr-fr/" target="_blank">account settings</a>. </span> <br> This ID is the Unique Identifier of the producer of any packaging related to the product added by the seller. This does not include
+     * packaging in which the product is shipped (see <b>ShipmentPackageID</b>). For instance, if the seller adds bubble wrap, it is the ID related to the bubble wrap.
      * - minOccurs: 0
      * @var string
      */
@@ -37,8 +39,9 @@ class ExtendedProducerResponsibilityType extends AbstractStructBase
     /**
      * The ShipmentPackageID
      * Meta information extracted from the WSDL
-     * - documentation: This ID is the Unique Identifier of the producer of any packaging used by the seller to ship the item. This does not include non-shipping packaging added to the product (see <b>ProductPackageID</b>). This ID is required when the
-     * seller uses packaging to ship the item. For instance, if the seller uses a different box to ship the item, it is the ID related to the box.
+     * - documentation: <span class="tablenote"><strong>Note:</strong> Extended Producer Responsibility IDs are no longer set at the listing level and will be ignored/dropped if used. Instead, sellers will provide/manage these IDs at the account level by
+     * going to <a href="https://accountsettings.ebay.fr/epr-fr/" target="_blank">account settings</a>. </span> <br> This ID is the Unique Identifier of the producer of any packaging used by the seller to ship the item. This does not include non-shipping
+     * packaging added to the product (see <b>ProductPackageID</b>). This ID is required when the seller uses packaging to ship the item. For instance, if the seller uses a different box to ship the item, it is the ID related to the box.
      * - minOccurs: 0
      * @var string
      */
@@ -46,7 +49,9 @@ class ExtendedProducerResponsibilityType extends AbstractStructBase
     /**
      * The ProductDocumentationID
      * Meta information extracted from the WSDL
-     * - documentation: This ID is the Unique Identifier of the producer of any paper added to the parcel of the item by the seller. For example, this ID concerns any notice, leaflet, or paper that the seller adds to a cell phone parcel.
+     * - documentation: <span class="tablenote"><strong>Note:</strong> Extended Producer Responsibility IDs are no longer set at the listing level and will be ignored/dropped if used. Instead, sellers will provide/manage these IDs at the account level by
+     * going to <a href="https://accountsettings.ebay.fr/epr-fr/" target="_blank">account settings</a>. </span> <br> This ID is the Unique Identifier of the producer of any paper added to the parcel of the item by the seller. For example, this ID concerns
+     * any notice, leaflet, or paper that the seller adds to a cell phone parcel.
      * - minOccurs: 0
      * @var string
      */

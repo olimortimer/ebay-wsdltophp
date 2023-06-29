@@ -17,9 +17,9 @@ class GetFeedbackRequestType extends AbstractRequestType
      * The UserID
      * Meta information extracted from the WSDL
      * - documentation: The user's eBay User ID is specified in this field. If this field is used, all retrieved Feedback data will be for this eBay user. Specifies the user whose feedback data is to be returned. If this field is omitted in the call
-     * request, all retrieved Feedback records will be for the eBay user making the call. | This is a string wrapper for the eBay ID that uniquely identifies a user. This is used by several other types to identify a specific eBay user, such as
-     * DisputeType.xsd, FeedbackInfoType.xsd, GetAllBidders, OrderType, and so on. <br><br>For GetAllBidders, some bidder information is anonymous, to protect bidders from fraud. If the seller makes this API call, the actual IDs of all bidders on the
-     * seller's item will be returned. If a bidder makes this API call, the bidder's actual ID will be returned, but information for all competing bidders or outside watchers will be returned as anonymized userIDs.
+     * request, all retrieved Feedback records will be for the eBay user making the call. | This is a string wrapper for the eBay ID that uniquely identifies a user. This is used by several other types to identify a specific eBay user. <br><br>For
+     * GetAllBidders, some bidder information is anonymous, to protect bidders from fraud. If the seller makes this API call, the actual IDs of all bidders on the seller's item will be returned. If a bidder makes this API call, the bidder's actual ID will
+     * be returned, but information for all competing bidders or outside watchers will be returned as anonymized userIDs.
      * - base: xs:string
      * - minOccurs: 0
      * @var string

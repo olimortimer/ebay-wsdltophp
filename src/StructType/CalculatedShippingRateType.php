@@ -8,9 +8,7 @@ use \WsdlToPhp\PackageBase\AbstractStructBase;
  * This class stands for CalculatedShippingRateType StructType
  * Meta information extracted from the WSDL
  * - documentation: Details pertinent to one or more items for which calculated shipping (or flat rate shipping using shipping rate tables with weight surcharges) has been offered by the seller, such as package dimension and weight and
- * packaging/handling costs. Also returned with the data for an item's transaction. <br><br> <span class="tablenote"><strong>Note:</strong> The <strong>CalculatedShippingRate</strong> container should only be used to specify values for the
- * <strong>InternationalPackagingHandlingCosts</strong>, <strong>OriginatingPostalCode</strong>, and/or <strong>PackagingHandlingCosts</strong> fields. The rest of the fields in the <strong>CalculatedShippingRate</strong> container should now be
- * specified in the <strong>ShippingPackageDetails</strong> container instead. </span>
+ * packaging/handling costs. Also returned with the data for an item's transaction.
  * @subpackage Structs
  */
 class CalculatedShippingRateType extends AbstractStructBase
@@ -39,7 +37,7 @@ class CalculatedShippingRateType extends AbstractStructBase
      * - documentation: Fees a seller might assess for the shipping of the item (in addition to whatever the shipping service might charge). Any packaging/handling cost specified on input is added to each shipping service on output. <br/><br/> If domestic
      * and international calculated shipping is offered for an item and if packaging/handling cost is specified only for domestic shipping, that cost will be applied by eBay as the international packaging/handling cost. (To specify a international
      * packaging/handling cost, you must always specify a domestic packaging/handling cost, even if it is 0.) When UPS is one of the shipping services offered by the seller, package dimensions are required on list/relist/revise. For calculated shipping
-     * only.
+     * only. <span class="tablenote"><strong>Note:</strong> If the listing only has one domestic shipping service and it is free shipping, the domestic package handling cost will be ignored and will not be applied to the listing. </span>
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
@@ -57,9 +55,8 @@ class CalculatedShippingRateType extends AbstractStructBase
     /**
      * The InternationalPackagingHandlingCosts
      * Meta information extracted from the WSDL
-     * - documentation: Fees a seller might assess for the shipping of the item (in addition to whatever the shipping service might charge). Any packaging/handling cost specified on input is added to each shipping service on output. <br/><br/> If domestic
-     * and international calculated shipping is offered for an item and if packaging/handling cost is specified only for domestic shipping, that cost will be applied by eBay as the international packaging/handling cost. (To specify a international
-     * packaging/handling cost, you must always specify a domestic packaging/handling cost, even if it is 0.) For international calculated shipping only.
+     * - documentation: This field shows any package handling cost applied to international shipping. This cost will be in addition to any shipping cost applicable to each international shipping service option. <br/><br/> For international calculated
+     * shipping only.
      * - minOccurs: 0
      * @var \StructType\AmountType
      */
